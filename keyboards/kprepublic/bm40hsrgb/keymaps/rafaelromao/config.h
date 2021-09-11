@@ -25,11 +25,6 @@
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD
 
-// Auto Shift
-#define NO_AUTO_SHIFT_ALPHA
-#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
-#define AUTO_SHIFT_NO_SETUP
-
 // Recommended for heavy chording.
 #define QMK_KEYS_PER_SCAN 4
 
@@ -57,8 +52,6 @@
 #define RGBLIGHT_EFFECT_RGB_TEST
 #define RGBLIGHT_EFFECT_ALTERNATING
 #define RGBLIGHT_EFFECT_TWINKLE
-
-#define RGBLIGHT_LIMIT_VAL 10
 
 //bootmagic
 #define BOOTMAGIC_KEY_SALT KC_V

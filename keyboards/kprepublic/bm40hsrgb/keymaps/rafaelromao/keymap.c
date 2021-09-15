@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LCTL , KC_RGUI , KC_LALT , MEH_ESC , SPC_MO3 ,      SPC_MO4      , SPC_MO2 , HYP_ENT , KC_RSFT , KC_TAB  , OSL(2)) ,
+      KC_LCTL , KC_RGUI , KC_LALT , MEH_ESC , SPC_MO3 ,      SPC_MO4      , SPC_MO2 , HYP_ENT , KC_RSFT , KC_TAB  , OSL(2) ),
  // |_______________________________________________________________________________________________________________________|
 
     [QWERTY] = LAYOUT_planck_mit(

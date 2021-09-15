@@ -29,13 +29,16 @@ enum layers {
 #define LCTLT_R LCTL_T(KC_R)
 #define LGUIT_S LGUI_T(KC_S)
 #define LALTT_T LALT_T(KC_T)
-#define LCTLT_T LCTL_T(KC_T)
+
+#define LCTLT_S LCTL_T(KC_S)
 #define LGUIT_D LGUI_T(KC_D)
 #define LALTT_F LALT_T(KC_F)
+
 #define RSFTT_O RSFT_T(KC_O)
 #define RCTLT_I RCTL_T(KC_I)
 #define RGUIT_E RGUI_T(KC_E)
 #define RALTT_N RALT_T(KC_N)
+
 #define RSFTT_BS RSFT_T(KC_BSPC)
 #define RCTLT_L RCTL_T(KC_L)
 #define RGUIT_K RGUI_T(KC_K)
@@ -47,7 +50,7 @@ enum layers {
 #define SPC_MO4 LT(4,KC_SPC)
 #define SPC_MO2 LT(2,KC_SPC)
 #define TAB_MO4 LT(4,KC_TAB)
-#define BS_MO4 LT(4,KC_BSPC
+#define BS_MO4 LT(4,KC_BSPC)
 
 #define LGUI_D LGUI(KC_D)
 #define LGUI_E LGUI(KC_E)
@@ -115,7 +118,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       RGB_VAI , RGB_HUI , RGB_SAI , RGB_SPI , TO(3)   , XXXXXXX , XXXXXXX , TO(2)   , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , _______ , XXXXXXX , XXXXXXX , _______ , SLEEP   , XXXXXXX , NK_ON   , NK_OFF  ,
+      RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , _______ , XXXXXXX , XXXXXXX , _______ , KC_SLEP , XXXXXXX , NK_ON   , NK_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , _______ , _______ ,      _______      , _______ , _______ , _______ , _______ , OSL(2)  )
  // |_______________________________________________________________________________________________________________________|

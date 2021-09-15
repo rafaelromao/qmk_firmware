@@ -25,36 +25,43 @@ enum layers {
   MAINTENANCE
 };
 
+#define LSFT_A LSFT_T(KC_A)
+#define LCTL_R LCTL_T(KC_R)
+#define LGUI_S LGUI_T(KC_S)
+#define LALT_T LALT_T(KC_T)
+#define LGUI_D LGUI_T(KC_D)
+#define LALT_F LALT_T(KC_F)
+#define RSFT_O RSFT_T(KC_O)
+#define RCTL_I RCTL_T(KC_I)
+#define RGUI_E RGUI_T(KC_E)
+#define RALT_N RALT_T(KC_N)
+#define RSFT_BS RSFT_T(KC_BSPC)
+#define RCTL_L RCTL_T(KC_L)
+#define RGUI_K RGUI_T(KC_K)
+#define RALT_J RALT_T(KC_J)
+#define MEH_ESC MEH_T(KC_ESC)
+#define HYP_ENT ALL_T(KC_ENT)
+#define SP_MO3 LT(3,KC_SPC)
+#define SP_MO4 LT(4,KC_SPC)
+#define SP_MO2 LT(2,KC_SPC)
+#define TAB_MO4 LT(4,KC_TAB)
+#define BS_MO4 LT(4,KC_BSPC)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-/* Colemak
- * |----------------------------------------------------------------------------------------------------------------------------|
- * |   Q    |   W    |   F    |   P    |   G    |  Play  |  Next  |   J    |   L    |   U    |   Y    |   BS   |
- * |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
- * | Sht/A  | Ctl/R  | Gui/S  | Alt/T  |   D    |  Vol+  |  Vol-  |   H    | Alt/N  | Gui/E  | Ctl/I  | Sht/O  |
- * |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
- * |   Z    |   X    |   C    |   V    |   B    |  Mic   |  Cam   |   K    |   M    |   ,    |   .    |   ;    |
- * |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
- * |  Ctrl  |  Gui   |  Alt   | Mh/Esc | Num/Sp |    Nav/Space    | Sym/Sp | Hp/Ent |  Shft  |  Tab   | OSL(2) |
- * |----------------------------------------------------------------------------------------------------------------------------|
- */
+/* Colemak */
 	[0] = LAYOUT_planck_mit(
+ // |----------------------------------------------------------------------------------------------------------------------------|
         KC_Q         , KC_W         , KC_F         , KC_P         , KC_G         , KC_MPLY      , KC_MFFD      , KC_J         , KC_L         , KC_U         , KC_Y         , KC_BSPC,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
         LSFT_T(KC_A) , LCTL_T(KC_R) , LGUI_T(KC_S) , LALT_T(KC_T) , KC_D         , KC_VOLD      , KC_VOLU      , KC_H         , RALT_T(KC_N) , RGUI_T(KC_E) , RCTL_T(KC_I) , RSFT_T(KC_O),
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
         KC_Z         , KC_X         , KC_C         , KC_V         , KC_B         , LGUI(KC_D)   , LGUI(KC_E)   , KC_K         , KC_M         , KC_COMM      , KC_DOT       , KC_SCLN,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
         KC_LCTL      , KC_RGUI      , KC_LALT      , MEH_T(KC_ESC), LT(3,KC_SPC) ,         LT(4,KC_SPC)        , LT(2,KC_SPC) , ALL_T(KC_ENT), KC_RSFT      , KC_TAB       , OSL(2)),
+ // |----------------------------------------------------------------------------------------------------------------------------|
 
-/* Qwerty
- * |----------------------------------------------------------------------------------------------------------------------------|
- * |   Q    |   W    |   E    |   R    |   T    |  Play  |  Next  |   Y    |   U    |   I    |   O    |   P    |
- * |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
- * | Sht/A  | Ctl/S  | Gui/D  | Alt/F  |   G    |  Vol+  |  Vol-  |   H    | Alt/J  | Gui/K  | Ctl/L  | Sht/BS |
- * |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
- * |   Z    |   X    |   C    |   V    |   B    |  Mic   |  Cam   |   N    |   M    |   ,    |   .    |   ;    |
- * |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
- * |  Ctrl  |  Gui   |  Alt   | Mh/Esc | Num/Sp |    Nav/Space    | Sym/Sp | Hp/Ent |  Shft  |  Tab   | OSL(2) |
- * |----------------------------------------------------------------------------------------------------------------------------|
- */
+/* Qwerty */
     [1] = LAYOUT_planck_mit(
         KC_Q         , KC_W         , KC_E         , KC_R         , KC_T         , KC_MPLY      , KC_MFFD      , KC_Y         , KC_U         , KC_I         , KC_O         , KC_P,
         LSFT_T(KC_A) , LCTL_T(KC_S) , LGUI_T(KC_D) , LALT_T(KC_F) , KC_G         , KC_VOLD      , KC_VOLU      , KC_H         , RALT_T(KC_J) , RGUI_T(KC_K) , RCTL_T(KC_L) , RSFT_T(KC_BSPC),

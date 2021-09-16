@@ -44,13 +44,15 @@ enum layers {
 #define RGUIT_K RGUI_T(KC_K)
 #define RALTT_J RALT_T(KC_J)
 
-#define MEH_ESC MEH_T(KC_ESC)
-#define HYP_ENT ALL_T(KC_ENT)
+#define NAV_ESC LT(NAVIGATION,KC_ESC)
+#define NAV_ENT LT(NAVIGATION,KC_ENT)
 #define NUM_SPC LT(NUMBERS,KC_SPC)
 #define NAV_SPC LT(NAVIGATION,KC_SPC)
 #define SYM_SPC LT(SYMBOLS,KC_SPC)
+#define MAI_TAB LT(MAINTENANCE,KC_TAB)
+#define MAI_BS LT(MAINTENANCE,KC_BSPC)
 #define NAV_TAB LT(NAVIGATION,KC_TAB)
-#define NAV_BS LT(NAVIGATION,KC_BSPC)
+#define NAV_BS LT(MAINTENANCE,KC_BSPC)
 
 #define LGUI_D LGUI(KC_D)
 #define LGUI_E LGUI(KC_E)
@@ -67,7 +69,7 @@ enum layers {
 #define TO_SYM TO(SYMBOLS)
 #define TO_NUM TO(NUMBERS)
 #define TO_NAV TO(NAVIGATION)
-#define MO_MAI MO(MAINTENANCE)
+#define TO_MAI TO(MAINTENANCE)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -79,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LCTL , KC_RGUI , KC_LALT , MEH_ESC , NUM_SPC ,      NAV_SPC      , SYM_SPC , HYP_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+      KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      NAV_SPC      , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
  // |_______________________________________________________________________________________________________________________|
 
     [QWERTY] = LAYOUT_planck_mit(
@@ -90,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , LGUI_D  , LGUI_E  , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LCTL , KC_RGUI , KC_LALT , MEH_ESC , NUM_SPC ,      NAV_SPC      , SYM_SPC , HYP_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+      KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      NAV_SPC      , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
  // |_______________________________________________________________________________________________________________________|
 
     [SYMBOLS] = LAYOUT_planck_mit(
@@ -101,7 +103,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_HASH , KC_LBRC , KC_RBRC , KC_EXLM , KC_CIRC , XXXXXXX , XXXXXXX , KC_GRV , KC_PIPE , KC_LT    , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , _______ , _______ , _______ , NAV_BS  ,       NAV_BS      , _______ , _______ , _______ , _______ , OSL_NUM),
+      _______ , _______ , _______ , _______ , MAI_BS  ,       MAI_BS      , _______ , _______ , _______ , _______ , OSL_NUM),
  // |_______________________________________________________________________________________________________________________|
 
     [NUMBERS] = LAYOUT_planck_mit(
@@ -112,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_F9   , KC_F10  , KC_F11  , KC_F12  , KC_DOT  , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   , KC_EQL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , _______ , _______ , _______ , _______ ,      NAV_TAB      , NAV_TAB , _______ , _______ , _______ , OSL_NAV),
+      _______ , _______ , _______ , _______ , _______ ,      MAI_TAB      , MAI_TAB , _______ , _______ , _______ , OSL_NAV),
  // |_______________________________________________________________________________________________________________________|
 
  	[NAVIGATION] = LAYOUT_planck_mit(
@@ -121,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_BTN2 , KC_MS_L , KC_MS_D , KC_MS_R , KC_BTN1 , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , KC_PSTE ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , MO_MAI  , XXXXXXX , XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
+      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , _______ , _______ ,      _______      , _______ , _______ , _______ , _______ , OSL_MAI),
  // |_______________________________________________________________________________________________________________________|
@@ -132,7 +134,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       RGB_VAI , RGB_HUI , RGB_SAI , RGB_SPI , TO_NUM  , XXXXXXX , XXXXXXX , TO_SYM  , XXXXXXX , XXXXXXX , BL_ON   , BL_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , MO_MAI  , XXXXXXX , XXXXXXX , TO_NAV  , KC_SLEP , XXXXXXX , NK_ON   , NK_OFF  ,
+      RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , TO_MAI  , XXXXXXX , XXXXXXX , TO_NAV  , KC_SLEP , XXXXXXX , NK_ON   , NK_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , _______ , _______ ,      _______      , _______ , _______ , _______ , _______ , OSL_SYM)
  // |_______________________________________________________________________________________________________________________|

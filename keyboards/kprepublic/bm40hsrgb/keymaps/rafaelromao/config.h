@@ -32,8 +32,9 @@
 #define PERMISSIVE_HOLD
 
 // Allow for a long press to send the shifted version of the key
-#define AUTO_SHIFT_TIMEOUT 150
-#define NO_AUTO_SHIFT_SPECIAL
+// #define AUTO_SHIFT_TIMEOUT 200
+// #define NO_AUTO_SHIFT_SPECIAL
+// #define RETRO_SHIFT
 
 // Mouse key speed and acceleration.
 #undef MOUSEKEY_DELAY

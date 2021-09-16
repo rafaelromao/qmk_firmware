@@ -62,6 +62,8 @@ enum layers {
 
 #define DF_QWER DF(QWERTY)
 #define DF_COLE DF(COLEMAK)
+#define TO_QWER TO(QWERTY)
+#define TO_COLE TO(COLEMAK)
 #define TO_SYM TO(SYMBOLS)
 #define TO_NUM TO(NUMBERS)
 #define TO_NAV TO(NAVIGATION)
@@ -108,27 +110,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_F5   , KC_F6   , KC_F7   , KC_F8   , KC_COMM , XXXXXXX , XXXXXXX , KC_P4   , KC_P5   , KC_P6   , KC_PAST , KC_PLUS ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_F9   , KC_F10  , KC_F11  , KC_F12  , KC_DOT  , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   , KC_PEQL ,
+      KC_F9   , KC_F10  , KC_F11  , KC_F12  , KC_DOT  , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   , KC_EQL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , _______ , _______ ,      NAV_TAB      , NAV_TAB , _______ , _______ , _______ , OSL_NAV),
  // |_______________________________________________________________________________________________________________________|
 
  	[NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_APP  , KC_WH_D , KC_MS_U , KC_WH_U , DF_QWER , XXXXXXX , XXXXXXX , DF_COLE , KC_END  , KC_HOME , KC_INS  , KC_DEL  ,
+      KC_APP  , KC_WH_D , KC_MS_U , KC_WH_U , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_END  , KC_HOME , KC_INS  , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_BTN2 , KC_MS_L , KC_MS_D , KC_MS_R , KC_BTN1 , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , KC_PSTE ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , MO_MAI  , XXXXXXX , XXXXXXX , TO_NAV  , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
+      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , MO_MAI  , XXXXXXX , XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , _______ , _______ ,      _______      , _______ , _______ , _______ , _______ , OSL_MAI),
  // |_______________________________________________________________________________________________________________________|
 
 	[MAINTENANCE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      RGB_TOG , RGB_MOD , BL_ON   , BL_OFF  , DF_QWER , XXXXXXX , XXXXXXX , DF_COLE , XXXXXXX , DEBUG   , EEP_RST , RESET   ,
+      RGB_TOG , RGB_MOD , XXXXXXX , DF_QWER , TO_QWER , XXXXXXX , XXXXXXX , TO_COLE , DF_COLE , DEBUG   , EEP_RST , RESET   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAI , RGB_HUI , RGB_SAI , RGB_SPI , TO_NUM  , XXXXXXX , XXXXXXX , TO_SYM  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      RGB_VAI , RGB_HUI , RGB_SAI , RGB_SPI , TO_NUM  , XXXXXXX , XXXXXXX , TO_SYM  , XXXXXXX , XXXXXXX , BL_ON   , BL_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , MO_MAI  , XXXXXXX , XXXXXXX , TO_NAV  , KC_SLEP , XXXXXXX , NK_ON   , NK_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|

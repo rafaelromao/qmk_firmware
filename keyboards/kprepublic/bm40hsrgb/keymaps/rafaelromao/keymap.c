@@ -46,11 +46,11 @@ enum layers {
 
 #define MEH_ESC MEH_T(KC_ESC)
 #define HYP_ENT ALL_T(KC_ENT)
-#define SPC_NUM LT(NUMBERS,KC_SPC)
-#define SPC_NAV LT(NAVIGATION,KC_SPC)
-#define SPC_SYM LT(SYMBOLS,KC_SPC)
-#define TAB_NAV LT(NAVIGATION,KC_TAB)
-#define BS_NAV LT(NAVIGATION,KC_BSPC)
+#define NUM_SPC LT(NUMBERS,KC_SPC)
+#define NAV_SPC LT(NAVIGATION,KC_SPC)
+#define SYM_SPC LT(SYMBOLS,KC_SPC)
+#define NAV_TAB LT(NAVIGATION,KC_TAB)
+#define NAV_BS LT(NAVIGATION,KC_BSPC)
 
 #define LGUI_D LGUI(KC_D)
 #define LGUI_E LGUI(KC_E)
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LCTL , KC_RGUI , KC_LALT , MEH_ESC , SPC_NUM ,      SPC_NAV      , SPC_SYM , HYP_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+      KC_LCTL , KC_RGUI , KC_LALT , MEH_ESC , NUM_SPC ,      NAV_SPC      , SYM_SPC , HYP_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
  // |_______________________________________________________________________________________________________________________|
 
     [QWERTY] = LAYOUT_planck_mit(
@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , LGUI_D  , LGUI_E  , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LCTL , KC_RGUI , KC_LALT , MEH_ESC , SPC_NUM ,      SPC_NAV      , SPC_SYM , HYP_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+      KC_LCTL , KC_RGUI , KC_LALT , MEH_ESC , NUM_SPC ,      NAV_SPC      , SYM_SPC , HYP_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
  // |_______________________________________________________________________________________________________________________|
 
     [SYMBOLS] = LAYOUT_planck_mit(
@@ -99,7 +99,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_HASH , KC_LBRC , KC_RBRC , KC_EXLM , KC_CIRC , XXXXXXX , XXXXXXX , KC_GRV , KC_PIPE , KC_LT    , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , _______ , _______ , _______ , BS_NAV  ,       BS_NAV      , _______ , _______ , _______ , _______ , OSL_NUM),
+      _______ , _______ , _______ , _______ , NAV_BS  ,       NAV_BS      , _______ , _______ , _______ , _______ , OSL_NUM),
  // |_______________________________________________________________________________________________________________________|
 
     [NUMBERS] = LAYOUT_planck_mit(
@@ -110,7 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_F9   , KC_F10  , KC_F11  , KC_F12  , KC_DOT  , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   , KC_PEQL ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , _______ , _______ , _______ , _______ ,      TAB_NAV      , TAB_NAV , _______ , _______ , _______ , OSL_NAV),
+      _______ , _______ , _______ , _______ , _______ ,      NAV_TAB      , NAV_TAB , _______ , _______ , _______ , OSL_NAV),
  // |_______________________________________________________________________________________________________________________|
 
  	[NAVIGATION] = LAYOUT_planck_mit(

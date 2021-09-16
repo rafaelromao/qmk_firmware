@@ -64,8 +64,8 @@ enum layers {
 #define DF_COLE DF(COLEMAK)
 #define TO_SYM TO(SYMBOLS)
 #define TO_NUM TO(NUMBERS)
-#define TT_NAV TO(NAVIGATION)
-#define TT_MAI TO(MAINTENANCE)
+#define TO_NAV TO(NAVIGATION)
+#define MO_MAI MO(MAINTENANCE)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -119,19 +119,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_BTN2 , KC_MS_L , KC_MS_D , KC_MS_R , KC_BTN1 , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , KC_PSTE ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , TT_MAI  , XXXXXXX , XXXXXXX , TT_NAV  , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
+      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , MO_MAI  , XXXXXXX , XXXXXXX , TO_NAV  , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , _______ , _______ ,      _______      , _______ , _______ , _______ , _______ , OSL_MAI),
  // |_______________________________________________________________________________________________________________________|
 
 	[MAINTENANCE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      RGB_TOG , RGB_MOD , BL_ON   , BL_OFF  , _______ , XXXXXXX , XXXXXXX , _______ , XXXXXXX , DEBUG   , EEP_RST , RESET   ,
+      RGB_TOG , RGB_MOD , BL_ON   , BL_OFF  , DF_QWER , XXXXXXX , XXXXXXX , DF_COLE , XXXXXXX , DEBUG   , EEP_RST , RESET   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       RGB_VAI , RGB_HUI , RGB_SAI , RGB_SPI , TO_NUM  , XXXXXXX , XXXXXXX , TO_SYM  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , _______ , XXXXXXX , XXXXXXX , _______ , KC_SLEP , XXXXXXX , NK_ON   , NK_OFF  ,
+      RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , MO_MAI  , XXXXXXX , XXXXXXX , TO_NAV  , KC_SLEP , XXXXXXX , NK_ON   , NK_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , _______ , _______ ,      _______      , _______ , _______ , _______ , _______ , OSL_SYM)
  // |_______________________________________________________________________________________________________________________|
 };
+
+void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+
+     if (host_keyboard_led_state().caps_lock) {
+         RGB_MATRIX_INDICATOR_SET_COLOR(0, 255, 255, 255);
+     } else {
+         RGB_MATRIX_INDICATOR_SET_COLOR(0, 0, 0, 0);
+     }
+
+     switch(get_highest_layer(layer_state|default_layer_state)) {
+          case QWERTY:
+               rgb_matrix_set_color(4, RGB_WHITE);
+               break;
+          case COLEMAK:
+               rgb_matrix_set_color(7, RGB_WHITE);
+               break;
+          case SYMBOLS:
+               rgb_matrix_set_color(19, RGB_WHITE);
+               break;
+          case NUMBERS:
+               rgb_matrix_set_color(16, RGB_WHITE);
+               break;
+          case NAVIGATION:
+               rgb_matrix_set_color(31, RGB_WHITE);
+               break;
+          case MAINTENANCE:
+               rgb_matrix_set_color(28, RGB_RED);
+               break;
+          default:
+               break;
+    }
+}

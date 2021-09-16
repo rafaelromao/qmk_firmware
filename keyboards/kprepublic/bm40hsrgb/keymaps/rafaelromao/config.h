@@ -15,9 +15,12 @@
   * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-// default but used in macros
+// Allow toggling layers with two taps
+#define TAPPING_TOGGLE 2
+
+// make it easier to work with tap hold
 #undef TAPPING_TERM
-#define TAPPING_TERM 300
+#define TAPPING_TERM 200
 
 // Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
@@ -27,6 +30,10 @@
 
 // Apply the modifier on keys that are tapped during a short hold of a modtap
 #define PERMISSIVE_HOLD
+
+// Allow for a long press to send the shifted version of the key
+#define AUTO_SHIFT_TIMEOUT 150
+#define NO_AUTO_SHIFT_SPECIAL
 
 // Mouse key speed and acceleration.
 #undef MOUSEKEY_DELAY
@@ -41,6 +48,9 @@
 #define MOUSEKEY_TIME_TO_MAX    64
 
 // Disable all RGB effects
+#undef RGBLIGHT_ANIMATIONS
+#undef RGBLIGHT_LAYERS
+
 #define DISABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
 #define DISABLE_RGB_MATRIX_ALPHAS_MODS
 #define DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN

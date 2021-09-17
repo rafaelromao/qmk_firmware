@@ -44,6 +44,12 @@ enum layers {
 #define RGUIT_K RGUI_T(KC_K)
 #define RALTT_J RALT_T(KC_J)
 
+#define LSGT_Z LSG_T(KC_Z)
+#define LCGT_X MT(MOD_LCTL | MOD_LGUI, KC_X)
+#define MEHT_C MEH_T(KC_C)
+#define LAGT_V LAG_T(KC_V)
+#define HYPT_B HYPR_T(KC_B)
+
 #define NAV_ESC LT(NAVIGATION,KC_ESC)
 #define NAV_ENT LT(NAVIGATION,KC_ENT)
 #define NUM_SPC LT(NUMBERS,KC_SPC)
@@ -77,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSFTT_A , LCTLT_R , LGUIT_S , LALTT_T , KC_D    , KC_VOLD , KC_VOLU , KC_H    , RALTT_N , RGUIT_E , RCTLT_I , RSFTT_O ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+      LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
  // |_______________________________________________________________________________________________________________________|
@@ -88,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSFTT_A , LCTLT_S , LGUIT_D , LALTT_F , KC_G    , KC_VOLD , KC_VOLU , KC_H    , RALTT_J , RGUIT_K , RCTLT_L , RSFTT_BS,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , LGUI_D  , LGUI_E  , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+      LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
  // |_______________________________________________________________________________________________________________________|

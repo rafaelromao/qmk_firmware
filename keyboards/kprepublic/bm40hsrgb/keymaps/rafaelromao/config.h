@@ -30,6 +30,7 @@
 
 // Apply the modifier on keys that are tapped during a short hold of a modtap
 #define PERMISSIVE_HOLD
+#define HOLD_ON_OTHER_KEY_PRESS
 
 // Allow for a long press to send the shifted version of the key
 // #define AUTO_SHIFT_TIMEOUT 200

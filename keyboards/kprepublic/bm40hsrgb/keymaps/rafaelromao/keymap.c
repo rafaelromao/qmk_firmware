@@ -123,11 +123,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  	[NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_APP  , KC_WH_D , KC_MS_U , KC_WH_U , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_END  , KC_HOME , KC_INS  , KC_DEL  ,
+      KC_APP  , KC_WH_D , KC_MS_U , KC_WH_U , KC_LSFT , XXXXXXX , XXXXXXX , KC_LALT , KC_END  , KC_HOME , KC_INS  , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_BTN2 , KC_MS_L , KC_MS_D , KC_MS_R , KC_BTN1 , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , KC_PSTE ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
+      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , KC_LCTL , XXXXXXX , XXXXXXX , KC_LGUI , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , _______ , _______ ,      KC_SPC       , _______ , _______ , _______ , _______ , OSL_MAI),
  // |_______________________________________________________________________________________________________________________|

@@ -17,8 +17,7 @@
 #include QMK_KEYBOARD_H
 
 enum layers {
-  COLEMAK,
-  QWERTY,
+  BASE,
   SYMBOLS,
   NUMBERS,
   NAVIGATION,
@@ -66,10 +65,7 @@ enum layers {
 #define OSL_NAV OSL(NAVIGATION)
 #define OSL_MAI OSL(MAINTENANCE)
 
-#define DF_QWER DF(QWERTY)
-#define DF_COLE DF(COLEMAK)
-#define TO_QWER TO(QWERTY)
-#define TO_COLE TO(COLEMAK)
+#define TO_BASE TO(BASE)
 #define TO_SYM TO(SYMBOLS)
 #define TO_NUM TO(NUMBERS)
 #define TO_NAV TO(NAVIGATION)
@@ -77,18 +73,77 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-	[COLEMAK] = LAYOUT_planck_mit(
- // |_______________________________________________________________________________________________________________________|
-      KC_Q    , KC_W    , KC_F    , KC_P    , KC_G    , KC_MPLY , KC_MFFD , KC_J    , KC_L    , KC_U    , KC_Y    , KC_BSPC ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      LSFTT_A , LCTLT_R , LGUIT_S , LALTT_T , KC_D    , KC_VOLD , KC_VOLU , KC_H    , RALTT_N , RGUIT_E , RCTLT_I , RSFTT_O ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
- // |_______________________________________________________________________________________________________________________|
+// This comment section maps the transition from qwerty to colemak via tarmak
+// Start from the bottom and replace the mappings in the base layer, one at a time, until you reach Colemak
 
-    [QWERTY] = LAYOUT_planck_mit(
+//     [TARMAK5=COLEMAK] = LAYOUT_planck_mit(
+//  // |_______________________________________________________________________________________________________________________|
+//       KC_Q    , KC_W    , KC_F    , KC_P    , KC_G    , KC_MPLY , KC_MFFD , KC_J    , KC_L    , KC_U    , KC_Y    , KC_BSPC ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSFTT_A , LCTLT_R , LGUIT_S , LALTT_T , KC_D    , KC_VOLD , KC_VOLU , KC_H    , RALTT_N , RGUIT_E , RCTLT_I , RSFTT_O ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+//  // |_______________________________________________________________________________________________________________________|
+
+//     [TARMAK4] = LAYOUT_planck_mit(
+//  // |_______________________________________________________________________________________________________________________|
+//       KC_Q    , KC_W    , KC_F    , KC_P    , KC_G    , KC_MPLY , KC_MFFD , KC_J    , KC_U    , KC_I    , KC_Y    , KC_BSPC ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSFTT_A , LCTLT_R , LGUIT_S , LALTT_T , KC_D    , KC_VOLD , KC_VOLU , KC_H    , RALTT_N , RGUIT_E , RCTLT_L , RSFTT_O ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+//  // |_______________________________________________________________________________________________________________________|
+
+//     [TARMAK3] = LAYOUT_planck_mit(
+//  // |_______________________________________________________________________________________________________________________|
+//       KC_Q    , KC_W    , KC_F    , KC_J    , KC_G    , KC_MPLY , KC_MFFD , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSFTT_A , LCTLT_R , LGUIT_S , LALTT_T , KC_D    , KC_VOLD , KC_VOLU , KC_H    , RALTT_N , RGUIT_E , RCTLT_L , RSFTT_BS,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+//  // |_______________________________________________________________________________________________________________________|
+
+//     [TARMAK2] = LAYOUT_planck_mit(
+//  // |_______________________________________________________________________________________________________________________|
+//       KC_Q    , KC_W    , KC_F    , KC_R    , KC_G    , KC_MPLY , KC_MFFD , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSFTT_A , LCTLT_S , LGUIT_D , LALTT_T , KC_J    , KC_VOLD , KC_VOLU , KC_H    , RALTT_N , RGUIT_E , RCTLT_L , RSFTT_BS,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+//  // |_______________________________________________________________________________________________________________________|
+
+//     [TARMAK1] = LAYOUT_planck_mit(
+//  // |_______________________________________________________________________________________________________________________|
+//       KC_Q    , KC_W    , KC_J    , KC_R    , KC_T    , KC_MPLY , KC_MFFD , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSFTT_A , LCTLT_S , LGUIT_D , LALTT_F , KC_G    , KC_VOLD , KC_VOLU , KC_H    , RALTT_N , RGUIT_E , RCTLT_L , RSFTT_BS,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_K    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+//  // |_______________________________________________________________________________________________________________________|
+
+//     [QWERTY] = LAYOUT_planck_mit(
+//  // |_______________________________________________________________________________________________________________________|
+//       KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , KC_MPLY , KC_MFFD , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSFTT_A , LCTLT_S , LGUIT_D , LALTT_F , KC_G    , KC_VOLD , KC_VOLU , KC_H    , RALTT_J , RGUIT_K , RCTLT_L , RSFTT_BS,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , LGUI_D  , LGUI_E  , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+//  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+//       KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+//  // |_______________________________________________________________________________________________________________________|
+
+
+    [BASE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , KC_MPLY , KC_MFFD , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -134,7 +189,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[MAINTENANCE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      RGB_TOG , RGB_MOD , XXXXXXX , DF_QWER , TO_QWER , XXXXXXX , XXXXXXX , TO_COLE , DF_COLE , DEBUG   , EEP_RST , RESET   ,
+      RGB_TOG , RGB_MOD , XXXXXXX , XXXXXXX , TO_BASE , XXXXXXX , XXXXXXX , TO_BASE , XXXXXXX , DEBUG   , EEP_RST , RESET   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       RGB_VAI , RGB_HUI , RGB_SAI , RGB_SPI , TO_NUM  , XXXXXXX , XXXXXXX , TO_SYM  , XXXXXXX , XXXXXXX , BL_ON   , BL_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -147,18 +202,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
      if (host_keyboard_led_state().caps_lock) {
-         RGB_MATRIX_INDICATOR_SET_COLOR(0, 255, 255, 255);
+         rgb_matrix_set_color(0, RGB_WHITE);
      } else {
-         RGB_MATRIX_INDICATOR_SET_COLOR(0, 0, 0, 0);
+         rgb_matrix_set_color(0, RGB_OFF);
      }
 
      switch(get_highest_layer(layer_state|default_layer_state)) {
-          case QWERTY:
-               rgb_matrix_set_color(4, RGB_WHITE);
-               break;
-          case COLEMAK:
-               rgb_matrix_set_color(7, RGB_WHITE);
-               break;
           case SYMBOLS:
                rgb_matrix_set_color(19, RGB_WHITE);
                break;

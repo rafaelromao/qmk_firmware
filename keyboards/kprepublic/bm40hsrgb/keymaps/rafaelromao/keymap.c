@@ -71,6 +71,8 @@ enum layers {
 #define TO_NAV TO(NAVIGATION)
 #define TO_MAI TO(MAINTENANCE)
 
+// Layout: http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [BASE] = LAYOUT_planck_mit(
@@ -81,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , HYPR_A  , HYPR_V  , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LCTL , KC_RGUI , KC_LALT , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_RSFT , KC_TAB  , OSL_SYM),
+      KC_RSFT , KC_LCTL , KC_RGUI , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_LALT , KC_TAB  , OSL_SYM),
  // |_______________________________________________________________________________________________________________________|
 
     [SYMBOLS] = LAYOUT_planck_mit(

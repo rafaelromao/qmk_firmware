@@ -18,9 +18,10 @@
 
 enum layers {
   BASE,
-  SYMBOLS,
   NUMBERS,
+  SYMBOLS,
   NAVIGATION,
+  MOUSE,
   MAINTENANCE
 };
 
@@ -49,13 +50,21 @@ enum layers {
 #define LAGT_V LAG_T(KC_V)
 #define HYPT_B HYPR_T(KC_B)
 
+#define LCGT_NO MT(MOD_LCTL | MOD_LGUI, KC_NO)
+#define LSGT_NO LSG_T(KC_NO)
+#define LAGT_NO LAG_T(KC_NO)
+#define MEHT_NO MEH_T(KC_NO)
+#define HYPT_NO HYPR_T(KC_NO)
+
 #define NAV_ESC LT(NAVIGATION,KC_ESC)
-#define NAV_ENT LT(NAVIGATION,KC_ENT)
 #define NUM_SPC LT(NUMBERS,KC_SPC)
-#define NAV_SPC LT(NAVIGATION,KC_SPC)
 #define SYM_SPC LT(SYMBOLS,KC_SPC)
-#define MAI_TAB LT(MAINTENANCE,KC_TAB)
-#define MAI_BS LT(MAINTENANCE,KC_BSPC)
+#define MOU_ENT LT(MOUSE,KC_ENT)
+#define NUM_BSP LT(NUMBERS,KC_BSPC)
+#define SYM_TAB LT(SYMBOLS,KC_TAB)
+
+#define MAI_ESC LT(MAINTENANCE,KC_ESC)
+#define MAI_ENT LT(MAINTENANCE,KC_ENT)
 
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
@@ -63,19 +72,18 @@ enum layers {
 #define OSL_SYM OSL(SYMBOLS)
 #define OSL_NUM OSL(NUMBERS)
 #define OSL_NAV OSL(NAVIGATION)
+#define OSL_MOU OSL(MOUSE)
 #define OSL_MAI OSL(MAINTENANCE)
 
-#define TO_BASE TO(BASE)
 #define TO_SYM TO(SYMBOLS)
 #define TO_NUM TO(NUMBERS)
 #define TO_NAV TO(NAVIGATION)
+#define TO_MOU TO(MOUSE)
 #define TO_MAI TO(MAINTENANCE)
-
-// Layout: http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    [BASE] = LAYOUT_planck_mit(
+     [BASE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , KC_MPLY , KC_MNXT , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -83,51 +91,62 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , HYPR_A  , HYPR_V  , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_RSFT , KC_LCTL , KC_RGUI , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , NAV_ENT , KC_LALT , KC_TAB  , OSL_SYM),
+      KC_RSFT , KC_LCTL , KC_RGUI , NAV_ESC , NUM_SPC ,       KC_SPC      , SYM_SPC , MOU_ENT , KC_LALT , KC_TAB  , OSL_NUM),
  // |_______________________________________________________________________________________________________________________|
 
-    [SYMBOLS] = LAYOUT_planck_mit(
+     [NUMBERS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_CAPS , KC_LCBR , KC_RCBR , KC_DLR  , KC_PERC , XXXXXXX , XXXXXXX , KC_BSLS , KC_UNDS , KC_QUES , KC_SLSH , KC_MINS ,
+      XXXXXXX , KC_F1   , KC_F2   , KC_F3   , KC_F4   , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , XXXXXXX , 
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , KC_F5   , KC_F6   , KC_F7   , KC_F8   , XXXXXXX , XXXXXXX , XXXXXXX , KC_P4   , KC_P5   , KC_P6   , KC_PDOT ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , KC_F9   , KC_F10  , KC_F11  , KC_F12  , XXXXXXX , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      _______ , _______ , _______ , _______ , _______ ,      KC_TAB       , SYM_TAB , _______ , _______ , _______ , OSL_SYM),
+ // |_______________________________________________________________________________________________________________________|
+
+     [SYMBOLS] = LAYOUT_planck_mit(
+ // |_______________________________________________________________________________________________________________________|
+      XXXXXXX , KC_LCBR , KC_RCBR , KC_DLR  , KC_PERC , XXXXXXX , XXXXXXX , KC_BSLS , KC_UNDS , KC_LT   , KC_GT   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_AT   , KC_LPRN , KC_RPRN , KC_EQL  , KC_QUOT , XXXXXXX , XXXXXXX , KC_TILD , KC_AMPR , KC_DQUO , KC_ASTR , KC_PLUS ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_HASH , KC_LBRC , KC_RBRC , KC_EXLM , KC_CIRC , XXXXXXX , XXXXXXX , KC_GRV , KC_PIPE , KC_LT    , KC_GT   , KC_COLN ,
+      KC_HASH , KC_LBRC , KC_RBRC , KC_EXLM , KC_CIRC , XXXXXXX , XXXXXXX , KC_COLN , KC_PIPE , KC_QUES , KC_SLSH , KC_MINS ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , _______ , _______ , _______ , MAI_BS  ,      KC_BSPC      , _______ , _______ , _______ , _______ , OSL_NUM),
- // |_______________________________________________________________________________________________________________________|
-
-    [NUMBERS] = LAYOUT_planck_mit(
- // |_______________________________________________________________________________________________________________________|
-      KC_F1   , KC_F2   , KC_F3   , KC_F4   , KC_PERC , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , KC_PSLS , KC_MINS ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_F5   , KC_F6   , KC_F7   , KC_F8   , KC_COMM , XXXXXXX , XXXXXXX , KC_P4   , KC_P5   , KC_P6   , KC_PAST , KC_PLUS ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_F9   , KC_F10  , KC_F11  , KC_F12  , KC_DOT  , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   , KC_EQL  ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , _______ , _______ , _______ , _______ ,      KC_TAB       , MAI_TAB , _______ , _______ , _______ , OSL_NAV),
+      _______ , _______ , _______ , _______ , NUM_BSP ,      KC_BSPC      , _______ , _______ , _______ , _______ , OSL_NAV),
  // |_______________________________________________________________________________________________________________________|
 
  	[NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_APP  , KC_WH_D , KC_MS_U , KC_WH_U , KC_LSFT , XXXXXXX , XXXXXXX , KC_LALT , KC_END  , KC_HOME , KC_INS  , KC_DEL  ,
+      XXXXXXX , C(KC_X) , C(KC_C) , C(KC_V) , KC_LOCK , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_END  , KC_HOME , XXXXXXX ,  
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_BTN2 , KC_MS_L , KC_MS_D , KC_MS_R , KC_BTN1 , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT , KC_PSTE ,
+      KC_LSFT , KC_LCTL , KC_LGUI , KC_LALT , KC_LEAD , XXXXXXX , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LEAD , KC_ACL0 , KC_ACL1 , KC_ACL2 , KC_LCTL , XXXXXXX , XXXXXXX , KC_LGUI , KC_PGDN , KC_PGUP , KC_CUT  , KC_COPY ,
+      LSGT_NO , LCGT_NO , MEHT_NO , LAGT_NO , HYPT_NO , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_PGDN , KC_PGUP , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , _______ , _______ , _______ , _______ ,      KC_SPC       , _______ , _______ , _______ , _______ , OSL_MAI),
+      _______ , _______ , _______ , _______ , _______ ,      KC_SPC       , _______ , MAI_ENT , _______ , _______ , OSL_MOU),
+ // |_______________________________________________________________________________________________________________________|
+
+ 	[MOUSE] = LAYOUT_planck_mit(
+ // |_______________________________________________________________________________________________________________________|
+      XXXXXXX , XXXXXXX , KC_MS_U , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_END  , KC_HOME , KC_INS  , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      KC_BTN2 , KC_MS_L , KC_MS_D , KC_MS_R , KC_GRV  , XXXXXXX , XXXXXXX , XXXXXXX , KC_ACL0 , KC_ACL1 , KC_ACL2 , KC_BTN1 ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      KC_LSFT , KC_LCTL , KC_LGUI , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      _______ , _______ , _______ , MAI_ESC , _______ ,      KC_SPC       , _______ , _______ , _______ , _______ , OSL_MAI),
  // |_______________________________________________________________________________________________________________________|
 
 	[MAINTENANCE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      RGB_TOG , RGB_MOD , XXXXXXX , XXXXXXX , TO_BASE , XXXXXXX , XXXXXXX , TO_BASE , XXXXXXX , DEBUG   , EEP_RST , RESET   ,
+      XXXXXXX , XXXXXXX , RGB_TOG , RGB_MOD , TO_MAI  , XXXXXXX , XXXXXXX , RESET   , DEBUG   , EEP_RST , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       RGB_VAI , RGB_HUI , RGB_SAI , RGB_SPI , TO_NUM  , XXXXXXX , XXXXXXX , TO_SYM  , XXXXXXX , XXXXXXX , BL_ON   , BL_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , TO_MAI  , XXXXXXX , XXXXXXX , TO_NAV  , KC_SLEP , XXXXXXX , NK_ON   , NK_OFF  ,
+      RGB_VAD , RGB_HUD , RGB_SAD , RGB_SPD , TO_NAV  , XXXXXXX , XXXXXXX , TO_MOU  , KC_SLEP , XXXXXXX , NK_ON   , NK_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , _______ , _______ , _______ , _______ ,      KC_SPC       , _______ , _______ , _______ , _______ , OSL_SYM)
+      _______ , _______ , _______ , _______ , _______ ,      KC_SPC       , _______ , _______ , _______ , _______ , OSL_NUM)
  // |_______________________________________________________________________________________________________________________|
 
 };
@@ -135,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
      if (host_keyboard_led_state().caps_lock) {
-         rgb_matrix_set_color(0, RGB_WHITE);
+         rgb_matrix_set_color(7, RGB_WHITE);
      }
 
      switch(get_highest_layer(layer_state|default_layer_state)) {
@@ -146,10 +165,14 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                rgb_matrix_set_color(16, RGB_WHITE);
                break;
           case NAVIGATION:
+               rgb_matrix_set_color(28, RGB_WHITE);
+               break;
+          case MOUSE:
                rgb_matrix_set_color(31, RGB_WHITE);
                break;
           case MAINTENANCE:
-               rgb_matrix_set_color(28, RGB_RED);
+               rgb_matrix_set_color(4, RGB_WHITE);
+               rgb_matrix_set_color(7, RGB_RED);
                break;
           default:
                break;

@@ -2,18 +2,18 @@
 
 ## A 34 key split keyboard on a planck platform, optimized for programmers.
 
-- All black keys (two center columns, the center space bar, and the 3 outer keys in the last row) are disabled.
+- All black keys (two center columns, the center space bar, and the 6 outer keys in the last row) are disabled.
 - Home row mods make modifiers easier to reach.
+- Dedicated modifier keys are available on navigation and mouse layers.
 - The two keys on each thumb cluster control layer transitions, esc, enter, space, tab and backspace.
   - Esc activates the navigation layer, when held.
-  - Left space activates the number layer, when held.
-  - Right space activates the symbol layer, when held.
-  - Enter activates the mouse layer, when held.
+  - Left space activates the number layer.
+  - Right space activates the symbol layer.
+  - Enter activates the mouse layer.
   - Holding left space followed by right space allows accessing the symbol layer from the number layer.
   - Holding both esc and enter will activate the maintenance layer.
 - Use of the two extreme top keys (Q and P on QWERTY) is reduced.
 - All symbols are conveniently placed for programming.
-- Dedicated modifier keys are available on navigation and mouse layers.
 - From the maintenance layer, all other layers can be toggled on.
 
 ### Compile

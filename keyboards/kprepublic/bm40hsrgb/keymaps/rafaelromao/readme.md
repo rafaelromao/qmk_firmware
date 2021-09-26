@@ -4,7 +4,7 @@
 
 - All black keys (two center columns, the center space bar, and the 6 outer keys in the last row) are disabled.
 - Home row mods make modifiers easier to reach.
-- Dedicated modifier keys are available on navigation, mouse and number and function layers.
+- Dedicated modifier keys are available on navigation, mouse, number and function layers.
 - The two keys on each thumb cluster control layer transitions, esc, enter, space, tab and backspace.
   - Esc activates the navigation layer, when held.
   - Left space activates the number layer.

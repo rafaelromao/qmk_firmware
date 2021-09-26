@@ -21,6 +21,7 @@
 #define TAPPING_FORCE_HOLD
 #define PERMISSIVE_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS
+#define TAPPING_TOGGLE 2
 // #define RETRO_TAPPING
 
 // Allow for a long press to send the shifted version of the key

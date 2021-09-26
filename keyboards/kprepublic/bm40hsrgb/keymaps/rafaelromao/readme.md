@@ -14,7 +14,9 @@
   - Holding both esc and enter will activate the maintenance layer.
 - Use of the two extreme top keys (Q and P on QWERTY) is reduced.
 - All symbols are conveniently placed for programming.
-- From the maintenance layer, all other layers can be toggled on.
+- Dedicated modifier keys are available on navigation and mouse layers.
+- From the maintenance layer, all primary layers can be toggled on.
+  - Function and media layers are secondary and can only be activated from the number layer
 
 ### Compile
 
@@ -28,4 +30,4 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/LSCPmvW.png)
+![img](https://i.imgur.com/t6VDthS.png)

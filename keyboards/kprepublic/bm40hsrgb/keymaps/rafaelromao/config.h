@@ -21,7 +21,7 @@
 #define TAPPING_FORCE_HOLD
 #define PERMISSIVE_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS
-#define RETRO_TAPPING
+// #define RETRO_TAPPING
 
 // Allow for a long press to send the shifted version of the key
 // #define AUTO_SHIFT_TIMEOUT 200

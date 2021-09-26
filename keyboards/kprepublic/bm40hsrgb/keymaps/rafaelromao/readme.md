@@ -2,9 +2,8 @@
 
 ## A 34 key split keyboard on a planck platform, optimized for programmers.
 
-- All black keys (two center columns, the center space bar, and the 3 outer keys in the last row) are dispensable.
+- All black keys (two center columns, the center space bar, and the 3 outer keys in the last row) are disabled.
 - Home row mods make modifiers easier to reach.
-- The esc key will send esc when tapped and backtick when shift is held.
 - The two keys on each thumb cluster control layer transitions, esc, enter, space, tab and backspace.
   - Esc activates the navigation layer, when held.
   - Left space activates the number layer, when held.
@@ -29,4 +28,4 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/CWQcK0f.png)
+![img](https://i.imgur.com/LSCPmvW.png)

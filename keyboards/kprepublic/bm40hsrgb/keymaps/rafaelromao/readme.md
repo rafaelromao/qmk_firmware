@@ -14,7 +14,7 @@
   - Holding both esc and enter will activate the maintenance layer.
 - Use of the two extreme top keys (Q and P on QWERTY) is reduced.
 - All symbols are conveniently placed for programming.
-- Dedicated modifier keys are available on navigation and mouse layers.
+- Dedicated modifier keys are available on navigation, mouse and number and function layers.
 - From the maintenance layer, all primary layers can be toggled on.
   - Function and media layers are secondary and can only be activated from the number layer
 

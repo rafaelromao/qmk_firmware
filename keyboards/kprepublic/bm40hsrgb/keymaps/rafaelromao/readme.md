@@ -5,11 +5,13 @@
 - All black keys (two center columns, the center space bar, and the 6 outer keys in the last row) are disabled.
 - Home row mods make modifiers easier to reach.
 - Dedicated modifier keys are available on navigation, mouse, number and function layers.
-- The two keys on each thumb cluster control layer transitions, esc, enter, space, tab and backspace.
-  - Esc activates the navigation layer, when held.
-  - Left space activates the number layer.
-  - Right space activates the symbol layer.
-  - Enter activates the mouse layer.
+- The two keys on each thumb cluster control layer transitions, space, tab and backspace.
+  - Outer left space activates the navigation layer, when held.
+    - On this layer, left pinky key acts as Esc when tapped and shift when held.
+  - Inner left space activates the number layer.
+  - Inner right space activates the symbol layer.
+  - Outer right activates the mouse layer.
+    - On this layer, right pinky key acts as Enter when tapped and shift when held.
   - Holding left space followed by right space allows accessing the symbol layer from the number layer.
   - Holding both esc and enter will activate the maintenance layer.
 - Use of the two extreme top keys (Q and P on QWERTY) is reduced.

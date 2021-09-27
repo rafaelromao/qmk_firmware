@@ -29,28 +29,30 @@ enum layers {
 
 #define LSFTT_A LSFT_T(KC_A)
 #define LCTLT_R LCTL_T(KC_R)
-#define LGUIT_S LGUI_T(KC_S)
-#define LALTT_T LALT_T(KC_T)
+#define LALTT_S LALT_T(KC_S)
+#define LGUIT_T LGUI_T(KC_T)
 
 #define LCTLT_S LCTL_T(KC_S)
-#define LGUIT_D LGUI_T(KC_D)
-#define LALTT_F LALT_T(KC_F)
+#define LALTT_D LALT_T(KC_D)
+#define LGUIT_F LGUI_T(KC_F)
 
 #define RSFTT_O RSFT_T(KC_O)
 #define RCTLT_I RCTL_T(KC_I)
-#define RGUIT_E RGUI_T(KC_E)
-#define RALTT_N RALT_T(KC_N)
+#define RALTT_E RALT_T(KC_E)
+#define RGUIT_N RGUI_T(KC_N)
 
 #define RSFTT_BS RSFT_T(KC_BSPC)
 #define RCTLT_L RCTL_T(KC_L)
-#define RGUIT_K RGUI_T(KC_K)
-#define RALTT_J RALT_T(KC_J)
+#define RALTT_K RALT_T(KC_K)
+#define RGUIT_J RGUI_T(KC_J)
 
 #define LSGT_Z LSG_T(KC_Z)
 #define LCGT_X MT(MOD_LCTL | MOD_LGUI, KC_X)
-#define MEHT_C MEH_T(KC_C)
-#define LAGT_V LAG_T(KC_V)
-#define HYPT_B HYPR_T(KC_B)
+#define LAGT_C LAG_T(KC_C)
+#define MEHT_E MEH_T(KC_E)
+#define HYPT_R HYPR_T(KC_R)
+#define MEHT_I MEH_T(KC_I)
+#define HYPT_U HYPR_T(KC_U)
 
 #define LCGT_NO MT(MOD_LCTL | MOD_LGUI, KC_NO)
 #define LSGT_NO LSG_T(KC_NO)
@@ -84,44 +86,44 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [BASE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , XXXXXXX , XXXXXXX , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
+      KC_Q    , KC_W    , MEHT_E  , HYPT_R  , KC_T    , XXXXXXX , XXXXXXX , KC_Y    , HYPT_U  , MEHT_I  , KC_O    , KC_P    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      LSFTT_A , LCTLT_S , LGUIT_D , LALTT_F , KC_G    , XXXXXXX , XXXXXXX , KC_H    , RALTT_J , RGUIT_K , RCTLT_L , RSFTT_BS,
+      LSFTT_A , LCTLT_S , LALTT_D , LGUIT_F , KC_G    , XXXXXXX , XXXXXXX , KC_H    , RGUIT_J , RALTT_K , RCTLT_L , RSFTT_BS,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      LSGT_Z  , LCGT_X  , MEHT_C  , LAGT_V  , HYPT_B  , XXXXXXX , XXXXXXX , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+      LSGT_Z  , LCGT_X  , LAGT_C  , KC_V    , KC_B    , XXXXXXX , XXXXXXX , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , MOU_ENT , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [NUMBERS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , XXXXXXX , 
+      XXXXXXX , XXXXXXX , MO_MED  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , XXXXXXX , 
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LGUI , KC_LALT , TT_FUN  , XXXXXXX , XXXXXXX , KC_COMM , KC_P4   , KC_P5   , KC_P6   , KC_DOT  ,
+      KC_LSFT , KC_LCTL , KC_LALT , TT_FUN  , KC_GRV  , XXXXXXX , XXXXXXX , KC_COMM , KC_P4   , KC_P5   , KC_P6   , KC_DOT  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , MO_MED  , XXXXXXX , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   ,
+      G(KC_Z) , G(KC_X) , G(KC_C) , G(KC_V) , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , SYM_TAB , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [FUCTIONS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , KC_F3   , KC_F4   , XXXXXXX , 
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F7   , KC_F8   , KC_F9   , XXXXXXX , 
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LGUI , KC_LALT , TT_FUN  , XXXXXXX , XXXXXXX , KC_F5   , KC_F6   , KC_F7   , KC_F8   , XXXXXXX ,
+      KC_LSFT , KC_LCTL , KC_LALT , TT_FUN  , XXXXXXX , XXXXXXX , XXXXXXX , KC_F10  , KC_F4   , KC_F5   , KC_F6   , KC_F11  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F9   , KC_F10  , KC_F11  , KC_F12  , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , KC_F3   , KC_F12  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , SYM_TAB , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [MEDIA] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , XXXXXXX , XXXXXXX , 
+      XXXXXXX , XXXXXXX , MO_MED  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , 
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , HYPR_A  , KC_MUTE , KC_VOLD , KC_VOLU , HYPR_V  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , MO_MED  , XXXXXXX , XXXXXXX , XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MPLY , KC_MSTP , KC_MPRV , KC_MNXT , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , SYM_TAB , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -139,22 +141,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  	[NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , G(KC_X) , G(KC_C) , G(KC_V) , KC_LOCK , XXXXXXX , XXXXXXX , KC_CAPS , XXXXXXX , KC_END  , KC_HOME , XXXXXXX ,  
+      XXXXXXX , KC_LOCK , MEHT_NO , HYPT_NO , XXXXXXX , XXXXXXX , XXXXXXX , KC_CAPS , XXXXXXX , KC_END  , KC_HOME , XXXXXXX ,  
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LGUI , KC_LALT , KC_LEAD , XXXXXXX , XXXXXXX , KC_TAB  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
+      KC_LSFT , KC_LCTL , KC_LALT , KC_LGUI , KC_GRV  , XXXXXXX , XXXXXXX , KC_TAB  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      LSGT_NO , LCGT_NO , MEHT_NO , LAGT_NO , HYPT_NO , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_PGDN , KC_PGUP , KC_DEL  ,
+      LSGT_NO , LCGT_NO , LAGT_NO , KC_LEAD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_PGDN , KC_PGUP , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , MAI_ENT , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
  	[MOUSE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , KC_MS_U , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , XXXXXXX ,
+      XXXXXXX , KC_BTN2 , KC_MS_U , KC_BTN1 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_BTN2 , KC_MS_L , KC_MS_D , KC_MS_R , KC_GRV  , XXXXXXX , XXXXXXX , XXXXXXX , KC_ACL0 , KC_ACL1 , KC_ACL2 , KC_BTN1 ,
+      XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_R , KC_GRV  , XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , KC_LALT , KC_LCTL , KC_LSFT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LGUI , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , KC_BTN2 , KC_BTN3 , KC_BTN1 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_ACL0 , KC_ACL1 , KC_ACL2 , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , MAI_ESC , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -183,10 +185,10 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                rgb_matrix_set_color(16, RGB_WHITE);
                break;
           case FUCTIONS:
-               rgb_matrix_set_color(16, RGB_ORANGE);
+               rgb_matrix_set_color(16, RGB_PURPLE);
                break;
           case MEDIA:
-               rgb_matrix_set_color(28, RGB_ORANGE);
+               rgb_matrix_set_color(28, RGB_PURPLE);
                break;
           case SYMBOLS:
                rgb_matrix_set_color(19, RGB_WHITE);
@@ -199,7 +201,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                break;
           case MAINTENANCE:
                rgb_matrix_set_color(4, RGB_WHITE);
-               rgb_matrix_set_color(10, RGB_RED);
+               rgb_matrix_set_color(10, RGB_PURPLE);
                break;
           default:
                break;

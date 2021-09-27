@@ -19,15 +19,9 @@
 #define TAPPING_TERM 300
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
-#define PERMISSIVE_HOLD
+//#define PERMISSIVE_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS
 #define TAPPING_TOGGLE 2
-// #define RETRO_TAPPING
-
-// Allow for a long press to send the shifted version of the key
-// #define AUTO_SHIFT_TIMEOUT 200
-// #define NO_AUTO_SHIFT_SPECIAL
-// #define RETRO_SHIFT
 
 // Mouse key speed and acceleration.
 #define MOUSEKEY_DELAY	100
@@ -39,7 +33,6 @@
 #define MOUSEKEY_WHEEL_INTERVAL	255
 #define MOUSEKEY_WHEEL_MAX_SPEED	8
 #define MOUSEKEY_WHEEL_TIME_TO_MAX	40
-
 
 // Disable all RGB effects
 #undef RGBLIGHT_ANIMATIONS

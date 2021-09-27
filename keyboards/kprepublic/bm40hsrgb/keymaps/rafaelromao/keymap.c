@@ -188,7 +188,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                rgb_matrix_set_color(16, RGB_PURPLE);
                break;
           case MEDIA:
-               rgb_matrix_set_color(28, RGB_PURPLE);
+               rgb_matrix_set_color(16, RGB_PINK);
                break;
           case SYMBOLS:
                rgb_matrix_set_color(19, RGB_WHITE);

@@ -10,7 +10,7 @@
     - On this layer, left pinky key acts as Esc when tapped and shift when held.
   - Inner left space activates the number layer.
   - Inner right space activates the symbol layer.
-  - Outer right activates the mouse layer.
+  - Outer right space activates the mouse layer.
     - On this layer, right pinky key acts as Enter when tapped and shift when held.
   - Holding inner left space followed by inner right space allows accessing the symbol layer from the number layer.
   - Holding both outer space keys will activate the maintenance layer.

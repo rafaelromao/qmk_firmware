@@ -12,8 +12,8 @@
   - Inner right space activates the symbol layer.
   - Outer right activates the mouse layer.
     - On this layer, right pinky key acts as Enter when tapped and shift when held.
-  - Holding left space followed by right space allows accessing the symbol layer from the number layer.
-  - Holding both esc and enter will activate the maintenance layer.
+  - Holding inner left space followed by inner right space allows accessing the symbol layer from the number layer.
+  - Holding both outer space keys will activate the maintenance layer.
 - Use of the two extreme top keys (Q and P on QWERTY) is reduced.
 - All symbols are conveniently placed for programming.
 - From the maintenance layer, all primary layers can be toggled on.

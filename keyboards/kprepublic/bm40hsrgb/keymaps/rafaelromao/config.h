@@ -16,12 +16,9 @@
 */
 
 // make it easier to work with tap hold
-#define TAPPING_TERM 300
+#define TAPPING_TERM 200
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_TOGGLE 2
-//#define TAPPING_FORCE_HOLD
-//#define PERMISSIVE_HOLD
-//#define HOLD_ON_OTHER_KEY_PRESS
 
 // Mouse key speed and acceleration.
 #define MOUSEKEY_DELAY	100

@@ -8,10 +8,12 @@
 - The two keys on each thumb cluster control layer transitions, space, tab and backspace.
   - Outer left space activates the navigation layer, when held.
     - On this layer, left pinky key acts as Esc when tapped and shift when held.
+    - On this layer, outer right space acts as Enter when tapped.
   - Inner left space activates the number layer.
   - Inner right space activates the symbol layer.
   - Outer right space activates the mouse layer.
     - On this layer, right pinky key acts as Enter when tapped and shift when held.
+    - On this layer, outer left space acts as Esc when tapped.
   - Holding inner left space followed by inner right space allows accessing the symbol layer from the number layer.
   - Holding both outer space keys will activate the maintenance layer.
 - Use of the two extreme top keys (Q and P on QWERTY) is reduced.
@@ -31,4 +33,4 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/mINd1EZ.png)
+![img](https://i.imgur.com/MP0vlp9.png)

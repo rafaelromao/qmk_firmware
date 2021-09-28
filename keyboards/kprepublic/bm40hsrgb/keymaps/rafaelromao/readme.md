@@ -11,8 +11,6 @@
     - Outer right space acts as Enter when tapped.
   - Inner left space activates the number layer.
     - On this layer, inner right space acts as Tab when tapped.
-  - Inner left space activates the number layer.
-  - Inner right space activates the symbol layer.
   - Outer right space activates the mouse layer.
     - On this layer, right pinky key acts as Enter when tapped and shift when held.
     - Outer left space acts as Esc when tapped.

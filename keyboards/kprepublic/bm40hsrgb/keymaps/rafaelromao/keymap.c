@@ -60,15 +60,17 @@ enum layers {
 #define MEHT_NO MEH_T(KC_NO)
 #define HYPT_NO HYPR_T(KC_NO)
 
-#define NAV_ESC LT(NAVIGATION,KC_ESC)
+#define NAV_SPC LT(NAVIGATION,KC_SPC)
 #define NUM_SPC LT(NUMBERS,KC_SPC)
 #define SYM_SPC LT(SYMBOLS,KC_SPC)
-#define MOU_ENT LT(MOUSE,KC_ENT)
+#define MOU_SPC LT(MOUSE,KC_SPC)
 #define NUM_BSP LT(NUMBERS,KC_BSPC)
 #define SYM_TAB LT(SYMBOLS,KC_TAB)
 
-#define MAI_ESC LT(MAINTENANCE,KC_ESC)
-#define MAI_ENT LT(MAINTENANCE,KC_ENT)
+#define SFT_ESC LSFT_T(KC_ESC)
+#define SFT_ENT RSFT_T(KC_ENT)
+
+#define MAI_SPC LT(MAINTENANCE,KC_SPC)
 
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
@@ -92,7 +94,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSGT_Z  , LCGT_X  , LAGT_C  , KC_V    , KC_B    , XXXXXXX , XXXXXXX , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , NAV_ESC , NUM_SPC ,      KC_SPC       , SYM_SPC , MOU_ENT , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , NAV_SPC , NUM_SPC ,      XXXXXXX      , SYM_SPC , MOU_SPC , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [NUMBERS] = LAYOUT_planck_mit(
@@ -143,22 +145,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_LOCK , MEHT_NO , HYPT_NO , XXXXXXX , XXXXXXX , XXXXXXX , KC_CAPS , XXXXXXX , KC_END  , KC_HOME , XXXXXXX ,  
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LALT , KC_LGUI , KC_GRV  , XXXXXXX , XXXXXXX , KC_TAB  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
+      SFT_ESC , KC_LCTL , KC_LALT , KC_LGUI , KC_GRV  , XXXXXXX , XXXXXXX , KC_TAB  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSGT_NO , LCGT_NO , LAGT_NO , KC_LEAD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_PGDN , KC_PGUP , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , MAI_ENT , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , MAI_SPC , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
  	[MOUSE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_BTN2 , KC_MS_U , KC_BTN1 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_R , KC_GRV  , XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , KC_LALT , KC_LCTL , KC_LSFT ,
+      XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_R , KC_GRV  , XXXXXXX , XXXXXXX , KC_TAB  , KC_LGUI , KC_LALT , KC_LCTL , SFT_ENT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , KC_BTN2 , KC_BTN3 , KC_BTN1 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_ACL0 , KC_ACL1 , KC_ACL2 , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , MAI_ESC , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , MAI_SPC , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
 	[MAINTENANCE] = LAYOUT_planck_mit(

@@ -4,6 +4,22 @@
 
 ![img](https://i.imgur.com/PcXHjYm.jpg)
 
+### Compile
+
+`qmk compile -kb bm40hsrgb -km rafaelromao`
+
+### Flash
+
+`qmk flash -kb bm40hsrgb -km rafaelromao`
+
+## Layout
+
+http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
+
+![img](https://i.imgur.com/MP0vlp9.png)
+
+## Highlights
+
 - All black keys (two center columns, the center space bar, and the 6 outer keys in the last row) are disabled.
 - Home row mods make modifiers easier to reach.
 - Dedicated modifier keys are available on navigation, mouse, number and function layers.
@@ -24,17 +40,3 @@
 - All symbols are conveniently placed for programming.
 - From the maintenance layer, all primary layers can be toggled on.
   - Function and media layers are secondary and can only be activated from the number layer
-
-### Compile
-
-`qmk compile -kb bm40hsrgb -km rafaelromao`
-
-### Flash
-
-`qmk flash -kb bm40hsrgb -km rafaelromao`
-
-## Layout
-
-http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
-
-![img](https://i.imgur.com/MP0vlp9.png)

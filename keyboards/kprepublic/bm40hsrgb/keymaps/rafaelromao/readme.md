@@ -2,6 +2,8 @@
 
 ## A 34 key split keyboard on a planck platform, optimized for programmers.
 
+![img](https://i.imgur.com/PcXHjYm.jpg)
+
 - All black keys (two center columns, the center space bar, and the 6 outer keys in the last row) are disabled.
 - Home row mods make modifiers easier to reach.
 - Dedicated modifier keys are available on navigation, mouse, number and function layers.

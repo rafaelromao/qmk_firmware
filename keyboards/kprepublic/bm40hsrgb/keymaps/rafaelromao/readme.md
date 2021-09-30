@@ -16,7 +16,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/MP0vlp9.png)
+![img](https://i.imgur.com/SLHgRNR.png)
 
 ## Highlights
 
@@ -27,16 +27,18 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
   - Outer left space activates the navigation layer, when held.
     - On this layer, left pinky key acts as Esc when tapped and shift when held.
     - Outer right space acts as Enter when tapped.
-  - Inner left space activates the number layer.
+  - Inner left space activates the symbol layer.
     - On this layer, inner right space acts as Tab when tapped.
+    - Holding the left pinky key activates the media layer.
   - Outer right space activates the mouse layer.
     - On this layer, right pinky key acts as Enter when tapped and shift when held.
     - Outer left space acts as Esc when tapped.
-  - Inner right space activates the symbol layer.
+  - Inner right space activates the number layer.
     - On this layer, inner left space acts as backspace when tapped.
-  - Holding inner left space followed by inner right space allows accessing the symbol layer from the number layer.
+    - Holding the left homming key activates the fuction layer.
   - Holding both outer space keys will activate the maintenance layer.
-- Use of the two extreme top keys (Q and P on QWERTY) is reduced.
+- The key bellow the left homming key activates the accentuation layer.
+- The key bellow the right homming key activates the operations layer.
+- Use of hard to reach keys is reduced.
 - All symbols are conveniently placed for programming.
-- From the maintenance layer, all primary layers can be toggled on.
-  - Function and media layers are secondary and can only be activated from the number layer
+- From the maintenance layer, all layers can be toggled on.

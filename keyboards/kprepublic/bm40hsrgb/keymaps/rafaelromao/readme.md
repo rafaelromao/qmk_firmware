@@ -22,7 +22,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
 - All black keys (two center columns, the center space bar, and the 6 outer keys in the last row) are disabled.
 - Home row mods make modifiers easier to reach.
-- Dedicated modifier keys are available on most layers, always in the home row.
+  - Dedicated modifier keys are available on most layers, always in the home row.
 - The two keys on each thumb cluster control layer transitions, space, tab, backspace, enter and esc.
   - Outer left space activates the navigation layer, when held.
     - On this layer, left pinky key acts as Esc when tapped and shift when held.

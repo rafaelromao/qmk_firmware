@@ -108,11 +108,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [SYMBOLS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_LT   , KC_GT   , XXXXXXX ,
+      XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_QUES , KC_HASH , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_EXLM , KC_LPRN , KC_RPRN , KC_EQL  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_AMPR , KC_DQUO , KC_AT   , KC_PIPE ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      MO_MED  , KC_LBRC , KC_RBRC , ACC_BSL , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_QUES , KC_HASH , KC_COLN ,
+      MO_MED  , KC_LBRC , KC_RBRC , ACC_BSL , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , KC_TAB  , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|

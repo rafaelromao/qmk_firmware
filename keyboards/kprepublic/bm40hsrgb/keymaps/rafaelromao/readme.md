@@ -36,6 +36,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
   - Inner right space activates the number layer.
     - On this layer, inner left space acts as backspace when tapped.
     - Holding the left homming key activates the function layer.
+    - Holding the right pinky key activates the shifted version of the numpad, allowing single-hand navigation.
   - Holding both outer space keys will activate the maintenance layer.
 - The key bellow the left homming key activates the accentuation layer.
 - The key bellow the right homming key activates the operations layer.

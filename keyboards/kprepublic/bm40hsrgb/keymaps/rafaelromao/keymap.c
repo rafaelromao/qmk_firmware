@@ -71,6 +71,7 @@ enum layers {
 #define NUM_SPC LT(NUMBERS,KC_SPC)
 #define MOU_SPC LT(MOUSE,KC_SPC)
 
+#define SFT_DOT RSFT_T(KC_DOT)
 #define SFT_ESC LSFT_T(KC_ESC)
 #define SFT_ENT RSFT_T(KC_ENT)
 
@@ -121,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_CAPS , KC_P7   , KC_P8   , KC_P9   , XXXXXXX , 
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LALT , TT_FUN  , XXXXXXX , XXXXXXX , XXXXXXX , KC_COMM , KC_P4   , KC_P5   , KC_P6   , KC_DOT  ,
+      KC_LSFT , KC_LCTL , KC_LALT , TT_FUN  , XXXXXXX , XXXXXXX , XXXXXXX , KC_COMM , KC_P4   , KC_P5   , KC_P6   , SFT_DOT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       G(KC_Z) , G(KC_X) , G(KC_C) , G(KC_V) , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OP_P1   , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|

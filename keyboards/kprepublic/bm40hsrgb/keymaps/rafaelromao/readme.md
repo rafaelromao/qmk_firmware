@@ -2,7 +2,7 @@
 
 ## A 34 key split keyboard on a planck platform, optimized for programmers.
 
-![img](https://i.imgur.com/PcXHjYm.jpg)
+![img](https://i.imgur.com/ZRLfzX4.jpg)
 
 ### Compile
 
@@ -16,7 +16,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/ZRLfzX4.jpg?)
+![img](https://i.imgur.com/piPJjZG.png)
 
 ## Highlights
 

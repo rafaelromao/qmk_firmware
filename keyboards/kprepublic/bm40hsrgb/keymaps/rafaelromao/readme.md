@@ -41,6 +41,8 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
       - Double tapping this key sends comma instead of dot.
   - Holding both outer space keys will activate the maintenance layer.
 - The key below the left homming key activates the accentuation layer.
+  - This works in the symbol layer as well.
 - The key below the right homming key activates the operations layer.
+  - This works in the number layer as well.
 - The keys in the two center columns and the keys in the extreme top left and right are used only in the base layer.
 - All symbols are conveniently placed for programming.

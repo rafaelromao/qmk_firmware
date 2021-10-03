@@ -29,7 +29,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
     - Outer right space acts as Enter when tapped.
   - Inner left space activates the symbol layer.
     - On this layer, inner right space acts as Tab when tapped.
-    - Holding the key below left pinky key activates the media layer.
+    - Holding the key below the left pinky key activates the media layer.
   - Outer right space activates the mouse layer.
     - On this layer, right pinky key acts as Enter when tapped and shift when held.
     - Outer left space acts as Esc when tapped.

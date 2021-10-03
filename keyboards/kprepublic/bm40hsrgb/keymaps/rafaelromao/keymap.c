@@ -16,6 +16,8 @@
 
 #include QMK_KEYBOARD_H
 
+// Layers
+
 enum layers {
   BASE,
   SYMBOLS,
@@ -23,11 +25,15 @@ enum layers {
   ACCENTUATION,
   OPERATIONS,
   MEDIA,
-  FUCTIONS,
+  FUCTIONS1,
+  FUCTIONS2,
   NAVIGATION,
   MOUSE,
-  MAINTENANCE
+  MAINTENANCE,
+  LAYERS
 };
+
+// Custom keycodes
 
 #define LSFTT_A LSFT_T(KC_A)
 #define LCTLT_R LCTL_T(KC_R)
@@ -71,7 +77,7 @@ enum layers {
 #define NUM_SPC LT(NUMBERS,KC_SPC)
 #define MOU_SPC LT(MOUSE,KC_SPC)
 
-#define SFT_DOT RSFT_T(KC_DOT)
+#define SFT_DOT TD(SFT_DOT_COM)
 #define SFT_ESC LSFT_T(KC_ESC)
 #define SFT_ENT RSFT_T(KC_ENT)
 
@@ -88,11 +94,38 @@ enum layers {
 #define TO_MOU TO(MOUSE)
 #define TO_MAI TO(MAINTENANCE)
 #define MO_MED MO(MEDIA)
-#define TT_FUN TT(FUCTIONS)
-#define TO_FUN TO(FUCTIONS)
+#define MO_LAY MO(LAYERS)
+#define TT_FN1 TT(FUCTIONS1)
+#define TO_FN1 TO(FUCTIONS1)
+#define TT_FN2 TT(FUCTIONS2)
+#define TO_FN2 TO(FUCTIONS2)
 #define TO_MED TO(MEDIA)
 #define TO_ACC TO(ACCENTUATION)
 #define TO_OP TO(OPERATIONS)
+
+// Tap dance settings
+
+typedef enum {
+    TD_NONE,
+    TD_SINGLE_TAP,
+    TD_SINGLE_HOLD,
+    TD_DOUBLE_TAP
+} td_state_t;
+
+typedef struct {
+    td_state_t state;
+} td_tap_t;
+
+enum {
+    SFT_DOT_COM
+};
+
+td_state_t dance_state(qk_tap_dance_state_t *state);
+
+void dance_finished(qk_tap_dance_state_t *state, void *user_data);
+void dance_reset(qk_tap_dance_state_t *state, void *user_data);
+
+// Keymap
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -109,7 +142,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [SYMBOLS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_QUES , KC_HASH , XXXXXXX ,
+      XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_QUES , KC_HASH , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_EXLM , KC_LPRN , KC_RPRN , KC_EQL  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_AMPR , KC_DQUO , KC_AT   , KC_PIPE ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -120,11 +153,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [NUMBERS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_CAPS , KC_P7   , KC_P8   , KC_P9   , XXXXXXX , 
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , XXXXXXX , 
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LALT , TT_FUN  , XXXXXXX , XXXXXXX , XXXXXXX , KC_COMM , KC_P4   , KC_P5   , KC_P6   , SFT_DOT ,
+      KC_LSFT , KC_LCTL , KC_LALT , TT_FN1  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P4   , KC_P5   , KC_P6   , SFT_DOT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      G(KC_Z) , G(KC_X) , G(KC_C) , G(KC_V) , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OP_P1   , KC_P2   , KC_P3   , KC_P0   ,
+      XXXXXXX , XXXXXXX , XXXXXXX , TT_FN2  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OP_P1   , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , KC_BSPC ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -151,20 +184,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-     [FUCTIONS] = LAYOUT_planck_mit(
+     [FUCTIONS1] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F7   , KC_F8   , KC_F9   , XXXXXXX , 
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LALT , _______ , XXXXXXX , XXXXXXX , XXXXXXX , KC_F10  , KC_F4   , KC_F5   , KC_F6   , KC_F11  ,
+      KC_LSFT , KC_LCTL , KC_LALT , _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F4   , KC_F5   , KC_F6   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , KC_F3   , KC_F12  ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , KC_F3   , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_______________________________________________________________________________________________________________________|
+
+     [FUCTIONS2] = LAYOUT_planck_mit(
+ // |_______________________________________________________________________________________________________________________|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , 
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F10  , KC_F11  , KC_F12  , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [MEDIA] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , XXXXXXX , 
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_CAPS , HYPR_A  , HYPR_V  , XXXXXXX , 
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -175,9 +219,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  	[NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , KC_LOCK , MEHT_NO , HYPT_NO , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_END  , KC_HOME , XXXXXXX ,  
+      XXXXXXX , KC_LOCK , MEHT_NO , HYPT_NO , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB , KC_END  , KC_HOME , XXXXXXX ,  
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      SFT_ESC , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
+      SFT_ESC , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSGT_NO , LCGT_NO , LAGT_NO , KC_LEAD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_PGDN , KC_PGUP , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -186,41 +230,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  	[MOUSE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , KC_BTN2 , KC_MS_U , KC_BTN1 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , XXXXXXX ,
+      XXXXXXX , KC_BTN2 , KC_BTN1 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_R , KC_GRV  , XXXXXXX , XXXXXXX , KC_TAB  , KC_RGUI , KC_RALT , KC_RCTL , SFT_ENT ,
+      KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R , KC_GRV  , XXXXXXX , XXXXXXX , XXXXXXX , KC_RGUI , KC_RALT , KC_RCTL , SFT_ENT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_BTN2 , KC_BTN3 , KC_BTN1 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_ACL0 , KC_ACL1 , KC_ACL2 , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_ACL0 , KC_ACL1 , KC_ACL2 , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , MAI_ESC , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
 	[MAINTENANCE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , RGB_TOG , RGB_MOD , XXXXXXX , TO_MAI  , XXXXXXX , XXXXXXX , TO_BAS  , XXXXXXX , EEP_RST , RESET   , XXXXXXX ,
+      XXXXXXX , RGB_TOG , RGB_MOD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , EEP_RST , RESET   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAI , RGB_HUI , RGB_SAI , TO_NAV  , TO_SYM  , XXXXXXX , XXXXXXX , TO_NUM  , TO_MOU  , DEBUG   , BL_ON   , BL_OFF  ,
+      RGB_VAI , RGB_HUI , RGB_SAI , MO_LAY  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , DEBUG   , BL_ON   , BL_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAD , RGB_HUD , RGB_SAD , TO_ACC  , TO_FUN  , XXXXXXX , XXXXXXX , TO_MED  , TO_OP  , KC_SLEP  , NK_ON   , NK_OFF  ,
+      RGB_VAD , RGB_HUD , RGB_SAD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_SLEP , NK_ON   , NK_OFF  ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+ // |_______________________________________________________________________________________________________________________|
+
+	[LAYERS] = LAYOUT_planck_mit(
+ // |_______________________________________________________________________________________________________________________|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_MED  , TO_BAS  , TO_MAI  , XXXXXXX ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_SYM  , TO_NUM  , TO_NAV  , TO_MOU  ,
+ // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_FN1  , TO_FN2  , TO_ACC  , TO_OP   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX)
  // |_______________________________________________________________________________________________________________________|
 
 };
 
+// RGB Indicators
+
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
      if (host_keyboard_led_state().caps_lock) {
-         rgb_matrix_set_color(4, RGB_WHITE);
-         rgb_matrix_set_color(7, RGB_WHITE);
+         rgb_matrix_set_color(8, RGB_WHITE);
      }
 
      switch(get_highest_layer(layer_state|default_layer_state)) {
           case SYMBOLS:
-               rgb_matrix_set_color(16, RGB_WHITE);
+               rgb_matrix_set_color(40, RGB_WHITE);
                break;
           case NUMBERS:
-               rgb_matrix_set_color(19, RGB_WHITE);
+               rgb_matrix_set_color(42, RGB_WHITE);
                break;
           case ACCENTUATION:
                rgb_matrix_set_color(27, RGB_WHITE);
@@ -229,22 +285,71 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                rgb_matrix_set_color(32, RGB_WHITE);
                break;
           case MEDIA:
-               rgb_matrix_set_color(31, RGB_WHITE);
+               rgb_matrix_set_color(24, RGB_WHITE);
                break;
-          case FUCTIONS:
-               rgb_matrix_set_color(28, RGB_WHITE);
-               break;
-          case NAVIGATION:
+          case FUCTIONS1:
                rgb_matrix_set_color(15, RGB_WHITE);
                break;
+          case FUCTIONS2:
+               rgb_matrix_set_color(27, RGB_WHITE);
+               break;
+          case NAVIGATION:
+               rgb_matrix_set_color(39, RGB_WHITE);
+               break;
           case MOUSE:
-               rgb_matrix_set_color(20, RGB_WHITE);
+               rgb_matrix_set_color(43, RGB_WHITE);
                break;
           case MAINTENANCE:
-               rgb_matrix_set_color(4, RGB_WHITE);
+               rgb_matrix_set_color(39, RGB_WHITE);
+               rgb_matrix_set_color(43, RGB_WHITE);
                rgb_matrix_set_color(10, RGB_PURPLE);
+               break;
+          case LAYERS:
+               rgb_matrix_set_color(15, RGB_WHITE);
                break;
           default:
                break;
     }
 }
+
+// Tap dance for dot/comma/shift
+
+td_state_t dance_state(qk_tap_dance_state_t *state) {
+    if (state->count == 1) {
+        if (state->interrupted || !state->pressed)
+            return TD_SINGLE_TAP;
+        else 
+            return TD_SINGLE_HOLD;
+    } else if (state->count == 2) {
+        return TD_DOUBLE_TAP;
+    }
+    return TD_SINGLE_TAP;
+}
+
+static td_tap_t tap_state = {
+    .state = TD_NONE
+};
+
+void dance_finished(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP: register_code(KC_DOT); break;
+        case TD_SINGLE_HOLD: register_code(KC_RSFT); break;
+        case TD_DOUBLE_TAP: register_code(KC_COMM); break;
+        case TD_NONE: break;
+    }
+}
+
+void dance_reset(qk_tap_dance_state_t *state, void *user_data) {
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
+        case TD_SINGLE_HOLD: unregister_code(KC_RSFT); break;
+        case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
+        case TD_NONE: break;
+    }
+    tap_state.state = TD_NONE;
+}
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [SFT_DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_finished, dance_reset)
+};

@@ -16,7 +16,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/piPJjZG.png)
+![img](https://i.imgur.com/FRo6CXo.png)
 
 ## Highlights
 
@@ -35,11 +35,11 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
     - Outer left space acts as Esc when tapped.
   - Inner right space activates the number layer.
     - On this layer, inner left space acts as backspace when tapped.
-    - Holding the left homming key activates the function layer.
+    - Holding the left homming key activates the primary function layer (F1-F9).
+    - Holding the key bellow the left homming key activates the secondary function layer (F10-F12).
     - Holding the right pinky key activates the shifted version of the numpad, allowing single-hand navigation.
   - Holding both outer space keys will activate the maintenance layer.
 - The key bellow the left homming key activates the accentuation layer.
 - The key bellow the right homming key activates the operations layer.
 - Use of hard to reach keys is reduced.
 - All symbols are conveniently placed for programming.
-- From the maintenance layer, all layers can be toggled on.

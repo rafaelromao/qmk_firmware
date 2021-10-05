@@ -26,6 +26,12 @@
 #define LEADER_NO_TIMEOUT
 #define LEADER_KEY_STRICT_KEY_PROCESSING
 
+// configure combos
+#define COMBO_COUNT 4
+#define COMBO_TERM 40
+#define EXTRA_SHORT_COMBOS
+#define COMBO_NO_TIMER
+
 // Mouse key speed and acceleration.
 #define MOUSEKEY_DELAY	100
 #define MOUSEKEY_INTERVAL	30

@@ -16,7 +16,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/FRo6CXo.png)
+![img](https://i.imgur.com/ILvUTUa.png)
 
 ## Highlights
 
@@ -46,3 +46,11 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
   - This works in the number layer as well.
 - The keys in the two center columns and the keys in the extreme top left and right are used only in the base layer.
 - All symbols are conveniently placed for programming.
+
+## Combos
+
+- Combos allow easy access to ENTER, ESC, TAB and BACKSPACE, when pressing two keys together.
+  - KL sends ENTER
+  - SD sends ESC
+  - IO sends TAB
+  - WE sends BACKSPACE

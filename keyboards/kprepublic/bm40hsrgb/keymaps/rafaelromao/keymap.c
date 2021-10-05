@@ -125,6 +125,20 @@ td_state_t dance_state(qk_tap_dance_state_t *state);
 void dance_finished(qk_tap_dance_state_t *state, void *user_data);
 void dance_reset(qk_tap_dance_state_t *state, void *user_data);
 
+// Combos
+
+const uint16_t PROGMEM kl_ent_combo[] = {RALTT_K, RCTLT_L, COMBO_END};
+const uint16_t PROGMEM sd_esc_combo[] = {LCTLT_S, LALTT_D, COMBO_END};
+const uint16_t PROGMEM io_tab_combo[] = {MEHT_I, KC_O, COMBO_END};
+const uint16_t PROGMEM we_bspc_combo[] = {KC_W, MEHT_E, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  COMBO(kl_ent_combo, KC_ENT),
+  COMBO(sd_esc_combo, KC_ESC),
+  COMBO(io_tab_combo, KC_TAB),
+  COMBO(we_bspc_combo, KC_BSPC)
+};
+
 // Keymap
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -241,7 +255,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 	[MAINTENANCE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , RGB_TOG , RGB_MOD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , EEP_RST , RESET   , XXXXXXX ,
+      XXXXXXX , RGB_TOG , RGB_MOD , CMB_TOG , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , EEP_RST , RESET   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       RGB_VAI , RGB_HUI , RGB_SAI , MO_LAY  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , DEBUG   , BL_ON   , BL_OFF  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -266,6 +280,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // RGB Indicators
 
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+
+     if (!is_combo_enabled()) {
+         rgb_matrix_set_color(3, RGB_WHITE);
+     }
 
      if (host_keyboard_led_state().caps_lock) {
          rgb_matrix_set_color(8, RGB_WHITE);

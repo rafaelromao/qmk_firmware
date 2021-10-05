@@ -50,7 +50,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 ## Combos
 
 - Combos allow easy access to ENTER, ESC, TAB and BACKSPACE, when pressing two keys together.
-  - KL sends ENTER
-  - SD sends ESC
-  - IO sends TAB
-  - WE sends BACKSPACE
+  - JKL sends ENTER
+  - SDF sends ESC
+  - UIO sends TAB
+  - WER sends BACKSPACE

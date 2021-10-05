@@ -127,16 +127,16 @@ void dance_reset(qk_tap_dance_state_t *state, void *user_data);
 
 // Combos
 
-const uint16_t PROGMEM kl_ent_combo[] = {RALTT_K, RCTLT_L, COMBO_END};
-const uint16_t PROGMEM sd_esc_combo[] = {LCTLT_S, LALTT_D, COMBO_END};
-const uint16_t PROGMEM io_tab_combo[] = {MEHT_I, KC_O, COMBO_END};
-const uint16_t PROGMEM we_bspc_combo[] = {KC_W, MEHT_E, COMBO_END};
+const uint16_t PROGMEM jkl_ent_combo[] = {RGUIT_J, RALTT_K, RCTLT_L, COMBO_END};
+const uint16_t PROGMEM sdf_esc_combo[] = {LCTLT_S, LALTT_D, LGUIT_F, COMBO_END};
+const uint16_t PROGMEM uio_tab_combo[] = {HYPT_U, MEHT_I, KC_O, COMBO_END};
+const uint16_t PROGMEM wer_bspc_combo[] = {KC_W, MEHT_E, HYPT_R, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  COMBO(kl_ent_combo, KC_ENT),
-  COMBO(sd_esc_combo, KC_ESC),
-  COMBO(io_tab_combo, KC_TAB),
-  COMBO(we_bspc_combo, KC_BSPC)
+  COMBO(jkl_ent_combo, KC_ENT),
+  COMBO(sdf_esc_combo, KC_ESC),
+  COMBO(uio_tab_combo, KC_TAB),
+  COMBO(wer_bspc_combo, KC_BSPC)
 };
 
 // Keymap

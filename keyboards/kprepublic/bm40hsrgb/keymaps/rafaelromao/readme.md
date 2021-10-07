@@ -56,4 +56,4 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
   - 123 activates the symbol layer for one shot
   - %<> or []\ swap hands for one shot
   - Acc1, Acc2, Acc3 activates the navigation layer
-  - Insert, Page Up, Page Down rerurns to the base layer
+  - Insert, Page Up, Page Down returns to the base layer

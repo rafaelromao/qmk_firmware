@@ -50,10 +50,13 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 ## Combos
 
 - Combos allow easy access to ENTER, ESC, TAB and single hand operations.
-  - JKL or 456 sends ENTER
+  - JKL sends ENTER
   - SDF sends ESC
-  - UIO or 789 sends TAB
+  - UIO sends TAB
   - 123 activates the symbol layer for one shot
+  - 456 or F10F11F12 activates the primary functions layer
+  - F4F5F6 activates the secondary functions layer
+  - F1F2F3 activates the base layer
   - %<> or []\ swap hands for one shot
   - Acc1, Acc2, Acc3 activates the navigation layer
   - Insert, Page Up, Page Down returns to the base layer

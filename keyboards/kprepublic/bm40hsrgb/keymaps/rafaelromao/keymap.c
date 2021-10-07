@@ -117,8 +117,10 @@ void dance_reset(qk_tap_dance_state_t *state, void *user_data);
 const uint16_t PROGMEM _jkl_ent_combo[] = {RGUIT_J, RALTT_K, RCTLT_L, COMBO_END};
 const uint16_t PROGMEM _sdf_esc_combo[] = {LCTLT_S, LALTT_D, LGUIT_F, COMBO_END};
 const uint16_t PROGMEM _uio_tab_combo[] = {KC_U, KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM _789_tab_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
-const uint16_t PROGMEM _456_ent_combo[] = {KC_P4, KC_P5, KC_P6, COMBO_END};
+const uint16_t PROGMEM _456_fn1_combo[] = {KC_P4, KC_P5, KC_P6, COMBO_END};
+const uint16_t PROGMEM _456_fn2_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
+const uint16_t PROGMEM _012_fn1_combo[] = {KC_F10, KC_F11, KC_F12, COMBO_END};
+const uint16_t PROGMEM _123_bas_combo[] = {KC_F1, KC_F2, KC_F3, COMBO_END};
 const uint16_t PROGMEM _123_sym_combo[] = {OP_P1, KC_P2, KC_P3, COMBO_END};
 const uint16_t PROGMEM _pmm_sho_combo[] = {KC_PERC, KC_LT, KC_GT, COMBO_END}; 
 const uint16_t PROGMEM _bbb_sho_combo[] = {KC_LBRC, KC_RBRC, ACC_BSL, COMBO_END};
@@ -129,9 +131,11 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(_jkl_ent_combo, KC_ENT),
   COMBO(_sdf_esc_combo, KC_ESC),
   COMBO(_uio_tab_combo, KC_TAB),
-  COMBO(_789_tab_combo, KC_TAB),
-  COMBO(_456_ent_combo, KC_ENT),
+  COMBO(_456_fn1_combo, TO_FN1),
+  COMBO(_012_fn1_combo, TO_FN1),
+  COMBO(_456_fn2_combo, TO_FN2),
   COMBO(_123_sym_combo, OS_SYM),
+  COMBO(_123_bas_combo, TO_BAS),
   COMBO(_pmm_sho_combo, SH_OS),
   COMBO(_bbb_sho_combo, SH_OS),
   COMBO(_acc_nav_combo, TO_NAV),

@@ -16,7 +16,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/ILvUTUa.png)
+![img](https://i.imgur.com/3Tz8M1p.png)
 
 ## Highlights
 
@@ -49,8 +49,10 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
 ## Combos
 
-- Combos allow easy access to ENTER, ESC, TAB and BACKSPACE, when pressing two keys together.
-  - JKL sends ENTER
+- Combos allow easy access to ENTER, ESC, TAB and single hand operations.
+  - JKL or 456 sends ENTER
   - SDF sends ESC
-  - UIO sends TAB
-  - WER sends BACKSPACE
+  - UIO or 789 sends TAB
+  - 123 activates the symbol layer
+  - %<> or []\ swap hands
+  - Acc1, Acc2, Acc3 activates the navigation layer

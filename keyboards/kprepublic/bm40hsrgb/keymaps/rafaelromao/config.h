@@ -27,7 +27,7 @@
 #define LEADER_KEY_STRICT_KEY_PROCESSING
 
 // configure combos
-#define COMBO_COUNT 4
+#define COMBO_COUNT 10
 #define COMBO_TERM 40
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER

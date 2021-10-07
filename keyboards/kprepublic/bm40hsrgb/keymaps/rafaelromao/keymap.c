@@ -54,20 +54,6 @@ enum layers {
 #define RALTT_K RALT_T(KC_K)
 #define RGUIT_J RGUI_T(KC_J)
 
-#define LSGT_Z LSG_T(KC_Z)
-#define LCGT_X MT(MOD_LCTL | MOD_LGUI, KC_X)
-#define LAGT_C LAG_T(KC_C)
-#define MEHT_E MEH_T(KC_E)
-#define HYPT_R HYPR_T(KC_R)
-#define MEHT_I MEH_T(KC_I)
-#define HYPT_U HYPR_T(KC_U)
-
-#define LCGT_NO MT(MOD_LCTL | MOD_LGUI, KC_NO)
-#define LSGT_NO LSG_T(KC_NO)
-#define LAGT_NO LAG_T(KC_NO)
-#define MEHT_NO MEH_T(KC_NO)
-#define HYPT_NO HYPR_T(KC_NO)
-
 #define OP_M LT(OPERATIONS,KC_M)
 #define OP_P1 LT(OPERATIONS,KC_P1)
 #define ACC_V LT(ACCENTUATION,KC_V)
@@ -89,6 +75,7 @@ enum layers {
 
 #define TO_BAS TO(BASE)
 #define TO_SYM TO(SYMBOLS)
+#define OS_SYM OSL(SYMBOLS)
 #define TO_NUM TO(NUMBERS)
 #define TO_NAV TO(NAVIGATION)
 #define TO_MOU TO(MOUSE)
@@ -127,16 +114,28 @@ void dance_reset(qk_tap_dance_state_t *state, void *user_data);
 
 // Combos
 
-const uint16_t PROGMEM jkl_ent_combo[] = {RGUIT_J, RALTT_K, RCTLT_L, COMBO_END};
-const uint16_t PROGMEM sdf_esc_combo[] = {LCTLT_S, LALTT_D, LGUIT_F, COMBO_END};
-const uint16_t PROGMEM uio_tab_combo[] = {HYPT_U, MEHT_I, KC_O, COMBO_END};
-const uint16_t PROGMEM wer_bspc_combo[] = {KC_W, MEHT_E, HYPT_R, COMBO_END};
+const uint16_t PROGMEM _jkl_ent_combo[] = {RGUIT_J, RALTT_K, RCTLT_L, COMBO_END};
+const uint16_t PROGMEM _sdf_esc_combo[] = {LCTLT_S, LALTT_D, LGUIT_F, COMBO_END};
+const uint16_t PROGMEM _uio_tab_combo[] = {KC_U, KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM _789_tab_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
+const uint16_t PROGMEM _456_ent_combo[] = {KC_P4, KC_P5, KC_P6, COMBO_END};
+const uint16_t PROGMEM _123_sym_combo[] = {OP_P1, KC_P2, KC_P3, COMBO_END};
+const uint16_t PROGMEM _pmm_sho_combo[] = {KC_PERC, KC_LT, KC_GT, COMBO_END}; 
+const uint16_t PROGMEM _bbb_sho_combo[] = {KC_LBRC, KC_RBRC, ACC_BSL, COMBO_END};
+const uint16_t PROGMEM _acc_nav_combo[] = {KC_ACL0, KC_ACL1, KC_ACL2, COMBO_END};
+const uint16_t PROGMEM _iud_bas_combo[] = {KC_INS , KC_PGDN , KC_PGUP, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  COMBO(jkl_ent_combo, KC_ENT),
-  COMBO(sdf_esc_combo, KC_ESC),
-  COMBO(uio_tab_combo, KC_TAB),
-  COMBO(wer_bspc_combo, KC_BSPC)
+  COMBO(_jkl_ent_combo, KC_ENT),
+  COMBO(_sdf_esc_combo, KC_ESC),
+  COMBO(_uio_tab_combo, KC_TAB),
+  COMBO(_789_tab_combo, KC_TAB),
+  COMBO(_456_ent_combo, KC_ENT),
+  COMBO(_123_sym_combo, OS_SYM),
+  COMBO(_pmm_sho_combo, SH_OS),
+  COMBO(_bbb_sho_combo, SH_OS),
+  COMBO(_acc_nav_combo, TO_NAV),
+  COMBO(_iud_bas_combo, TO_BAS)
 };
 
 // Keymap
@@ -145,11 +144,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [BASE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_Q    , KC_W    , MEHT_E  , HYPT_R  , KC_T    , XXXXXXX , XXXXXXX , KC_Y    , HYPT_U  , MEHT_I  , KC_O    , KC_P    ,
+      KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , XXXXXXX , XXXXXXX , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSFTT_A , LCTLT_S , LALTT_D , LGUIT_F , KC_G    , XXXXXXX , XXXXXXX , KC_H    , RGUIT_J , RALTT_K , RCTLT_L , RSFTT_BS,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      LSGT_Z  , LCGT_X  , LAGT_C  , ACC_V   , KC_B    , XXXXXXX , XXXXXXX , KC_N    , OP_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+      KC_Z    , KC_X    , KC_C    , ACC_V   , KC_B    , XXXXXXX , XXXXXXX , KC_N    , OP_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , NAV_SPC , SYM_SPC ,      XXXXXXX      , NUM_SPC , MOU_SPC , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -160,7 +159,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_EXLM , KC_LPRN , KC_RPRN , KC_EQL  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_AMPR , KC_DQUO , KC_AT   , KC_PIPE ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      MO_MED  , KC_LBRC , KC_RBRC , ACC_BSL , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
+      SH_OS   , KC_LBRC , KC_RBRC , ACC_BSL , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , KC_TAB  , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -222,22 +221,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [MEDIA] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_CAPS , HYPR_A  , HYPR_V  , XXXXXXX , 
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , XXXXXXX , 
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP ,
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
  	[NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , KC_LOCK , MEHT_NO , HYPT_NO , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB , KC_END  , KC_HOME , XXXXXXX ,  
+      XXXXXXX , KC_LOCK , KC_LEAD , KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_END  , KC_HOME , XXXXXXX ,  
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       SFT_ESC , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      LSGT_NO , LCGT_NO , LAGT_NO , KC_LEAD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_PGDN , KC_PGUP , KC_DEL  ,
+      XXXXXXX , XXXXXXX , XXXXXXX , MO_MED  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_PGDN , KC_PGUP , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , MAI_ENT , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -277,16 +276,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
+// Swap Hands
+const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
+  {{11, 0}, {10, 0}, {9, 0}, {8, 0}, {7, 0}, {6, 0}, {5, 0}, {4, 0}, {3, 0}, {2, 0}, {1, 0}, {0, 0}},
+  {{11, 1}, {10, 1}, {9, 1}, {8, 1}, {7, 1}, {6, 1}, {5, 1}, {4, 1}, {3, 1}, {2, 1}, {1, 1}, {0, 1}},
+  {{11, 2}, {10, 2}, {9, 2}, {8, 2}, {7, 2}, {6, 2}, {5, 2}, {4, 2}, {3, 2}, {2, 2}, {1, 2}, {0, 2}},
+  {{11, 3}, {10, 3}, {9, 3}, {8, 3}, {7, 3}, {6, 3}, {5, 3}, {4, 3}, {3, 3}, {2, 3}, {1, 3}, {0, 3}},
+};
+
 // RGB Indicators
 
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
      if (!is_combo_enabled()) {
-         rgb_matrix_set_color(3, RGB_WHITE);
+         rgb_matrix_set_color(3, RGB_PURPLE);
      }
 
      if (host_keyboard_led_state().caps_lock) {
-         rgb_matrix_set_color(8, RGB_WHITE);
+         rgb_matrix_set_color(3, RGB_RED);
      }
 
      switch(get_highest_layer(layer_state|default_layer_state)) {
@@ -303,7 +310,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                rgb_matrix_set_color(32, RGB_WHITE);
                break;
           case MEDIA:
-               rgb_matrix_set_color(24, RGB_WHITE);
+               rgb_matrix_set_color(27, RGB_WHITE);
                break;
           case FUCTIONS1:
                rgb_matrix_set_color(15, RGB_WHITE);
@@ -320,7 +327,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
           case MAINTENANCE:
                rgb_matrix_set_color(39, RGB_WHITE);
                rgb_matrix_set_color(43, RGB_WHITE);
-               rgb_matrix_set_color(10, RGB_PURPLE);
+               rgb_matrix_set_color(10, RGB_RED);
                break;
           case LAYERS:
                rgb_matrix_set_color(15, RGB_WHITE);

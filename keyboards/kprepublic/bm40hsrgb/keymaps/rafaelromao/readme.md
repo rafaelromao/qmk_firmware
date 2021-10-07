@@ -53,6 +53,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
   - JKL or 456 sends ENTER
   - SDF sends ESC
   - UIO or 789 sends TAB
-  - 123 activates the symbol layer
-  - %<> or []\ swap hands
+  - 123 activates the symbol layer for one shot
+  - %<> or []\ swap hands for one shot
   - Acc1, Acc2, Acc3 activates the navigation layer
+  - Insert, Page Up, Page Down rerurns to the base layer

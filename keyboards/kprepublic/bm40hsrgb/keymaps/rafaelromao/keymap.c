@@ -124,6 +124,8 @@ const uint16_t PROGMEM _123_bas_combo[] = {KC_F1, KC_F2, KC_F3, COMBO_END};
 const uint16_t PROGMEM _123_sym_combo[] = {OP_P1, KC_P2, KC_P3, COMBO_END};
 const uint16_t PROGMEM _pmm_sho_combo[] = {KC_PERC, KC_LT, KC_GT, COMBO_END}; 
 const uint16_t PROGMEM _bbb_sho_combo[] = {KC_LBRC, KC_RBRC, ACC_BSL, COMBO_END};
+const uint16_t PROGMEM _rca_sho_combo[] = {KC_RCTL, KC_RALT, COMBO_END};
+const uint16_t PROGMEM _lac_sho_combo[] = {KC_LALT, KC_LCTL, COMBO_END};
 const uint16_t PROGMEM _acc_nav_combo[] = {KC_ACL0, KC_ACL1, KC_ACL2, COMBO_END};
 const uint16_t PROGMEM _iud_bas_combo[] = {KC_INS , KC_PGDN , KC_PGUP, COMBO_END};
 
@@ -138,6 +140,8 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(_123_bas_combo, TO_BAS),
   COMBO(_pmm_sho_combo, SH_OS),
   COMBO(_bbb_sho_combo, SH_OS),
+  COMBO(_rca_sho_combo, SH_OS),
+  COMBO(_lac_sho_combo, SH_OS),
   COMBO(_acc_nav_combo, TO_NAV),
   COMBO(_iud_bas_combo, TO_BAS)
 };
@@ -168,7 +172,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , KC_BSPC ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-     [SYMBOLS] = LAYOUT_planck_mit(
+      [SYMBOLS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_QUES , KC_HASH , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|

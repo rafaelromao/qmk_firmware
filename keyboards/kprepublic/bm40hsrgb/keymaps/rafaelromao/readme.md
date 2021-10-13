@@ -20,7 +20,8 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
 ## Highlights
 
-- All black keys (two center columns, the center space bar, and the 6 outer keys in the bottom row) are disabled.
+- The two center columns, the center space bar, and the 6 outer keys in the bottom row are disabled.
+- The base layer can be either qwerty or colemak dhm.
 - Home row mods make modifiers easier to reach.
   - Dedicated modifier keys are available on most layers, always in the home row.
 - The two keys on each thumb cluster control layer transitions, space, tab, backspace, enter and esc.
@@ -50,9 +51,9 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 ## Combos
 
 - Combos allow easy access to ENTER, ESC, TAB and single hand operations.
-  - JKL sends ENTER
-  - SDF sends ESC
-  - UIO sends TAB
+  - JKL (qwerty) sends ENTER
+  - SDF (qwerty) sends ESC
+  - UIO (qwerty) sends TAB
   - 123 activates the symbol layer for one shot
   - 456 or F10F11F12 activates the primary functions layer
   - F4F5F6 activates the secondary functions layer

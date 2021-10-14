@@ -53,7 +53,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 - Combos allow easy access to ENTER, ESC, TAB and single hand operations.
   - JKL (qwerty) / NEI (colemak) sends ENTER
   - SDF (qwerty) / RST (colemak) sends ESC
-  - UIO (qwerty) / LUI (colemak) sends TAB
+  - UIO (qwerty) / LUY (colemak) sends TAB
   - 123 activates the symbol layer for one shot
   - 456 or F10F11F12 activates the primary functions layer
   - F4F5F6 activates the secondary functions layer

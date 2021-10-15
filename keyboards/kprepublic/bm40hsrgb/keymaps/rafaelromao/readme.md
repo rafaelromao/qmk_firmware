@@ -16,7 +16,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/J3I3oTz.png)
+![img](https://i.imgur.com/ZNopC1j.png)
 
 ## Highlights
 
@@ -36,15 +36,11 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
     - Outer left space acts as Esc when tapped.
   - Inner right space activates the number layer.
     - On this layer, inner left space acts as backspace when tapped.
-    - Holding the left homming key activates the primary function layer (F1-F9).
-    - Holding the key below the left homming key activates the secondary function layer (F10-F12).
+    - Holding the key below the left pinky activates the primary function layer (F1-F9).
+    - Holding the key below the left ring finger activates the secondary function layer (F10-F12).
     - Holding the right pinky key activates the shifted version of the numpad, allowing single-hand navigation.
       - Double tapping this key sends comma instead of dot.
   - Holding both outer space keys will activate the maintenance layer.
-- The key below the left homming key activates the accentuation layer.
-  - This works in the symbol layer as well.
-- The key below the right homming key activates the operations layer.
-  - This works in the number layer as well.
 - The keys in the two center columns and the keys in the extreme top left and right are used only in the base layer.
 - All symbols are conveniently placed for programming.
 

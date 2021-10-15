@@ -48,9 +48,9 @@ enum layers {
 #define RALTT_E RALT_T(KC_E)
 #define RGUIT_N RGUI_T(KC_N)
 
-#define RCTLT_4 RCTL_T(KC_P6)
+#define RCTLT_6 RCTL_T(KC_P6)
 #define RALTT_5 RALT_T(KC_P5)
-#define RGUIT_6 RGUI_T(KC_P4)
+#define RGUIT_4 RGUI_T(KC_P4)
 
 #define RSFTT_BS RSFT_T(KC_BSPC)
 #define RCTLT_L RCTL_T(KC_L)
@@ -127,7 +127,7 @@ const uint16_t PROGMEM num_fn1_combo[] = {RGUIT_4, RALTT_5, RCTLT_6, COMBO_END};
 const uint16_t PROGMEM fn1_fn2_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM fn2_tog_combo[] = {KC_F10, KC_F11, KC_F12, COMBO_END};
 const uint16_t PROGMEM fn1_tog_combo[] = {KC_F1, KC_F2, KC_F3, COMBO_END};
-const uint16_t PROGMEM num_sym_combo[] = {OP_P1, KC_P2, KC_P3, COMBO_END};
+const uint16_t PROGMEM num_sym_combo[] = {KC_P1, KC_P2, KC_P3, COMBO_END};
 const uint16_t PROGMEM rsy_sho_combo[] = {KC_PERC, KC_LT, KC_GT, COMBO_END};
 const uint16_t PROGMEM lsy_sho_combo[] = {KC_LBRC, KC_RBRC, KC_BSLS, COMBO_END};
 const uint16_t PROGMEM num_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
@@ -183,11 +183,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_TILD , KC_QUOT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_SLSH , KC_ASTR , KC_MINS , KC_PLUS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_4 , RALTT_5 , RCRLT_6 , SFT_DOT ,
+      KC_SLSH , KC_ASTR , KC_MINS , KC_PLUS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_4 , RALTT_5 , RCTLT_6 , SFT_DOT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      TT_FN1  , XXXXXXX , XXXXXXX , TT_FN2  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   ,
+      TT_FN1  , KC_GRV  , KC_CIRC , TT_FN2  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_GRV  , KC_CIRC , _______ , KC_BSPC ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , KC_BSPC ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [SYMBOLS] = LAYOUT_planck_mit(
@@ -207,7 +207,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_LSFT , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F4   , KC_F5   , KC_F6   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , KC_F3   , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , TT_FN2  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , KC_F3   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -218,7 +218,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_LSFT , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F10  , KC_F11  , KC_F12  , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , TT_FN2  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -331,7 +331,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                rgb_matrix_set_color(27, RGB_WHITE);
                break;
           case FUCTIONS1:
-               rgb_matrix_set_color(15, RGB_WHITE);
+               rgb_matrix_set_color(24, RGB_WHITE);
                break;
           case FUCTIONS2:
                rgb_matrix_set_color(27, RGB_WHITE);

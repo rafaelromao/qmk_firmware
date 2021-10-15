@@ -16,7 +16,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/N9738vo.png)
+![img](https://i.imgur.com/J3I3oTz.png)
 
 ## Highlights
 
@@ -58,6 +58,6 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
   - 456 or F10F11F12 activates the primary functions layer
   - F4F5F6 activates the secondary functions layer
   - F1F2F3 returns to the previous layer
-  - %<> or []\ swap hands for one shot
+  - %<> or []\ or 789 swap hands for one shot
   - Acc1, Acc2, Acc3 activates the navigation layer
   - Insert, Page Up, Page Down returns to the previous layer

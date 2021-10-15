@@ -23,8 +23,6 @@ enum layers {
   COLEMAK,
   NUMBERS,
   SYMBOLS,
-  ACCENTUATION,
-  OPERATIONS,
   FUCTIONS1,
   FUCTIONS2,
   NAVIGATION,
@@ -50,17 +48,15 @@ enum layers {
 #define RALTT_E RALT_T(KC_E)
 #define RGUIT_N RGUI_T(KC_N)
 
+#define RCTLT_4 RCTL_T(KC_P6)
+#define RALTT_5 RALT_T(KC_P5)
+#define RGUIT_6 RGUI_T(KC_P4)
+
 #define RSFTT_BS RSFT_T(KC_BSPC)
 #define RCTLT_L RCTL_T(KC_L)
 #define RALTT_K RALT_T(KC_K)
 #define RGUIT_J RGUI_T(KC_J)
 
-#define OP_M LT(OPERATIONS,KC_M)
-#define OP_H LT(OPERATIONS,KC_H)
-#define OP_P1 LT(OPERATIONS,KC_P1)
-#define ACC_V LT(ACCENTUATION,KC_V)
-#define ACC_D LT(ACCENTUATION,KC_D)
-#define ACC_BSL LT(ACCENTUATION,KC_BSLS)
 #define NAV_SPC LT(NAVIGATION,KC_SPC)
 #define SYM_SPC LT(SYMBOLS,KC_SPC)
 #define NUM_SPC LT(NUMBERS,KC_SPC)
@@ -127,13 +123,14 @@ const uint16_t PROGMEM qwe_tab_combo[] = {KC_U, KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM col_ent_combo[] = {RGUIT_N, RALTT_E, RCTLT_I, COMBO_END};
 const uint16_t PROGMEM col_esc_combo[] = {LCTLT_R, LALTT_S, LGUIT_T, COMBO_END};
 const uint16_t PROGMEM col_tab_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
-const uint16_t PROGMEM num_fn1_combo[] = {KC_P4, KC_P5, KC_P6, COMBO_END};
+const uint16_t PROGMEM num_fn1_combo[] = {RGUIT_4, RALTT_5, RCTLT_6, COMBO_END};
 const uint16_t PROGMEM fn1_fn2_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM fn2_tog_combo[] = {KC_F10, KC_F11, KC_F12, COMBO_END};
 const uint16_t PROGMEM fn1_tog_combo[] = {KC_F1, KC_F2, KC_F3, COMBO_END};
 const uint16_t PROGMEM num_sym_combo[] = {OP_P1, KC_P2, KC_P3, COMBO_END};
 const uint16_t PROGMEM rsy_sho_combo[] = {KC_PERC, KC_LT, KC_GT, COMBO_END};
-const uint16_t PROGMEM lsy_sho_combo[] = {KC_LBRC, KC_RBRC, ACC_BSL, COMBO_END};
+const uint16_t PROGMEM lsy_sho_combo[] = {KC_LBRC, KC_RBRC, KC_BSLS, COMBO_END};
+const uint16_t PROGMEM num_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
 const uint16_t PROGMEM mou_nav_combo[] = {KC_ACL0, KC_ACL1, KC_ACL2, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_INS , KC_PGDN , KC_PGUP, COMBO_END};
 
@@ -151,6 +148,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(num_sym_combo, OS_SYM),
   COMBO(rsy_sho_combo, SH_OS),
   COMBO(lsy_sho_combo, SH_OS),
+  COMBO(num_sho_combo, SH_OS),
   COMBO(mou_nav_combo, TG_NAV),
   COMBO(nav_tog_combo, TG_NAV)
 };
@@ -165,7 +163,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSFTT_A , LCTLT_S , LALTT_D , LGUIT_F , KC_G    , XXXXXXX , XXXXXXX , KC_H    , RGUIT_J , RALTT_K , RCTLT_L , RSFTT_BS,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_Z    , KC_X    , KC_C    , ACC_V   , KC_B    , XXXXXXX , XXXXXXX , KC_N    , OP_M    , KC_COMM , KC_DOT  , KC_SCLN ,
+      KC_Z    , KC_X    , KC_C    , KC_V    , KC_B    , XXXXXXX , XXXXXXX , KC_N    , KC_M    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , NAV_SPC , SYM_SPC ,      XXXXXXX      , NUM_SPC , MOU_SPC , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -176,60 +174,38 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       LSFTT_A , LCTLT_R , LALTT_S , LGUIT_T , KC_G    , XXXXXXX , XXXXXXX , KC_M    , RGUIT_N , RALTT_E , RCTLT_I , RSFTT_O ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_Z    , KC_X    , KC_C    , ACC_D   , KC_V    , XXXXXXX , XXXXXXX , KC_K    , OP_H    , KC_COMM , KC_DOT  , KC_SCLN ,
+      KC_Z    , KC_X    , KC_C    , KC_D    , KC_V    , XXXXXXX , XXXXXXX , KC_K    , KC_H    , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , NAV_SPC , SYM_SPC ,      XXXXXXX      , NUM_SPC , MOU_SPC , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [NUMBERS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , XXXXXXX ,
+      XXXXXXX , KC_TILD , KC_QUOT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LALT , TT_FN1  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P4   , KC_P5   , KC_P6   , SFT_DOT ,
+      KC_SLSH , KC_ASTR , KC_MINS , KC_PLUS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_4 , RALTT_5 , RCRLT_6 , SFT_DOT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , TT_FN2  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OP_P1   , KC_P2   , KC_P3   , KC_P0   ,
+      TT_FN1  , XXXXXXX , XXXXXXX , TT_FN2  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , KC_BSPC ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , KC_GRV  , KC_CIRC , _______ , KC_BSPC ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-      [SYMBOLS] = LAYOUT_planck_mit(
+     [SYMBOLS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_QUES , KC_HASH , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_EXLM , KC_LPRN , KC_RPRN , KC_EQL  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_AMPR , KC_DQUO , KC_AT   , KC_PIPE ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      SH_OS   , KC_LBRC , KC_RBRC , ACC_BSL , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
+      SH_OS   , KC_LBRC , KC_RBRC , KC_BSLS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , KC_TAB  , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_______________________________________________________________________________________________________________________|
-
-     [ACCENTUATION] = LAYOUT_planck_mit(
- // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_QUOT , KC_TILD , KC_CIRC , KC_GRV  ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      SH_OS   , XXXXXXX , XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
- // |_______________________________________________________________________________________________________________________|
-
-     [OPERATIONS] = LAYOUT_planck_mit(
- // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_SLSH , KC_ASTR , KC_MINS , KC_PLUS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_RGUI , KC_RALT , KC_RCTL , KC_RSFT ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , _______ , XXXXXXX , XXXXXXX , SH_OS   ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [FUCTIONS1] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F7   , KC_F8   , KC_F9   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F4   , KC_F5   , KC_F6   , XXXXXXX ,
+      KC_LSFT , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F4   , KC_F5   , KC_F6   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , KC_F3   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -240,14 +216,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F10  , KC_F11  , KC_F12  , XXXXXXX ,
+      KC_LSFT , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F10  , KC_F11  , KC_F12  , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , TT_FN2  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
- 	[NAVIGATION] = LAYOUT_planck_mit(
+     [NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_LOCK , KC_LEAD , KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_END  , KC_HOME , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -258,7 +234,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , MAI_ENT , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
- 	[MOUSE] = LAYOUT_planck_mit(
+     [MOUSE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_BTN2 , KC_BTN1 , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -280,7 +256,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-	[MAINTENANCE] = LAYOUT_planck_mit(
+     [MAINTENANCE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , RGB_TOG , RGB_MOD , CMB_TOG , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , EEP_RST , RESET   , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -291,13 +267,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-	[LAYERS] = LAYOUT_planck_mit(
+     [LAYERS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_MED  , TO_MAI  , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       DF_QWE  , DF_COL  , XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_SYM  , TO_NUM  , TO_NAV  , TO_MOU  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_FN1  , TO_FN2  , TO_ACC  , TO_OP   ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_FN1  , TO_FN2  , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX)
  // |_______________________________________________________________________________________________________________________|
@@ -350,12 +326,6 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                break;
           case NUMBERS:
                rgb_matrix_set_color(42, RGB_WHITE);
-               break;
-          case ACCENTUATION:
-               rgb_matrix_set_color(27, RGB_WHITE);
-               break;
-          case OPERATIONS:
-               rgb_matrix_set_color(32, RGB_WHITE);
                break;
           case MEDIA:
                rgb_matrix_set_color(27, RGB_WHITE);

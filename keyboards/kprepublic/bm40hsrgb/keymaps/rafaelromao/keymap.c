@@ -358,7 +358,7 @@ static td_tap_t tap_state = {
 
 void td_dcq_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    bool isQwerty = IS_LAYER_ON(QWERTY);
+    bool isQwerty = biton32(default_layer_state) == QWERTY;
     if (isQwerty) {
         switch (tap_state.state) {
             case TD_SINGLE_TAP: register_code(KC_DOT); break;
@@ -374,7 +374,7 @@ void td_dcq_finished(qk_tap_dance_state_t *state, void *user_data) {
 }
 
 void td_dcq_reset(qk_tap_dance_state_t *state, void *user_data) {
-    bool isQwerty = IS_LAYER_ON(QWERTY);
+    bool isQwerty = biton32(default_layer_state) == QWERTY;
     if (isQwerty) {
         switch (tap_state.state) {
             case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
@@ -392,7 +392,7 @@ void td_dcq_reset(qk_tap_dance_state_t *state, void *user_data) {
 
 void td_dcc_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    bool isColemak = IS_LAYER_ON(COLEMAK);
+    bool isColemak = biton32(default_layer_state) == COLEMAK;
     if (isColemak) {
         switch (tap_state.state) {
             case TD_SINGLE_TAP: register_code(KC_DOT); break;
@@ -410,7 +410,7 @@ void td_dcc_finished(qk_tap_dance_state_t *state, void *user_data) {
 }
 
 void td_dcc_reset(qk_tap_dance_state_t *state, void *user_data) {
-    bool isColemak = IS_LAYER_ON(COLEMAK);
+    bool isColemak = biton32(default_layer_state) == COLEMAK;
     if (isColemak) {
         switch (tap_state.state) {
             case TD_SINGLE_TAP: unregister_code(KC_DOT); break;

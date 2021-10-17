@@ -16,7 +16,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/1jyEZFt.png)
+![img](https://i.imgur.com/4Xvf6sC.png)
 
 ## Highlights
 
@@ -38,7 +38,6 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 - UIO (qwerty) / LUY (colemak) sends TAB
 - 123 activates the symbol layer for one shot
 - 456 activates the functions layer
-- []\ activates the number layer for one shot
 - Gui, Alt, Ctrl activates the navigation layer
 - F4F5F6 or LeftDownUp returns to the previous layer
 - {}_ or $?# or 789 or ^~` swap hands for one shot

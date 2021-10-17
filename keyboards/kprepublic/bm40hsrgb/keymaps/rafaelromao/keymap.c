@@ -66,9 +66,6 @@ enum layers {
 #define TD_DCQ TD(DOT_COM_QWE)
 #define TD_DCC TD(DOT_COM_COL)
 
-#define SFT_ESC LSFT_T(KC_ESC)
-#define SFT_ENT RSFT_T(KC_ENT)
-
 #define MAI_ESC LT(MAINTENANCE,KC_ESC)
 #define MAI_ENT LT(MAINTENANCE,KC_ENT)
 
@@ -79,7 +76,6 @@ enum layers {
 #define DF_COL DF(COLEMAK)
 #define TO_SYM TO(SYMBOLS)
 #define OS_SYM OSL(SYMBOLS)
-#define OS_NUM OSL(NUMBERS)
 #define TO_NUM TO(NUMBERS)
 #define TO_NAV TO(NAVIGATION)
 #define TG_NAV TG(NAVIGATION)
@@ -124,7 +120,6 @@ const uint16_t PROGMEM col_tab_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
 const uint16_t PROGMEM num_fun_combo[] = {RGUIT_4, RALTT_5, RCTLT_6, COMBO_END};
 const uint16_t PROGMEM fun_tog_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM num_sym_combo[] = {KC_P1, KC_P2, KC_P3, COMBO_END};
-const uint16_t PROGMEM sym_num_combo[] = {KC_LBRC, KC_RBRC, KC_BSLS, COMBO_END};
 const uint16_t PROGMEM rsy_sho_combo[] = {KC_DLR, KC_QUES, KC_HASH, COMBO_END};
 const uint16_t PROGMEM lsy_sho_combo[] = {KC_LCBR, KC_RCBR, KC_UNDS, COMBO_END};
 const uint16_t PROGMEM rnu_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
@@ -142,7 +137,6 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(num_fun_combo, TG_FN),
   COMBO(fun_tog_combo, TG_FN),
   COMBO(num_sym_combo, OS_SYM),
-  COMBO(sym_num_combo, OS_NUM),
   COMBO(rsy_sho_combo, SH_OS),
   COMBO(lsy_sho_combo, SH_OS),
   COMBO(rnu_sho_combo, SH_OS),

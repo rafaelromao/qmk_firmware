@@ -47,3 +47,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 - If the base layer is qwerty, the key above the right pinky, in the numbers layer, sends dot on single tap and comma on double tap.
 - If the base layer is colemak, the right pink, in the numbers layer, sends dot on single tap, comma on double tap and shift when hold.
   
+## Resources
+
+- [QMK Docs](https://docs.qmk.fm)
+- [Keyboard Tester](https://config.qmk.fm/#/test)

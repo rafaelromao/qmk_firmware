@@ -30,7 +30,7 @@ Considering the QWERTY layout:
 - It is also possible to send tab, backspace, enter and esc using only these four thumb keys, depending on which ones you hold first and tap later.
 - On the navigation layer, you find Esc in the Q key.
 - On the mouse layer, you find Enter in the P key.
-- Tab is also present on both sides of the navigation and mouse layers, allowing easy access to cmd/alt+tab.
+- Tab is also present on both sides of the navigation and mouse layers, allowing easy access to gui/alt+tab.
 - Holding Z on base, numbers or symbols layers activates the functions layer.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (UIO) and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, in the numbers layer.

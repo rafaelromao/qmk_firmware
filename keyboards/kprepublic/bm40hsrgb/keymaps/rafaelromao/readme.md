@@ -34,7 +34,7 @@ Considering the QWERTY layout:
 - On the mouse layer, you find Enter in the P key.
 - Tab is also present on both sides of the navigation and mouse layers, allowing easy access to cmd/alt+tab.
 - Holding Z on base, numbers or symbols layers activates the functions layer.
-- Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (UIO) and single hand operations (Swap hands or activate another layer.
+- Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (UIO) and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, in the numbers layer.
 
 ## Combos

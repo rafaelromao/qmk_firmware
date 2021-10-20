@@ -24,7 +24,8 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 - The base layer can be either qwerty or colemak dhm.
 - Home row mods make modifiers easier to reach.
 - Dedicated modifier keys are available on most layers, always in the home row.
-- The two keys on each thumb cluster control layer transitions when held and space when tapped. It is also possible to send tab, backspace, enter and esc using only these four thumb keys, depending on the order and combination.
+- The two keys on each thumb cluster control layer transitions when held and space when tapped.
+- It is also possible to send tab, backspace, enter and esc using only these four thumb keys, depending on the order and combination.
 - On the navigation layer, you find Esc in the Q key.
 - On the mouse layer, you find Enter in the P key (qwerty) or backspace (colemak).
 - Holding Z on base, numbers or symbols layers activates the functions layer.

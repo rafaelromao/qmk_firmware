@@ -29,7 +29,7 @@ Considering the QWERTY layout:
 - Home row mods (A Shift, S Ctrl, D Alt, F Win), also mirrored in the other side of the keyboard (J Win, K Alt, L Ctrl, Backspace Shift).
 - Dedicated modifier keys are available on most layers, always in the home row.
 - The two keys on each thumb cluster control layer transitions when held and space (all 4 keys) when tapped.
-- It is also possible to send tab, backspace, enter and esc using only these four thumb keys, depending on which one you hold first and tap later.
+- It is also possible to send tab, backspace, enter and esc using only these four thumb keys, depending on which ones you hold first and tap later.
 - On the navigation layer, you find Esc in the Q key.
 - On the mouse layer, you find Enter in the P key.
 - Holding Z on base, numbers or symbols layers activates the functions layer.

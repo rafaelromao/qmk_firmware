@@ -27,7 +27,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 - The two keys on each thumb cluster control layer transitions, space, tab, backspace, enter and esc.
 - Holding Z on base, numbers or symbols layers activates the functions layer.
 - Combos allow easy access to ENTER, ESC, TAB and single hand operations.
-- Tap dance allow using dot or comma as decimal separator, as well as backspace in the numbers layer.
+- Tap dance allow using dot or comma as decimal separator, as well as backspace, in the numbers layer.
 - The keys in the two center columns are used only in the base layer, minimizing lateral movement.
 - All symbols are conveniently placed for programming.
 

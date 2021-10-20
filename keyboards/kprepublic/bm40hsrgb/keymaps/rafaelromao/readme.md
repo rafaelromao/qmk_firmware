@@ -44,8 +44,8 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
 ## Tap Dance
 
-- If the base layer is qwerty, the key above the right pinky, in the numbers layer, sends dot on single tap and comma on double tap.
-- If the base layer is colemak, the right pink, in the numbers layer, sends dot on single tap, comma on double tap and shift when hold.
+- If the base layer is qwerty, the right pinky key, in the numbers row, sends backspace when tapped and shift when hold, while the key above it sends dot on single tap and comma on double tap.
+- If the base layer is colemak, the right pinky key, in the numbers layer, sends dot on single tap, comma on double tap and shift when hold, while the key above it simply sends backspace when tapped or held. .
   
 ## Resources
 

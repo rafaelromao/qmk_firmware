@@ -1,6 +1,4 @@
-# rafaelromao
-
-## A 34 keys split keyboard on a planck platform, optimized for programmers.
+# A 34 keys split keyboard on a planck platform, optimized for programmers.
 
 ![img](https://i.imgur.com/odzZLMc.jpg)
 

@@ -302,46 +302,46 @@ const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
 
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
-     if (!is_combo_enabled()) {
-         rgb_matrix_set_color(3, RGB_PURPLE);
-     }
+    if (!is_combo_enabled()) {
+        rgb_matrix_set_color(3, RGB_RED);
+    }
 
-     if (host_keyboard_led_state().caps_lock) {
-         rgb_matrix_set_color(24, RGB_RED);
-     }
+    if (host_keyboard_led_state().caps_lock) {
+        rgb_matrix_set_color(24, RGB_RED);
+    }
 
-     switch(get_highest_layer(layer_state|default_layer_state)) {
-          case SYMBOLS:
-               rgb_matrix_set_color(40, RGB_WHITE);
-               break;
-          case NUMBERS:
-               rgb_matrix_set_color(42, RGB_WHITE);
-               break;
-          case MEDIA:
-               rgb_matrix_set_color(27, RGB_WHITE);
-               rgb_matrix_set_color(32, RGB_WHITE);
-               break;
-          case FUCTIONS:
-               rgb_matrix_set_color(40, RGB_WHITE);
-               rgb_matrix_set_color(42, RGB_WHITE);
-               break;
-          case NAVIGATION:
-               rgb_matrix_set_color(39, RGB_WHITE);
-               break;
-          case MOUSE:
-               rgb_matrix_set_color(43, RGB_WHITE);
-               break;
-          case MAINTENANCE:
-               rgb_matrix_set_color(39, RGB_WHITE);
-               rgb_matrix_set_color(43, RGB_WHITE);
-               rgb_matrix_set_color(7, RGB_RED);
-               break;
-          case LAYERS:
-               rgb_matrix_set_color(15, RGB_WHITE);
-               rgb_matrix_set_color(20, RGB_WHITE);
-               break;
-          default:
-               break;
+    switch(get_highest_layer(layer_state|default_layer_state)) {
+        case SYMBOLS:
+            rgb_matrix_set_color(40, RGB_WHITE);
+            break;
+        case NUMBERS:
+            rgb_matrix_set_color(42, RGB_WHITE);
+            break;
+        case MEDIA:
+            rgb_matrix_set_color(27, RGB_WHITE);
+            rgb_matrix_set_color(32, RGB_WHITE);
+            break;
+        case FUCTIONS:
+            rgb_matrix_set_color(40, RGB_WHITE);
+            rgb_matrix_set_color(42, RGB_WHITE);
+            break;
+        case NAVIGATION:
+            rgb_matrix_set_color(39, RGB_WHITE);
+            break;
+        case MOUSE:
+            rgb_matrix_set_color(43, RGB_WHITE);
+            break;
+        case MAINTENANCE:
+            rgb_matrix_set_color(39, RGB_WHITE);
+            rgb_matrix_set_color(43, RGB_WHITE);
+            rgb_matrix_set_color(7, RGB_RED);
+            break;
+        case LAYERS:
+            rgb_matrix_set_color(15, RGB_WHITE);
+            rgb_matrix_set_color(20, RGB_WHITE);
+            break;
+        default:
+            break;
     }
 }
 

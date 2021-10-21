@@ -14,24 +14,26 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/4Xvf6sC.png)
+![img](https://i.imgur.com/8cS571p.png)
 
 ## Highlights
 
 - The two center columns, the center space bar, and the 6 outer keys in the bottom row are disabled.
 - The base layer can be either qwerty or colemak dhm.
-- The keys in the two center columns are used only in the base layer, minimizing lateral movement.
+- The keys in the two inner columns are used only in the base layer, minimizing lateral movement.
 - All symbols are conveniently placed for programming.
 
 Considering the QWERTY layout:
-- Home row mods (A Shift, S Ctrl, D Alt, F Win), also mirrored in the other side of the keyboard (J Win, K Alt, L Ctrl, Backspace Shift).
-- Dedicated modifier keys are available on mouse, navigation and functions layers, always in the home row.
+- Home row mods (A Shift, S Ctrl, D Alt, F Win), also mirrored in the other side of the keyboard (J Win, K Alt, L Ctrl, Backspace Shift), are available on the base layers.
+- Dedicated modifiers are available on the functions layers.
+- Sticky (one shot) modifiers are available on the navigation and mouse layers.
 - The two keys on each thumb cluster control layer transitions (navigation, symbols, numbers and mouse) when held and space (all 4 keys) when tapped.
+- Activating both numbers and symbols layers activates the functions layer.
+- Activating both navigation and mouse layers activates the maintenance layer.
 - It is also possible to send tab, backspace, enter and esc using only these four thumb keys, depending on which ones you hold first and tap later.
 - On the navigation layer, you find Esc in the Q key.
 - On the mouse layer, you find Enter in the P key.
 - Tab is also present on both sides of the navigation and mouse layers, allowing easy access to gui/alt+tab.
-- Holding Z on base, numbers or symbols layers activates the functions layer.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (UIO) and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, in the numbers layer.
 

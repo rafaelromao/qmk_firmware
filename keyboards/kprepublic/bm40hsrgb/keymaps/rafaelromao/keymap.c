@@ -56,15 +56,15 @@ enum layers {
 #define RALTT_K RALT_T(KC_K)
 #define RGUIT_J RGUI_T(KC_J)
 
-// #define OS_LSFT OSM(MOD_LSFT)
-// #define OS_LCTL OSM(MOD_LCTL)
-// #define OS_LALT OSM(MOD_LALT)
-// #define OS_LGUI OSM(MOD_LGUI)
+#define OS_LSFT OSM(MOD_LSFT)
+#define OS_LCTL OSM(MOD_LCTL)
+#define OS_LALT OSM(MOD_LALT)
+#define OS_LGUI OSM(MOD_LGUI)
 
-// #define OS_RSFT OSM(MOD_RSFT)
-// #define OS_RCTL OSM(MOD_RCTL)
-// #define OS_RALT OSM(MOD_RALT)
-// #define OS_RGUI OSM(MOD_RGUI)
+#define OS_RSFT OSM(MOD_RSFT)
+#define OS_RCTL OSM(MOD_RCTL)
+#define OS_RALT OSM(MOD_RALT)
+#define OS_RGUI OSM(MOD_RGUI)
 
 #define NAV_SPC LT(NAVIGATION,KC_SPC)
 #define SYM_SPC LT(SYMBOLS,KC_SPC)
@@ -117,40 +117,6 @@ enum {
 };
 
 td_state_t dance_state(qk_tap_dance_state_t *state);
-
-// Oneshot (from https://github.com/callum-oakley/qmk_firmware/blob/master/users/callum)
-
-typedef enum {
-    os_up_unqueued,
-    os_up_queued,
-    os_down_unused,
-    os_down_used,
-} oneshot_state;
-
-enum keycodes {
-    // Custom oneshot mod implementation with no timers.
-    OS_LSFT = SAFE_RANGE,
-    OS_LCTL,
-    OS_LALT,
-    OS_LGUI,
-    OS_RSFT,
-    OS_RCTL,
-    OS_RALT,
-    OS_RGUI
-};
-
-void update_oneshot(
-    oneshot_state *state,
-    uint16_t mod,
-    uint16_t trigger,
-    uint16_t keycode,
-    keyrecord_t *record
-);
-
-oneshot_state os_sft_state = os_up_unqueued;
-oneshot_state os_ctl_state = os_up_unqueued;
-oneshot_state os_alt_state = os_up_unqueued;
-oneshot_state os_gui_state = os_up_unqueued;
 
 // Combos
 
@@ -324,41 +290,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default:
             return true;
     }
-
-    // One shot
-
-    update_oneshot(
-        &os_sft_state, KC_LSFT, OS_LSFT,
-        keycode, record
-    );
-    update_oneshot(
-        &os_ctl_state, KC_LCTL, OS_LCTL,
-        keycode, record
-    );
-    update_oneshot(
-        &os_alt_state, KC_LALT, OS_LALT,
-        keycode, record
-    );
-    update_oneshot(
-        &os_gui_state, KC_LGUI, OS_LGUI,
-        keycode, record
-    );
-    update_oneshot(
-        &os_sft_state, KC_RSFT, OS_RSFT,
-        keycode, record
-    );
-    update_oneshot(
-        &os_ctl_state, KC_RCTL, OS_RCTL,
-        keycode, record
-    );
-    update_oneshot(
-        &os_alt_state, KC_RALT, OS_RALT,
-        keycode, record
-    );
-    update_oneshot(
-        &os_gui_state, KC_RGUI, OS_RGUI,
-        keycode, record
-    );
 }
 
 // Swap Hands
@@ -524,69 +455,3 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [DOT_COM_QWE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dcq_finished, td_dcq_reset),
     [DOT_COM_COL] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dcc_finished, td_dcc_reset)
 };
-
-// Oneshot
-
-bool is_oneshot_cancel_key(uint16_t keycode) {
-    return false;
-}
-
-bool is_oneshot_ignored_key(uint16_t keycode) {
-    return true;
-}
-
-void update_oneshot(
-    oneshot_state *state,
-    uint16_t mod,
-    uint16_t trigger,
-    uint16_t keycode,
-    keyrecord_t *record
-) {
-    if (keycode == trigger) {
-        if (record->event.pressed) {
-            // Trigger keydown
-            if (*state == os_up_unqueued) {
-                register_code(mod);
-            }
-            *state = os_down_unused;
-        } else {
-            // Trigger keyup
-            switch (*state) {
-            case os_down_unused:
-                // If we didn't use the mod while trigger was held, queue it.
-                *state = os_up_queued;
-                break;
-            case os_down_used:
-                // If we did use the mod while trigger was held, unregister it.
-                *state = os_up_unqueued;
-                unregister_code(mod);
-                break;
-            default:
-                break;
-            }
-        }
-    } else {
-        if (record->event.pressed) {
-            if (is_oneshot_cancel_key(keycode) && *state != os_up_unqueued) {
-                // Cancel oneshot on designated cancel keydown.
-                *state = os_up_unqueued;
-                unregister_code(mod);
-            }
-        } else {
-            if (!is_oneshot_ignored_key(keycode)) {
-                // On non-ignored keyup, consider the oneshot used.
-                switch (*state) {
-                case os_down_unused:
-                    *state = os_down_used;
-                    break;
-                case os_up_queued:
-                    *state = os_up_unqueued;
-                    unregister_code(mod);
-                    break;
-                default:
-                    break;
-                }
-            }
-        }
-    }
-}

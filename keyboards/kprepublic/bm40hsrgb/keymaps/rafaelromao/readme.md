@@ -24,7 +24,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 - All symbols are conveniently placed for programming.
 
 Considering the QWERTY layout:
-- Home row mods (A Shift, S Ctrl, D Alt, F Win), also mirrored in the other side of the keyboard (J Win, K Alt, L Ctrl, Backspace Shift), are available on the base layers, and in the right side in the numbers layers.
+- Home row mods (A Shift, S Ctrl, D Alt, F Win), also mirrored in the other side of the keyboard (J Win, K Alt, L Ctrl, Backspace Shift), are available on the base layers, and in the right side in the numbers layer.
 - Dedicated modifiers are available on the functions layers.
 - Sticky (one shot) modifiers are available on the navigation and mouse layers.
 - The two keys on each thumb cluster control layer transitions (navigation, symbols, numbers and mouse) when held and space (all 4 keys) when tapped.

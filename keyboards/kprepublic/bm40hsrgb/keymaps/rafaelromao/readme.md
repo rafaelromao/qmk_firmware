@@ -42,8 +42,8 @@ Considering the QWERTY layout:
 - JKL (qwerty) / NEI (colemak) sends ENTER
 - SDF (qwerty) / RST (colemak) sends ESC
 - UIO (qwerty) / LUY (colemak) or WER (qwerty) / WFP (colemak) sends TAB
-- XCV (qwerty) / XCD (colemak) activates the symbol layer for one shot
-- M,. (qwerty) / H,. (colemak) or 123 activates the symbol layer for one shot
+- XCV (qwerty) / XCD (colemak) activates the numbers layer for one shot
+- M,. (qwerty) / H,. (colemak) or 123 activates the symbols layer for one shot
 - 456 activates the functions layer
 - Gui, Alt, Ctrl activates the navigation layer
 - F4F5F6 or LeftDownUp returns to the previous layer

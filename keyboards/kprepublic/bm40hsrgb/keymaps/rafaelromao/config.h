@@ -21,7 +21,7 @@
 //#define PERMISSIVE_HOLD
 #define ONESHOT_TAP_TOGGLE 2
 #define TAPPING_TOGGLE 2
-#define TAPPING_TERM 125
+#define TAPPING_TERM 175
 
 // configure leader key
 #define LEADER_TIMEOUT 300

@@ -38,6 +38,7 @@ enum layers {
 #define LALTT_S LALT_T(KC_S)
 #define LGUIT_T LGUI_T(KC_T)
 
+#define SFT_SLS LSFT_T(KC_SLSH)
 #define LCTLT_S LCTL_T(KC_S)
 #define LALTT_D LALT_T(KC_D)
 #define LGUIT_F LGUI_T(KC_F)
@@ -86,6 +87,7 @@ enum layers {
 #define DF_COL DF(COLEMAK)
 #define TO_SYM TO(SYMBOLS)
 #define OS_SYM OSL(SYMBOLS)
+#define OS_NUM OSL(NUMBERS)
 #define TO_NUM TO(NUMBERS)
 #define TO_NAV TO(NAVIGATION)
 #define TG_NAV TG(NAVIGATION)
@@ -122,14 +124,20 @@ td_state_t dance_state(qk_tap_dance_state_t *state);
 
 const uint16_t PROGMEM qwe_ent_combo[] = {RGUIT_J, RALTT_K, RCTLT_L, COMBO_END};
 const uint16_t PROGMEM qwe_esc_combo[] = {LCTLT_S, LALTT_D, LGUIT_F, COMBO_END};
-const uint16_t PROGMEM qwe_tab_combo[] = {KC_U, KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM qw1_tab_combo[] = {KC_W, KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM qw2_tab_combo[] = {KC_U, KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM col_ent_combo[] = {RGUIT_N, RALTT_E, RCTLT_I, COMBO_END};
 const uint16_t PROGMEM col_esc_combo[] = {LCTLT_R, LALTT_S, LGUIT_T, COMBO_END};
-const uint16_t PROGMEM col_tab_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
+const uint16_t PROGMEM co1_tab_combo[] = {KC_W, KC_F, KC_P, COMBO_END};
+const uint16_t PROGMEM co2_tab_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
 const uint16_t PROGMEM num_fun_combo[] = {RGUIT_4, RALTT_5, RCTLT_6, COMBO_END};
 const uint16_t PROGMEM fun_tog_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
+const uint16_t PROGMEM qwe_num_combo[] = {KC_X, KC_C, KC_V, COMBO_END};
+const uint16_t PROGMEM col_num_combo[] = {KC_X, KC_C, KC_D, COMBO_END};
 const uint16_t PROGMEM num_sym_combo[] = {KC_P1, KC_P2, KC_P3, COMBO_END};
-const uint16_t PROGMEM rsy_sho_combo[] = {KC_DLR, KC_QUES, KC_HASH, COMBO_END};
+const uint16_t PROGMEM qwe_sym_combo[] = {KC_M, KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM col_sym_combo[] = {KC_H, KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM rsy_sho_combo[] = {KC_DLR, KC_LPRN, KC_RPRN, COMBO_END};
 const uint16_t PROGMEM lsy_sho_combo[] = {KC_LCBR, KC_RCBR, KC_UNDS, COMBO_END};
 const uint16_t PROGMEM rnu_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
 const uint16_t PROGMEM lnu_sho_combo[] = {KC_CIRC, KC_TILD, KC_GRV , COMBO_END};
@@ -139,13 +147,19 @@ const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(qwe_ent_combo, KC_ENT),
   COMBO(qwe_esc_combo, KC_ESC),
-  COMBO(qwe_tab_combo, KC_TAB),
+  COMBO(qw1_tab_combo, KC_TAB),
+  COMBO(qw2_tab_combo, KC_TAB),
   COMBO(col_ent_combo, KC_ENT),
   COMBO(col_esc_combo, KC_ESC),
-  COMBO(col_tab_combo, KC_TAB),
+  COMBO(co1_tab_combo, KC_TAB),
+  COMBO(co2_tab_combo, KC_TAB),
   COMBO(num_fun_combo, TG_FN),
   COMBO(fun_tog_combo, TG_FN),
+  COMBO(qwe_num_combo, OS_NUM),
+  COMBO(col_num_combo, OS_NUM),
   COMBO(num_sym_combo, OS_SYM),
+  COMBO(qwe_sym_combo, OS_SYM),
+  COMBO(col_sym_combo, OS_SYM),
   COMBO(rsy_sho_combo, SH_OS),
   COMBO(lsy_sho_combo, SH_OS),
   COMBO(rnu_sho_combo, SH_OS),
@@ -193,9 +207,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [SYMBOLS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_QUES , KC_HASH , XXXXXXX ,
+      XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_EXLM , KC_LPRN , KC_RPRN , KC_EQL  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_AMPR , KC_DQUO , KC_AT   , KC_PIPE ,
+      SFT_SLS , KC_ASTR , KC_MINS , KC_EQL  , KC_EXLM , XXXXXXX , XXXXXXX , KC_PIPE , KC_AMPR , KC_DQUO , KC_AT   , KC_HASH ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_CAPS , KC_LBRC , KC_RBRC , KC_BSLS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|

@@ -14,13 +14,13 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/8cS571p.png)
+![img](https://i.imgur.com/nc260RS.png)
 
 ## Highlights
 
 - The two center columns, the center space bar, and the 6 outer keys in the bottom row are disabled.
 - The base layer can be either qwerty or colemak dhm.
-- The keys in the two inner columns are used only in the base layer, minimizing lateral movement.
+- Use of keys in the two inner columns is reduced, minimizing lateral movement.
 - All symbols are conveniently placed for programming.
 
 Considering the QWERTY layout:
@@ -41,8 +41,9 @@ Considering the QWERTY layout:
 
 - JKL (qwerty) / NEI (colemak) sends ENTER
 - SDF (qwerty) / RST (colemak) sends ESC
-- UIO (qwerty) / LUY (colemak) sends TAB
-- 123 activates the symbol layer for one shot
+- UIO (qwerty) / LUY (colemak) or WER (qwerty) / WFP (colemak) sends TAB
+- XCV (qwerty) / XCD (colemak) activates the symbol layer for one shot
+- M,. (qwerty) / H,. (colemak) or 123 activates the symbol layer for one shot
 - 456 activates the functions layer
 - Gui, Alt, Ctrl activates the navigation layer
 - F4F5F6 or LeftDownUp returns to the previous layer

@@ -99,6 +99,14 @@ enum layers {
 #define TG_FN TG(FUCTIONS)
 #define TO_MED TO(MEDIA)
 
+enum custom_keycodes {
+    SS_BTIC = SAFE_RANGE,
+    SS_DQUO,
+    SS_SQUO,
+    SS_CIRC,
+    SS_TILD
+};
+
 // Tap dance settings
 
 typedef enum {
@@ -200,25 +208,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_SLSH , KC_ASTR , KC_MINS , KC_PLUS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_4 , RALTT_5 , RCTLT_6 , TD_DCC  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , KC_C    , KC_QUOT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   ,
+      XXXXXXX , KC_DQUO , KC_C    , KC_QUOT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_P1   , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , FUN_BSP ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [SYMBOLS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , KC_LCBR , KC_RCBR , KC_UNDS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
+      KC_AT   , KC_LCBR , KC_RCBR , KC_UNDS , SS_CIRC , XXXXXXX , XXXXXXX , SS_TILD , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      SFT_SLS , KC_ASTR , KC_MINS , KC_EQL  , KC_EXLM , XXXXXXX , XXXXXXX , KC_PIPE , KC_AMPR , KC_DQUO , KC_AT   , KC_HASH ,
+      SFT_SLS , KC_ASTR , KC_MINS , KC_EQL  , KC_EXLM , XXXXXXX , XXXXXXX , KC_PIPE , KC_AMPR , SS_DQUO , SS_SQUO , SS_BTIC ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_CAPS , KC_LBRC , KC_RBRC , KC_BSLS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
+      KC_HASH , KC_LBRC , KC_RBRC , KC_BSLS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , FUN_TAB , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [FUCTIONS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F7   , KC_F8   , KC_F9   , KC_F12  ,
+      KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F7   , KC_F8   , KC_F9   , KC_F12  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_LSFT , KC_LCTL , KC_LALT , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F4   , KC_F5   , KC_F6   , KC_F11  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -229,7 +237,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_ESC  , KC_LOCK , KC_LEAD , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_END  , KC_HOME , XXXXXXX ,
+      KC_ESC  , XXXXXXX , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_END  , KC_HOME , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       OS_LSFT , OS_LCTL , OS_LALT , OS_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -262,11 +270,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [MAINTENANCE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , RGB_TOG , RGB_MOD , CMB_TOG , EEP_RST , XXXXXXX , XXXXXXX , RESET   , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , RGB_TOG , RGB_MOD , XXXXXXX , EEP_RST , XXXXXXX , XXXXXXX , RESET   , XXXXXXX , CMB_TOG , NK_TOGG , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAI , RGB_HUI , RGB_SAI , MO_LAY  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , MO_LAY  , DEBUG   , BL_ON   , BL_OFF  ,
+      RGB_VAI , RGB_HUI , RGB_SAI , MO_LAY  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , MO_LAY  , DEBUG   , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      RGB_VAD , RGB_HUD , RGB_SAD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_SLEP , NK_ON   , NK_OFF  ,
+      RGB_VAD , RGB_HUD , RGB_SAD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -288,9 +296,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
-    // Persistent default layers
-
     switch (keycode) {
+
+        // Persistent default layers
+
         case DF_COL:
             if (record->event.pressed) {
                 set_single_persistent_default_layer(COLEMAK);
@@ -301,6 +310,35 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 set_single_persistent_default_layer(QWERTY);
             }
             return false;
+
+        // String delimiters
+
+        case SS_BTIC:
+            if (record->event.pressed) {
+                SEND_STRING("` ");
+            }
+            return false;
+        case SS_DQUO:
+            if (record->event.pressed) {
+                SEND_STRING("\" ");
+            }
+            return false;
+        case SS_SQUO:
+            if (record->event.pressed) {
+                SEND_STRING("' ");
+            }
+            return false;
+        case SS_CIRC:
+            if (record->event.pressed) {
+                SEND_STRING("^ ");
+            }
+            return false;
+        case SS_TILD:
+            if (record->event.pressed) {
+                SEND_STRING("~ ");
+            }
+            return false;
+
         default:
             return true;
     }
@@ -320,11 +358,11 @@ const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
     if (!is_combo_enabled()) {
-        rgb_matrix_set_color(3, RGB_RED);
+        rgb_matrix_set_color(9, RGB_RED);
     }
 
     if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(24, RGB_RED);
+        rgb_matrix_set_color(0, RGB_RED);
     }
 
     switch(get_highest_layer(layer_state|default_layer_state)) {

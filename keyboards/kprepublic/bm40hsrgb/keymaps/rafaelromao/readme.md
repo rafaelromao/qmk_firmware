@@ -14,7 +14,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/nc260RS.png)
+![img](https://i.imgur.com/CCkfF5P.png)
 
 ## Highlights
 

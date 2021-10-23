@@ -34,7 +34,7 @@ Considering the QWERTY layout:
 - On the navigation layer, you find Esc in the Q key.
 - On the mouse layer, you find Enter in the P key.
 - Tab is also present on both sides of the navigation and mouse layers, allowing easy access to gui/alt+tab.
-- Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (UIO) and single hand operations (Swap hands or activate another layer).
+- Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO) and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, in the numbers layer.
 
 ## Combos

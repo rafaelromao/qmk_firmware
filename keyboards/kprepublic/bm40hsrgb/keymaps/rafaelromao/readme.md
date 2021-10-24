@@ -18,7 +18,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
 ## Highlights
 
-- This layout works well with the OS configured for the US Internacional layout.
+- This layout works well with the OS configured for the US International layout.
 - The two center columns, the center space bar, and the 6 outer keys in the bottom row are disabled.
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.

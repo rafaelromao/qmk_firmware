@@ -18,6 +18,7 @@ http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
 ## Highlights
 
+- This layout works well with the OS configured for the US Internacional layout.
 - The two center columns, the center space bar, and the 6 outer keys in the bottom row are disabled.
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
@@ -53,7 +54,13 @@ Considering the QWERTY layout:
 
 - If the base layer is qwerty, the right pinky key, in the numbers row, sends shift when held or backspace when tapped, or tapped and then held, while the key above it sends dot on single tap and comma on double tap.
 - If the base layer is colemak, the right pinky key, in the numbers layer, sends dot on single tap, comma on double tap and shift when held, while the key above it simply sends backspace when tapped or held.
-  
+
+## Accentuation
+
+- This layout was designed mostly for coding and typing in English and Portuguese.
+- Using the symbols layer, we can use ", ', `, ~ and ^ as independent symbols, while in the left side of my numbers (numpad style) layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
+- Considering qwerty, holding my left thumb + tapping l + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping v + releasing the thumb + tapping c, gives me ç. The same goes for the other accents.
+
 ## Resources
 
 - [QMK Docs](https://docs.qmk.fm)

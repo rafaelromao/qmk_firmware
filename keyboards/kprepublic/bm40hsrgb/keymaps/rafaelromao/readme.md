@@ -48,7 +48,7 @@ Considering the QWERTY layout:
 - 456 activates the functions layer
 - Gui, Alt, Ctrl activates the navigation layer
 - F4F5F6 or LeftDownUp returns to the previous layer
-- {}_ or $?# or 789 or ^~` swap hands for one shot
+- {}_ or $() or 789 or ^~` swap hands for one shot
 
 ## Tap Dance
 

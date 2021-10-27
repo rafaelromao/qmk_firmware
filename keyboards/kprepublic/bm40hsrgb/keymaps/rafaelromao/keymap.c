@@ -148,7 +148,7 @@ const uint16_t PROGMEM num_sym_combo[] = {KC_P1, KC_P2, KC_P3, COMBO_END};
 const uint16_t PROGMEM qwe_sym_combo[] = {KC_M, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM col_sym_combo[] = {KC_H, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM rsy_sho_combo[] = {KC_DLR, KC_LPRN, KC_RPRN, COMBO_END};
-const uint16_t PROGMEM lsy_sho_combo[] = {KC_LCBR, KC_RCBR, KC_UNDS, COMBO_END};
+const uint16_t PROGMEM lsy_sho_combo[] = {KC_UNDS, KC_LCBR, KC_RCBR, COMBO_END};
 const uint16_t PROGMEM rnu_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
 const uint16_t PROGMEM lnu_sho_combo[] = {KC_CIRC, KC_TILD, KC_GRV , COMBO_END};
 const uint16_t PROGMEM mou_nav_combo[] = {OS_RALT, OS_RSFT, OS_RCTL, COMBO_END};
@@ -217,11 +217,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [SYMBOLS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_AT   , KC_LCBR , KC_RCBR , KC_UNDS , SS_CIRC , XXXXXXX , XXXXXXX , SS_TILD , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
+      KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_CIRC , XXXXXXX , XXXXXXX , SS_TILD , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_SLSH , KC_ASTR , SFT_MIN , KC_EQL  , KC_EXLM , XXXXXXX , XXXXXXX , KC_PIPE , KC_AMPR , SS_DQUO , SS_SQUO , SS_BTIC ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_HASH , KC_LBRC , KC_RBRC , KC_BSLS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
+      KC_HASH , KC_BSLS , KC_LBRC , KC_RBRC , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , MO_FUN  , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -298,6 +298,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
+    bool isQwerty = biton32(default_layer_state) == QWERTY;
+    bool isColemak = biton32(default_layer_state) == COLEMAK;
+
     switch (keycode) {
 
         // Persistent default layers
@@ -340,6 +343,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 SEND_STRING("~ ");
             }
             return false;
+
+        // Tap dance
+
+        case TD_DCC:
+            if (isQwerty) {
+                if (record->event.pressed) {
+                    register_code(KC_BSPC);
+                } else {
+                    unregister_code(KC_BSPC);
+                }
+                return false;
+            }
+        case TD_DCQ:
+            if (isColemak) {
+                if (record->event.pressed) {
+                    register_code(KC_BSPC);
+                } else {
+                    unregister_code(KC_BSPC);
+                }
+                return false;
+            }
 
         default:
             return true;

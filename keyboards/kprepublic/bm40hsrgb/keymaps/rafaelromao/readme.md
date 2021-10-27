@@ -14,7 +14,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
 
-![img](https://i.imgur.com/HwjcJR6.png)
+![img](https://i.imgur.com/Cdsi0CM.png)
 
 ## Highlights
 
@@ -47,7 +47,7 @@ Considering the QWERTY layout:
 - 456 activates the functions layer
 - Alt, Shift, Ctrl activates the navigation layer
 - F4F5F6 or LeftDownUp returns to the previous layer
-- {}_ or $() or 789 or ^~` swap hands for one shot
+- _{} or $() or 789 or ^~` swap hands for one shot
 
 ## Tap Dance
 

@@ -346,15 +346,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         // Tap dance
 
-        case TD_DCC:
-            if (isQwerty) {
-                if (record->event.pressed) {
-                    register_code(KC_BSPC);
-                } else {
-                    unregister_code(KC_BSPC);
-                }
-                return false;
-            }
         case TD_DCQ:
             if (isColemak) {
                 if (record->event.pressed) {
@@ -363,6 +354,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     unregister_code(KC_BSPC);
                 }
                 return false;
+            } else {
+                return true;
+            }
+        case TD_DCC:
+            if (isQwerty) {
+                if (record->event.pressed) {
+                    register_code(KC_BSPC);
+                } else {
+                    unregister_code(KC_BSPC);
+                }
+                return false;
+            } else {
+                return true;
             }
 
         default:

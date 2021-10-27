@@ -358,6 +358,30 @@ bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LCTLT_S:
+        case LSFTT_D:
+        case LALTT_F:
+        case LGUIT_V:
+        case LCTLT_R:
+        case LSFTT_S:
+        case LALTT_T:
+        case LGUIT_D:
+        case RCTLT_L:
+        case RSFTT_K:
+        case RALTT_J:
+        case RGUIT_M:
+        case RCTLT_I:
+        case RSFTT_E:
+        case RALTT_N:
+        case RGUIT_H:
+            return true;
+        default:
+            return false;
+    }
+}
+
 // Swap Hands
 
 const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
@@ -448,12 +472,8 @@ void td_dcq_finished(qk_tap_dance_state_t *state, void *user_data) {
         }
     } else {
         switch (tap_state.state) {
-            case TD_SINGLE_TAP:
-            case TD_DOUBLE_TAP:
-            case TD_SINGLE_HOLD:
-            case TD_DOUBLE_HOLD:
-                register_code(KC_BSPC); break;
-            default: break;
+            default:
+                unregister_code(KC_BSPC); break;
         }
     }
 }
@@ -468,12 +488,8 @@ void td_dcq_reset(qk_tap_dance_state_t *state, void *user_data) {
         }
     } else {
         switch (tap_state.state) {
-            case TD_SINGLE_TAP:
-            case TD_DOUBLE_TAP:
-            case TD_SINGLE_HOLD:
-            case TD_DOUBLE_HOLD:
-                unregister_code(KC_BSPC); break;
-            default: break;
+            default:
+                register_code(KC_BSPC); break;
         }
     }
     tap_state.state = TD_NONE;
@@ -490,12 +506,8 @@ void td_dcc_finished(qk_tap_dance_state_t *state, void *user_data) {
         }
     } else {
         switch (tap_state.state) {
-            case TD_SINGLE_TAP:
-            case TD_DOUBLE_TAP:
-            case TD_SINGLE_HOLD:
-            case TD_DOUBLE_HOLD:
+            default:
                 register_code(KC_BSPC); break;
-            default: break;
         }
     }
 }
@@ -510,12 +522,8 @@ void td_dcc_reset(qk_tap_dance_state_t *state, void *user_data) {
         }
     } else {
         switch (tap_state.state) {
-            case TD_SINGLE_TAP:
-            case TD_DOUBLE_TAP:
-            case TD_SINGLE_HOLD:
-            case TD_DOUBLE_HOLD:
+            default:
                 unregister_code(KC_BSPC); break;
-            default: break;
         }
     }
     tap_state.state = TD_NONE;

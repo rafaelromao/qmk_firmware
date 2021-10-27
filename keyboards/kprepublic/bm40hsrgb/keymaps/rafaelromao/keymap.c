@@ -494,11 +494,6 @@ void td_dcq_finished(qk_tap_dance_state_t *state, void *user_data) {
             case TD_DOUBLE_TAP: register_code(KC_COMM); break;
             default: break;
         }
-    } else {
-        switch (tap_state.state) {
-            default:
-                register_code(KC_BSPC); break;
-        }
     }
 }
 
@@ -509,11 +504,6 @@ void td_dcq_reset(qk_tap_dance_state_t *state, void *user_data) {
             case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
             case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
             default: break;
-        }
-    } else {
-        switch (tap_state.state) {
-            default:
-                unregister_code(KC_BSPC); break;
         }
     }
     tap_state.state = TD_NONE;
@@ -528,11 +518,6 @@ void td_dcc_finished(qk_tap_dance_state_t *state, void *user_data) {
             case TD_DOUBLE_TAP: register_code(KC_COMM); break;
             default: break;
         }
-    } else {
-        switch (tap_state.state) {
-            default:
-                register_code(KC_BSPC); break;
-        }
     }
 }
 
@@ -543,11 +528,6 @@ void td_dcc_reset(qk_tap_dance_state_t *state, void *user_data) {
             case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
             case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
             default: break;
-        }
-    } else {
-        switch (tap_state.state) {
-            default:
-                unregister_code(KC_BSPC); break;
         }
     }
     tap_state.state = TD_NONE;

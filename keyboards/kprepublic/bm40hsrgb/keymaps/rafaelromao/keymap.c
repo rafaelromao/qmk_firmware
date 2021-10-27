@@ -190,7 +190,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B    , XXXXXXX , XXXXXXX , KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , SYM_SPC ,     RESET      , NUM_SPC , MO_MOU  , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , SYM_SPC ,      XXXXXXX      , NUM_SPC , MO_MOU  , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [COLEMAK] = LAYOUT_planck_mit(
@@ -201,7 +201,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V    , XXXXXXX , XXXXXXX , KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , SYM_SPC ,     RESET      , NUM_SPC , MO_MOU  , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , SYM_SPC ,      XXXXXXX      , NUM_SPC , MO_MOU  , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [NUMBERS] = LAYOUT_planck_mit(
@@ -449,6 +449,7 @@ void td_dcq_finished(qk_tap_dance_state_t *state, void *user_data) {
     } else {
         switch (tap_state.state) {
             case TD_SINGLE_TAP:
+            case TD_DOUBLE_TAP:
             case TD_SINGLE_HOLD:
             case TD_DOUBLE_HOLD:
                 register_code(KC_BSPC); break;
@@ -468,6 +469,7 @@ void td_dcq_reset(qk_tap_dance_state_t *state, void *user_data) {
     } else {
         switch (tap_state.state) {
             case TD_SINGLE_TAP:
+            case TD_DOUBLE_TAP:
             case TD_SINGLE_HOLD:
             case TD_DOUBLE_HOLD:
                 unregister_code(KC_BSPC); break;
@@ -489,6 +491,7 @@ void td_dcc_finished(qk_tap_dance_state_t *state, void *user_data) {
     } else {
         switch (tap_state.state) {
             case TD_SINGLE_TAP:
+            case TD_DOUBLE_TAP:
             case TD_SINGLE_HOLD:
             case TD_DOUBLE_HOLD:
                 register_code(KC_BSPC); break;
@@ -508,6 +511,7 @@ void td_dcc_reset(qk_tap_dance_state_t *state, void *user_data) {
     } else {
         switch (tap_state.state) {
             case TD_SINGLE_TAP:
+            case TD_DOUBLE_TAP:
             case TD_SINGLE_HOLD:
             case TD_DOUBLE_HOLD:
                 unregister_code(KC_BSPC); break;

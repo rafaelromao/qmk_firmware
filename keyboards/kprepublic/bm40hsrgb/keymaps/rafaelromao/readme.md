@@ -32,8 +32,8 @@ Considering the QWERTY layout:
 - The two inner thumb keys acts as space when tapped.
 - Activating both numbers and symbols layers activates the functions layer.
 - Activating both navigation and mouse layers activates the maintenance layer.
-- On the navigation and mouse layer, you find Esc in the Q key.
-- On the navigation adn mouse layer, you find Enter in the P key.
+- On the navigation and mouse layers, you find Esc in the Q key.
+- On the navigation adn mouse layers, you find Enter in the P key.
 - Tab is also present on both sides of the navigation and mouse layers, allowing easy access to gui/alt+tab.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO) and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, in the numbers layer.

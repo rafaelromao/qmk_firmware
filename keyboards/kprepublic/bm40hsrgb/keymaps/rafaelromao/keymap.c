@@ -473,7 +473,7 @@ void td_dcq_finished(qk_tap_dance_state_t *state, void *user_data) {
     } else {
         switch (tap_state.state) {
             default:
-                unregister_code(KC_BSPC); break;
+                register_code(KC_BSPC); break;
         }
     }
 }
@@ -489,7 +489,7 @@ void td_dcq_reset(qk_tap_dance_state_t *state, void *user_data) {
     } else {
         switch (tap_state.state) {
             default:
-                register_code(KC_BSPC); break;
+                unregister_code(KC_BSPC); break;
         }
     }
     tap_state.state = TD_NONE;

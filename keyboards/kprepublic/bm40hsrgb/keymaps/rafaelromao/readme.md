@@ -40,15 +40,15 @@ Considering the QWERTY layout:
 
 ## Combos
 
-- JKL (qwerty) / NEI (colemak) sends ENTER
-- SDF (qwerty) / RST (colemak) sends ESC
-- UIO (qwerty) / LUY (colemak) or WER (qwerty) / WFP (colemak) sends TAB
-- XCV (qwerty) / XCD (colemak) activates the raise layer for one shot
-- M,. (qwerty) / H,. (colemak) activates the lower layer for one shot
-- 123 activates the functions layer
-- AltShiftCtrl activates the navigation layer
-- ' " &, 456, CtrlShiftAlt, -=!, F4F5F6 or LeftDownUp returns to the previous layer
-- _{} or $() or 789 or ^~` swap hands for one shot
+- JKL (qwerty) / NEI (colemak) sends ENTER.
+- SDF (qwerty) / RST (colemak) sends ESC.
+- UIO (qwerty) / LUY (colemak) or WER (qwerty) / WFP (colemak) sends TAB.
+- XCV (qwerty) / XCD (colemak) activates the raise layer for one shot.
+- M,. (qwerty) / H,. (colemak) activates the lower layer for one shot.
+- 123 activates the functions layer.
+- AltShiftCtrl activates the navigation layer.
+- ' " &, 456, CtrlShiftAlt, -=!, F4F5F6 or LeftDownUp returns to the previous layer.
+- _{} or $() or 789 or ^~` swap hands for one shot.
 
 ## Tap Dance
 

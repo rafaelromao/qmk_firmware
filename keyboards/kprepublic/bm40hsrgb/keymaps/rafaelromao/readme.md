@@ -52,13 +52,13 @@ Considering the QWERTY layout:
 
 ## Tap Dance
 
-- If the base layer is qwerty, the right pinky key, in the lower layer, sends backspace when tapped or held, while the key above it sends dot on single tap and comma on double tap.
-- If the base layer is colemak, the right pinky key, in the lower layer, sends dot on single tap and comma on double tap, while the key above it simply sends backspace when tapped or held.
+- If the base layer is qwerty, the right pinky key, in the lower (numpad style) layer, sends backspace when tapped or held, while the key above it sends dot on single tap and comma on double tap.
+- If the base layer is colemak, the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap, while the key above it simply sends backspace when tapped or held.
 
 ## Accentuation
 
 - This layout was designed mostly for coding and typing in English and Portuguese.
-- Using the raise layer, we can use ", ', `, ~ and ^ as independent symbols, while in the left side of my lower (numpad style) layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
+- Using the raise layer, we can use ", ', `, ~ and ^ as independent symbols, while in the left side of the lower (numpad style) layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
 - For example, considering qwerty, holding my left thumb + tapping l + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping v + releasing the thumb + tapping c, gives me ç. The same goes for the other accents.
 
 ## Resources

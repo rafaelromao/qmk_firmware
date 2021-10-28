@@ -12,7 +12,7 @@
 
 ## Layout
 
-http://www.keyboard-layout-editor.com/#/gists/59d65a3aafd060cf391e85eef33f5b21
+http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 ![img](https://i.imgur.com/a6KH4yh.png)
 

@@ -59,7 +59,7 @@ Considering the QWERTY layout:
 
 - This layout was designed mostly for coding and typing in English and Portuguese.
 - Using the raise layer, we can use ", ', `, ~ and ^ as independent symbols, while in the left side of the lower (numpad style) layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
-- For example, considering qwerty, holding my left thumb + tapping l + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping v + releasing the thumb + tapping c, gives me ç. The same goes for the other accents.
+- For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping v + releasing the thumb + tapping c, gives me ç. The same goes for the other accents.
 
 ## Resources
 

@@ -23,7 +23,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
 - Symbols are spread among lower and raise layers, making it easier to use them with a single hand.
-- All symbols are conveniently placed for software programming and VIM editors.
+- All symbols are conveniently placed for software programming and VIM commands.
 
 Considering the QWERTY layout:
 - Home block mods (S Ctrl, D Shift, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Shift, L Ctrl), are available on the base layers, and in the right side in the lower layer.

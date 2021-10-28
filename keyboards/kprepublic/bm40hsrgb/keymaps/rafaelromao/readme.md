@@ -22,7 +22,9 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - The two center columns, the center space bar, and the 6 outer keys in the bottom row are disabled.
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
+- Symbols are spread among lower and raise layers, making it easier to use them with a single hand.
 - All symbols are conveniently placed for programming.
+- The symbols that are most used in VIM are all in the same side.
 
 Considering the QWERTY layout:
 - Home block mods (S Ctrl, D Shift, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Shift, L Ctrl), are available on the base layers, and in the right side in the lower layer.

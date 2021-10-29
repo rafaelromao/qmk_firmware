@@ -43,38 +43,38 @@ enum custom_keycodes {
 
 #define GUI_QUO LGUI_T(KC_QUOT)
 
-#define LCTLT_S LCTL_T(KC_S)
-#define LSFTT_D LSFT_T(KC_D)
+#define LSFTT_S LSFT_T(KC_S)
+#define LCTLT_D LCTL_T(KC_D)
 #define LALTT_F LALT_T(KC_F)
 #define LGUIT_V LGUI_T(KC_V)
 
-#define LCTLT_R LCTL_T(KC_R)
-#define LSFTT_S LSFT_T(KC_S)
+#define LSFTT_R LSFT_T(KC_R)
+#define LCTLT_S LCTL_T(KC_S)
 #define LALTT_T LALT_T(KC_T)
 #define LGUIT_D LGUI_T(KC_D)
 
-#define RCTLT_L RCTL_T(KC_L)
-#define RSFTT_K RSFT_T(KC_K)
+#define RSFTT_L RSFT_T(KC_L)
+#define RCTLT_K RCTL_T(KC_K)
 #define RALTT_J RALT_T(KC_J)
 #define RGUIT_M RGUI_T(KC_M)
 
-#define RCTLT_I RCTL_T(KC_I)
-#define RSFTT_E RSFT_T(KC_E)
+#define RSFTT_I RSFT_T(KC_I)
+#define RCTLT_E RCTL_T(KC_E)
 #define RALTT_N RALT_T(KC_N)
 #define RGUIT_H RGUI_T(KC_H)
 
-#define RCTLT_6 RCTL_T(KC_P6)
-#define RSFTT_5 RSFT_T(KC_P5)
+#define RSFTT_6 RSFT_T(KC_P6)
+#define RCTLT_5 RCTL_T(KC_P5)
 #define RALTT_4 RALT_T(KC_P4)
 #define RGUIT_1 RGUI_T(KC_P1)
 
-#define OS_LCTL OSM(MOD_LCTL)
 #define OS_LSFT OSM(MOD_LSFT)
+#define OS_LCTL OSM(MOD_LCTL)
 #define OS_LALT OSM(MOD_LALT)
 #define OS_LGUI OSM(MOD_LGUI)
 
-#define OS_RCTL OSM(MOD_RCTL)
 #define OS_RSFT OSM(MOD_RSFT)
+#define OS_RCTL OSM(MOD_RCTL)
 #define OS_RALT OSM(MOD_RALT)
 #define OS_RGUI OSM(MOD_RGUI)
 
@@ -130,12 +130,12 @@ td_state_t dance_state(qk_tap_dance_state_t *state);
 
 // Combos
 
-const uint16_t PROGMEM qwe_ent_combo[] = {RALTT_J, RSFTT_K, RCTLT_L, COMBO_END};
-const uint16_t PROGMEM qwe_esc_combo[] = {LCTLT_S, LSFTT_D, LALTT_F, COMBO_END};
+const uint16_t PROGMEM qwe_ent_combo[] = {RALTT_J, RCTLT_K, RSFTT_L, COMBO_END};
+const uint16_t PROGMEM qwe_esc_combo[] = {LSFTT_S, LCTLT_D, LALTT_F, COMBO_END};
 const uint16_t PROGMEM qw1_tab_combo[] = {KC_W, KC_E, KC_R, COMBO_END};
 const uint16_t PROGMEM qw2_tab_combo[] = {KC_U, KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM col_ent_combo[] = {RALTT_N, RSFTT_E, RCTLT_I, COMBO_END};
-const uint16_t PROGMEM col_esc_combo[] = {LCTLT_R, LSFTT_S, LALTT_T, COMBO_END};
+const uint16_t PROGMEM col_ent_combo[] = {RALTT_N, RCTLT_E, RSFTT_I, COMBO_END};
+const uint16_t PROGMEM col_esc_combo[] = {LSFTT_R, LCTLT_S, LALTT_T, COMBO_END};
 const uint16_t PROGMEM co1_tab_combo[] = {KC_W, KC_F, KC_P, COMBO_END};
 const uint16_t PROGMEM co2_tab_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
 const uint16_t PROGMEM low_adj_combo[] = {RGUIT_1, KC_P2, KC_P3, COMBO_END};
@@ -148,11 +148,11 @@ const uint16_t PROGMEM rsy_sho_combo[] = {KC_DLR, KC_LPRN, KC_RPRN, COMBO_END};
 const uint16_t PROGMEM lsy_sho_combo[] = {KC_UNDS, KC_LCBR, KC_RCBR, COMBO_END};
 const uint16_t PROGMEM rnu_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
 const uint16_t PROGMEM lnu_sho_combo[] = {KC_CIRC, KC_TILD, KC_GRV , COMBO_END};
-const uint16_t PROGMEM mou_nav_combo[] = {OS_RALT, OS_RSFT, OS_RCTL, COMBO_END};
+const uint16_t PROGMEM mou_nav_combo[] = {OS_RALT, OS_RCTL, OS_RSFT, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM lo1_tog_combo[] = {SS_SQUO, SS_DQUO, KC_AMPR, COMBO_END};
-const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RSFTT_5, RCTLT_6, COMBO_END};
-const uint16_t PROGMEM ra1_tog_combo[] = {KC_LCTL, KC_LSFT, KC_LALT, COMBO_END};
+const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
+const uint16_t PROGMEM ra1_tog_combo[] = {KC_LSFT, KC_LCTL, KC_LALT, COMBO_END};
 const uint16_t PROGMEM ra2_tog_combo[] = {KC_MINS, KC_EQL, KC_EXLM, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -190,7 +190,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , XXXXXXX , XXXXXXX , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_A    , LCTLT_S , LSFTT_D , LALTT_F , KC_G    , XXXXXXX , XXXXXXX , KC_H    , RALTT_J , RSFTT_K , RCTLT_L , KC_BSPC ,
+      KC_A    , LSFTT_S , LCTLT_D , LALTT_F , KC_G    , XXXXXXX , XXXXXXX , KC_H    , RALTT_J , RCTLT_K , RSFTT_L , KC_BSPC ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B    , XXXXXXX , XXXXXXX , KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -201,7 +201,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       KC_Q    , KC_W    , KC_F    , KC_P    , KC_B    , XXXXXXX , XXXXXXX , KC_J    , KC_L    , KC_U    , KC_Y    , KC_BSPC ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_A    , LCTLT_R , LSFTT_S , LALTT_T , KC_G    , XXXXXXX , XXXXXXX , KC_M    , RALTT_N , RSFTT_E , RCTLT_I , KC_O    ,
+      KC_A    , LSFTT_R , LCTLT_S , LALTT_T , KC_G    , XXXXXXX , XXXXXXX , KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KC_O    ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V    , XXXXXXX , XXXXXXX , KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -212,7 +212,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_TILD , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , TD_DCQ  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      SS_BTIC , SS_SQUO , SS_DQUO , KC_AMPR , KC_PIPE , XXXXXXX , XXXXXXX , XXXXXXX , RALTT_4 , RSFTT_5 , RCTLT_6 , TD_DCC  ,
+      SS_BTIC , SS_SQUO , SS_DQUO , KC_AMPR , KC_PIPE , XXXXXXX , XXXXXXX , XXXXXXX , RALTT_4 , RCTLT_5 , RSFTT_6 , TD_DCC  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_HASH , KC_BSLS , KC_LBRC , KC_RBRC , SS_CIRC , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_1 , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -223,7 +223,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_CIRC , KC_TILD , KC_GRV  , XXXXXXX , XXXXXXX , XXXXXXX , SS_DQUO , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_A    , KC_LCTL , KC_LSFT , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_SLSH ,
+      KC_A    , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_SLSH ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , KC_DQUO , KC_C    , GUI_QUO , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_ASTR , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -234,7 +234,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F7   , KC_F8   , KC_F9   , KC_F12  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_LCTL , KC_LSFT , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F4   , KC_F5   , KC_F6   , KC_F11  ,
+      XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F4   , KC_F5   , KC_F6   , KC_F11  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F1   , KC_F2   , KC_F3   , KC_F10  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -245,7 +245,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       KC_ESC  , XXXXXXX , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_END  , KC_HOME , KC_ENT  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , OS_LCTL , OS_LSFT , OS_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
+      XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       MO_MED  , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_PGDN , KC_PGUP , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -256,7 +256,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       KC_ESC  , KC_BTN2 , KC_BTN1 , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_WH_D , KC_WH_U , KC_ENT  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_MS_L , KC_MS_U , KC_MS_D , KC_MS_R , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OS_RALT , OS_RSFT , OS_RCTL , XXXXXXX ,
+      KC_MS_L , KC_MS_U , KC_MS_D , KC_MS_R , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OS_RALT , OS_RCTL , OS_RSFT , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OS_RGUI , XXXXXXX , XXXXXXX , MO_MED ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -380,8 +380,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case RCTLT_6:
-        case RSFTT_5:
+        case RSFTT_6:
+        case RCTLT_5:
         case RALTT_4:
         case RGUIT_1:
             return true;
@@ -392,20 +392,20 @@ bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
 
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LCTLT_S:
-        case LSFTT_D:
+        case LSFTT_S:
+        case LCTLT_D:
         case LALTT_F:
         case LGUIT_V:
-        case LCTLT_R:
-        case LSFTT_S:
+        case LSFTT_R:
+        case LCTLT_S:
         case LALTT_T:
         case LGUIT_D:
-        case RCTLT_L:
-        case RSFTT_K:
+        case RSFTT_L:
+        case RCTLT_K:
         case RALTT_J:
         case RGUIT_M:
-        case RCTLT_I:
-        case RSFTT_E:
+        case RSFTT_I:
+        case RCTLT_E:
         case RALTT_N:
         case RGUIT_H:
             return true;

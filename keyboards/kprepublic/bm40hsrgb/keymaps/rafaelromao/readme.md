@@ -14,7 +14,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/a6KH4yh.png)
+![img](https://i.imgur.com/ubSqup7.png)
 
 ## Highlights
 
@@ -26,7 +26,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - All symbols are conveniently placed for software programming and VIM commands.
 
 Considering the QWERTY layout:
-- Home block mods (S Ctrl, D Shift, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Shift, L Ctrl), are available on the base layers.
+- Home block mods (S Shift, D Ctrl, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on the base layers.
 - Dedicated modifiers are available on the left side of the functions layer.
 - Sticky (one shot) modifiers are available on the navigation and mouse layers.
 - The two keys on each thumb cluster control layer transitions (navigation, lower, raise and mouse).
@@ -46,8 +46,8 @@ Considering the QWERTY layout:
 - XCV (qwerty) / XCD (colemak) activates the raise layer for one shot.
 - M,. (qwerty) / H,. (colemak) activates the lower layer for one shot.
 - 123 activates the functions layer.
-- AltShiftCtrl activates the navigation layer.
-- ' " &, 456, CtrlShiftAlt, -=!, F4F5F6 or LeftDownUp returns to the previous layer.
+- AltCtrlShift activates the navigation layer.
+- ' " &, 456, ShiftCtrlAlt, -=!, F4F5F6 or LeftDownUp returns to the previous layer.
 - _{} or $() or 789 or ^~` swap hands for one shot.
 
 ## Tap Dance

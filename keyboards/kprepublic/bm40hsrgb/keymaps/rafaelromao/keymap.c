@@ -38,10 +38,10 @@ enum custom_keycodes {
     SS_DQUO,
     SS_SQUO,
     SS_CIRC,
-    SS_TILD
+    SS_TILD,
+    MT_ASTR,
+    MT_EXLM
 };
-
-#define GUI_QUO LGUI_T(KC_QUOT)
 
 #define LSFTT_S LSFT_T(KC_S)
 #define LCTLT_D LCTL_T(KC_D)
@@ -67,6 +67,13 @@ enum custom_keycodes {
 #define RCTLT_5 RCTL_T(KC_P5)
 #define RALTT_4 RALT_T(KC_P4)
 #define RGUIT_1 RGUI_T(KC_P1)
+
+#define SFT_EXL RSFT_T(MT_EXLM)
+#define CTL_EQL RCTL_T(KC_EQL)
+#define ALT_MIN RALT_T(KC_MINS)
+#define GUI_AST RGUI_T(MT_ASTR)
+
+#define GUI_QUO LGUI_T(KC_QUOT)
 
 #define OS_LSFT OSM(MOD_LSFT)
 #define OS_LCTL OSM(MOD_LCTL)
@@ -153,7 +160,7 @@ const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM lo1_tog_combo[] = {SS_SQUO, SS_DQUO, KC_AMPR, COMBO_END};
 const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
 const uint16_t PROGMEM ra1_tog_combo[] = {KC_LSFT, KC_LCTL, KC_LALT, COMBO_END};
-const uint16_t PROGMEM ra2_tog_combo[] = {KC_MINS, KC_EQL, KC_EXLM, COMBO_END};
+const uint16_t PROGMEM ra2_tog_combo[] = {ALT_MIN, CTL_EQL, SFT_EXL, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(qwe_ent_combo, KC_ENT),
@@ -223,9 +230,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , KC_CIRC , KC_TILD , KC_GRV  , XXXXXXX , XXXXXXX , XXXXXXX , SS_DQUO , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_A    , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_SLSH ,
+      KC_A    , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_SLSH ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_DQUO , KC_C    , GUI_QUO , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , KC_ASTR , KC_LT   , KC_GT   , KC_COLN ,
+      XXXXXXX , KC_DQUO , KC_C    , GUI_QUO , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , GUI_AST , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , MO_ADJ  ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -319,6 +326,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 set_single_persistent_default_layer(_QWERTY);
             }
             return false;
+
+        // Non-basic mod-taps
+
+        case GUI_AST:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    tap_code16(KC_ASTR);
+                }
+                return false;
+            }
+            return true;
+
+        case SFT_EXL:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    tap_code16(KC_EXLM);
+                }
+                return false;
+            }
+            return true;
 
         // String delimiters
 

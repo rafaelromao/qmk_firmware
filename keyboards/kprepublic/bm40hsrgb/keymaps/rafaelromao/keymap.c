@@ -40,7 +40,8 @@ enum custom_keycodes {
     SS_CIRC,
     SS_TILD,
     MT_ASTR,
-    MT_EXLM
+    MT_EXLM,
+    MT_AMPR
 };
 
 #define LSFTT_S LSFT_T(KC_S)
@@ -72,6 +73,11 @@ enum custom_keycodes {
 #define CTL_EQL RCTL_T(KC_EQL)
 #define ALT_MIN RALT_T(KC_MINS)
 #define GUI_AST RGUI_T(MT_ASTR)
+
+#define SFT_SQU RSFT_T(SS_SQUO)
+#define CTL_DQU RCTL_T(SS_DQUO)
+#define ALT_AMP RALT_T(MT_AMPR)
+#define GUI_RBR RGUI_T(KC_RBRC)
 
 #define GUI_QUO LGUI_T(KC_QUOT)
 
@@ -157,7 +163,7 @@ const uint16_t PROGMEM rnu_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
 const uint16_t PROGMEM lnu_sho_combo[] = {KC_CIRC, KC_TILD, KC_GRV , COMBO_END};
 const uint16_t PROGMEM mou_nav_combo[] = {OS_RALT, OS_RCTL, OS_RSFT, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
-const uint16_t PROGMEM lo1_tog_combo[] = {SS_SQUO, SS_DQUO, KC_AMPR, COMBO_END};
+const uint16_t PROGMEM lo1_tog_combo[] = {SFT_SQU, CTL_DQU, ALT_AMP, COMBO_END};
 const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
 const uint16_t PROGMEM ra1_tog_combo[] = {KC_LSFT, KC_LCTL, KC_LALT, COMBO_END};
 const uint16_t PROGMEM ra2_tog_combo[] = {ALT_MIN, CTL_EQL, SFT_EXL, COMBO_END};
@@ -219,9 +225,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_TILD , XXXXXXX , XXXXXXX , XXXXXXX , KC_P7   , KC_P8   , KC_P9   , TD_DCQ  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      SS_BTIC , SS_SQUO , SS_DQUO , KC_AMPR , KC_PIPE , XXXXXXX , XXXXXXX , XXXXXXX , RALTT_4 , RCTLT_5 , RSFTT_6 , TD_DCC  ,
+      SS_BTIC , SFT_SQU , CTL_DQU , ALT_AMP , KC_PIPE , XXXXXXX , XXXXXXX , XXXXXXX , RALTT_4 , RCTLT_5 , RSFTT_6 , TD_DCC  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_HASH , KC_BSLS , KC_LBRC , KC_RBRC , SS_CIRC , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_1 , KC_P2   , KC_P3   , KC_P0   ,
+      KC_HASH , KC_BSLS , KC_LBRC , GUI_RBR , SS_CIRC , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_1 , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , MO_ADJ  , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -342,6 +348,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     tap_code16(KC_EXLM);
+                }
+                return false;
+            }
+            return true;
+
+        case SFT_SQU:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    SEND_STRING("' ");
+                }
+                return false;
+            }
+            return true;
+
+        case CTL_DQU:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    SEND_STRING("\" ");
+                }
+                return false;
+            }
+            return true;
+
+        case ALT_AMP:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    tap_code16(KC_AMPR);
                 }
                 return false;
             }

@@ -31,6 +31,7 @@ Considering the QWERTY layout:
 - Sticky (one shot) modifiers are available on the navigation and mouse layers.
 - The two keys on each thumb cluster control layer transitions when held (navigation, lower, raise and mouse).
 - The two inner thumb keys acts as space when tapped.
+- The two outer thumb keys perform tap dances when tapped. See the *Tap Dance* section below.
 - Activating both lower and raise layers activates the functions layer.
 - Activating both navigation and mouse layers activates the maintenance layer.
 - On the navigation and mouse layers, you find Esc in the Q key and Enter in the P key.

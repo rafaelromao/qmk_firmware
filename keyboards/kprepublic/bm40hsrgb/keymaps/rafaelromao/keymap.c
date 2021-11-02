@@ -42,8 +42,10 @@ enum custom_keycodes {
     MT_ASTR,
     MT_EXLM,
     MT_AMPR,
-    MT_OS_S,
-    MT_OS_CG
+    TP_O_SF,
+    TP_O_CG,
+    TG_MD_G,
+    TG_MD_C
 };
 
 #define LSFTT_S LSFT_T(KC_S)
@@ -82,7 +84,8 @@ enum custom_keycodes {
 #define GUI_RBR RGUI_T(KC_RBRC)
 
 #define GUI_QUO LGUI_T(KC_QUOT)
-#define MOU_SFT LT(_MOUSE, MT_OS_S)
+#define MOU_SFT LT(_MOUSE, TP_O_SF)
+#define NAV_C_G LT(_NAVIGATION, TP_O_CG)
 
 #define OS_LSFT OSM(MOD_LSFT)
 #define OS_LCTL OSM(MOD_LCTL)
@@ -143,6 +146,16 @@ enum {
 };
 
 td_state_t dance_state(qk_tap_dance_state_t *state);
+
+// User data
+typedef enum {
+    C_G_MODE_G,
+    C_G_MODE_C
+} c_g_mode_t;
+
+typedef struct {
+    c_g_mode_t c_g_mode;
+} user_data_t;
 
 // Combos
 
@@ -210,7 +223,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B    , XXXXXXX , XXXXXXX , KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_SFT , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , NAV_C_G , LOW_SPC ,      RESET      , RAI_SPC , MOU_SFT , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_COLEMAK] = LAYOUT_planck_mit(
@@ -221,7 +234,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V    , XXXXXXX , XXXXXXX , KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_SFT , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , NAV_C_G , LOW_SPC ,      RESET      , RAI_SPC , MOU_SFT , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_LOWER] = LAYOUT_planck_mit(
@@ -305,7 +318,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , DF_QWE  , TO_MAI  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_MAI  , DF_COL  , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , TO_ADJ  , XXXXXXX , XXXXXXX , TO_ADJ  , _______ , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , XXXXXXX , TG_MD_G , _______ , TO_ADJ  , XXXXXXX , XXXXXXX , TO_ADJ  , _______ , TG_MD_C , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       TO_MED  , XXXXXXX , XXXXXXX , TO_NAV  , TO_RAI  , XXXXXXX , XXXXXXX , TO_LOW  , TO_MOU  , XXXXXXX , XXXXXXX , TO_MED  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -316,11 +329,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // Custom keycodes
 
+static user_data_t user_data = {
+    .c_g_mode = C_G_MODE_G
+};
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     bool isQwerty = biton32(default_layer_state) == _QWERTY;
     bool isColemak = biton32(default_layer_state) == _COLEMAK;
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isCGModeG = user_data.c_g_mode == C_G_MODE_G;
+    bool isCGModeC = user_data.c_g_mode == C_G_MODE_C;
+    bool isOneShotCG = (isCGModeG && (get_oneshot_mods() & MOD_MASK_GUI)) || (isCGModeC && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
 
     switch (keycode) {
 
@@ -384,7 +404,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return true;
 
-        // One shot thumb mods/layer taps
+        // Change Gui/Ctrl mode
+
+        case TG_MD_G:
+            if (record->event.pressed) {
+                user_data.c_g_mode = C_G_MODE_G;
+            }
+            return false;
+
+        case TG_MD_C:
+            if (record->event.pressed) {
+                user_data.c_g_mode = C_G_MODE_C;
+            }
+            return false;
+
+        // Custom one shot mods taps
 
         case MOU_SFT:
             if (record->tap.count > 0) {
@@ -393,6 +427,27 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                         add_oneshot_mods(MOD_BIT(KC_RSFT));
                     } else {
                         del_oneshot_mods(MOD_BIT(KC_RSFT));
+                    }
+                }
+                return false;
+            }
+            return true;
+
+        case NAV_C_G:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (!isOneShotCG) {
+                        if (isCGModeG) {
+                            add_oneshot_mods(MOD_BIT(KC_LGUI));
+                        } else {
+                            del_oneshot_mods(MOD_BIT(KC_LGUI));
+                        }
+                    } else {
+                       if (isCGModeG) {
+                            add_oneshot_mods(MOD_BIT(KC_LCTL));
+                        } else {
+                            del_oneshot_mods(MOD_BIT(KC_LCTL));
+                        }
                     }
                 }
                 return false;

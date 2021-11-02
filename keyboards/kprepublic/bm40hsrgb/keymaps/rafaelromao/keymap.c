@@ -427,6 +427,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                         add_oneshot_mods(MOD_BIT(KC_RSFT));
                     } else {
                         del_oneshot_mods(MOD_BIT(KC_RSFT));
+                        register_code16(KC_CAPS);
                     }
                 }
                 return false;
@@ -439,15 +440,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     if (isCGModeG) {
                         if (!isOneShotCG) {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));
-                        } else {
-                            del_oneshot_mods(MOD_BIT(KC_LGUI));
                         }
                     }
                     if (isCGModeC) {
                         if (!isOneShotCG) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
-                        } else {
-                            del_oneshot_mods(MOD_BIT(KC_LCTL));
                         }
                     }
                 }

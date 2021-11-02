@@ -14,7 +14,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/PKge2op.png)
+![img](https://i.imgur.com/4KyJmmY.png)
 
 ## Highlights
 
@@ -33,6 +33,7 @@ Considering the QWERTY layout:
 - The two inner thumb keys acts as space when tapped.
 - Tapping the outer left thumb key can either activate one shot gui or one shot ctrl. You can toggle between than using the layers layer.
 - Tapping the outer right thumb key activates a one shot shift.
+- Double tapping the outer right thumb key toggles caps lock.
 - Activating both lower and raise layers activates the functions layer.
 - Activating both navigation and mouse layers activates the maintenance layer.
 - On the navigation and mouse layers, you find Esc in the Q key and Enter in the P key.

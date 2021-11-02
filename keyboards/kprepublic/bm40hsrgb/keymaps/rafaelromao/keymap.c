@@ -436,14 +436,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case NAV_C_G:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (!isOneShotCG) {
-                        if (isCGModeG) {
+                    if (isCGModeG) {
+                        if (!isOneShotCG) {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));
                         } else {
                             del_oneshot_mods(MOD_BIT(KC_LGUI));
                         }
-                    } else {
-                       if (isCGModeG) {
+                    }
+                    if (isCGModeC) {
+                        if (!isOneShotCG) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
                         } else {
                             del_oneshot_mods(MOD_BIT(KC_LCTL));

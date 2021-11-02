@@ -14,7 +14,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/iJE0pMx.png)
+![img](https://i.imgur.com/R32Gwcr.png)
 
 ## Highlights
 
@@ -31,7 +31,8 @@ Considering the QWERTY layout:
 - Sticky (one shot) modifiers are available on the navigation and mouse layers.
 - The two keys on each thumb cluster control layer transitions (navigation, lower, raise and mouse).
 - The two inner thumb keys acts as space when tapped.
-- Tapping the outer left thumb key activates a one shot shift.
+- Tapping the outer left thumb key can either activate one shot gui or one shot ctrl. You can toggle between than using the layers layer.
+- Tapping the outer right thumb key activates a one shot shift.
 - Activating both lower and raise layers activates the functions layer.
 - Activating both navigation and mouse layers activates the maintenance layer.
 - On the navigation and mouse layers, you find Esc in the Q key and Enter in the P key.

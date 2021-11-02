@@ -29,7 +29,7 @@ Considering the QWERTY layout:
 - Home block mods (S Shift, D Ctrl, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
 - Dedicated modifiers are available on the left side of the functions and raise layers.
 - Sticky (one shot) modifiers are available on the navigation and mouse layers.
-- The two keys on each thumb cluster control layer transitions (navigation, lower, raise and mouse).
+- The two keys on each thumb cluster control layer transitions when held (navigation, lower, raise and mouse).
 - The two inner thumb keys acts as space when tapped.
 - Activating both lower and raise layers activates the functions layer.
 - Activating both navigation and mouse layers activates the maintenance layer.

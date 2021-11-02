@@ -41,7 +41,9 @@ enum custom_keycodes {
     SS_TILD,
     MT_ASTR,
     MT_EXLM,
-    MT_AMPR
+    MT_AMPR,
+    MT_OS_S,
+    MT_OS_CG
 };
 
 #define LSFTT_S LSFT_T(KC_S)
@@ -80,6 +82,7 @@ enum custom_keycodes {
 #define GUI_RBR RGUI_T(KC_RBRC)
 
 #define GUI_QUO LGUI_T(KC_QUOT)
+#define MOU_SFT LT(_MOUSE, MT_OS_S)
 
 #define OS_LSFT OSM(MOD_LSFT)
 #define OS_LCTL OSM(MOD_LCTL)
@@ -207,7 +210,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B    , XXXXXXX , XXXXXXX , KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , LOW_SPC ,      XXXXXXX      , RAI_SPC , MO_MOU  , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_SFT , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_COLEMAK] = LAYOUT_planck_mit(
@@ -218,7 +221,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V    , XXXXXXX , XXXXXXX , KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , LOW_SPC ,      XXXXXXX      , RAI_SPC , MO_MOU  , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , MO_NAV  , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_SFT , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_LOWER] = LAYOUT_planck_mit(
@@ -317,6 +320,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     bool isQwerty = biton32(default_layer_state) == _QWERTY;
     bool isColemak = biton32(default_layer_state) == _COLEMAK;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
 
@@ -380,7 +384,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return true;
 
-        // String delimiters
+        // One shot thumb mods/layer taps
+
+        case MOU_SFT:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (!isOneShotShift) {
+                        add_oneshot_mods(MOD_BIT(KC_RSFT));
+                    } else {
+                        del_oneshot_mods(MOD_BIT(KC_RSFT));
+                    }
+                }
+                return false;
+            }
+            return true;
+
+        // Macros
 
         case SS_BTIC:
             if (record->event.pressed) {

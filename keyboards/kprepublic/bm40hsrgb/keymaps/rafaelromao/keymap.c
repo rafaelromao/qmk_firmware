@@ -423,11 +423,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case MOU_SFT:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (!isOneShotShift) {
-                        add_oneshot_mods(MOD_BIT(KC_RSFT));
-                    } else {
-                        del_oneshot_mods(MOD_BIT(KC_RSFT));
+                    if (host_keyboard_led_state().caps_lock) {
                         register_code16(KC_CAPS);
+                    } else {
+                        if (!isOneShotShift) {
+                            add_oneshot_mods(MOD_BIT(KC_RSFT));
+                        } else {
+                            del_oneshot_mods(MOD_BIT(KC_RSFT));
+                            register_code16(KC_CAPS);
+                        }
                     }
                 }
                 return false;

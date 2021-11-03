@@ -14,7 +14,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/m2aQAnU.png)
+![img](https://i.imgur.com/IXxMJSa.png)
 
 ## Highlights
 
@@ -47,9 +47,9 @@ Considering the QWERTY layout:
 - XCV (qwerty) / XCD (colemak) activates the raise layer for one shot.
 - M,. (qwerty) / H,. (colemak) activates the lower layer for one shot.
 - 123 activates the functions layer.
-- AltCtrlShift activates the navigation layer.
+- Btn1Btn2 activates the navigation layer.
 - ' " &, 456, ShiftCtrlAlt, -=!, F4F5F6 or LeftDownUp returns to the previous layer.
-- _{} or $() or 789 or ^~` swap hands for one shot.
+- _{} or 789 or WE" (qwerty) or WF" (colemak) or $() swap hands for one shot.
 
 ## Tap Dance
 

@@ -87,8 +87,8 @@ enum custom_keycodes {
 #define ALT_AMP RALT_T(MT_AMPR)
 #define GUI_RBR RGUI_T(KC_RBRC)
 
-#define SFT_TIL LSFT_T(MT_TILD)
-#define CTL_CIR LCTL_T(MT_CIRC)
+#define SFT_CIR LSFT_T(MT_CIRC)
+#define CTL_TIL LCTL_T(MT_TILD)
 #define ALT_QUO LALT_T(KC_QUOT)
 #define GUI_GRV LGUI_T(MT_GRV)
 
@@ -185,7 +185,7 @@ const uint16_t PROGMEM mou_nav_combo[] = {CB_NONE, KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM lo1_tog_combo[] = {SFT_SQU, CTL_DQU, ALT_AMP, COMBO_END};
 const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
-const uint16_t PROGMEM ra1_tog_combo[] = {SFT_TIL, CTL_CIR, ALT_QUO, COMBO_END};
+const uint16_t PROGMEM ra1_tog_combo[] = {SFT_CIR, CTL_TIL, ALT_QUO, COMBO_END};
 const uint16_t PROGMEM ra2_tog_combo[] = {ALT_MIN, CTL_EQL, SFT_EXL, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -257,7 +257,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________ ________________________________________________________________________________________|
       _______ , _______ , _______ , KC_DQUO , _______ , XXXXXXX , XXXXXXX , SS_DQUO , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      _______ , SFT_TIL , CTL_CIR , ALT_QUO , _______ , XXXXXXX , XXXXXXX , KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_SLSH ,
+      _______ , SFT_CIR , CTL_TIL , ALT_QUO , _______ , XXXXXXX , XXXXXXX , KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_SLSH ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , GUI_GRV , _______ , XXXXXXX , XXXXXXX , KC_PERC , GUI_AST , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -409,19 +409,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return true;
 
-        case SFT_TIL:
+        case SFT_CIR:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    tap_code16(KC_TILD);
+                    tap_code16(KC_CIRC);
                 }
                 return false;
             }
             return true;
 
-        case CTL_CIR:
+        case CTL_TIL:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    tap_code16(KC_CIRC);
+                    tap_code16(KC_TILD);
                 }
                 return false;
             }

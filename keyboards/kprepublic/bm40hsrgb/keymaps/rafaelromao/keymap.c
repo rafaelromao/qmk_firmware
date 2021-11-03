@@ -42,10 +42,14 @@ enum custom_keycodes {
     MT_ASTR,
     MT_EXLM,
     MT_AMPR,
+    MT_CIRC,
+    MT_TILD,
+    MT_GRV,
     TP_O_SF,
     TP_O_CG,
     TG_MD_G,
-    TG_MD_C
+    TG_MD_C,
+    CB_NONE
 };
 
 #define LSFTT_S LSFT_T(KC_S)
@@ -83,7 +87,11 @@ enum custom_keycodes {
 #define ALT_AMP RALT_T(MT_AMPR)
 #define GUI_RBR RGUI_T(KC_RBRC)
 
-#define GUI_QUO LGUI_T(KC_QUOT)
+#define SFT_TIL LSFT_T(MT_TILD)
+#define CTL_CIR LCTL_T(MT_CIRC)
+#define ALT_QUO LALT_T(KC_QUOT)
+#define GUI_GRV LGUI_T(MT_GRV)
+
 #define MOU_SFT LT(_MOUSE, TP_O_SF)
 #define NAV_C_G LT(_NAVIGATION, TP_O_CG)
 
@@ -91,11 +99,6 @@ enum custom_keycodes {
 #define OS_LCTL OSM(MOD_LCTL)
 #define OS_LALT OSM(MOD_LALT)
 #define OS_LGUI OSM(MOD_LGUI)
-
-#define OS_RSFT OSM(MOD_RSFT)
-#define OS_RCTL OSM(MOD_RCTL)
-#define OS_RALT OSM(MOD_RALT)
-#define OS_RGUI OSM(MOD_RGUI)
 
 #define RAI_SPC LT(_RAISE,KC_SPC)
 #define LOW_SPC LT(_LOWER,KC_SPC)
@@ -173,15 +176,16 @@ const uint16_t PROGMEM qwe_low_combo[] = {RGUIT_M, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM col_low_combo[] = {RGUIT_H, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM qwe_rai_combo[] = {KC_X, KC_C, LGUIT_V, COMBO_END};
 const uint16_t PROGMEM col_rai_combo[] = {KC_X, KC_C, LGUIT_D, COMBO_END};
-const uint16_t PROGMEM rsy_sho_combo[] = {KC_DLR, KC_LPRN, KC_RPRN, COMBO_END};
-const uint16_t PROGMEM lsy_sho_combo[] = {KC_UNDS, KC_LCBR, KC_RCBR, COMBO_END};
-const uint16_t PROGMEM rnu_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
-const uint16_t PROGMEM lnu_sho_combo[] = {KC_CIRC, KC_TILD, KC_GRV , COMBO_END};
-const uint16_t PROGMEM mou_nav_combo[] = {OS_RALT, OS_RCTL, OS_RSFT, COMBO_END};
+const uint16_t PROGMEM qr1_sho_combo[] = {KC_W, KC_E , KC_DQUO , COMBO_END};
+const uint16_t PROGMEM cr1_sho_combo[] = {KC_W, KC_F , KC_DQUO , COMBO_END};
+const uint16_t PROGMEM rs2_sho_combo[] = {KC_DLR, KC_LPRN, KC_RPRN, COMBO_END};
+const uint16_t PROGMEM ls1_sho_combo[] = {KC_UNDS, KC_LCBR, KC_RCBR, COMBO_END};
+const uint16_t PROGMEM ls2_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
+const uint16_t PROGMEM mou_nav_combo[] = {CB_NONE, KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM lo1_tog_combo[] = {SFT_SQU, CTL_DQU, ALT_AMP, COMBO_END};
 const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
-const uint16_t PROGMEM ra1_tog_combo[] = {KC_LSFT, KC_LCTL, KC_LALT, COMBO_END};
+const uint16_t PROGMEM ra1_tog_combo[] = {SFT_TIL, CTL_CIR, ALT_QUO, COMBO_END};
 const uint16_t PROGMEM ra2_tog_combo[] = {ALT_MIN, CTL_EQL, SFT_EXL, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -199,10 +203,11 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(col_low_combo, TG_LOW),
   COMBO(qwe_rai_combo, TG_RAI),
   COMBO(col_rai_combo, TG_RAI),
-  COMBO(rsy_sho_combo, SH_OS),
-  COMBO(lsy_sho_combo, SH_OS),
-  COMBO(rnu_sho_combo, SH_OS),
-  COMBO(lnu_sho_combo, SH_OS),
+  COMBO(qr1_sho_combo, SH_OS),
+  COMBO(cr1_sho_combo, SH_OS),
+  COMBO(rs2_sho_combo, SH_OS),
+  COMBO(ls1_sho_combo, SH_OS),
+  COMBO(ls2_sho_combo, SH_OS),
   COMBO(mou_nav_combo, TG_NAV),
   COMBO(nav_tog_combo, TG_NAV),
   COMBO(lo1_tog_combo, TG_LOW),
@@ -249,12 +254,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_______________________________________________________________________________________________________________________|
 
      [_RAISE] = LAYOUT_planck_mit(
- // |_______________________________________________________________________________________________________________________|
-      XXXXXXX , KC_CIRC , KC_TILD , KC_GRV  , XXXXXXX , XXXXXXX , XXXXXXX , SS_DQUO , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
+ // |_______________________________ ________________________________________________________________________________________|
+      _______ , _______ , _______ , KC_DQUO , _______ , XXXXXXX , XXXXXXX , SS_DQUO , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_A    , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX , XXXXXXX , XXXXXXX , KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_SLSH ,
+      _______ , SFT_TIL , CTL_CIR , ALT_QUO , _______ , XXXXXXX , XXXXXXX , KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_SLSH ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_DQUO , KC_C    , GUI_QUO , XXXXXXX , XXXXXXX , XXXXXXX , KC_PERC , GUI_AST , KC_LT   , KC_GT   , KC_COLN ,
+      _______ , _______ , _______ , GUI_GRV , _______ , XXXXXXX , XXXXXXX , KC_PERC , GUI_AST , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , _______ , MO_ADJ  ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -283,11 +288,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [_MOUSE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_ESC  , KC_BTN2 , KC_BTN1 , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_WH_D , KC_WH_U , KC_ENT  ,
+      KC_ESC  , XXXXXXX , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_WH_D , KC_WH_U , KC_ENT  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_MS_L , KC_MS_U , KC_MS_D , KC_MS_R , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OS_RALT , OS_RCTL , OS_RSFT , XXXXXXX ,
+      XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , OS_RGUI , XXXXXXX , XXXXXXX , MO_MED ,
+      XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , MO_MED ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , MO_MAI  , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
@@ -404,6 +409,33 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return true;
 
+        case SFT_TIL:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    tap_code16(KC_TILD);
+                }
+                return false;
+            }
+            return true;
+
+        case CTL_CIR:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    tap_code16(KC_CIRC);
+                }
+                return false;
+            }
+            return true;
+
+        case GUI_GRV:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    tap_code16(KC_GRV);
+                }
+                return false;
+            }
+            return true;
+
         // Change Gui/Ctrl mode
 
         case TG_MD_G:
@@ -427,9 +459,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                         register_code16(KC_CAPS);
                     } else {
                         if (!isOneShotShift) {
-                            add_oneshot_mods(MOD_BIT(KC_RSFT));
+                            add_oneshot_mods(MOD_BIT(KC_LSFT));
                         } else {
-                            del_oneshot_mods(MOD_BIT(KC_RSFT));
+                            del_oneshot_mods(MOD_BIT(KC_LSFT));
                             register_code16(KC_CAPS);
                         }
                     }
@@ -569,6 +601,24 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
     if (host_keyboard_led_state().caps_lock) {
         rgb_matrix_set_color(0, RGB_RED);
+    }
+
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
+    bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL;
+    bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT;
+    bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI;
+
+    if (isOneShotShift) {
+        rgb_matrix_set_color(13, RGB_WHITE);
+    }
+    if (isOneShotCtrl) {
+        rgb_matrix_set_color(14, RGB_WHITE);
+    }
+    if (isOneShotAlt) {
+        rgb_matrix_set_color(15, RGB_WHITE);
+    }
+    if (isOneShotGui) {
+        rgb_matrix_set_color(27, RGB_WHITE);
     }
 
     switch(get_highest_layer(layer_state|default_layer_state)) {

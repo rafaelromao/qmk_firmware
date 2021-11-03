@@ -14,7 +14,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/4KyJmmY.png)
+![img](https://i.imgur.com/m2aQAnU.png)
 
 ## Highlights
 
@@ -27,8 +27,8 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 Considering the QWERTY layout:
 - Home block mods (S Shift, D Ctrl, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
-- Dedicated modifiers are available on the left side of the functions and raise layers.
-- Sticky (one shot) modifiers are available on the navigation and mouse layers.
+- Dedicated modifiers are available on the left side of the functions layer.
+- Sticky (one shot) modifiers are available on the left side of the navigation and mouse layers.
 - The two keys on each thumb cluster control layer transitions when held (navigation, lower, raise and mouse).
 - The two inner thumb keys acts as space when tapped.
 - The two outer thumb keys perform tap dances when tapped or double tapped. See the *Tap Dance* section below.
@@ -63,7 +63,7 @@ Considering the QWERTY layout:
 
 - This layout was designed mostly for coding and typing in English and Portuguese.
 - Using the lower layer, we can type `, ', ", ~ and ^ as independent symbols, while in the left side of the raise layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
-- For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping v + releasing the thumb + tapping c, gives me ç. The same goes for the other accents.
+- For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + releasing the thumb + tapping c, gives me ç. The same goes for the other accents.
 
 ## Resources
 

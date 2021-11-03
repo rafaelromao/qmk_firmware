@@ -476,11 +476,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                     if (isCGModeG) {
                         if (!isOneShotCG) {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));
+                        } else {
+                            clear_oneshot_mods();
                         }
                     }
                     if (isCGModeC) {
                         if (!isOneShotCG) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
+                        } else {
+                            clear_oneshot_mods();
                         }
                     }
                 }

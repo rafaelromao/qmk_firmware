@@ -342,10 +342,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     bool isQwerty = biton32(default_layer_state) == _QWERTY;
     bool isColemak = biton32(default_layer_state) == _COLEMAK;
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
     bool isCGModeG = user_data.c_g_mode == C_G_MODE_G;
     bool isCGModeC = user_data.c_g_mode == C_G_MODE_C;
     bool isOneShotCG = (isCGModeG && (get_oneshot_mods() & MOD_MASK_GUI)) || (isCGModeC && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
+    bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
+    bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
+    bool isAnyOneShot = isOneShotShift || isOneShotCtrl || isOneShotAlt || isOneShotGui || isOneShotCG;
 
     switch (keycode) {
 
@@ -473,20 +477,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         case NAV_C_G:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (isCGModeG) {
-                        if (!isOneShotCG) {
+                    if (isAnyOneShot) {
+                        clear_oneshot_mods();
+                        clear_oneshot_locked_mods();
+                    } else if (!isOneShotCG) {
+                        if (isCGModeG) {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));
-                        } else {
-                            clear_oneshot_mods();
-                            clear_oneshot_locked_mods();
                         }
-                    }
-                    if (isCGModeC) {
-                        if (!isOneShotCG) {
+                        if (isCGModeC) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
-                        } else {
-                            clear_oneshot_mods();
-                            clear_oneshot_locked_mods();
                         }
                     }
                 }

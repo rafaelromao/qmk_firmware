@@ -454,7 +454,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
 
-        // Custom one shot mods taps
+        // Custom one shot mod-taps
 
         case MOU_SFT:
             if (record->tap.count > 0) {

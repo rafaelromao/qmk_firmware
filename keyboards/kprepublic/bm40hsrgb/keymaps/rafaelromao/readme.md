@@ -57,8 +57,8 @@ Considering the QWERTY layout:
 - If the base layer is colemak, the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap, while the key above it simply sends backspace when tapped or held.
 - Tapping the outer left thumb key can either activate one shot gui or one shot ctrl. You can toggle between them using the layers layer.
 - Tapping the outer right thumb key activates a one shot shift.
-- Tapping the outer left thumb key with any one shot mod active or locked, clears all active one shot mods.
-- Tapping the outer right thumb key with a one shot Shift active, activates caps lock. One single tap deactivates caps lock when it is active.
+- Tapping the outer left thumb key with any one shot mod active or locked, clears all active or locked one shot mods.
+- Tapping the outer right thumb key with a one shot shift active, activates caps lock. One single tap deactivates caps lock when it is active.
 
 ## Accentuation
 

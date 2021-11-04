@@ -478,8 +478,15 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (isAnyOneShot) {
-                        clear_oneshot_mods();
-                        clear_oneshot_locked_mods();
+                        uint8_t mods = 0;
+                        if ((mods = get_oneshot_mods())) {
+                            clear_oneshot_mods();
+                            unregister_mods(mods);
+                        }
+                        if ((mods = get_oneshot_locked_mods())) {
+                            clear_oneshot_locked_mods();
+                            unregister_mods(mods);
+                        }
                     } else if (!isOneShotCG) {
                         if (isCGModeG) {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));

@@ -478,6 +478,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));
                         } else {
                             clear_oneshot_mods();
+                            clear_oneshot_locked_mods();
                         }
                     }
                     if (isCGModeC) {
@@ -485,6 +486,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
                         } else {
                             clear_oneshot_mods();
+                            clear_oneshot_locked_mods();
                         }
                     }
                 }
@@ -609,10 +611,10 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         rgb_matrix_set_color(0, RGB_RED);
     }
 
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT;
-    bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL;
-    bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT;
-    bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
+    bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
+    bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
 
     if (isOneShotShift) {
         rgb_matrix_set_color(13, RGB_WHITE);

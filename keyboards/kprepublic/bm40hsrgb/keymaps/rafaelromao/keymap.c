@@ -277,7 +277,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [_NAVIGATION] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_ESC  , XXXXXXX , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_PGDN , KC_PGUP , KC_ENT  ,
+      KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -288,7 +288,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
      [_MOUSE] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
-      KC_ESC  , XXXXXXX , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_TAB  , KC_WH_D , KC_WH_U , KC_ENT  ,
+      KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -549,6 +549,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             return true;
     }
 }
+
+// Tap-hold configuration
 
 bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

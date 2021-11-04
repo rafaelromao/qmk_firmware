@@ -14,7 +14,7 @@
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/E07cuhz.png)
+![img](https://i.imgur.com/RWnGczG.png)
 
 ## Highlights
 
@@ -35,7 +35,7 @@ Considering the QWERTY layout:
 - Activating both lower and raise layers activates the functions layer.
 - Activating both navigation and mouse layers activates the maintenance layer.
 - On the navigation and mouse layers, you find Esc in the Q key and Enter in the P key.
-- Tab is present on both sides of the navigation and mouse layers, allowing easy access to gui/alt+tab.
+- Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO) and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, with the numpad, in the lower layer.
 

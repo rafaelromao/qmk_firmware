@@ -26,6 +26,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
 - Symbols are spread among lower and raise layers, making it easier to use them with a single hand.
 - All symbols are conveniently placed for software programming and VIM commands.
+- Leds will highlight active layers, caps lock and one-shot mods.
 
 Considering the QWERTY layout:
 - Home block mods (S Shift, D Ctrl, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.

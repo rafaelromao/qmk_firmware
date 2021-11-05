@@ -45,8 +45,8 @@ enum custom_keycodes {
     MT_CIRC,
     MT_TILD,
     MT_GRV,
-    TP_O_SF,
-    TP_O_CG,
+    SP_CAP,
+    SP_MOD,
     TG_MD_G,
     TG_MD_C,
     CB_NONE
@@ -92,8 +92,8 @@ enum custom_keycodes {
 #define ALT_QUO LALT_T(KC_QUOT)
 #define GUI_GRV LGUI_T(MT_GRV)
 
-#define MOU_SFT LT(_MOUSE, TP_O_SF)
-#define NAV_C_G LT(_NAVIGATION, TP_O_CG)
+#define MOU_CAP LT(_MOUSE, SP_CAP)
+#define NAV_MOD LT(_NAVIGATION, SP_MOD)
 
 #define OS_LSFT OSM(MOD_LSFT)
 #define OS_LCTL OSM(MOD_LCTL)
@@ -152,12 +152,12 @@ td_state_t dance_state(qk_tap_dance_state_t *state);
 
 // User data
 typedef enum {
-    C_G_MODE_G,
-    C_G_MODE_C
-} c_g_mode_t;
+    MOD_CG_G,
+    MOD_CG_C
+} mod_cg_t;
 
 typedef struct {
-    c_g_mode_t c_g_mode;
+    mod_cg_t mod_cg;
 } user_data_t;
 
 // Combos
@@ -228,7 +228,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B    , XXXXXXX , XXXXXXX , KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , NAV_C_G , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_SFT , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , NAV_MOD , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_CAP , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_COLEMAK] = LAYOUT_planck_mit(
@@ -239,7 +239,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V    , XXXXXXX , XXXXXXX , KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , NAV_C_G , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_SFT , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , NAV_MOD , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_CAP , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_LOWER] = LAYOUT_planck_mit(
@@ -335,15 +335,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Custom keycodes
 
 static user_data_t user_data = {
-    .c_g_mode = C_G_MODE_G
+    .mod_cg = MOD_CG_G
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     bool isQwerty = biton32(default_layer_state) == _QWERTY;
     bool isColemak = biton32(default_layer_state) == _COLEMAK;
-    bool isCGModeG = user_data.c_g_mode == C_G_MODE_G;
-    bool isCGModeC = user_data.c_g_mode == C_G_MODE_C;
+    bool isCGModeG = user_data.mod_cg == MOD_CG_G;
+    bool isCGModeC = user_data.mod_cg == MOD_CG_C;
     bool isOneShotCG = (isCGModeG && (get_oneshot_mods() & MOD_MASK_GUI)) || (isCGModeC && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
@@ -444,19 +444,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
         case TG_MD_G:
             if (record->event.pressed) {
-                user_data.c_g_mode = C_G_MODE_G;
+                user_data.mod_cg = MOD_CG_G;
             }
             return false;
 
         case TG_MD_C:
             if (record->event.pressed) {
-                user_data.c_g_mode = C_G_MODE_C;
+                user_data.mod_cg = MOD_CG_C;
             }
             return false;
 
         // Custom one shot mod-taps
 
-        case MOU_SFT:
+        case MOU_CAP:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (host_keyboard_led_state().caps_lock) {
@@ -475,7 +475,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return true;
 
-        case NAV_C_G:
+        case NAV_MOD:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (isAnyOneShot) {

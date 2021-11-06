@@ -51,7 +51,7 @@ Considering the QWERTY layout:
     - If any modifier is active or locked in one-shot mode, all these modifiers will be released.
 - Cap: This special thumb key behaves as follows, when tapped (not hold):
     - If CapsLock is active, it deactivates CapsLock.
-    - If Shift is active in one-shot mode or locked in one-shot mode, it activates CapsLock.
+    - If Shift is active or locked in one-shot mode, it activates CapsLock.
     - If Shift is not active in one-shot mode, it activates Shift for one-shot.
 
 ## Combos

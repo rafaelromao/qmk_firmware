@@ -1,7 +1,7 @@
 ## bm40hsrgb/rafaelromao
 ### A 34 keys split keyboard layout, optimized for programmers.
 
-The keyboard in the picture below is a BM40, using this layout.
+The keyboard in the picture below is a BM40, used to design and test this layout.
 ![img](https://i.imgur.com/odzZLMc.jpg)
 
 ### Compile

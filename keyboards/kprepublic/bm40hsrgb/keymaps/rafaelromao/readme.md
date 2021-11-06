@@ -16,7 +16,7 @@ The keyboard in the picture below is a BM40, using this layout.
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/mgvPHqB.png)
+![img](https://i.imgur.com/6Yu2Jpn.png)
 
 ## Highlights
 
@@ -33,10 +33,11 @@ Considering the QWERTY layout:
 - Dedicated modifiers are available on the left side of the functions layer.
 - Sticky (one shot) modifiers are available on the left side of the navigation and mouse layers.
 - The two keys on each thumb cluster control layer transitions when held (navigation, lower, raise and mouse).
-- The two inner thumb keys acts as space when tapped.
+- The two inner thumb keys acts as space when tapped. In the lower or raise layer, they toggle the opposite layer when double tapped.
+- The raise layer can be activated from the lower layer by holding the opposite inner thumb key, which allow access to math operators without leaving the lower (numpad) layer.
 - The two outer thumb keys acts as Special Keys when tapped. See the *Special Keys* section below.
-- Activating both lower and raise layers activates the functions layer.
-- Activating both navigation and mouse layers activates the maintenance layer.
+- Any combination of one inner plus one outer thumb keys will activate or toggle the functions layer.
+- Holding both outer thumb keys will activate the maintenance layer.
 - On the navigation and mouse layers, you find Esc in the Q key and Enter in the P key.
 - Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO) and single hand operations (Swap hands or activate another layer).

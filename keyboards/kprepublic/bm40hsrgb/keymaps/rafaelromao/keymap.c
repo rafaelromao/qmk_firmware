@@ -21,9 +21,9 @@
 enum layers {
   _QWERTY,
   _COLEMAK,
-  _RAISE,
   _LOWER,
-  _ADJUST,
+  _RAISE,
+  _FUNCTIONS,
   _NAVIGATION,
   _MOUSE,
   _MEDIA,
@@ -113,8 +113,10 @@ enum custom_keycodes {
 #define DF_COL DF(_COLEMAK)
 #define TO_RAI TO(_RAISE)
 #define TG_RAI TG(_RAISE)
+#define TT_RAI TT(_RAISE)
 #define TO_LOW TO(_LOWER)
 #define TG_LOW TG(_LOWER)
+#define TT_LOW TT(_LOWER)
 #define MO_NAV MO(_NAVIGATION)
 #define TO_NAV TO(_NAVIGATION)
 #define TG_NAV TG(_NAVIGATION)
@@ -125,9 +127,10 @@ enum custom_keycodes {
 #define MO_MED MO(_MEDIA)
 #define TO_MED TO(_MEDIA)
 #define MO_LAY MO(_LAYERS)
-#define MO_ADJ MO(_ADJUST)
-#define TO_ADJ TO(_ADJUST)
-#define TG_ADJ TG(_ADJUST)
+#define MO_FUN MO(_FUNCTIONS)
+#define TO_FUN TO(_FUNCTIONS)
+#define TG_FUN TG(_FUNCTIONS)
+#define TT_FUN TT(_FUNCTIONS)
 
 // Tap dance settings
 
@@ -197,8 +200,8 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(col_esc_combo, KC_ESC),
   COMBO(co1_tab_combo, KC_TAB),
   COMBO(co2_tab_combo, KC_TAB),
-  COMBO(low_adj_combo, TG_ADJ),
-  COMBO(adj_tog_combo, TG_ADJ),
+  COMBO(low_adj_combo, TG_FUN),
+  COMBO(adj_tog_combo, TG_FUN),
   COMBO(qwe_low_combo, TG_LOW),
   COMBO(col_low_combo, TG_LOW),
   COMBO(qwe_rai_combo, TG_RAI),
@@ -250,7 +253,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_HASH , KC_BSLS , KC_LBRC , GUI_RBR , SS_CIRC , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_1 , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , MO_ADJ  , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , TT_FUN  , _______ ,      XXXXXXX      , TT_RAI  , TT_FUN  , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_RAISE] = LAYOUT_planck_mit(
@@ -261,10 +264,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       _______ , _______ , _______ , GUI_GRV , _______ , XXXXXXX , XXXXXXX , KC_PERC , GUI_AST , KC_LT   , KC_GT   , KC_COLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , MO_ADJ  ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , TT_FUN  , TT_LOW  ,      XXXXXXX      , _______ , TT_FUN , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
-     [_ADJUST] = LAYOUT_planck_mit(
+     [_FUNCTIONS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_F7   , KC_F8   , KC_F9   , KC_F12  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
@@ -283,7 +286,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       MO_MED  , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , MO_MAI  , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , TT_FUN  ,      XXXXXXX      , TT_FUN  , MO_MAI  , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_MOUSE] = LAYOUT_planck_mit(
@@ -294,7 +297,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , MO_MED ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , MO_MAI  , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , MO_MAI  , TT_FUN  ,      XXXXXXX      , TT_FUN  , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_MEDIA] = LAYOUT_planck_mit(
@@ -305,7 +308,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , HYPR_V  , HYPR_A  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , XXXXXXX ,      XXXXXXX      , XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_MAINTENANCE] = LAYOUT_planck_mit(
@@ -316,18 +319,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       RGB_VAD , RGB_HUD , RGB_SAD , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , XXXXXXX ,      XXXXXXX      , XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_LAYERS] = LAYOUT_planck_mit(
  // |_______________________________________________________________________________________________________________________|
       XXXXXXX , XXXXXXX , DF_QWE  , TO_MAI  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , TO_MAI  , DF_COL  , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , TG_MD_G , _______ , TO_ADJ  , XXXXXXX , XXXXXXX , TO_ADJ  , _______ , TG_MD_C , XXXXXXX , XXXXXXX ,
+      XXXXXXX , XXXXXXX , TG_MD_G , _______ , TO_FUN  , XXXXXXX , XXXXXXX , TO_FUN  , _______ , TG_MD_C , XXXXXXX , XXXXXXX ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       TO_MED  , XXXXXXX , XXXXXXX , TO_NAV  , TO_RAI  , XXXXXXX , XXXXXXX , TO_LOW  , TO_MOU  , XXXXXXX , XXXXXXX , TO_MED  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , _______ , _______ ,      XXXXXXX      , _______ , _______ , XXXXXXX , XXXXXXX , XXXXXXX)
+      XXXXXXX , XXXXXXX , XXXXXXX , _______ , XXXXXXX ,      XXXXXXX      , XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX)
  // |_______________________________________________________________________________________________________________________|
 
 };
@@ -647,9 +650,11 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color(24, RGB_WHITE);
             rgb_matrix_set_color(35, RGB_WHITE);
             break;
-        case _ADJUST:
+        case _FUNCTIONS:
+            rgb_matrix_set_color(39, RGB_WHITE);
             rgb_matrix_set_color(40, RGB_WHITE);
             rgb_matrix_set_color(42, RGB_WHITE);
+            rgb_matrix_set_color(43, RGB_WHITE);
             break;
         case _NAVIGATION:
             rgb_matrix_set_color(39, RGB_WHITE);

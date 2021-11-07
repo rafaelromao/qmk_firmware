@@ -20,7 +20,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 ## Highlights
 
-- 34 keys, split layout, optimized for programmers.
+- This is a 34 keys split layout, optimized for programmers.
 - This layout works well with the OS configured for the US International layout.
 - The two center columns, the center space bar, and the 6 outer keys in the bottom row are disabled.
 - The base layer can be either qwerty or colemak dhm.

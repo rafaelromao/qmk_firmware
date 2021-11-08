@@ -81,7 +81,7 @@ Considering the QWERTY layout:
 
 ## VIM
 - Symbols that are commonly used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
-- Navigation with hjkl is ignored, in favor of the navigation with the fingers in the home position, in the navigation layer. This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
+- Navigation with hjkl is ignored in favor of the navigation with the fingers in the home position, in the navigation layer. This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
 
 ## Resources
 

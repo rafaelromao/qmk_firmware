@@ -25,7 +25,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - The two center columns, the center space bar, and the six outer keys in the bottom row are disabled.
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
-- Symbols are spread among lower and raise layers, making it easier to use them with a single hand.
+- Symbols are spread among lower and raise layers, making them easier to reach with a single hand.
 - All symbols are conveniently placed for software programming and VIM commands.
 - Leds will highlight active layers, caps lock and one-shot mods.
 

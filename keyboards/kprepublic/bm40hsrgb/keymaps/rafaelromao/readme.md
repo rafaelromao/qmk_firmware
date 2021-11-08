@@ -64,7 +64,7 @@ Considering the QWERTY layout:
 - M,. (qwerty) / H,. (colemak) activates the lower layer for one shot.
 - 123 activates the functions layer.
 - Btn1Btn2 activates the navigation layer.
-- ' " &, 456, ShiftCtrlAlt, -=!, F4F5F6 or LeftDownUp returns to the previous layer.
+- ' " &, 456, ShiftCtrlAlt, -=!, F4F5F6, LeftDownUp or MouseLeftMouseDownMouseUp return to the previous layer.
 - _{} or 789 or WE" (qwerty) or WF" (colemak) or $() swap hands for one shot.
 
 ## Tap Dance

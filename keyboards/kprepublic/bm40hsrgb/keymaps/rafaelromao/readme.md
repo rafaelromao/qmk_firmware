@@ -34,8 +34,8 @@ Considering the QWERTY layout:
 - Dedicated modifiers are available on the left side of the functions layer.
 - Sticky (one shot) modifiers are available on the left side of the navigation and mouse layers.
 - The four thumb keys control layer transitions when held (navigation, lower, raise and mouse).
-- The two outer thumb keys acts as Special Keys when tapped. See the *Special Keys* section below.
-- The two inner thumb keys acts as space when tapped.
+- The two outer thumb keys act as Special Keys when tapped. See the *Special Keys* section below.
+- The two inner thumb keys act as space when tapped.
 - In the lower or raise layers, the two opposite thumb keys can be held (or tapped, for one shot) to activate its corresponding layer.
 - The key below the pinky key in the left side of the lower layer will activate or toggle the functions layer.
 - Holding both outer thumb keys will activate the maintenance layer.

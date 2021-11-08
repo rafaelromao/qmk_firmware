@@ -233,7 +233,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B    , XXXXXXX , XXXXXXX , KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , NAV_MOD , LOW_SPC ,      RESET      , RAI_SPC , MOU_CAP , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , NAV_MOD , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_CAP , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_COLEMAK] = LAYOUT_planck_mit(
@@ -244,7 +244,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V    , XXXXXXX , XXXXXXX , KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , NAV_MOD , LOW_SPC ,      RESET      , RAI_SPC , MOU_CAP , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , NAV_MOD , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_CAP , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|
 
      [_LOWER] = LAYOUT_planck_mit(

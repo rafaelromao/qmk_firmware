@@ -22,7 +22,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 - This is a 34 keys split layout, optimized for programmers.
 - This layout works well with the OS configured for the US International keyboard.
-- The two center columns, the center space bar, and the 6 outer keys in the bottom row are disabled.
+- The two center columns, the center space bar, and the six outer keys in the bottom row are disabled.
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
 - Symbols are spread among lower and raise layers, making it easier to use them with a single hand.

@@ -123,6 +123,7 @@ enum custom_keycodes {
 #define OS_NAV OSL(_NAVIGATION)
 #define MO_MOU MO(_MOUSE)
 #define TO_MOU TO(_MOUSE)
+#define TG_MOU TG(_MOUSE)
 #define OS_MOU OSL(_MOUSE)
 #define MO_MAI MO(_MAINTENANCE)
 #define TO_MAI TO(_MAINTENANCE)
@@ -188,6 +189,7 @@ const uint16_t PROGMEM ls1_sho_combo[] = {KC_UNDS, KC_LCBR, KC_RCBR, COMBO_END};
 const uint16_t PROGMEM ls2_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
 const uint16_t PROGMEM mou_nav_combo[] = {CB_NONE, KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
+const uint16_t PROGMEM mou_tog_combo[] = {KC_MS_L, KC_MS_D, KC_MS_U, COMBO_END};
 const uint16_t PROGMEM lo1_tog_combo[] = {SFT_SQU, CTL_DQU, ALT_AMP, COMBO_END};
 const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
 const uint16_t PROGMEM ra1_tog_combo[] = {SFT_CIR, CTL_TIL, ALT_QUO, COMBO_END};
@@ -215,6 +217,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(ls2_sho_combo, SH_OS),
   COMBO(mou_nav_combo, TG_NAV),
   COMBO(nav_tog_combo, TG_NAV),
+  COMBO(mou_tog_combo, TG_MOU),
   COMBO(lo1_tog_combo, TG_LOW),
   COMBO(lo2_tog_combo, TG_LOW),
   COMBO(ra1_tog_combo, TG_RAI),

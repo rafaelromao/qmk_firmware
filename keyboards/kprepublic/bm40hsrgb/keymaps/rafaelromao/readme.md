@@ -80,7 +80,7 @@ Considering the QWERTY layout:
 - For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + tapping c, gives me ç. The same goes for the other accents.
 
 ## VIM
-- The symbols that are most used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
+- Symbols that are most used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
 - Navigation with hjkl is ignored, in favor of the navigation with the fingers in the home position, in the navigation layer. This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
 
 ## Resources

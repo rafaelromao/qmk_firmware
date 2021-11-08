@@ -16,7 +16,7 @@ The keyboard in the picture below is a BM40, used to design and test this layout
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/R1enRzB.png)
+![img](https://i.imgur.com/Wo9Vrpo.png)
 
 ## Highlights
 

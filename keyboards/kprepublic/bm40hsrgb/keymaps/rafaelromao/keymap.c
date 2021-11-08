@@ -133,7 +133,7 @@ enum custom_keycodes {
 #define MO_FUN MO(_FUNCTIONS)
 #define TO_FUN TO(_FUNCTIONS)
 #define TG_FUN TG(_FUNCTIONS)
-#define TT_FUN TT(_FUNCTIONS)
+#define OS_FUN OSL(_FUNCTIONS)
 
 // Tap dance settings
 
@@ -256,7 +256,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       SS_BTIC , SFT_SQU , CTL_DQU , ALT_AMP , KC_PIPE , XXXXXXX , XXXXXXX , XXXXXXX , RALTT_4 , RCTLT_5 , RSFTT_6 , TD_DCC  ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      TT_FUN  , KC_BSLS , KC_LBRC , GUI_RBR , KC_HASH , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_1 , KC_P2   , KC_P3   , KC_P0   ,
+      OS_FUN  , KC_BSLS , KC_LBRC , GUI_RBR , KC_HASH , XXXXXXX , XXXXXXX , XXXXXXX , RGUIT_1 , KC_P2   , KC_P3   , KC_P0   ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX  , _______ ,      XXXXXXX      , OS_RAI , OS_MOU  , XXXXXXX , XXXXXXX , XXXXXXX),
  // |_______________________________________________________________________________________________________________________|

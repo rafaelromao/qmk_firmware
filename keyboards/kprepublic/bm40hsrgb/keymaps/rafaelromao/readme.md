@@ -44,6 +44,7 @@ Considering the QWERTY layout:
 - Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO) and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, with the numpad, in the lower layer.
+- Shift+Backspace sends Delete
 
 ## Special Keys
 

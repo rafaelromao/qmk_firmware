@@ -358,6 +358,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
     bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
     bool isAnyOneShot = isOneShotShift || isOneShotCtrl || isOneShotAlt || isOneShotGui || isOneShotCG;
+    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
 
@@ -373,6 +374,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 set_single_persistent_default_layer(_QWERTY);
             }
             return false;
+
+        // Shift+Backspace for Delete
+
+        case KC_BSPC:
+            if (record->event.pressed) {
+                if (isShifted) {
+                    tap_code(KC_DEL);
+                    return false;
+                }
+                return true;
+            }
 
         // Non-basic mod-taps
 

@@ -1,0 +1,11 @@
+SRC += rafaelromao.c
+MOUSEKEY_ENABLE = yes # Mouse keys
+EXTRAKEY_ENABLE = yes # Audio control and System control
+TAP_DANCE_ENABLE = yes
+SWAP_HANDS_ENABLE = yes
+COMBO_ENABLE = yes
+NKRO_ENABLE = yes
+KEY_LOCK_ENABLE = no
+LEADER_ENABLE = no
+CONSOLE_ENABLED = no
+COMMAND_ENABLE = no

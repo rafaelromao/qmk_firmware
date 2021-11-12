@@ -258,10 +258,10 @@ typedef struct {
 #define ___________________MEDIA_L3____________________ _______ , HYPR_V  , HYPR_A  , XXXXXXX , XXXXXXX
 #define ___________________MEDIA_L4____________________ XXXXXXX , XXXXXXX , XXXXXXX , _______ , XXXXXXX
 
-#define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
-#define ___________________MOUSE_R2____________________ XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
-#define ___________________MOUSE_R3____________________ XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , MO_MED
-#define ___________________MOUSE_R4____________________ XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
+#define ___________________MEDIA_R2____________________ XXXXXXX , XXXXXXX , KC_VOLD , KC_VOLU , KC_MUTE
+#define ___________________MEDIA_R3____________________ XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , _______
+#define ___________________MEDIA_R4____________________ XXXXXXX , _______ , XXXXXXX , XXXXXXX , XXXXXXX
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_TOG , RGB_MOD , XXXXXXX , EEP_RST
 #define ___________________MAINTENANCE_L2______________ RGB_VAI , RGB_HUI , RGB_SAI , MO_LAY  , XXXXXXX

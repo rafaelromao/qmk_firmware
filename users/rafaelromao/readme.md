@@ -1,6 +1,7 @@
 # rafaelromao's userspace
+## A 34 keys split keyboard layout, optimized for programmers.
 
-Here is where most of my code resides. My keyboard keymaps reference this code and extend it with keyboard specific code.
+Here is where most of my code resides. My keyboards reference and extend this code, with keyboard specific definitions.
 
 ## Keyboards
 

@@ -14,7 +14,7 @@ The keyboard in the picture below is a BM40, used to design and test this layout
 
 ## Keymap
 
-This keymap extends [my userspace](../../../../../users/rafaelromao/readme.md) definitions. You can find a detailed explanation of this keymap layout [there](../../../../../users/rafaelromao/readme.md).
+This keymap extends [my userspace](../../../../../users/rafaelromao/readme.md) definitions. You can find a detailed explanation for this keymap layout [there](../../../../../users/rafaelromao/readme.md).
 
 ## Resources
 

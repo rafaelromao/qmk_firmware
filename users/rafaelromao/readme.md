@@ -6,6 +6,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 ## Keyboards
 
 - [kprepublic/bm40hsrgb](../../keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
+- [xiudi/xd75](../../keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
 ## Keymap
 

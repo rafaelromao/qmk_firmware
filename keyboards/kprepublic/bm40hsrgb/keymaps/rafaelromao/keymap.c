@@ -17,19 +17,21 @@
 #include QMK_KEYBOARD_H
 #include "rafaelromao.h"
 
+#define LAYOUT_planck_mit_wrapper(...) LAYOUT_planck_mit(__VA_ARGS__)
+
 // Keymap
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-     [_QWERTY] = LAYOUT_planck_mit(
+     [_QWERTY] = LAYOUT_planck_mit_wrapper(
  // |_______________________________________________________________________________________________________________________|
-      KC_Q    , KC_W    , KC_E    , KC_R    , KC_T    , XXXXXXX , XXXXXXX , KC_Y    , KC_U    , KC_I    , KC_O    , KC_P    ,
+      ___________________QWERTY_L1___________________ , XXXXXXX , XXXXXXX , ___________________QWERTY_R1___________________,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_A    , LSFTT_S , LCTLT_D , LALTT_F , KC_G    , XXXXXXX , XXXXXXX , KC_H    , RALTT_J , RCTLT_K , RSFTT_L , KC_BSPC ,
+      ___________________QWERTY_L2___________________ , XXXXXXX , XXXXXXX , ___________________QWERTY_R2___________________,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B    , XXXXXXX , XXXXXXX , KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN ,
+      ___________________QWERTY_L3___________________ , XXXXXXX , XXXXXXX , ___________________QWERTY_R3___________________,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , NAV_MOD , LOW_SPC ,      XXXXXXX      , RAI_SPC , MOU_CAP , XXXXXXX , XXXXXXX , XXXXXXX),
+      ___________________QWERTY_L4___________________ ,      XXXXXXX      , ___________________QWERTY_R4___________________),
  // |_______________________________________________________________________________________________________________________|
 
      [_COLEMAK] = LAYOUT_planck_mit(

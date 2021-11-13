@@ -122,15 +122,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
 
         // Non-basic mod-taps
 
-        case GUI_AST:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    tap_code16(KC_ASTR);
-                }
-                return false;
-            }
-            return true;
-
         case SFT_EXL:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {

@@ -39,7 +39,6 @@ enum custom_keycodes {
     SS_SQUO,
     SS_CIRC,
     SS_TILD,
-    MT_ASTR,
     MT_EXLM,
     MT_AMPR,
     MT_CIRC,
@@ -82,12 +81,12 @@ enum custom_keycodes {
 #define SFT_EXL RSFT_T(MT_EXLM)
 #define CTL_EQL RCTL_T(KC_EQL)
 #define ALT_MIN RALT_T(KC_MINS)
-#define GUI_AST RGUI_T(MT_ASTR)
+#define GUI_SLS RGUI_T(KC_SLSH)
 
-#define SFT_SQU RSFT_T(SS_SQUO)
-#define CTL_DQU RCTL_T(SS_DQUO)
-#define ALT_AMP RALT_T(MT_AMPR)
-#define GUI_RBR RGUI_T(KC_RBRC)
+#define SFT_SQU LSFT_T(SS_SQUO)
+#define CTL_DQU LCTL_T(SS_DQUO)
+#define ALT_AMP LALT_T(MT_AMPR)
+#define GUI_RBR LGUI_T(KC_RBRC)
 
 #define SFT_CIR LSFT_T(MT_CIRC)
 #define CTL_TIL LCTL_T(MT_TILD)
@@ -219,8 +218,8 @@ typedef struct {
 #define ____RAISE_L4_____                                                             OS_NAV  , OS_LOW
 
 #define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES
-#define ___________________RAISE_R2____________________ KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_SLSH
-#define ___________________RAISE_R3____________________ KC_PERC , GUI_AST , KC_LT   , KC_GT   , KC_COLN
+#define ___________________RAISE_R2____________________ KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_PERC
+#define ___________________RAISE_R3____________________ KC_ASTR , GUI_SLS , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , XXXXXXX
 
 #define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX

@@ -26,8 +26,8 @@ const uint16_t PROGMEM col_ent_combo[] = {RALTT_N, RCTLT_E, RSFTT_I, COMBO_END};
 const uint16_t PROGMEM col_esc_combo[] = {LSFTT_R, LCTLT_S, LALTT_T, COMBO_END};
 const uint16_t PROGMEM co1_tab_combo[] = {KC_W, KC_F, KC_P, COMBO_END};
 const uint16_t PROGMEM co2_tab_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
-const uint16_t PROGMEM low_adj_combo[] = {RGUIT_1, KC_P2, KC_P3, COMBO_END};
-const uint16_t PROGMEM adj_tog_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
+const uint16_t PROGMEM low_fun_combo[] = {RGUIT_1, KC_P2, KC_P3, COMBO_END};
+const uint16_t PROGMEM fun_tog_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM qwe_low_combo[] = {RGUIT_M, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM col_low_combo[] = {RGUIT_H, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM qwe_rai_combo[] = {KC_X, KC_C, LGUIT_V, COMBO_END};
@@ -54,12 +54,12 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(col_esc_combo, KC_ESC),
   COMBO(co1_tab_combo, KC_TAB),
   COMBO(co2_tab_combo, KC_TAB),
-  COMBO(low_adj_combo, TG_FUN),
-  COMBO(adj_tog_combo, TG_FUN),
-  COMBO(qwe_low_combo, TG_LOW),
-  COMBO(col_low_combo, TG_LOW),
-  COMBO(qwe_rai_combo, TG_RAI),
-  COMBO(col_rai_combo, TG_RAI),
+  COMBO(low_fun_combo, TG_FUN),
+  COMBO(fun_tog_combo, TG_FUN),
+  COMBO(qwe_low_combo, TT_LOW),
+  COMBO(col_low_combo, TT_LOW),
+  COMBO(qwe_rai_combo, TT_RAI),
+  COMBO(col_rai_combo, TT_RAI),
   COMBO(qr1_sho_combo, SH_OS),
   COMBO(cr1_sho_combo, SH_OS),
   COMBO(rs2_sho_combo, SH_OS),

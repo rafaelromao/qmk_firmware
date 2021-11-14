@@ -117,8 +117,8 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                     tap_code(KC_DEL);
                     return false;
                 }
-                return true;
             }
+            return true;
 
         // Non-basic mod-taps
 
@@ -274,6 +274,18 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             }
             return false;
 
+        // Force TT to toggle on single tap
+
+        case TT_LOW:
+        case TT_RAI:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    return false;
+                }
+            }
+            return true;
+
+
         // Tap dance
 
         case TD_DCQ:
@@ -284,9 +296,9 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                     unregister_code(KC_BSPC);
                 }
                 return false;
-            } else {
-                return true;
             }
+            return true;
+
         case TD_DCC:
             if (isQwerty) {
                 if (record->event.pressed) {
@@ -295,9 +307,8 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                     unregister_code(KC_BSPC);
                 }
                 return false;
-            } else {
-                return true;
             }
+            return true;
 
         default:
             return true;

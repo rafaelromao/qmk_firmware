@@ -44,6 +44,8 @@ const uint16_t PROGMEM lo1_tog_combo[] = {SFT_SQU, CTL_DQU, ALT_AMP, COMBO_END};
 const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
 const uint16_t PROGMEM ra1_tog_combo[] = {SFT_CIR, CTL_TIL, ALT_QUO, COMBO_END};
 const uint16_t PROGMEM ra2_tog_combo[] = {ALT_MIN, CTL_EQL, SFT_EXL, COMBO_END};
+const uint16_t PROGMEM md1_tog_combo[] = {KC_VOLU, KC_VOLD, SS_MODM, COMBO_END};
+const uint16_t PROGMEM md2_tog_combo[] = {SS_MODM, KC_VOLD, KC_VOLU, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(qwe_ent_combo, KC_ENT),
@@ -71,7 +73,9 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(lo1_tog_combo, TG_LOW),
   COMBO(lo2_tog_combo, TG_LOW),
   COMBO(ra1_tog_combo, TG_RAI),
-  COMBO(ra2_tog_combo, TG_RAI)
+  COMBO(ra2_tog_combo, TG_RAI),
+  COMBO(md1_tog_combo, TG_MED),
+  COMBO(md2_tog_combo, TG_MED)
 };
 
 // Custom handlers
@@ -274,8 +278,30 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             }
             return false;
 
+        case SS_MODP:
+            if (record->event.pressed) {
+                if (isCGModeG) {
+                    SEND_STRING(SS_LGUI("+"));
+                }
+                else if (isCGModeC) {
+                    SEND_STRING(SS_LCTL("+"));
+                }
+            }
+            return false;
+        case SS_MODM:
+            if (record->event.pressed) {
+                if (isCGModeG) {
+                    SEND_STRING(SS_LGUI("-"));
+                }
+                else if (isCGModeC) {
+                    SEND_STRING(SS_LCTL("-"));
+                }
+            }
+            return false;
+
         // Force TT to toggle on single tap
 
+        case TT_MED:
         case TT_LOW:
         case TT_RAI:
             if (record->tap.count > 0) {
@@ -284,7 +310,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                 }
             }
             return true;
-
 
         // Tap dance
 

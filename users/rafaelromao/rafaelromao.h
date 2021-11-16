@@ -48,7 +48,9 @@ enum custom_keycodes {
     SP_MOD,
     TG_MD_G,
     TG_MD_C,
-    CB_NONE
+    CB_NONE,
+    SS_MODP,
+    SS_MODM
 };
 
 // Mod-taps
@@ -130,8 +132,9 @@ enum custom_keycodes {
 #define OS_MOU OSL(_MOUSE)
 #define MO_MAI MO(_MAINTENANCE)
 #define TO_MAI TO(_MAINTENANCE)
-#define MO_MED MO(_MEDIA)
+#define TT_MED TT(_MEDIA)
 #define TO_MED TO(_MEDIA)
+#define TG_MED TG(_MEDIA)
 #define MO_LAY MO(_LAYERS)
 #define MO_FUN MO(_FUNCTIONS)
 #define TO_FUN TO(_FUNCTIONS)
@@ -236,7 +239,7 @@ typedef struct {
 
 #define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
-#define ___________________NAVIGATION_L3_______________ MO_MED  , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
+#define ___________________NAVIGATION_L3_______________ TT_MED  , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , XXXXXXX
 
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT
@@ -251,16 +254,16 @@ typedef struct {
 
 #define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
 #define ___________________MOUSE_R2____________________ XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
-#define ___________________MOUSE_R3____________________ XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , MO_MED
+#define ___________________MOUSE_R3____________________ XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , TT_MED
 #define ____MOUSE_R4_____                               XXXXXXX , _______
 
 #define ___________________MEDIA_L1____________________ KC_MSTP , KC_MNXT , KC_MPRV , KC_MPLY , XXXXXXX
-#define ___________________MEDIA_L2____________________ KC_MUTE , KC_VOLU , KC_VOLD , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_L2____________________ KC_MUTE , KC_VOLU , KC_VOLD , SS_MODM , SS_MODP
 #define ___________________MEDIA_L3____________________ _______ , HYPR_V  , HYPR_A  , XXXXXXX , XXXXXXX
 #define ____MEDIA_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
-#define ___________________MEDIA_R2____________________ XXXXXXX , XXXXXXX , KC_VOLD , KC_VOLU , KC_MUTE
+#define ___________________MEDIA_R2____________________ SS_MODP , SS_MODM , KC_VOLD , KC_VOLU , KC_MUTE
 #define ___________________MEDIA_R3____________________ XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , _______
 #define ____MEDIA_R4_____                               XXXXXXX , _______
 

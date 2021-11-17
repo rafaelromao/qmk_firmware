@@ -110,6 +110,9 @@ enum custom_keycodes {
 #define RAI_SPC LT(_RAISE,KC_SPC)
 #define LOW_SPC LT(_LOWER,KC_SPC)
 
+#define KCZ_MED LT(_MEDIA, KC_Z)
+#define SCL_MED LT(_MEDIA, KC_SCLN)
+
 // Layer transitions
 
 #define DF_QWE DF(_QWERTY)
@@ -189,22 +192,22 @@ typedef struct {
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
 #define ___________________QWERTY_L2___________________ KC_A    , LSFTT_S , LCTLT_D , LALTT_F , KC_G
-#define ___________________QWERTY_L3___________________ KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B
+#define ___________________QWERTY_L3___________________ KCZ_MED , KC_X    , KC_C    , LGUIT_V , KC_B
 #define ____QWERTY_L4____                                                             NAV_MOD , LOW_SPC
 
 #define ___________________QWERTY_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
 #define ___________________QWERTY_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , KC_BSPC
-#define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN
+#define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , KC_DOT  , SCL_MED
 #define ____QWERTY_R4____                               RAI_SPC , MOU_CAP
 
 #define ___________________COLEMAK_L1__________________ KC_Q    , KC_W    , KC_F    , KC_P    , KC_B
 #define ___________________COLEMAK_L2__________________ KC_A    , LSFTT_R , LCTLT_S , LALTT_T , KC_G
-#define ___________________COLEMAK_L3__________________ KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V
+#define ___________________COLEMAK_L3__________________ KCZ_MED , KC_X    , KC_C    , LGUIT_D , KC_V
 #define ____COLEMAK_L4___                                                             NAV_MOD , LOW_SPC
 
 #define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , KC_BSPC
 #define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KC_O
-#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN
+#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , SCL_MED
 #define ____COLEMAK_R4___                               RAI_SPC , MOU_CAP
 
 #define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_TILD

@@ -42,7 +42,7 @@ More:
 - One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
 - Leds, when available, will highlight active layers, caps lock and one-shot mods.
 - In the base layer, holding Z or ; will activate the functions and media layers, respectively. They can be toggled on tapping the same keys in the lower and mouse layers, respectively.
-- But holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
+- Holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
 - Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
 - Combos allow easy access to ENTER, ESC, TAB and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, with the numpad, in the lower layer.

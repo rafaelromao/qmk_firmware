@@ -182,12 +182,10 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color(42, RGB_WHITE);
             break;
         case _MEDIA:
-            rgb_matrix_set_color(24, RGB_WHITE);
             rgb_matrix_set_color(35, RGB_WHITE);
             break;
         case _FUNCTIONS:
-            rgb_matrix_set_color(40, RGB_WHITE);
-            rgb_matrix_set_color(42, RGB_WHITE);
+            rgb_matrix_set_color(24, RGB_WHITE);
             break;
         case _NAVIGATION:
             rgb_matrix_set_color(39, RGB_WHITE);

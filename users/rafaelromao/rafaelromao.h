@@ -110,7 +110,7 @@ enum custom_keycodes {
 #define RAI_SPC LT(_RAISE,KC_SPC)
 #define LOW_SPC LT(_LOWER,KC_SPC)
 
-#define KCZ_MED LT(_MEDIA, KC_Z)
+#define KCZ_FUN LT(_FUNCTIONS, KC_Z)
 #define SCL_MED LT(_MEDIA, KC_SCLN)
 
 // Layer transitions
@@ -141,8 +141,8 @@ enum custom_keycodes {
 #define MO_LAY MO(_LAYERS)
 #define MO_FUN MO(_FUNCTIONS)
 #define TO_FUN TO(_FUNCTIONS)
+#define TT_FUN TT(_FUNCTIONS)
 #define TG_FUN TG(_FUNCTIONS)
-#define OS_FUN OSL(_FUNCTIONS)
 
 // Custom Shortcuts
 
@@ -192,7 +192,7 @@ typedef struct {
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
 #define ___________________QWERTY_L2___________________ KC_A    , LSFTT_S , LCTLT_D , LALTT_F , KC_G
-#define ___________________QWERTY_L3___________________ KCZ_MED , KC_X    , KC_C    , LGUIT_V , KC_B
+#define ___________________QWERTY_L3___________________ KCZ_FUN , KC_X    , KC_C    , LGUIT_V , KC_B
 #define ____QWERTY_L4____                                                             NAV_MOD , LOW_SPC
 
 #define ___________________QWERTY_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
@@ -202,7 +202,7 @@ typedef struct {
 
 #define ___________________COLEMAK_L1__________________ KC_Q    , KC_W    , KC_F    , KC_P    , KC_B
 #define ___________________COLEMAK_L2__________________ KC_A    , LSFTT_R , LCTLT_S , LALTT_T , KC_G
-#define ___________________COLEMAK_L3__________________ KCZ_MED , KC_X    , KC_C    , LGUIT_D , KC_V
+#define ___________________COLEMAK_L3__________________ KCZ_FUN , KC_X    , KC_C    , LGUIT_D , KC_V
 #define ____COLEMAK_L4___                                                             NAV_MOD , LOW_SPC
 
 #define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , KC_BSPC
@@ -212,7 +212,7 @@ typedef struct {
 
 #define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SFT_SQU , CTL_DQU , ALT_AMP , KC_PIPE
-#define ___________________LOWER_L3____________________ OS_FUN  , KC_BSLS , KC_LBRC , GUI_RBR , KC_HASH
+#define ___________________LOWER_L3____________________ TT_FUN  , KC_BSLS , KC_LBRC , GUI_RBR , KC_HASH
 #define ____LOWER_L4_____                                                             XXXXXXX , _______
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_P7   , KC_P8   , KC_P9   , TD_DCQ
@@ -232,7 +232,7 @@ typedef struct {
 
 #define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
 #define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
-#define ___________________FUNCTIONS_L3________________ _______ , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
+#define ___________________FUNCTIONS_L3________________ TT_FUN  , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____FUNCTIONS_L4_                                                             XXXXXXX , XXXXXXX
 
 #define ___________________FUNCTIONS_R1________________ XXXXXXX , KC_F7   , KC_F8   , KC_F9   , KC_F12

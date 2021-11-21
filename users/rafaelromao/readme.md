@@ -23,7 +23,7 @@ Layout:
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
 
 Symbols:
-- Symbols are spread among lower and raise layers, making them easier to reach with a single hand.
+- Symbols are spread across the lower and raise layers, making them easier to reach with a single hand.
 - All symbols are conveniently placed for software programming and VIM commands.
 
 Modifiers:

@@ -16,30 +16,39 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 ## Highlights
 
+Layout:
 - This is a 34 keys split layout, optimized for programmers.
 - This layout works well with the OS configured for the US International keyboard.
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
+
+Symbols:
 - Symbols are spread among lower and raise layers, making them easier to reach with a single hand.
-- One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
 - All symbols are conveniently placed for software programming and VIM commands.
-- Leds, when available, will highlight active layers, caps lock and one-shot mods.
+
+Modifiers:
+- Considering qwerty, home block mods (S Shift, D Ctrl, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
 - Dedicated modifiers are available on the left side of the functions layer.
-- Sticky (one shot) modifiers are available on the left side of the navigation and mouse layers.
+- One-shot modifiers are available on the left side of the navigation and mouse layers.
+
+Thumb Keys:
 - The four thumb keys control layer transitions when held (navigation, lower, raise and mouse).
 - The two outer thumb keys act as Special Keys when tapped. See the *Special Keys* section below.
 - The two inner thumb keys act as space when tapped.
 - In the lower or raise layers, the two opposite thumb keys can be held (or tapped, for one shot) to activate its corresponding layer.
-- In the base layer, holding Z or ; will activate the functions and media layers, respectively. They can be toggled on tapping the same keys in the lower and mouse layers, respectively. But holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
 - Holding both outer thumb keys will activate the maintenance layer.
+
+Layers:
+- One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
+- Leds, when available, will highlight active layers, caps lock and one-shot mods.
+- In the base layer, holding Z or ; will activate the functions and media layers, respectively. They can be toggled on tapping the same keys in the lower and mouse layers, respectively. But holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
+ 
+Exttas:
 - Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
 - Combos allow easy access to ENTER, ESC, TAB and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, with the numpad, in the lower layer.
+- On the navigation and mouse layers, considering qwerty, you find Esc in the Q and Enter in the P.
 - Shift+Backspace sends Delete.
-
-Considering the QWERTY layout:
-- Home block mods (S Shift, D Ctrl, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
-- On the navigation and mouse layers, you find Esc in the Q and Enter in the P.
 
 ## Special Keys
 

@@ -24,22 +24,22 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
 - All symbols are conveniently placed for software programming and VIM commands.
 - Leds, when available, will highlight active layers, caps lock and one-shot mods.
-
-Considering the QWERTY layout:
-- Home block mods (S Shift, D Ctrl, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
 - Dedicated modifiers are available on the left side of the functions layer.
 - Sticky (one shot) modifiers are available on the left side of the navigation and mouse layers.
 - The four thumb keys control layer transitions when held (navigation, lower, raise and mouse).
 - The two outer thumb keys act as Special Keys when tapped. See the *Special Keys* section below.
 - The two inner thumb keys act as space when tapped.
 - In the lower or raise layers, the two opposite thumb keys can be held (or tapped, for one shot) to activate its corresponding layer.
-- In the base layer, holding Z or ; will activate the functions and media layers, respectively. They can be toggled on tapping the same keys in the lower and mouse layers, respectively. But holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
 - Holding both outer thumb keys will activate the maintenance layer.
-- On the navigation and mouse layers, you find Esc in the Q and Enter in the P.
 - Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
-- Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO) and single hand operations (Swap hands or activate another layer).
+- Combos allow easy access to ENTER, ESC, TAB and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, with the numpad, in the lower layer.
 - Shift+Backspace sends Delete.
+
+Considering the QWERTY layout:
+- Home block mods (S Shift, D Ctrl, F Alt, V Gui), also mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
+- In the base layer, holding Z or ; will activate the functions and media layers, respectively. They can be toggled on tapping the same keys in the lower and mouse layers, respectively. But holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
+- On the navigation and mouse layers, you find Esc in the Q and Enter in the P.
 
 ## Special Keys
 
@@ -58,8 +58,8 @@ In the base layers, considering the QWERTY layout:
 - WER or UIO sends TAB. 
 - SDF sends ESC.
 - JKL sends ENTER.
-- XCV activates the raise layer for one shot.
-- M,. activates the lower layer for one shot.
+- XCV activates the raise layer for one shot, or while held.
+- M,. activates the lower layer for one shot, or while held.
 
 In the lower layer:
 - JKL activates the functions layer.

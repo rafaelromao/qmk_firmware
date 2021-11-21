@@ -19,6 +19,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 Layout:
 - This is a 34 keys split layout, optimized for programmers.
 - This layout works well with the OS configured for the US International keyboard.
+- This layout considers the right hand as the favored hand.
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
 

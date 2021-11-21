@@ -75,9 +75,13 @@ In the lower layer:
 In the mouse layer:
 - JKL activates the navigation layer.
 
-In all layers but the base:
-- WER or UIO swap hands for one shot.
-- SDF or JKL return to the previous layer.
+In all layers but the base and maintenance:
+- UIO swap hands for one shot.
+- JKL return to the previous layer.
+
+In the lower and raise layers:
+- WER swap hands for one shot.
+- SDF return to the previous layer.
 
 ## Tap Dance
 

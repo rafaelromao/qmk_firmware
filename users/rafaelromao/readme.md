@@ -21,7 +21,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
 - Symbols are spread among lower and raise layers, making them easier to reach with a single hand.
-- One-shot layers and mods remain active with a double tap.
+- One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
 - All symbols are conveniently placed for software programming and VIM commands.
 - Leds, when available, will highlight active layers, caps lock and one-shot mods.
 

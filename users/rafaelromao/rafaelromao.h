@@ -27,8 +27,7 @@ enum layers {
   _NAVIGATION,
   _MOUSE,
   _MEDIA,
-  _MAINTENANCE,
-  _LAYERS
+  _MAINTENANCE
 };
 
 // Custom keycodes
@@ -138,7 +137,6 @@ enum custom_keycodes {
 #define TT_MED TT(_MEDIA)
 #define TO_MED TO(_MEDIA)
 #define TG_MED TG(_MEDIA)
-#define MO_LAY MO(_LAYERS)
 #define MO_FUN MO(_FUNCTIONS)
 #define TO_FUN TO(_FUNCTIONS)
 #define TT_FUN TT(_FUNCTIONS)
@@ -260,9 +258,9 @@ typedef struct {
 #define ___________________MOUSE_R3____________________ XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , TT_MED
 #define ____MOUSE_R4_____                               XXXXXXX , _______
 
-#define ___________________MEDIA_L1____________________ KC_MSTP , KC_MNXT , KC_MPRV , KC_MPLY , XXXXXXX
-#define ___________________MEDIA_L2____________________ KC_MUTE , KC_VOLU , KC_VOLD , SS_MODM , SS_MODP
-#define ___________________MEDIA_L3____________________ _______ , HYPR_V  , HYPR_A  , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
+#define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_L3____________________ _______ , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define ____MEDIA_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
@@ -270,22 +268,12 @@ typedef struct {
 #define ___________________MEDIA_R3____________________ XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , _______
 #define ____MEDIA_R4_____                               XXXXXXX , _______
 
-#define ___________________MAINTENANCE_L1______________ XXXXXXX , RGB_TOG , RGB_MOD , XXXXXXX , EEP_RST
-#define ___________________MAINTENANCE_L2______________ RGB_VAI , RGB_HUI , RGB_SAI , MO_LAY  , XXXXXXX
-#define ___________________MAINTENANCE_L3______________ RGB_VAD , RGB_HUD , RGB_SAD , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , DF_QWE  , XXXXXXX , EEP_RST
+#define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , TG_MD_G , XXXXXXX , CMB_TOG
+#define ___________________MAINTENANCE_L3______________ TO_FUN  , XXXXXXX , XXXXXXX , TO_NAV  , TO_LOW
 #define __MAINTENANCE_L4_                                                             _______ , XXXXXXX
 
-#define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , CMB_TOG , XXXXXXX , XXXXXXX
-#define ___________________MAINTENANCE_R2______________ XXXXXXX , MO_LAY  , NK_TOGG , XXXXXXX , XXXXXXX
-#define ___________________MAINTENANCE_R3______________ XXXXXXX , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , DF_COL  , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_R2______________ NK_TOGG , XXXXXXX , TG_MD_C , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , KC_SLEP , XXXXXXX , TO_MED
 #define __MAINTENANCE_R4_                               XXXXXXX , _______
-
-#define ___________________LAYERS_L1___________________ XXXXXXX , XXXXXXX , DF_QWE  , TO_MAI  , XXXXXXX
-#define ___________________LAYERS_L2___________________ XXXXXXX , XXXXXXX , TG_MD_G , _______ , XXXXXXX
-#define ___________________LAYERS_L3___________________ TO_FUN  , XXXXXXX , XXXXXXX , TO_NAV  , TO_RAI
-#define ____LAYERS_L4____                                                             _______ , XXXXXXX
-
-#define ___________________LAYERS_R1___________________ XXXXXXX , TO_MAI  , DF_COL  , XXXXXXX , XXXXXXX
-#define ___________________LAYERS_R2___________________ XXXXXXX , _______ , TG_MD_C , XXXXXXX , XXXXXXX
-#define ___________________LAYERS_R3___________________ TO_LOW  , TO_MOU  , XXXXXXX , XXXXXXX , TO_MED
-#define ____LAYERS_R4____                               XXXXXXX , _______

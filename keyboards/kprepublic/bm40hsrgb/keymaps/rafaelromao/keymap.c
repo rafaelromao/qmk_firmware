@@ -119,20 +119,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
       ___________________MAINTENANCE_L3______________ , XXXXXXX , XXXXXXX , ___________________MAINTENANCE_R3______________ ,
  // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , __MAINTENANCE_L4_ ,      XXXXXXX      , __MAINTENANCE_R4_ , XXXXXXX , XXXXXXX , XXXXXXX),
+      XXXXXXX , XXXXXXX , XXXXXXX , __MAINTENANCE_L4_ ,      XXXXXXX      , __MAINTENANCE_R4_ , XXXXXXX , XXXXXXX , XXXXXXX)
  // |_______________________________________________________________________________________________________________________|
-
-     [_LAYERS] = LAYOUT_wrapper(
- // |_______________________________________________________________________________________________________________________|
-      ___________________LAYERS_L1___________________ , XXXXXXX , XXXXXXX , ___________________LAYERS_R1___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________LAYERS_L2___________________ , XXXXXXX , XXXXXXX , ___________________LAYERS_R2___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      ___________________LAYERS_L3___________________ , XXXXXXX , XXXXXXX , ___________________LAYERS_R3___________________ ,
- // |---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , ____LAYERS_L4____ ,      XXXXXXX      , ____LAYERS_R4____ , XXXXXXX , XXXXXXX , XXXXXXX)
- // |_______________________________________________________________________________________________________________________|
-
 };
 
 // Swap Hands
@@ -181,9 +169,6 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         case _RAISE:
             rgb_matrix_set_color(42, RGB_WHITE);
             break;
-        case _MEDIA:
-            rgb_matrix_set_color(35, RGB_WHITE);
-            break;
         case _FUNCTIONS:
             rgb_matrix_set_color(24, RGB_WHITE);
             break;
@@ -193,14 +178,13 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         case _MOUSE:
             rgb_matrix_set_color(43, RGB_WHITE);
             break;
+        case _MEDIA:
+            rgb_matrix_set_color(35, RGB_WHITE);
+            break;
         case _MAINTENANCE:
             rgb_matrix_set_color(39, RGB_WHITE);
             rgb_matrix_set_color(43, RGB_WHITE);
             rgb_matrix_set_color(7, RGB_RED);
-            break;
-        case _LAYERS:
-            rgb_matrix_set_color(15, RGB_WHITE);
-            rgb_matrix_set_color(20, RGB_WHITE);
             break;
         default:
             break;

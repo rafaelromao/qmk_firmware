@@ -12,7 +12,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/uG21MGP.png)
+![img](https://i.imgur.com/g6uuPhR.png)
 
 ## Highlights
 
@@ -45,7 +45,7 @@ Considering the QWERTY layout:
 
 - Mod: This special thumb key behaves as follows, when tapped (not hold):
     - If no modifier is active or locked in one-shot mode, it activates the Gui or Ctrl modifier in one-shot mode.
-    - In the layers layer, we can toggle between Gui and Ctrl, which makes it easier to transition between different operating systems, using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.
+    - In the maintenance layer, we can toggle between Gui and Ctrl, which makes it easier to transition between different operating systems, using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.
     - If any modifier is active or locked in one-shot mode, all these modifiers will be released.
 - Cap: This special thumb key behaves as follows, when tapped (not hold):
     - If CapsLock is active, it deactivates CapsLock.

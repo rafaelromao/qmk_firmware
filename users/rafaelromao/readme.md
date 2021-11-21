@@ -33,9 +33,9 @@ Considering the QWERTY layout:
 - The two outer thumb keys act as Special Keys when tapped. See the *Special Keys* section below.
 - The two inner thumb keys act as space when tapped.
 - In the lower or raise layers, the two opposite thumb keys can be held (or tapped, for one shot) to activate its corresponding layer.
-- The key below the pinky key in the left side of the lower layer will activate or toggle the functions layer.
+- In the base layer, holdong Z ou ; will activate the functions and media layers, respectively. They can be toggled on with the same key in the lower or navigation/mouse layers.
 - Holding both outer thumb keys will activate the maintenance layer.
-- On the navigation and mouse layers, you find Esc in the Q key and Enter in the P key.
+- On the navigation and mouse layers, you find Esc in the Q and Enter in the P.
 - Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO) and single hand operations (Swap hands or activate another layer).
 - Tap dance allows using dot or comma as decimal separator, as well as backspace, with the numpad, in the lower layer.

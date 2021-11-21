@@ -54,15 +54,16 @@ Considering the QWERTY layout:
 
 ## Combos
 
-- JKL (qwerty) / NEI (colemak) sends ENTER.
-- SDF (qwerty) / RST (colemak) sends ESC.
-- UIO (qwerty) / LUY (colemak) or WER (qwerty) / WFP (colemak) sends TAB.
-- XCV (qwerty) / XCD (colemak) activates the raise layer for one shot.
-- M,. (qwerty) / H,. (colemak) activates the lower layer for one shot.
+Considering qwerty:
+- JKL sends ENTER.
+- SDF sends ESC.
+- WER or UIO sends TAB.
+- XCV activates the raise layer for one shot.
+- M,. activates the lower layer for one shot.
 - 123 activates the functions layer.
 - Btn1Btn2 activates the navigation layer.
-- ' " &, 456, ShiftCtrlAlt, -=!, F4F5F6, LeftDownUp or MouseLeftMouseDownMouseUp return to the previous layer.
-- _{} or 789 or WE" (qwerty) or WF" (colemak) or $() swap hands for one shot.
+- In all layers but the base, SDF or JKL return to the previous layer.
+- In all layers but the base, WER or UIO swap hands for one shot.
 
 ## Tap Dance
 

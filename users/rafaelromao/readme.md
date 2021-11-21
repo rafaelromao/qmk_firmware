@@ -54,16 +54,22 @@ Considering the QWERTY layout:
 
 ## Combos
 
-Considering qwerty:
-- JKL sends ENTER.
+In the base layers, considering the QWERTY layout:
+- WER or UIO sends TAB. 
 - SDF sends ESC.
-- WER or UIO sends TAB.
+- JKL sends ENTER.
 - XCV activates the raise layer for one shot.
 - M,. activates the lower layer for one shot.
-- 123 activates the functions layer.
-- Btn1Btn2 activates the navigation layer.
-- In all layers but the base, SDF or JKL return to the previous layer.
-- In all layers but the base, WER or UIO swap hands for one shot.
+
+In the lower layer:
+- JKL activates the functions layer.
+
+In the mouse layer:
+- JKL activates the navigation layer.
+
+In all layers but the base:
+- WER or UIO swap hands for one shot.
+- SDF or JKL return to the previous layer.
 
 ## Tap Dance
 
@@ -77,6 +83,7 @@ Considering qwerty:
 - For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + tapping c, gives me ç. The same goes for the other accents.
 
 ## VIM
+
 - Symbols that are commonly used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
 - Navigation with hjkl is ignored in favor of the navigation with the fingers in the home position, in the navigation layer. This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
 

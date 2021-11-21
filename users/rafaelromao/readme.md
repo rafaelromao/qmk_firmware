@@ -33,7 +33,7 @@ Considering the QWERTY layout:
 - The two outer thumb keys act as Special Keys when tapped. See the *Special Keys* section below.
 - The two inner thumb keys act as space when tapped.
 - In the lower or raise layers, the two opposite thumb keys can be held (or tapped, for one shot) to activate its corresponding layer.
-- In the base layer, holdong Z ou ; will activate the functions and media layers, respectively. They can be toggled on with the same key in the lower or navigation/mouse layers.
+- In the base layer, holding Z or ; will activate the functions and media layers, respectively. They can be toggled on tapping the same keys in the lower and navigation/mouse layers, respectively.
 - Holding both outer thumb keys will activate the maintenance layer.
 - On the navigation and mouse layers, you find Esc in the Q and Enter in the P.
 - Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.

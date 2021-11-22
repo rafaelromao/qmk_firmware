@@ -44,9 +44,9 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
 
 ### Enter, Esc, Tab, Delete
-- Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
-- Combos allow easy access to ENTER, ESC, TAB.
-- On the navigation and mouse layers, considering qwerty, you find Esc in the Q and Enter in the P.
+- Considering qwerty, on the navigation and mouse layers, you find Esc in the Q and Enter in the P.
+- Tab is present on the left side of the navigation and mouse layers, in the E, allowing easy access to Gui/Alt+Tab.
+- Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO).
 - Shift+Backspace sends Delete.
 
 ### Special Keys

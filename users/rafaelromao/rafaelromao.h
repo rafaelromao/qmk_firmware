@@ -260,12 +260,12 @@ typedef struct {
 
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
 #define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX
-#define ___________________MEDIA_L3____________________ _______ , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_L3____________________ TT_MED  , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define ____MEDIA_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
 #define ___________________MEDIA_R2____________________ SS_MODP , SS_MODM , KC_VOLD , KC_VOLU , KC_MUTE
-#define ___________________MEDIA_R3____________________ XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , _______
+#define ___________________MEDIA_R3____________________ XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , TT_MED
 #define ____MEDIA_R4_____                               XXXXXXX , _______
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , DF_QWE  , XXXXXXX , EEP_RST

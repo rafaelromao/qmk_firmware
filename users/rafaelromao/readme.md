@@ -25,23 +25,21 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Symbols are spread across the lower and raise layers, making them easier to reach with a single hand.
 - All symbols are conveniently placed for software programming and VIM commands.
 
-### Mod-taps and Layer-taps
-- Considering qwerty, home block mods (S Shift, D Ctrl, F Alt, V Gui), mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
-- Dedicated modifiers are available on the left side of the functions layer.
-- One-shot modifiers are available on the left side of the navigation and mouse layers.
-- Gui/Ctrl and Shift are also available as Special Keys, in the thumbs, see below.
-- One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
-
 ### Thumb Keys
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).
 - The two outer thumb keys act as Special Keys, when tapped. See the *Special Keys* section below.
 - The two inner thumb keys act as space, when tapped.
-- In the lower or raise layers, the two opposite thumb keys can be held (or tapped, for one shot) to activate its corresponding layer.
 - Holding both outer thumb keys will activate the maintenance layer.
 
-### Functions and Media
+### Mod-Taps and Layer-Taps
+- Considering qwerty, home block mods (S Shift, D Ctrl, F Alt, V Gui), mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
+- Dedicated modifiers are available on the left side of the functions layer.
+- One-shot modifiers are available on the left side of the navigation and mouse layers.
+- Gui/Ctrl and Shift are also available as Special Keys, in the thumbs, see below.
 - In the base layer, holding Z or ; will activate the functions and media layers, respectively. They can be toggled on tapping the same keys in the lower and mouse layers, respectively.
 - Holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
+- In the lower or raise layers, the two opposite thumb keys can be held (or tapped, for one shot) to activate its corresponding layer.
+- One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
 
 ### Enter, Esc, Tab, Delete
 - Considering qwerty, on the navigation and mouse layers, you find Esc in the Q and Enter in the P.

@@ -136,12 +136,8 @@ const keypos_t PROGMEM hand_swap_config[MATRIX_ROWS][MATRIX_COLS] = {
 
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
-    if (!is_combo_enabled()) {
-        rgb_matrix_set_color(9, RGB_RED);
-    }
-
     if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(0, RGB_RED);
+        rgb_matrix_set_color(0, RGB_WHITE);
     }
 
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
@@ -184,6 +180,9 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         case _MAINTENANCE:
             rgb_matrix_set_color(39, RGB_WHITE);
             rgb_matrix_set_color(43, RGB_WHITE);
+            rgb_matrix_set_color(4, RGB_WHITE);
+            rgb_matrix_set_color(26, RGB_WHITE);
+            rgb_matrix_set_color(33, RGB_WHITE);
             rgb_matrix_set_color(7, RGB_RED);
             break;
         default:

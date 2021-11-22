@@ -67,8 +67,8 @@ In the base layers, considering the QWERTY layout:
 - WER or UIO sends TAB. 
 - SDF sends ESC.
 - JKL sends ENTER.
-- XCV activates the raise layer for one shot, or while held.
-- M,. activates the lower layer for one shot, or while held.
+- XCV activates the raise layer.
+- M,. activates the lower layer.
 
 In the lower layer:
 - M,. activates the functions layer.

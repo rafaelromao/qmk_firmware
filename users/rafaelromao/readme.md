@@ -31,6 +31,7 @@ Modifiers:
 - Considering qwerty, home block mods (S Shift, D Ctrl, F Alt, V Gui), mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
 - Dedicated modifiers are available on the left side of the functions layer.
 - One-shot modifiers are available on the left side of the navigation and mouse layers.
+- Gui/Ctrl and Shift are also available as Special Keys, in the thumbs, see below.
 
 Thumb Keys:
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).

@@ -15,15 +15,12 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 ![img](https://i.imgur.com/W15KGHn.png)
 
 ### Layout
-- This is a 34 keys split layout, optimized for programmers.
+- This is a 34 keys split layout, 3x5+2, optimized for programmers.
 - This layout works well with the OS configured for the US International keyboard.
-- This layout considers the right hand as the favored hand.
+- This layout was designed mostly for coding and typing in English and Portuguese (but will probably work well for other latin languages).
+- This layout considers the right hand as the stronger hand.
 - The base layer can be either qwerty or colemak dhm.
 - Use of keys in the two inner columns is reduced, minimizing lateral movement.
-
-### Symbols
-- Symbols are spread across the lower and raise layers, making them easier to reach with a single hand.
-- All symbols are conveniently placed for software programming and VIM commands.
 
 ### Thumb Keys
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).
@@ -32,7 +29,9 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Holding both outer thumb keys will activate the maintenance layer.
 
 ### Mod-Taps and Layer-Taps
-- Considering qwerty, home block mods (S Shift, D Ctrl, F Alt, V Gui), mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
+- Considering qwerty, home block mods, mirrored in the other side of the keyboard, are available on most layers.
+  - S Shift, D Ctrl, F Alt, V Gui
+  - M Gui, J Alt, K Ctrl, L Shift
 - Dedicated modifiers are available on the left side of the functions layer.
 - One-shot modifiers are available on the left side of the navigation and mouse layers.
 - Gui/Ctrl and Shift are also available as Special Keys, in the thumbs, see below.
@@ -46,6 +45,18 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Tab is present on the left side of the navigation and mouse layers, in the E, allowing easy access to Gui/Alt+Tab.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO).
 - Shift+Backspace sends Delete.
+
+### Symbols
+- Symbols are spread across the lower and raise layers, making them easier to reach with a single hand.
+- All symbols are conveniently placed for software programming and VIM commands.
+
+#### Accentuation
+- Using the lower layer, we can type `, ', ", ~ and ^ as independent symbols, while in the left side of the raise layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
+- For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + tapping c, gives me ç. The same goes for the other accents.
+
+#### VIM
+- Symbols that are commonly used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
+- Navigation with hjkl is ignored in favor of the navigation with the fingers in the home position, in the navigation layer. This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
 
 ### Special Keys
 
@@ -85,17 +96,6 @@ In the lower and raise layers:
 
 - If the base layer is qwerty, the right pinky key, in the lower (numpad style) layer, sends backspace when tapped or held, while the key above it sends dot on single tap and comma on double tap.
 - If the base layer is colemak, the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap, while the key above it simply sends backspace when tapped or held.
-
-### Accentuation
-
-- This layout was designed mostly for coding and typing in English and Portuguese.
-- Using the lower layer, we can type `, ', ", ~ and ^ as independent symbols, while in the left side of the raise layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
-- For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + tapping c, gives me ç. The same goes for the other accents.
-
-### VIM
-
-- Symbols that are commonly used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
-- Navigation with hjkl is ignored in favor of the navigation with the fingers in the home position, in the navigation layer. This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
 
 ## Resources
 

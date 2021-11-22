@@ -44,7 +44,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Considering qwerty, on the navigation and mouse layers, you find Esc in the Q and Enter in the P.
 - Tab is present on the left side of the navigation and mouse layers, in the E, allowing easy access to Gui/Alt+Tab.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO).
-- Shift+Backspace sends Delete.
+- Shift+Backspace sends Delete, but Delete is also available under ; in the navigation layer.
 
 ### Symbols
 - Symbols are spread across the lower and raise layers, making them easier to reach with a single hand.

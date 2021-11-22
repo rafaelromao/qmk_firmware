@@ -25,7 +25,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Symbols are spread across the lower and raise layers, making them easier to reach with a single hand.
 - All symbols are conveniently placed for software programming and VIM commands.
 
-### Modifiers
+### Mod-taps and Layer-taps
 - Considering qwerty, home block mods (S Shift, D Ctrl, F Alt, V Gui), mirrored in the other side of the keyboard (M Gui, J Alt, K Ctrl, L Shift), are available on most layers.
 - Dedicated modifiers are available on the left side of the functions layer.
 - One-shot modifiers are available on the left side of the navigation and mouse layers.
@@ -45,7 +45,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 ### Enter, Esc, Tab, Delete
 - Tab is present on the left side of the navigation and mouse layers, allowing easy access to gui/alt+tab.
-- Combos allow easy access to ENTER, ESC, TAB and single hand operations (Swap hands or activate another layer).
+- Combos allow easy access to ENTER, ESC, TAB.
 - On the navigation and mouse layers, considering qwerty, you find Esc in the Q and Enter in the P.
 - Shift+Backspace sends Delete.
 

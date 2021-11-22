@@ -71,10 +71,10 @@ In the base layers, considering the QWERTY layout:
 - M,. activates the lower layer for one shot, or while held.
 
 In the lower layer:
-- JKL activates the functions layer.
+- M,. activates the functions layer.
 
 In the mouse layer:
-- JKL activates the navigation layer.
+- M,. activates the navigation layer.
 
 In all layers but the base and maintenance:
 - UIO swap hands for one shot.

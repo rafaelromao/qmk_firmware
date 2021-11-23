@@ -56,7 +56,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 #### VIM
 - Symbols that are commonly used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
-- Navigation with hjkl is ignored in favor of the navigation with the fingers in the home position, in the navigation layer. This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
+- Navigation with hjkl is ignored in favor of the navigation with the fingers in the home position, in the navigation layer. For that to work better, hjkl is remapped to jklBackSpace, in normal and visual modes. This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
 
 ### Special Keys
 

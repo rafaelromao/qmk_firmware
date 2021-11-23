@@ -104,7 +104,7 @@ In the lower and raise layers:
 - [A guide to home row mods](https://precondition.github.io/home-row-mods)
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
-- [Getreuer's Posts](https://getreuer.info/posts/keyboards)
+- [Getreuer's Keymap](https://github.com/getreuer/qmk-keymap)
 - [Callum's Userspace](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum)
 - [Drashna's Userspace](https://github.com/qmk/qmk_firmware/tree/master/users/drashna)
 - [DreymaR's Big Bag](https://dreymar.colemak.org) 

@@ -97,10 +97,13 @@ In the lower and raise layers:
 - If the base layer is qwerty, the right pinky key, in the lower (numpad style) layer, sends backspace when tapped or held, while the key above it sends dot on single tap and comma on double tap.
 - If the base layer is colemak, the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap, while the key above it simply sends backspace when tapped or held.
 
+## Resources
+
+- [QMK Docs](https://docs.qmk.fm)
+- [Keyboard Tester](https://config.qmk.fm/#/test)
+
 ## References
 
-- [Keyboard Tester](https://config.qmk.fm/#/test)
-- [QMK Docs](https://docs.qmk.fm)
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
 - [Precondition](https://precondition.github.io/home-row-mods)

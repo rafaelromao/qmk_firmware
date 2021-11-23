@@ -101,3 +101,4 @@ In the lower and raise layers:
 
 - [QMK Docs](https://docs.qmk.fm)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
+- [A guide to home row mods](https://precondition.github.io/home-row-mods)

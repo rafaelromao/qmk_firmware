@@ -57,17 +57,18 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 #### VIM
 - Symbols that are commonly used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
 - Navigation with hjkl is ignored in favor of the navigation with the fingers in the home position, in the navigation layer.
-- For that to work better, hjkl should be disabled in normal and visual modes.
+- For that to work better, hjkl and backspace should be disabled in normal and visual modes.
 ```vim
 nnoremap h <nop>
 nnoremap j <nop>
 nnoremap k <nop>
 nnoremap l <nop>
-
+nnoremap <BACKSPACE> <nop>
 vnoremap h <nop>
 vnoremap j <nop>
 vnoremap k <nop>
 vnoremap l <nop>
+vnoremap <BACKSPACE> <nop>
 ```
 - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
 

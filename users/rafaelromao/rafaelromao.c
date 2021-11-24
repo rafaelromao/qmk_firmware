@@ -341,6 +341,18 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
 
 // Tap-hold configuration
 
+__attribute__ ((weak)) bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LOW_SPC:
+        case RAI_SPC:
+            // Immediately select the hold action when another key is pressed.
+            return true;
+        default:
+            // Do not select the hold action when another key is pressed.
+            return false;
+    }
+}
+
 __attribute__ ((weak)) bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case RSFTT_6:

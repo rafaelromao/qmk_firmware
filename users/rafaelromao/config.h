@@ -16,16 +16,15 @@
 
 #pragma once
 
-// make it easier to work with tap hold
+// Make it easier to work with tap hold
 #define IGNORE_MOD_TAP_INTERRUPT
-#define RETRO_TAPPING_PER_KEY
 #define TAPPING_FORCE_HOLD_PER_KEY
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 #define ONESHOT_TAP_TOGGLE 2
 #define TAPPING_TOGGLE 2
 #define TAPPING_TERM 175
 
-// configure combos
+// Configure combos
 #define COMBO_COUNT 27
 #define COMBO_TERM 40
 #define EXTRA_SHORT_COMBOS

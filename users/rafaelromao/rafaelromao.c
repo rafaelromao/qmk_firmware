@@ -27,7 +27,6 @@ const uint16_t PROGMEM col_esc_combo[] = {LSFTT_R, LCTLT_S, LALTT_T, COMBO_END};
 const uint16_t PROGMEM co1_tab_combo[] = {KC_W, KC_F, KC_P, COMBO_END};
 const uint16_t PROGMEM co2_tab_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
 const uint16_t PROGMEM low_fun_combo[] = {KC_P1, KC_P2, KC_P3, COMBO_END};
-//const uint16_t PROGMEM low_fun_combo[] = {RGUIT_1, KC_P2, KC_P3, COMBO_END};
 const uint16_t PROGMEM fun_tog_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM qwe_low_combo[] = {RGUIT_M, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM col_low_combo[] = {RGUIT_H, KC_COMM, KC_DOT, COMBO_END};
@@ -42,13 +41,9 @@ const uint16_t PROGMEM mou_nav_combo[] = {CB_NONE, KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM mou_tog_combo[] = {KC_MS_L, KC_MS_D, KC_MS_U, COMBO_END};
 const uint16_t PROGMEM lo1_tog_combo[] = {KC_QUOT, KC_DQUO, KC_AMPR, COMBO_END};
-//const uint16_t PROGMEM lo1_tog_combo[] = {SFT_SQU, CTL_DQU, ALT_AMP, COMBO_END};
 const uint16_t PROGMEM lo2_tog_combo[] = {KC_P4, KC_P5, KC_P6, COMBO_END};
-//const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
 const uint16_t PROGMEM ra1_tog_combo[] = {KC_CIRC, KC_TILD, KC_QUOT, COMBO_END};
 const uint16_t PROGMEM ra2_tog_combo[] = {KC_MINS, KC_EQL, KC_EXLM, COMBO_END};
-// const uint16_t PROGMEM ra1_tog_combo[] = {SFT_CIR, CTL_TIL, ALT_QUO, COMBO_END};
-// const uint16_t PROGMEM ra2_tog_combo[] = {ALT_MIN, CTL_EQL, SFT_EXL, COMBO_END};
 const uint16_t PROGMEM med_tog_combo[] = {SS_MODM, KC_VOLD, KC_VOLU, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -126,73 +121,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                 }
             }
             return true;
-
-        /*
-        // Non-basic mod-taps
-
-        case SFT_EXL:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    tap_code16(KC_EXLM);
-                }
-                return false;
-            }
-            return true;
-
-        case SFT_SQU:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    SEND_STRING("' ");
-                }
-                return false;
-            }
-            return true;
-
-        case CTL_DQU:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    SEND_STRING("\" ");
-                }
-                return false;
-            }
-            return true;
-
-        case ALT_AMP:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    tap_code16(KC_AMPR);
-                }
-                return false;
-            }
-            return true;
-
-        case SFT_CIR:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    tap_code16(KC_CIRC);
-                }
-                return false;
-            }
-            return true;
-
-        case CTL_TIL:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    tap_code16(KC_TILD);
-                }
-                return false;
-            }
-            return true;
-
-        case GUI_GRV:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    tap_code16(KC_GRV);
-                }
-                return false;
-            }
-            return true;
-        */
 
         // Change Gui/Ctrl mode
 
@@ -359,18 +287,6 @@ __attribute__ ((weak)) bool get_hold_on_other_key_press(uint16_t keycode, keyrec
             return false;
     }
 }
-
-// __attribute__ ((weak)) bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
-//     switch (keycode) {
-//         case RSFTT_6:
-//         case RCTLT_5:
-//         case RALTT_4:
-//         case RGUIT_1:
-//             return true;
-//         default:
-//             return false;
-//     }
-// }
 
 __attribute__ ((weak)) bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

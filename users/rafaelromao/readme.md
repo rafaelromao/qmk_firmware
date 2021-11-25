@@ -12,7 +12,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/W15KGHn.png)
+![img](https://i.imgur.com/gFnckvq.png)
 
 ### Layout
 - This is a 34 keys split layout, 3x5+2, optimized for programmers.
@@ -29,9 +29,10 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Holding both outer thumb keys will activate the maintenance layer.
 
 ### Mod-Taps and Layer-Taps
-- Considering qwerty, home block mods, mirrored in the other side of the keyboard, are available on most layers.
-  - S Shift, D Ctrl, F Alt, V Gui
-  - M Gui, J Alt, K Ctrl, L Shift
+- Home block mods, mirrored in the other side of the keyboard, are available on the base layers.
+  - Qwerty: S Shift, D Ctrl, F Alt, V Gui, M Gui, J Alt, K Ctrl, L Shift
+  - Colemak: R Shift, S Ctrl, T Alt, D Gui, H Gui, N Alt, R Ctrl, I Shift
+- Home block mods are not available on lower and raise layers, since they delay the symbol activation and are not that much usefull anyway.
 - Dedicated modifiers are available on the left side of the functions layer.
 - One-shot modifiers are available on the left side of the navigation and mouse layers.
 - Gui/Ctrl and Shift are also available as Special Keys, in the thumbs, see below.

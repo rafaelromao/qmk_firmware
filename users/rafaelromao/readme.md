@@ -24,7 +24,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 ### Thumb Keys
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).
-- The two outer thumb keys act as Special Keys, when tapped. See the *Special Keys* section below.
+- The two outer thumb keys act as Special Keys, when tapped. See below.
 - The two inner thumb keys act as space, when tapped.
 - Holding both outer thumb keys will activate the maintenance layer.
 

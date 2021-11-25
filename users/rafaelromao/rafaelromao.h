@@ -38,11 +38,11 @@ enum custom_keycodes {
     SS_SQUO,
     SS_CIRC,
     SS_TILD,
-    MT_EXLM,
-    MT_AMPR,
-    MT_CIRC,
-    MT_TILD,
-    MT_GRV,
+    // MT_EXLM,
+    // MT_AMPR,
+    // MT_CIRC,
+    // MT_TILD,
+    // MT_GRV,
     SP_CAP,
     SP_MOD,
     TG_MD_G,
@@ -74,25 +74,25 @@ enum custom_keycodes {
 #define RALTT_N RALT_T(KC_N)
 #define RGUIT_H RGUI_T(KC_H)
 
-#define RSFTT_6 RSFT_T(KC_P6)
-#define RCTLT_5 RCTL_T(KC_P5)
-#define RALTT_4 RALT_T(KC_P4)
-#define RGUIT_1 RGUI_T(KC_P1)
+// #define RSFTT_6 RSFT_T(KC_P6)
+// #define RCTLT_5 RCTL_T(KC_P5)
+// #define RALTT_4 RALT_T(KC_P4)
+// #define RGUIT_1 RGUI_T(KC_P1)
 
-#define SFT_EXL RSFT_T(MT_EXLM)
-#define CTL_EQL RCTL_T(KC_EQL)
-#define ALT_MIN RALT_T(KC_MINS)
-#define GUI_SLS RGUI_T(KC_SLSH)
+// #define SFT_EXL RSFT_T(MT_EXLM)
+// #define CTL_EQL RCTL_T(KC_EQL)
+// #define ALT_MIN RALT_T(KC_MINS)
+// #define GUI_SLS RGUI_T(KC_SLSH)
 
-#define SFT_SQU LSFT_T(SS_SQUO)
-#define CTL_DQU LCTL_T(SS_DQUO)
-#define ALT_AMP LALT_T(MT_AMPR)
-#define GUI_RBR LGUI_T(KC_RBRC)
+// #define SFT_SQU LSFT_T(SS_SQUO)
+// #define CTL_DQU LCTL_T(SS_DQUO)
+// #define ALT_AMP LALT_T(MT_AMPR)
+// #define GUI_RBR LGUI_T(KC_RBRC)
 
-#define SFT_CIR LSFT_T(MT_CIRC)
-#define CTL_TIL LCTL_T(MT_TILD)
-#define ALT_QUO LALT_T(KC_QUOT)
-#define GUI_GRV LGUI_T(MT_GRV)
+// #define SFT_CIR LSFT_T(MT_CIRC)
+// #define CTL_TIL LCTL_T(MT_TILD)
+// #define ALT_QUO LALT_T(KC_QUOT)
+// #define GUI_GRV LGUI_T(MT_GRV)
 
 // One-shot mods
 
@@ -209,23 +209,31 @@ typedef struct {
 #define ____COLEMAK_R4___                               RAI_SPC , MOU_CAP
 
 #define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_TILD
-#define ___________________LOWER_L2____________________ SS_BTIC , SFT_SQU , CTL_DQU , ALT_AMP , KC_PIPE
-#define ___________________LOWER_L3____________________ TT_FUN  , KC_BSLS , KC_LBRC , GUI_RBR , KC_HASH
+#define ___________________LOWER_L2____________________ SS_BTIC , SS_SQUO , SS_DQUO , KC_AMPR , KC_PIPE
+//#define ___________________LOWER_L2____________________ SS_BTIC , SFT_SQU , CTL_DQU , ALT_AMP , KC_PIPE
+#define ___________________LOWER_L3____________________ TT_FUN  , KC_BSLS , KC_LBRC , KC_RBRC , KC_HASH
+//#define ___________________LOWER_L3____________________ TT_FUN  , KC_BSLS , KC_LBRC , GUI_RBR , KC_HASH
 #define ____LOWER_L4_____                                                             XXXXXXX , _______
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_P7   , KC_P8   , KC_P9   , TD_DCQ
-#define ___________________LOWER_R2____________________ XXXXXXX , RALTT_4 , RCTLT_5 , RSFTT_6 , TD_DCC
-#define ___________________LOWER_R3____________________ XXXXXXX , RGUIT_1 , KC_P2   , KC_P3   , KC_P0
+#define ___________________LOWER_R2____________________ XXXXXXX , KC_P4 , KC_P5 , KC_P6 , TD_DCC
+//#define ___________________LOWER_R2____________________ XXXXXXX , RALTT_4 , RCTLT_5 , RSFTT_6 , TD_DCC
+#define ___________________LOWER_R3____________________ XXXXXXX , KC_P1 , KC_P2   , KC_P3   , KC_P0
+//#define ___________________LOWER_R3____________________ XXXXXXX , RGUIT_1 , KC_P2   , KC_P3   , KC_P0
 #define ____LOWER_R4_____                               OS_RAI  , OS_MOU
 
 #define ___________________RAISE_L1____________________ _______ , _______ , _______ , KC_DQUO , _______
-#define ___________________RAISE_L2____________________ _______ , SFT_CIR , CTL_TIL , ALT_QUO , _______
-#define ___________________RAISE_L3____________________ _______ , _______ , _______ , GUI_GRV , _______
+#define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , _______
+//#define ___________________RAISE_L2____________________ _______ , SFT_CIR , CTL_TIL , ALT_QUO , _______
+#define ___________________RAISE_L3____________________ _______ , _______ , _______ , KC_GRV , _______
+//#define ___________________RAISE_L3____________________ _______ , _______ , _______ , GUI_GRV , _______
 #define ____RAISE_L4_____                                                             OS_NAV  , OS_LOW
 
 #define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES
-#define ___________________RAISE_R2____________________ KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_PERC
-#define ___________________RAISE_R3____________________ KC_ASTR , GUI_SLS , KC_LT   , KC_GT   , KC_COLN
+#define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
+//#define ___________________RAISE_R2____________________ KC_PLUS , ALT_MIN , CTL_EQL , SFT_EXL , KC_PERC
+#define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
+//#define ___________________RAISE_R3____________________ KC_ASTR , GUI_SLS , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , XXXXXXX
 
 #define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX

@@ -26,7 +26,8 @@ const uint16_t PROGMEM col_ent_combo[] = {RALTT_N, RCTLT_E, RSFTT_I, COMBO_END};
 const uint16_t PROGMEM col_esc_combo[] = {LSFTT_R, LCTLT_S, LALTT_T, COMBO_END};
 const uint16_t PROGMEM co1_tab_combo[] = {KC_W, KC_F, KC_P, COMBO_END};
 const uint16_t PROGMEM co2_tab_combo[] = {KC_L, KC_U, KC_Y, COMBO_END};
-const uint16_t PROGMEM low_fun_combo[] = {RGUIT_1, KC_P2, KC_P3, COMBO_END};
+const uint16_t PROGMEM low_fun_combo[] = {KC_P1, KC_P2, KC_P3, COMBO_END};
+//const uint16_t PROGMEM low_fun_combo[] = {RGUIT_1, KC_P2, KC_P3, COMBO_END};
 const uint16_t PROGMEM fun_tog_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM qwe_low_combo[] = {RGUIT_M, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM col_low_combo[] = {RGUIT_H, KC_COMM, KC_DOT, COMBO_END};
@@ -40,10 +41,14 @@ const uint16_t PROGMEM ls2_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
 const uint16_t PROGMEM mou_nav_combo[] = {CB_NONE, KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM mou_tog_combo[] = {KC_MS_L, KC_MS_D, KC_MS_U, COMBO_END};
-const uint16_t PROGMEM lo1_tog_combo[] = {SFT_SQU, CTL_DQU, ALT_AMP, COMBO_END};
-const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
-const uint16_t PROGMEM ra1_tog_combo[] = {SFT_CIR, CTL_TIL, ALT_QUO, COMBO_END};
-const uint16_t PROGMEM ra2_tog_combo[] = {ALT_MIN, CTL_EQL, SFT_EXL, COMBO_END};
+const uint16_t PROGMEM lo1_tog_combo[] = {KC_QUOT, KC_DQUO, KC_AMPR, COMBO_END};
+//const uint16_t PROGMEM lo1_tog_combo[] = {SFT_SQU, CTL_DQU, ALT_AMP, COMBO_END};
+const uint16_t PROGMEM lo2_tog_combo[] = {KC_P4, KC_P5, KC_P6, COMBO_END};
+//const uint16_t PROGMEM lo2_tog_combo[] = {RALTT_4, RCTLT_5, RSFTT_6, COMBO_END};
+const uint16_t PROGMEM ra1_tog_combo[] = {KC_CIRC, KC_TILD, KC_QUOT, COMBO_END};
+const uint16_t PROGMEM ra2_tog_combo[] = {KC_MINS, KC_EQL, KC_EXLM, COMBO_END};
+// const uint16_t PROGMEM ra1_tog_combo[] = {SFT_CIR, CTL_TIL, ALT_QUO, COMBO_END};
+// const uint16_t PROGMEM ra2_tog_combo[] = {ALT_MIN, CTL_EQL, SFT_EXL, COMBO_END};
 const uint16_t PROGMEM med_tog_combo[] = {SS_MODM, KC_VOLD, KC_VOLU, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -122,6 +127,7 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             }
             return true;
 
+        /*
         // Non-basic mod-taps
 
         case SFT_EXL:
@@ -186,6 +192,7 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                 return false;
             }
             return true;
+        */
 
         // Change Gui/Ctrl mode
 
@@ -353,17 +360,17 @@ __attribute__ ((weak)) bool get_hold_on_other_key_press(uint16_t keycode, keyrec
     }
 }
 
-__attribute__ ((weak)) bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case RSFTT_6:
-        case RCTLT_5:
-        case RALTT_4:
-        case RGUIT_1:
-            return true;
-        default:
-            return false;
-    }
-}
+// __attribute__ ((weak)) bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case RSFTT_6:
+//         case RCTLT_5:
+//         case RALTT_4:
+//         case RGUIT_1:
+//             return true;
+//         default:
+//             return false;
+//     }
+// }
 
 __attribute__ ((weak)) bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {

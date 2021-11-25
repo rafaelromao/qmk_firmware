@@ -29,7 +29,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Holding both outer thumb keys will activate the maintenance layer.
 
 ### Mod-Taps and Layer-Taps
-- Home block mods, mirrored in the other side of the keyboard, are available on the base layers.
+- Home block mods are available on both sides of the base layers.
   - Qwerty: S Shift, D Ctrl, F Alt, V Gui, M Gui, J Alt, K Ctrl, L Shift
   - Colemak: R Shift, S Ctrl, T Alt, D Gui, H Gui, N Alt, R Ctrl, I Shift
 - Home block mods are not available on lower and raise layers, since they delay the symbol activation and are not that much usefull anyway.

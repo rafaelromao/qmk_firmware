@@ -100,11 +100,11 @@ In the mouse layer:
 - M,. activates the navigation layer.
 
 In all layers but the base and maintenance:
-- UIO swap hands for one shot.
 - JKL return to the previous layer.
 
 In the lower and raise layers:
 - WER swap hands for one shot.
+- UIO swap hands for one shot.
 - SDF return to the previous layer.
 
 ### Tap Dance

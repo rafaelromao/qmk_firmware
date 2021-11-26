@@ -12,7 +12,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/gFnckvq.png)
+![img](https://i.imgur.com/eMDMryz.png)
 
 ### Layout
 - This is a 34 keys split layout, 3x5+2, optimized for programmers.
@@ -44,7 +44,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 ### Enter, Esc, Tab, Delete
 - Considering qwerty, on the navigation and mouse layers, you find Esc in the Q and Enter in the P.
 - Tab is present on the left side of the navigation and mouse layers, in the E, allowing easy access to Gui/Alt+Tab.
-- Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (WER or UIO).
+- Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (UIO).
 - Shift+Backspace sends Delete, but Delete is also available under ; in the navigation layer.
 
 ### Symbols
@@ -87,7 +87,7 @@ vnoremap <BACKSPACE> <nop>
 ### Combos
 
 In the base layers, considering the QWERTY layout:
-- WER or UIO sends TAB. 
+- UIO sends TAB. 
 - SDF sends ESC.
 - JKL sends ENTER.
 - XCV activates the raise layer.

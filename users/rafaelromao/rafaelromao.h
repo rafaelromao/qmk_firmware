@@ -109,12 +109,10 @@ enum custom_keycodes {
 #define OS_MOU OSL(_MOUSE)
 #define MO_MAI MO(_MAINTENANCE)
 #define TO_MAI TO(_MAINTENANCE)
-#define TT_MED TT(_MEDIA)
 #define TO_MED TO(_MEDIA)
 #define TG_MED TG(_MEDIA)
 #define MO_FUN MO(_FUNCTIONS)
 #define TO_FUN TO(_FUNCTIONS)
-#define TT_FUN TT(_FUNCTIONS)
 #define TG_FUN TG(_FUNCTIONS)
 
 // Custom Shortcuts
@@ -124,8 +122,7 @@ enum custom_keycodes {
 
 // Tap dance
 
-#define TD_DCQ TD(DOT_COM_QWE)
-#define TD_DCC TD(DOT_COM_COL)
+#define TD_DOT TD(DOT_COM)
 
 typedef enum {
     TD_NONE,
@@ -140,14 +137,11 @@ typedef struct {
 } td_tap_t;
 
 td_state_t dance_state(qk_tap_dance_state_t *state);
-void td_dcq_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_dcq_reset(qk_tap_dance_state_t *state, void *user_data);
-void td_dcc_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_dcc_reset(qk_tap_dance_state_t *state, void *user_data);
+void td_dot_finished(qk_tap_dance_state_t *state, void *user_data);
+void td_dot_reset(qk_tap_dance_state_t *state, void *user_data);
 
 enum {
-    DOT_COM_QWE,
-    DOT_COM_COL
+    DOT_COM
 };
 
 // User data
@@ -185,27 +179,27 @@ typedef struct {
 
 #define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_SQUO , SS_DQUO , KC_AMPR , KC_PIPE
-#define ___________________LOWER_L3____________________ TT_FUN  , KC_BSLS , KC_LBRC , KC_RBRC , KC_HASH
+#define ___________________LOWER_L3____________________ XXXXXXX , KC_BSLS , KC_LBRC , KC_RBRC , KC_HASH
 #define ____LOWER_L4_____                                                             XXXXXXX , _______
 
-#define ___________________LOWER_R1____________________ XXXXXXX , KC_P7   , KC_P8   , KC_P9   , TD_DCQ
-#define ___________________LOWER_R2____________________ XXXXXXX , KC_P4 , KC_P5 , KC_P6 , TD_DCC
-#define ___________________LOWER_R3____________________ XXXXXXX , KC_P1 , KC_P2   , KC_P3   , KC_P0
-#define ____LOWER_R4_____                               OS_RAI  , OS_MOU
+#define ___________________LOWER_R1____________________ XXXXXXX , KC_P7 , KC_P8   , KC_P9   , KC_BSPC
+#define ___________________LOWER_R2____________________ XXXXXXX , KC_P4 , KC_P5   , KC_P6   , KC_BSPC
+#define ___________________LOWER_R3____________________ XXXXXXX , KC_P1 , KC_P2   , KC_P3   , TD_DOT
+#define ____LOWER_R4_____                               OS_RAI  , KC_P0
 
 #define ___________________RAISE_L1____________________ _______ , _______ , _______ , KC_DQUO , _______
 #define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , _______
-#define ___________________RAISE_L3____________________ _______ , _______ , _______ , KC_GRV , _______
-#define ____RAISE_L4_____                                                             OS_NAV  , OS_LOW
+#define ___________________RAISE_L3____________________ _______ , _______ , _______ , KC_GRV  , _______
+#define ____RAISE_L4_____                                                             _______ , OS_LOW
 
 #define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               _______ , XXXXXXX
 
-#define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX
+#define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , KC_APP  , XXXXXXX , XXXXXXX
 #define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
-#define ___________________FUNCTIONS_L3________________ TT_FUN  , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
+#define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____FUNCTIONS_L4_                                                             XXXXXXX , XXXXXXX
 
 #define ___________________FUNCTIONS_R1________________ XXXXXXX , KC_F7   , KC_F8   , KC_F9   , KC_F12
@@ -215,7 +209,7 @@ typedef struct {
 
 #define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
-#define ___________________NAVIGATION_L3_______________ TT_MED  , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
+#define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
 #define __NAVIGATION_L4__                                                             _______ , XXXXXXX
 
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT
@@ -230,17 +224,17 @@ typedef struct {
 
 #define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
 #define ___________________MOUSE_R2____________________ XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
-#define ___________________MOUSE_R3____________________ XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , TT_MED
+#define ___________________MOUSE_R3____________________ XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , XXXXXXX
 #define ____MOUSE_R4_____                               XXXXXXX , _______
 
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
 #define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX
-#define ___________________MEDIA_L3____________________ TT_MED  , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
+#define ___________________MEDIA_L3____________________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
 #define ____MEDIA_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
 #define ___________________MEDIA_R2____________________ SS_MODP , SS_MODM , KC_VOLD , KC_VOLU , KC_MUTE
-#define ___________________MEDIA_R3____________________ XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , TT_MED
+#define ___________________MEDIA_R3____________________ XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , XXXXXXX
 #define ____MEDIA_R4_____                               XXXXXXX , _______
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , DF_QWE  , XXXXXXX , EEP_RST

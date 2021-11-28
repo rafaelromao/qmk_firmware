@@ -80,8 +80,6 @@ static user_data_t user_data = {
 
 __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
-    bool isQwerty = biton32(default_layer_state) == _QWERTY;
-    bool isColemak = biton32(default_layer_state) == _COLEMAK;
     bool isCGModeG = user_data.mod_cg == MOD_CG_G;
     bool isCGModeC = user_data.mod_cg == MOD_CG_C;
     bool isOneShotCG = (isCGModeG && (get_oneshot_mods() & MOD_MASK_GUI)) || (isCGModeC && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
@@ -230,38 +228,12 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
 
         // Force TT to toggle on single tap
 
-        case TT_MED:
-        case TT_FUN:
         case TT_LOW:
         case TT_RAI:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     return false;
                 }
-            }
-            return true;
-
-        // Tap dance
-
-        case TD_DCQ:
-            if (isColemak) {
-                if (record->event.pressed) {
-                    register_code(KC_BSPC);
-                } else {
-                    unregister_code(KC_BSPC);
-                }
-                return false;
-            }
-            return true;
-
-        case TD_DCC:
-            if (isQwerty) {
-                if (record->event.pressed) {
-                    register_code(KC_BSPC);
-                } else {
-                    unregister_code(KC_BSPC);
-                }
-                return false;
             }
             return true;
 
@@ -315,8 +287,7 @@ static td_tap_t tap_state = {
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [DOT_COM_QWE] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dcq_finished, td_dcq_reset),
-    [DOT_COM_COL] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dcc_finished, td_dcc_reset)
+    [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_finished, td_dot_reset),
 };
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
@@ -336,50 +307,19 @@ __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
     return TD_SINGLE_TAP;
 }
 
-void td_dcq_finished(qk_tap_dance_state_t *state, void *user_data) {
+void td_dot_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
-    bool isQwerty = biton32(default_layer_state) == _QWERTY;
-    if (isQwerty) {
-        switch (tap_state.state) {
-            case TD_SINGLE_TAP: register_code(KC_DOT); break;
-            case TD_DOUBLE_TAP: register_code(KC_COMM); break;
-            default: break;
-        }
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP: register_code(KC_DOT); break;
+        case TD_DOUBLE_TAP: register_code(KC_COMM); break;
+        default: break;
     }
 }
 
-void td_dcq_reset(qk_tap_dance_state_t *state, void *user_data) {
-    bool isQwerty = biton32(default_layer_state) == _QWERTY;
-    if (isQwerty) {
-        switch (tap_state.state) {
-            case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
-            case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
-            default: break;
-        }
+void td_dot_reset(qk_tap_dance_state_t *state, void *user_data) {
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
+        case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
+        default: break;
     }
-    tap_state.state = TD_NONE;
-}
-
-void td_dcc_finished(qk_tap_dance_state_t *state, void *user_data) {
-    tap_state.state = dance_state(state);
-    bool isColemak = biton32(default_layer_state) == _COLEMAK;
-    if (isColemak) {
-        switch (tap_state.state) {
-            case TD_SINGLE_TAP: register_code(KC_DOT); break;
-            case TD_DOUBLE_TAP: register_code(KC_COMM); break;
-            default: break;
-        }
-    }
-}
-
-void td_dcc_reset(qk_tap_dance_state_t *state, void *user_data) {
-    bool isColemak = biton32(default_layer_state) == _COLEMAK;
-    if (isColemak) {
-        switch (tap_state.state) {
-            case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
-            case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
-            default: break;
-        }
-    }
-    tap_state.state = TD_NONE;
 }

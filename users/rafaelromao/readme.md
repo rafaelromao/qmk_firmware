@@ -36,9 +36,8 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Dedicated modifiers are available on the left side of the functions layer.
 - One-shot modifiers are available on the left side of the navigation and mouse layers.
 - Gui/Ctrl and Shift are also available as Special Keys, in the thumbs, see below.
-- In the base layer, holding Z or ; will activate the functions and media layers, respectively. They can be toggled on tapping the same keys in the lower and mouse layers, respectively.
-- Holding or tapping Z in the navigation layer will toggle the media layer instead of the functions layer.
-- In the lower or raise layers, the two opposite thumb keys can be held (or tapped, for one shot) to activate its corresponding layer.
+- In the base layer, holding Z or ; will activate the functions and media layers, respectively.
+- In the lower or raise layers, the two opposite thumb key can be held (or tapped, for one shot) to activate its corresponding layer.
 - One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
 
 ### Enter, Esc, Tab, Delete
@@ -109,8 +108,7 @@ In the lower and raise layers:
 
 ### Tap Dance
 
-- If the base layer is qwerty, the right pinky key, in the lower (numpad style) layer, sends backspace when tapped or held, while the key above it sends dot on single tap and comma on double tap.
-- If the base layer is colemak, the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap, while the key above it simply sends backspace when tapped or held.
+- The key below the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap.
 
 ## Resources
 

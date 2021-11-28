@@ -39,6 +39,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - In the base layer, holding Z or ; will activate the functions and media layers, respectively.
 - In the lower or raise layers, the two opposite thumb key can be held (or tapped, for one shot) to activate its corresponding layer.
 - One-shot layers and mods remain active with a double tap. Tap toggle layers will be toggle on with a single tap.
+- The mouse layer can be disabled (using the maintenace layer) or be unavailable (MOUSEKEY_ENABLED = false in rules.mk). In both cases, the navigation layer will be activated in its place instead.
 
 ### Enter, Esc, Tab, Delete
 - Considering qwerty, on the navigation and mouse layers, you find Esc in the Q and Enter in the P.

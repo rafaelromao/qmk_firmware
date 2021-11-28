@@ -75,7 +75,8 @@ combo_t key_combos[COMBO_COUNT] = {
 // Custom handlers
 
 static user_data_t user_data = {
-    .mod_cg = MOD_CG_G
+    .mod_cg = MOD_CG_G,
+    .mouselayer = true
 };
 
 __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -130,26 +131,22 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             }
             return false;
 
-        // Custom one shot mod-taps
+        // Enable/Disable the Mouse Layer
 
-        case MOU_CAP:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    if (host_keyboard_led_state().caps_lock) {
-                        tap_code(KC_CAPS);
-                    } else {
-                        if (!isOneShotShift) {
-                            add_oneshot_mods(MOD_BIT(KC_LSFT));
-                        } else {
-                            del_oneshot_mods(MOD_BIT(KC_LSFT));
-                            unregister_mods(MOD_BIT(KC_LSFT));
-                            tap_code(KC_CAPS);
-                        }
-                    }
-                }
-                return false;
+        case TG_M_ON:
+            if (record->event.pressed) {
+                user_data.mouselayer = true;
             }
-            return true;
+            return false;
+
+        case TG_M_OF:
+            if (record->event.pressed) {
+                user_data.mouselayer = false;
+                layer_off(_MOUSE);
+            }
+            return false;
+
+        // Custom one shot mod-taps
 
         case NAV_MOD:
             if (record->tap.count > 0) {
@@ -174,6 +171,38 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                     }
                 }
                 return false;
+            }
+            return true;
+
+        case MOU_CAP:
+            if (record->tap.count > 0) {
+                if (record->event.pressed) {
+                    if (host_keyboard_led_state().caps_lock) {
+                        tap_code(KC_CAPS);
+                    } else {
+                        if (!isOneShotShift) {
+                            add_oneshot_mods(MOD_BIT(KC_LSFT));
+                        } else {
+                            del_oneshot_mods(MOD_BIT(KC_LSFT));
+                            unregister_mods(MOD_BIT(KC_LSFT));
+                            tap_code(KC_CAPS);
+                        }
+                    }
+                }
+                return false;
+            }
+            // If it is starting or finishing holding, and the mouse layer is disabled,
+            // activate or deactivate the navigation layer instead, otherwise continue with normal behavior
+            if (!record->tap.count) {
+                if (!user_data.mouselayer) {
+                    if (record->event.pressed) {
+                        layer_on(_NAVIGATION);
+                        return false;
+                    } else {
+                        layer_off(_NAVIGATION);
+                        return false;
+                    }
+                }
             }
             return true;
 

@@ -82,6 +82,7 @@ enum custom_keycodes {
 
 #define MOU_CAP LT(_MOUSE, SP_CAP)
 #define NAV_MOD LT(_NAVIGATION, SP_MOD)
+#define MOU_P0 LT(_MOUSE, KC_P0)
 
 #define RAI_SPC LT(_RAISE,KC_SPC)
 #define LOW_SPC LT(_LOWER,KC_SPC)
@@ -188,7 +189,7 @@ typedef struct {
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_P7 , KC_P8   , KC_P9   , KC_BSPC
 #define ___________________LOWER_R2____________________ XXXXXXX , KC_P4 , KC_P5   , KC_P6   , KC_BSPC
 #define ___________________LOWER_R3____________________ XXXXXXX , KC_P1 , KC_P2   , KC_P3   , TD_DOT
-#define ____LOWER_R4_____                               OS_RAI  , KC_P0
+#define ____LOWER_R4_____                               OS_RAI  , MOU_P0
 
 #define ___________________RAISE_L1____________________ _______ , _______ , _______ , KC_DQUO , _______
 #define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , _______

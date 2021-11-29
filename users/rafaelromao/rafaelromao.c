@@ -142,7 +142,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
         case TG_M_OF:
             if (record->event.pressed) {
                 user_data.mouselayer = false;
-                layer_off(_MOUSE);
             }
             return false;
 
@@ -193,7 +192,23 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             }
             // If it is starting or finishing holding, and the mouse layer is disabled,
             // activate or deactivate the navigation layer instead, otherwise continue with normal behavior
-            if (!record->tap.count) {
+            if (!record->tap.count){
+                if (!user_data.mouselayer) {
+                    if (record->event.pressed) {
+                        layer_on(_NAVIGATION);
+                        return false;
+                    } else {
+                        layer_off(_NAVIGATION);
+                        return false;
+                    }
+                }
+            }
+            return true;
+
+        case MOU_P0:
+            // If it is starting or finishing holding, and the mouse layer is disabled,
+            // activate or deactivate the navigation layer instead, otherwise continue with normal behavior
+            if (!record->tap.count){
                 if (!user_data.mouselayer) {
                     if (record->event.pressed) {
                         layer_on(_NAVIGATION);

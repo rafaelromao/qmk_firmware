@@ -184,7 +184,7 @@ typedef struct {
 #define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_SQUO , SS_DQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ XXXXXXX , KC_BSLS , KC_LBRC , KC_RBRC , KC_HASH
-#define ____LOWER_L4_____                                                             XXXXXXX , _______
+#define ____LOWER_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_P7 , KC_P8   , KC_P9   , KC_BSPC
 #define ___________________LOWER_R2____________________ XXXXXXX , KC_P4 , KC_P5   , KC_P6   , KC_BSPC
@@ -199,17 +199,17 @@ typedef struct {
 #define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
-#define ____RAISE_R4_____                               _______ , XXXXXXX
+#define ____RAISE_R4_____                               XXXXXXX , _______
 
 #define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , KC_APP  , XXXXXXX , XXXXXXX
 #define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
 #define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
-#define ____FUNCTIONS_L4_                                                             XXXXXXX , XXXXXXX
+#define ____FUNCTIONS_L4_                                                             _______ , XXXXXXX
 
 #define ___________________FUNCTIONS_R1________________ XXXXXXX , KC_F7   , KC_F8   , KC_F9   , KC_F12
 #define ___________________FUNCTIONS_R2________________ XXXXXXX , KC_F4   , KC_F5   , KC_F6   , KC_F11
 #define ___________________FUNCTIONS_R3________________ XXXXXXX , KC_F1   , KC_F2   , KC_F3   , KC_F10
-#define ____FUNCTIONS_R4_                               XXXXXXX , XXXXXXX
+#define ____FUNCTIONS_R4_                               XXXXXXX , _______
 
 #define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX

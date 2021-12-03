@@ -106,11 +106,11 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             }
             return false;
 
-        // Shift+Backspace for Delete
+        // Shift+Backspace for Delete (when not one-shot)
 
         case KC_BSPC:
             if (record->event.pressed) {
-                if (isShifted) {
+                if (isShifted && !isOneShotShift) {
                     tap_code(KC_DEL);
                     return false;
                 }

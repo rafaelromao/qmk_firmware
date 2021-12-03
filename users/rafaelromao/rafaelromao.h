@@ -44,7 +44,6 @@ enum custom_keycodes {
     TG_MD_C,
     TG_M_ON,
     TG_M_OF,
-    CB_NONE,
     SS_MODP,
     SS_MODM
 };
@@ -126,6 +125,7 @@ enum custom_keycodes {
 // Tap dance
 
 #define TD_DOT TD(DOT_COM)
+#define TD_MOU TD(MOU_BTN)
 
 typedef enum {
     TD_NONE,
@@ -140,11 +140,14 @@ typedef struct {
 } td_tap_t;
 
 td_state_t dance_state(qk_tap_dance_state_t *state);
-void td_dot_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_dot_reset(qk_tap_dance_state_t *state, void *user_data);
+void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data);
+void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_btn_finished(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_btn_reset(qk_tap_dance_state_t *state, void *user_data);
 
 enum {
-    DOT_COM
+    DOT_COM,
+    MOU_BTN
 };
 
 // User data
@@ -227,8 +230,8 @@ typedef struct {
 #define ____MOUSE_L4_____                                                             MO_MAI  , XXXXXXX
 
 #define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
-#define ___________________MOUSE_R2____________________ XXXXXXX , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
-#define ___________________MOUSE_R3____________________ XXXXXXX , CB_NONE , KC_BTN1 , KC_BTN2 , XXXXXXX
+#define ___________________MOUSE_R2____________________ TD_MOU  , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
+#define ___________________MOUSE_R3____________________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define ____MOUSE_R4_____                               XXXXXXX , _______
 
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX

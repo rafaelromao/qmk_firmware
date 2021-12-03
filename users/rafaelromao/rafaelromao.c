@@ -35,7 +35,7 @@ const uint16_t PROGMEM cr1_sho_combo[] = {KC_W, KC_F , KC_DQUO , COMBO_END};
 const uint16_t PROGMEM rs2_sho_combo[] = {KC_DLR, KC_LPRN, KC_RPRN, COMBO_END};
 const uint16_t PROGMEM ls1_sho_combo[] = {KC_UNDS, KC_LCBR, KC_RCBR, COMBO_END};
 const uint16_t PROGMEM ls2_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
-const uint16_t PROGMEM mou_nav_combo[] = {CB_NONE, KC_BTN1, KC_BTN2, COMBO_END};
+const uint16_t PROGMEM mou_nav_combo[] = {KC_INS, KC_HOME, KC_END, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM mou_tog_combo[] = {KC_MS_L, KC_MS_D, KC_MS_U, COMBO_END};
 const uint16_t PROGMEM lo1_tog_combo[] = {KC_QUOT, KC_DQUO, KC_AMPR, COMBO_END};
@@ -331,7 +331,8 @@ static td_tap_t tap_state = {
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_finished, td_dot_reset),
+    [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_com_finished, td_dot_com_reset),
+    [MOU_BTN] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_btn_finished, td_mou_btn_reset),
 };
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
@@ -351,7 +352,7 @@ __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
     return TD_SINGLE_TAP;
 }
 
-void td_dot_finished(qk_tap_dance_state_t *state, void *user_data) {
+void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP: register_code(KC_DOT); break;
@@ -360,10 +361,27 @@ void td_dot_finished(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_dot_reset(qk_tap_dance_state_t *state, void *user_data) {
+void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
         case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
+        default: break;
+    }
+}
+
+void td_mou_btn_finished(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP: register_code(KC_BTN1); break;
+        case TD_SINGLE_HOLD: register_code(KC_BTN2); break;
+        default: break;
+    }
+}
+
+void td_mou_btn_reset(qk_tap_dance_state_t *state, void *user_data) {
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP: unregister_code(KC_BTN1); break;
+        case TD_SINGLE_HOLD: unregister_code(KC_BTN2); break;
         default: break;
     }
 }

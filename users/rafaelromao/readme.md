@@ -12,7 +12,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/NRsQ1dx.png)
+![img](https://i.imgur.com/PYkylvp.png)
 
 ### Layout
 - This is a 34 keys split layout, 3x5+2, optimized for programmers.
@@ -110,6 +110,7 @@ In the lower and raise layers:
 ### Tap Dance
 
 - The key below the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap.
+- The first and second mouse buttons can be triggered tapping or holding the same key.
 
 ## Resources
 

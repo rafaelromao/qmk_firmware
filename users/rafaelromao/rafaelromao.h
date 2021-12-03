@@ -191,9 +191,9 @@ typedef struct {
 #define ___________________LOWER_R3____________________ XXXXXXX , KC_P1 , KC_P2   , KC_P3   , TD_DOT
 #define ____LOWER_R4_____                               OS_RAI  , MOU_P0
 
-#define ___________________RAISE_L1____________________ _______ , _______ , _______ , KC_DQUO , _______
-#define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , _______
-#define ___________________RAISE_L3____________________ _______ , _______ , _______ , KC_GRV  , _______
+#define ___________________RAISE_L1____________________ XXXXXXX , XXXXXXX , _______ , KC_DQUO , XXXXXXX
+#define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , XXXXXXX
+#define ___________________RAISE_L3____________________ XXXXXXX , XXXXXXX , _______ , KC_GRV  , XXXXXXX
 #define ____RAISE_L4_____                                                             _______ , OS_LOW
 
 #define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES

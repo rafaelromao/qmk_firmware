@@ -80,8 +80,8 @@ enum custom_keycodes {
 // Layer-taps
 
 #define MOU_CAP LT(_MOUSE, SP_CAP)
+#define MOU_P0  LT(_MOUSE, KC_P0)
 #define NAV_MOD LT(_NAVIGATION, SP_MOD)
-#define MOU_P0 LT(_MOUSE, KC_P0)
 
 #define RAI_SPC LT(_RAISE,KC_SPC)
 #define LOW_SPC LT(_LOWER,KC_SPC)
@@ -124,8 +124,15 @@ enum custom_keycodes {
 
 // Tap dance
 
-#define TD_DOT TD(DOT_COM)
-#define TD_MOU TD(MOU_BTN)
+enum {
+    DOT_COM,
+    MOU_B12,
+    MOU_B34
+};
+
+#define TD_DOT  TD(DOT_COM)
+#define TD_MB12 TD(MOU_B12)
+#define TD_MB34 TD(MOU_B34)
 
 typedef enum {
     TD_NONE,
@@ -142,13 +149,10 @@ typedef struct {
 td_state_t dance_state(qk_tap_dance_state_t *state);
 void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data);
 void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_btn_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_btn_reset(qk_tap_dance_state_t *state, void *user_data);
-
-enum {
-    DOT_COM,
-    MOU_BTN
-};
+void td_mou_b12_finished(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_b12_reset(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_b34_finished(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_b34_reset(qk_tap_dance_state_t *state, void *user_data);
 
 // User data
 
@@ -230,8 +234,8 @@ typedef struct {
 #define ____MOUSE_L4_____                                                             MO_MAI  , XXXXXXX
 
 #define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
-#define ___________________MOUSE_R2____________________ TD_MOU  , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
-#define ___________________MOUSE_R3____________________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
+#define ___________________MOUSE_R2____________________ TD_MB12  , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
+#define ___________________MOUSE_R3____________________ TD_MB34 , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define ____MOUSE_R4_____                               XXXXXXX , _______
 
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX

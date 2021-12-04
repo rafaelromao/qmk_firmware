@@ -14,6 +14,25 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 ![img](https://i.imgur.com/uEeAhAU.png)
 
+## Keymap Highlights
+- Home block mods for shortcuts that combine them.
+- One-shot mods in thumb keys.
+	- Cmd/Ctrl on the left side (you can choose which one will be used).
+	- Shift on the right side (if already active, will toggle CapsLock instead).
+- Symbols in the left side of the lower and right side of the raise.
+    - All symbols reachable with a single hand.
+    - Open all kinds of brackets with the middle finger. Close with the key at its right. 
+    - Most used VIM symbols on the right side of the raise layer.
+- Numpad in the right side of the lower and accents in the left side of the raise.
+	- A combo activates the numpad using only the right hand.
+	- Math symbols can be accessed activating the raise layer when the lower is already active.
+- Navigation and Mouse layers activated holding thumb keys.
+    - VIM style navigation, but in the home position (shifted one key to the right).
+    - Mouse layer can be disabled (navigation layer will replace it).
+- Combos allow easy access to Esc, Enter, Tab and layer switching.
+
+## Keymap Details
+
 ### Layout
 - This is a 34 keys split layout, 3x5+2, optimized for programmers.
 - This layout works well with the OS configured for the US International keyboard.

@@ -30,18 +30,11 @@ const uint16_t PROGMEM qwe_low_combo[] = {RGUIT_M, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM col_low_combo[] = {RGUIT_H, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM qwe_rai_combo[] = {KC_X, KC_C, LGUIT_V, COMBO_END};
 const uint16_t PROGMEM col_rai_combo[] = {KC_X, KC_C, LGUIT_D, COMBO_END};
-const uint16_t PROGMEM qr1_sho_combo[] = {KC_W, KC_E , KC_DQUO , COMBO_END};
-const uint16_t PROGMEM cr1_sho_combo[] = {KC_W, KC_F , KC_DQUO , COMBO_END};
-const uint16_t PROGMEM rs2_sho_combo[] = {KC_DLR, KC_LPRN, KC_RPRN, COMBO_END};
-const uint16_t PROGMEM ls1_sho_combo[] = {KC_UNDS, KC_LCBR, KC_RCBR, COMBO_END};
-const uint16_t PROGMEM ls2_sho_combo[] = {KC_P7, KC_P8, KC_P9, COMBO_END};
 const uint16_t PROGMEM mou_nav_combo[] = {KC_INS, KC_HOME, KC_END, COMBO_END};
 const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
 const uint16_t PROGMEM mou_tog_combo[] = {KC_MS_L, KC_MS_D, KC_MS_U, COMBO_END};
-const uint16_t PROGMEM lo1_tog_combo[] = {KC_QUOT, KC_DQUO, KC_AMPR, COMBO_END};
-const uint16_t PROGMEM lo2_tog_combo[] = {KC_P4, KC_P5, KC_P6, COMBO_END};
-const uint16_t PROGMEM ra1_tog_combo[] = {KC_CIRC, KC_TILD, KC_QUOT, COMBO_END};
-const uint16_t PROGMEM ra2_tog_combo[] = {KC_MINS, KC_EQL, KC_EXLM, COMBO_END};
+const uint16_t PROGMEM low_tog_combo[] = {KC_P4, KC_P5, KC_P6, COMBO_END};
+const uint16_t PROGMEM rai_tog_combo[] = {KC_MINS, KC_EQL, KC_EXLM, COMBO_END};
 const uint16_t PROGMEM med_tog_combo[] = {SS_MODM, KC_VOLD, KC_VOLU, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
@@ -57,18 +50,11 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(col_low_combo, TT_LOW),
   COMBO(qwe_rai_combo, TT_RAI),
   COMBO(col_rai_combo, TT_RAI),
-  COMBO(qr1_sho_combo, SH_OS),
-  COMBO(cr1_sho_combo, SH_OS),
-  COMBO(rs2_sho_combo, SH_OS),
-  COMBO(ls1_sho_combo, SH_OS),
-  COMBO(ls2_sho_combo, SH_OS),
   COMBO(mou_nav_combo, TG_NAV),
   COMBO(nav_tog_combo, TG_NAV),
   COMBO(mou_tog_combo, TG_MOU),
-  COMBO(lo1_tog_combo, TG_LOW),
-  COMBO(lo2_tog_combo, TG_LOW),
-  COMBO(ra1_tog_combo, TG_RAI),
-  COMBO(ra2_tog_combo, TG_RAI),
+  COMBO(low_tog_combo, TG_LOW),
+  COMBO(rai_tog_combo, TG_RAI),
   COMBO(med_tog_combo, TG_MED)
 };
 
@@ -136,12 +122,16 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
         case TG_M_ON:
             if (record->event.pressed) {
                 user_data.mouselayer = true;
+                layer_off(_MOUSE);
+                layer_off(_NAVIGATION);
             }
             return false;
 
         case TG_M_OF:
             if (record->event.pressed) {
                 user_data.mouselayer = false;
+                layer_off(_MOUSE);
+                layer_off(_NAVIGATION);
             }
             return false;
 

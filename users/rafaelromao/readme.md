@@ -12,7 +12,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/EoI9g1L.png)
+![img](https://i.imgur.com/xaPPKgL.png)
 
 ### Layout
 - This is a 34 keys split layout, 3x5+2, optimized for programmers.
@@ -45,15 +45,11 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Considering qwerty, on the navigation and mouse layers, you find Esc in the Q and Enter in the P.
 - Tab is present on the left side of the navigation and mouse layers, in the E, allowing easy access to Gui/Alt+Tab.
 - Combos allow easy access to ENTER (JKL), ESC (SDF), TAB (UIO).
-- Shift+Backspace sends Delete, when shift is not one-shot, but Delete is also available under ; in the navigation layer.
+- Shift+Backspace sends Delete, when shift is not one-shot, but Delete is also available under ; in the navigation and mouse layers.
 
 ### Symbols
 - Symbols are spread across the lower and raise layers, making them easier to reach with a single hand.
 - All symbols are conveniently placed for software programming and VIM commands.
-
-#### Accentuation
-- Using the lower layer, we can type `, ', ", ~ and ^ as independent symbols, while in the left side of the raise layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
-- For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + tapping c, gives me ç. The same goes for the other accents.
 
 #### VIM
 - Symbols that are commonly used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
@@ -72,6 +68,10 @@ vnoremap l <nop>
 vnoremap <BACKSPACE> <nop>
 ```
 - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
+
+#### Accentuation
+- Using the lower layer, we can type `, ', ", ~ and ^ as independent symbols, while in the left side of the raise layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
+- For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + tapping c, gives me ç. The same goes for the other accents.
 
 ### Special Keys
 
@@ -101,11 +101,6 @@ In the mouse layer:
 
 In all layers but the base and maintenance:
 - JKL return to the previous layer.
-
-In the lower and raise layers:
-- WER swap hands for one shot.
-- UIO swap hands for one shot.
-- SDF return to the previous layer.
 
 ### Tap Dance
 

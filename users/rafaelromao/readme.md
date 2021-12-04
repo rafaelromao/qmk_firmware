@@ -121,7 +121,7 @@ In the lower and raise layers:
 
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
-- [Precondition](https://precondition.github.io/home-row-mods)
+- [Precondition](https://github.com/precondition/dactyl-manuform-keymap)
 - [Callum](https://github.com/callum-oakley/qmk_firmware/tree/master/users/callum)
 - [Drashna](https://github.com/qmk/qmk_firmware/tree/master/users/drashna)
 - [Getreuer](https://github.com/getreuer/qmk-keymap)

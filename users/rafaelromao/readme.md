@@ -51,7 +51,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Home block mods are available on both sides of the base layers.
   - Qwerty: S Shift, D Ctrl, F Alt, V Gui, M Gui, J Alt, K Ctrl, L Shift
   - Colemak: R Shift, S Ctrl, T Alt, D Gui, H Gui, N Alt, R Ctrl, I Shift
-- Home block mods are not available on lower and raise layers, since they delay the symbol activation and are not that much usefull anyway.
+- Home block mods are not available on lower and raise layers, since they delay the symbol activation and are not that much useful anyway.
 - Dedicated modifiers are available on the left side of the functions layer.
 - One-shot modifiers are available on the left side of the navigation and mouse layers.
 - Gui/Ctrl and Shift are also available as Special Keys, in the thumbs, see below.

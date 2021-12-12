@@ -16,6 +16,10 @@
 
 #pragma once
 
+// Optimization to save memory
+#define NO_ACTION_MACRO
+#define NO_ACTION_FUNCTION
+
 // Make it easier to work with tap hold
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD_PER_KEY

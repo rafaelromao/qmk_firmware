@@ -189,7 +189,7 @@ typedef struct {
 #define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , SCL_MED
 #define ____COLEMAK_R4___                               RAI_SPC , MOU_CAP
 
-#define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LCBR , KC_RCBR , SS_TILD
+#define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LPRN , KC_RPRN , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_SQUO , SS_DQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ XXXXXXX , KC_BSLS , KC_LBRC , KC_RBRC , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
@@ -204,7 +204,7 @@ typedef struct {
 #define ___________________RAISE_L3____________________ XXXXXXX , XXXXXXX , _______ , KC_GRV  , XXXXXXX
 #define ____RAISE_L4_____                                                             _______ , OS_LOW
 
-#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LPRN , KC_RPRN , KC_QUES
+#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LCBR , KC_RCBR , KC_QUES
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               XXXXXXX , _______

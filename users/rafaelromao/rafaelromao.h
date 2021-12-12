@@ -164,6 +164,7 @@ typedef enum {
 typedef struct {
     mod_cg_t mod_cg;
     bool mouselayer;
+    uint16_t capslock_timer;
 } user_data_t;
 
 // Keymap

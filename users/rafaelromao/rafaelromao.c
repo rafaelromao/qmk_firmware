@@ -62,10 +62,99 @@ combo_t key_combos[COMBO_COUNT] = {
 
 static user_data_t user_data = {
     .mod_cg = MOD_CG_G,
-    .mouselayer = true
+    .mouselayer = true,
+    .capslock_timer = 0
 };
 
+// Capslock timer
+
+bool capslock_timer_expired(void) {
+    return user_data.capslock_timer > 0 && (timer_elapsed(user_data.capslock_timer) > ONESHOT_TIMEOUT);
+}
+
+void start_capslock_timer(void) {
+    user_data.capslock_timer = timer_read();
+}
+
+void clear_capslock_timer(void) {
+    user_data.capslock_timer = 0;
+}
+
+void disable_capslock(bool isCapsLocked) {
+    if (isCapsLocked) {
+        tap_code(KC_CAPS);
+    }
+}
+
+void disable_capslock_when_timeout(bool isCapsLocked) {
+    // Disable capslock if timer expired
+    if (capslock_timer_expired()) {
+        clear_capslock_timer();
+        disable_capslock(isCapsLocked);
+    }
+}
+
+void check_start_capslock_timer(bool isCapsLocked) {
+    // Start timer to automatically disable capslock
+    if (isCapsLocked) {
+        start_capslock_timer();
+    } else {
+        clear_capslock_timer();
+    }
+}
+
+void check_disable_capslock(void) {
+    // Disable capslock if autodisable timer expired
+    bool isCapsLocked = host_keyboard_led_state().caps_lock;
+    disable_capslock_when_timeout(isCapsLocked);
+}
+
+void check_extend_capslock_timer(uint16_t keycode, keyrecord_t *record) {
+    // Extend autodisable capslock timer
+    bool isCapsLocked = host_keyboard_led_state().caps_lock;
+    if (isCapsLocked) {
+        switch (keycode) {
+            case QK_MOD_TAP ... QK_MOD_TAP_MAX:
+            case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
+            // Earlier return if this has not been considered tapped yet.
+            if (record->tap.count == 0) {
+                return;
+            }
+            // Get the base tapping keycode of a mod- or layer-tap key.
+            keycode &= 0xff;
+        }
+        // Extend capslock timer
+        switch (keycode) {
+            case KC_A ... KC_Z:
+            case KC_1 ... KC_0:
+            case KC_BSPC:
+            case KC_MINS:
+            case KC_UNDS:
+            case KC_SPC:
+                start_capslock_timer();
+        }
+    }
+}
+
+// Led update
+
+__attribute__ ((weak)) bool led_update_user(led_t led_state) {
+    check_start_capslock_timer(led_state.caps_lock);
+    return true;
+}
+
+// Matrix scan
+
+__attribute__ ((weak)) void matrix_scan_user(void) {
+    check_disable_capslock();
+}
+
+// Custom keycodes
+
 __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+    // Extend capslock timer
+    check_extend_capslock_timer(keycode, record);
 
     bool isCGModeG = user_data.mod_cg == MOD_CG_G;
     bool isCGModeC = user_data.mod_cg == MOD_CG_C;
@@ -76,7 +165,9 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
     bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
     bool isAnyOneShot = isOneShotShift || isOneShotCtrl || isOneShotAlt || isOneShotGui || isOneShotCG;
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+    bool isCapsLocked = host_keyboard_led_state().caps_lock;
 
+    // Handle custom keycodes
     switch (keycode) {
 
         // Persistent default layers
@@ -167,15 +258,15 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
         case MOU_CAP:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (host_keyboard_led_state().caps_lock) {
-                        tap_code(KC_CAPS);
+                    if (isCapsLocked) {
+                        tap_code(KC_CAPS); // Disable capslock
                     } else {
                         if (!isOneShotShift) {
                             add_oneshot_mods(MOD_BIT(KC_LSFT));
                         } else {
                             del_oneshot_mods(MOD_BIT(KC_LSFT));
                             unregister_mods(MOD_BIT(KC_LSFT));
-                            tap_code(KC_CAPS);
+                            tap_code(KC_CAPS); // Enable capslock
                         }
                     }
                 }

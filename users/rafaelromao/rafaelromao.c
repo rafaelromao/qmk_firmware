@@ -322,8 +322,8 @@ static td_tap_t tap_state = {
 
 qk_tap_dance_action_t tap_dance_actions[] = {
     [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_com_finished, td_dot_com_reset),
-    [MOU_B12] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b12_finished, td_mou_b12_reset),
-    [MOU_B34] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b34_finished, td_mou_b34_reset)
+    [MOU_B13] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b13_finished, td_mou_b13_reset),
+    [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset)
 };
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
@@ -360,36 +360,44 @@ void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
-void td_mou_b12_finished(qk_tap_dance_state_t *state, void *user_data) {
+void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP: register_code(KC_BTN1); break;
-        case TD_SINGLE_HOLD: register_code(KC_BTN2); break;
+        case TD_SINGLE_HOLD: register_code(KC_BTN1); break;
+        case TD_DOUBLE_TAP: register_code(KC_BTN3); break;
+        case TD_DOUBLE_HOLD: register_code(KC_BTN3); break;
         default: break;
     }
 }
 
-void td_mou_b12_reset(qk_tap_dance_state_t *state, void *user_data) {
+void td_mou_b13_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP: unregister_code(KC_BTN1); break;
-        case TD_SINGLE_HOLD: unregister_code(KC_BTN2); break;
+        case TD_SINGLE_HOLD: unregister_code(KC_BTN1); break;
+        case TD_DOUBLE_TAP: unregister_code(KC_BTN3); break;
+        case TD_DOUBLE_HOLD: unregister_code(KC_BTN3); break;
         default: break;
     }
 }
 
-void td_mou_b34_finished(qk_tap_dance_state_t *state, void *user_data) {
+void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
-        case TD_SINGLE_TAP: register_code(KC_BTN3); break;
-        case TD_SINGLE_HOLD: register_code(KC_BTN4); break;
+        case TD_SINGLE_TAP: register_code(KC_BTN2); break;
+        case TD_SINGLE_HOLD: register_code(KC_BTN2); break;
+        case TD_DOUBLE_TAP: register_code(KC_BTN4); break;
+        case TD_DOUBLE_HOLD: register_code(KC_BTN4); break;
         default: break;
     }
 }
 
-void td_mou_b34_reset(qk_tap_dance_state_t *state, void *user_data) {
+void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
-        case TD_SINGLE_TAP: unregister_code(KC_BTN3); break;
-        case TD_SINGLE_HOLD: unregister_code(KC_BTN4); break;
+        case TD_SINGLE_TAP: unregister_code(KC_BTN2); break;
+        case TD_SINGLE_HOLD: unregister_code(KC_BTN2); break;
+        case TD_DOUBLE_TAP: unregister_code(KC_BTN4); break;
+        case TD_DOUBLE_HOLD: unregister_code(KC_BTN4); break;
         default: break;
     }
 }

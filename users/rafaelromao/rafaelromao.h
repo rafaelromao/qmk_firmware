@@ -126,13 +126,13 @@ enum custom_keycodes {
 
 enum {
     DOT_COM,
-    MOU_B12,
-    MOU_B34
+    MOU_B13,
+    MOU_B24
 };
 
 #define TD_DOT  TD(DOT_COM)
-#define TD_MB12 TD(MOU_B12)
-#define TD_MB34 TD(MOU_B34)
+#define TD_MB13 TD(MOU_B13)
+#define TD_MB24 TD(MOU_B24)
 
 typedef enum {
     TD_NONE,
@@ -149,10 +149,10 @@ typedef struct {
 td_state_t dance_state(qk_tap_dance_state_t *state);
 void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data);
 void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b12_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b12_reset(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b34_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b34_reset(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_b13_reset(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data);
+void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data);
 
 // User data
 
@@ -229,13 +229,13 @@ typedef struct {
 #define __NAVIGATION_R4__                               XXXXXXX , MO_MAI
 
 #define ___________________MOUSE_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
-#define ___________________MOUSE_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
-#define ___________________MOUSE_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
+#define ___________________MOUSE_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , TD_MB13
+#define ___________________MOUSE_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , TD_MB24
 #define ____MOUSE_L4_____                                                             MO_MAI  , XXXXXXX
 
 #define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
-#define ___________________MOUSE_R2____________________ TD_MB12  , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
-#define ___________________MOUSE_R3____________________ TD_MB34 , KC_INS  , KC_HOME , KC_END  , KC_DEL
+#define ___________________MOUSE_R2____________________ TD_MB13 , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
+#define ___________________MOUSE_R3____________________ TD_MB24 , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define ____MOUSE_R4_____                               XXXXXXX , _______
 
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX

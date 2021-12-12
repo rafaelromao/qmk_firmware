@@ -142,12 +142,13 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                 if (record->event.pressed) {
                     if (isAnyOneShot) {
                         uint8_t mods = 0;
-                        if ((mods = get_oneshot_mods())) {
-                            clear_oneshot_mods();
-                            unregister_mods(mods);
-                        }
                         if ((mods = get_oneshot_locked_mods())) {
                             clear_oneshot_locked_mods();
+                        }
+                        if ((mods = get_oneshot_mods())) {
+                            clear_oneshot_mods();
+                        }
+                        if ((mods = get_mods())) {
                             unregister_mods(mods);
                         }
                     } else if (!isOneShotCG) {

@@ -48,6 +48,10 @@
 #include "taphold.h"
 #endif
 
+#ifndef _COMBOS_H
+#include "combos.h"
+#endif
+
 // Keymap
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T

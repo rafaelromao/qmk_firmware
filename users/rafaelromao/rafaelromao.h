@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "tapdance.h"
 
 // Layers
 
@@ -120,38 +121,6 @@ enum custom_keycodes {
 
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
-
-// Tap dance
-
-enum {
-    DOT_COM,
-    MOU_B13,
-    MOU_B24
-};
-
-#define TD_DOT  TD(DOT_COM)
-#define TD_MB13 TD(MOU_B13)
-#define TD_MB24 TD(MOU_B24)
-
-typedef enum {
-    TD_NONE,
-    TD_SINGLE_TAP,
-    TD_SINGLE_HOLD,
-    TD_DOUBLE_TAP,
-    TD_DOUBLE_HOLD
-} td_state_t;
-
-typedef struct {
-    td_state_t state;
-} td_tap_t;
-
-td_state_t dance_state(qk_tap_dance_state_t *state);
-void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b13_reset(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data);
 
 // User data
 

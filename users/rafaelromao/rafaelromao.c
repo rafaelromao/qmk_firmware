@@ -85,67 +85,16 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             break;
     };
 
-    bool isMacOS = os.type == MACOS;
-    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
-    bool isOneShotCG = (isMacOS && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
-    bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
-    bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
-    bool isAnyOneShot = isOneShotShift || isOneShotCtrl || isOneShotAlt || isOneShotGui || isOneShotCG;
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-
-    // Handle custom keycodes
-    switch (keycode) {
-
-        // Custom one shot mod-taps
-
-        case NAV_MOD:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    if (isAnyOneShot) {
-                        uint8_t mods = 0;
-                        if ((mods = get_oneshot_locked_mods())) {
-                            clear_oneshot_locked_mods();
-                        }
-                        if ((mods = get_oneshot_mods())) {
-                            clear_oneshot_mods();
-                        }
-                        if ((mods = get_mods())) {
-                            unregister_mods(mods);
-                        }
-                    } else if (!isOneShotCG) {
-                        if (isMacOS) {
-                            add_oneshot_mods(MOD_BIT(KC_LGUI));
-                        }
-                        if (isWindowsOrLinux) {
-                            add_oneshot_mods(MOD_BIT(KC_LCTL));
-                        }
-                    }
-                }
-                return false;
-            }
+    // Process special keys
+    switch (process_special_keys(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
             return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
 
-        case MOU_CAP:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    if (isCapsLocked) {
-                        tap_code(KC_CAPS); // Disable capslock
-                    } else {
-                        if (!isOneShotShift) {
-                            add_oneshot_mods(MOD_BIT(KC_LSFT));
-                        } else {
-                            del_oneshot_mods(MOD_BIT(KC_LSFT));
-                            unregister_mods(MOD_BIT(KC_LSFT));
-                            tap_code(KC_CAPS); // Enable capslock
-                        }
-                    }
-                }
-                return false;
-            }
-
-    }
     return true;
 }
 

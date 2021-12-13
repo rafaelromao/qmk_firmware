@@ -56,6 +56,10 @@
 #include "combos.h"
 #endif
 
+#ifndef _SPECIAL_KEY_H
+#include "special_keys.h"
+#endif
+
 // Keymap
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T

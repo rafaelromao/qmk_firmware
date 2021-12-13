@@ -22,14 +22,15 @@
 
 // Custom keycodes
 
-enum custom_keycodes {
+enum {
     SS_BTIC = SAFE_RANGE,
     SS_DQUO,
     SS_SQUO,
     SS_CIRC,
     SS_TILD,
-    TG_MD_G,
-    TG_MD_C,
+    TG_MAC,
+    TG_WIN,
+    TG_LIN,
     TG_M_ON,
     TG_M_OF,
     SP_CAP,

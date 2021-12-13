@@ -58,12 +58,6 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(med_tog_combo, TG_MED)
 };
 
-// Custom handlers
-
-static user_data_t user_data = {
-    .mod_cg = MOD_CG_G
-};
-
 // Led update
 
 __attribute__ ((weak)) bool led_update_user(led_t led_state) {
@@ -78,6 +72,8 @@ __attribute__ ((weak)) void matrix_scan_user(void) {
 }
 
 // Custom keycodes
+
+extern os_t os;
 
 __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
@@ -101,9 +97,19 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             break;
     };
 
-    bool isCGModeG = user_data.mod_cg == MOD_CG_G;
-    bool isCGModeC = user_data.mod_cg == MOD_CG_C;
-    bool isOneShotCG = (isCGModeG && (get_oneshot_mods() & MOD_MASK_GUI)) || (isCGModeC && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
+    // Process OS toggle
+    switch (process_os_toggle(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    bool isMacOS = os.type == MACOS;
+    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    bool isOneShotCG = (isMacOS && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
     bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
@@ -139,20 +145,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             }
             return true;
 
-        // Change Gui/Ctrl mode
-
-        case TG_MD_G:
-            if (record->event.pressed) {
-                user_data.mod_cg = MOD_CG_G;
-            }
-            return false;
-
-        case TG_MD_C:
-            if (record->event.pressed) {
-                user_data.mod_cg = MOD_CG_C;
-            }
-            return false;
-
         // Custom one shot mod-taps
 
         case NAV_MOD:
@@ -170,10 +162,10 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                             unregister_mods(mods);
                         }
                     } else if (!isOneShotCG) {
-                        if (isCGModeG) {
+                        if (isMacOS) {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));
                         }
-                        if (isCGModeC) {
+                        if (isWindowsOrLinux) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
                         }
                     }
@@ -230,20 +222,20 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
 
         case SS_MODP:
             if (record->event.pressed) {
-                if (isCGModeG) {
+                if (isMacOS) {
                     SEND_STRING(SS_LGUI("+"));
                 }
-                else if (isCGModeC) {
+                else if (isWindowsOrLinux) {
                     SEND_STRING(SS_LCTL("+"));
                 }
             }
             return false;
         case SS_MODM:
             if (record->event.pressed) {
-                if (isCGModeG) {
+                if (isMacOS) {
                     SEND_STRING(SS_LGUI("-"));
                 }
-                else if (isCGModeC) {
+                else if (isWindowsOrLinux) {
                     SEND_STRING(SS_LCTL("-"));
                 }
             }

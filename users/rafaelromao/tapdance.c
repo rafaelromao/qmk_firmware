@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+
 #include "tapdance.h"
 
 static td_tap_t tap_state = {

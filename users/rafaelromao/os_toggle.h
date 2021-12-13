@@ -14,10 +14,26 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _PROCESS_RECORD_RESULT_H
+#define _OS_TOGGLE_H
+
+#include QMK_KEYBOARD_H
+
+#ifndef _PROCESS_RECORD_RESULT_H
+#include "process_record_result.h"
+#endif
+
+#ifndef _KEYCODES_H
+#include "keycodes.h"
+#endif
 
 typedef enum {
-  PROCESS_RECORD_RETURN_TRUE,
-  PROCESS_RECORD_RETURN_FALSE,
-  PROCESS_RECORD_CONTINUE
-} process_record_result_t;
+    MACOS,
+    WINDOWS,
+    LINUX
+} os_type_t;
+
+typedef struct {
+    os_type_t type;
+} os_t;
+
+process_record_result_t process_os_toggle(uint16_t keycode, keyrecord_t *record);

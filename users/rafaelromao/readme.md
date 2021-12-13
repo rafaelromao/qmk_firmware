@@ -12,7 +12,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/kiljH1u.png)
+![img](https://i.imgur.com/erE9VFX.png)
 
 ## Keymap Highlights
 - Home block mods for shortcuts that combine them.

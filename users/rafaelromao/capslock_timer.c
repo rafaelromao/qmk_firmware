@@ -1,4 +1,4 @@
-/* Copyright 2021 Rafael Romão https://github.com/rafaelromao
+/* Copyright 2021 RVafael Romão https://github.com/rafaelromao
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+
 #include "capslock_timer.h"
 
 static capslock_timer_t capslock_timer = {

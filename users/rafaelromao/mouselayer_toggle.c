@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+
 #include "mouselayer_toggle.h"
 
 static mouselayer_t mouselayer = {

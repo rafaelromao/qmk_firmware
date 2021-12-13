@@ -36,16 +36,9 @@
 #include "mouselayer_toggle.h"
 #endif
 
-// User data
-
-typedef enum {
-    MOD_CG_G,
-    MOD_CG_C
-} mod_cg_t;
-
-typedef struct {
-    mod_cg_t mod_cg;
-} user_data_t;
+#ifndef _OS_TOGGLE_H
+#include "os_toggle.h"
+#endif
 
 // Keymap
 
@@ -130,11 +123,11 @@ typedef struct {
 #define ____MEDIA_R4_____                               XXXXXXX , _______
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , DF_QWE  , XXXXXXX , EEP_RST
-#define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , TG_MD_G , TG_M_ON , XXXXXXX
+#define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , TG_M_ON , TG_M_OF , XXXXXXX
 #define ___________________MAINTENANCE_L3______________ TO_FUN  , XXXXXXX , KC_PWR  , TO_NAV  , TO_LOW
 #define __MAINTENANCE_L4_                                                             _______ , XXXXXXX
 
 #define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , DF_COL  , XXXXXXX , XXXXXXX
-#define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_M_OF , TG_MD_C , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX
 #define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , KC_SLEP , XXXXXXX , TO_MED
 #define __MAINTENANCE_R4_                               XXXXXXX , _______

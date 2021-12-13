@@ -16,7 +16,7 @@
 
 #define _LAYERS_H
 
-typedef enum layers {
+typedef enum {
   _QWERTY,
   _COLEMAK,
   _LOWER,

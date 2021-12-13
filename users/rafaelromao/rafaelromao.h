@@ -24,6 +24,10 @@
 #include "keycodes.h"
 #endif
 
+#ifndef _PERSISTENT_LAYERS_H
+#include "persistent_layers.h"
+#endif
+
 #ifndef _TAPDANCE_H
 #include "tapdance.h"
 #endif

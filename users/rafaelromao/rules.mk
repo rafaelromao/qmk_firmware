@@ -1,4 +1,5 @@
 SRC += rafaelromao.c
+SRC += persistent_layers.c
 SRC += tapdance.c
 SRC += capslock_timer.c
 SRC += mouselayer_toggle.c

@@ -16,6 +16,8 @@
 
 #include "rafaelromao.h"
 
+extern os_t os;
+
 // Led update
 
 __attribute__ ((weak)) bool led_update_user(led_t led_state) {
@@ -29,14 +31,22 @@ __attribute__ ((weak)) void matrix_scan_user(void) {
     check_disable_capslock();
 }
 
-// Custom keycodes
-
-extern os_t os;
+// Process record
 
 __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Extend capslock timer
     switch (process_capslock_timer_extension(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process persistent layers
+    switch (process_persistent_layers(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -88,19 +98,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
 
     // Handle custom keycodes
     switch (keycode) {
-
-        // Persistent default layers
-
-        case DF_COL:
-            if (record->event.pressed) {
-                set_single_persistent_default_layer(_COLEMAK);
-            }
-            return false;
-        case DF_QWE:
-            if (record->event.pressed) {
-                set_single_persistent_default_layer(_QWERTY);
-            }
-            return false;
 
         // Shift+Backspace for Delete (when not one-shot)
 

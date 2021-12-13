@@ -26,7 +26,7 @@
 #define HOLD_ON_OTHER_KEY_PRESS_PER_KEY
 #define ONESHOT_TAP_TOGGLE 2
 #define ONESHOT_TIMEOUT 1500
-#define TAPPING_TOGGLE 2
+#define TAPPING_TOGGLE 1
 #define TAPPING_TERM 175
 
 // Configure combos

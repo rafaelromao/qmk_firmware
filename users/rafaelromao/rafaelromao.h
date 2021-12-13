@@ -44,6 +44,10 @@
 #include "macros.h"
 #endif
 
+#ifndef _TAPHOLD_H
+#include "taphold.h"
+#endif
+
 // Keymap
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T

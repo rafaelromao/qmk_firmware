@@ -202,54 +202,16 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                 return false;
             }
 
-        // Force TT to toggle on single tap
-
-        case TT_LOW:
-        case TT_RAI:
-            if (record->tap.count > 0) {
-                if (record->event.pressed) {
-                    return false;
-                }
-            }
     }
-
     return true;
 }
 
 // Tap-hold configuration
 
 __attribute__ ((weak)) bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LOW_SPC:
-        case RAI_SPC:
-            // Immediately select the hold action when another key is pressed.
-            return true;
-        default:
-            // Do not select the hold action when another key is pressed.
-            return false;
-    }
+    return get_hold_on_other_key_press_result(keycode);
 }
 
 __attribute__ ((weak)) bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LSFTT_S:
-        case LCTLT_D:
-        case LALTT_F:
-        case LGUIT_V:
-        case LSFTT_R:
-        case LCTLT_S:
-        case LALTT_T:
-        case LGUIT_D:
-        case RSFTT_L:
-        case RCTLT_K:
-        case RALTT_J:
-        case RGUIT_M:
-        case RSFTT_I:
-        case RCTLT_E:
-        case RALTT_N:
-        case RGUIT_H:
-            return true;
-        default:
-            return false;
-    }
+    return get_tapping_force_hold_result(keycode);
 }

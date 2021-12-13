@@ -14,18 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _CAPSLOCK_TIMER_H
+#define _PROCESS_RECORD_RESULT_H
 
-#include QMK_KEYBOARD_H
-
-#ifndef _PROCESS_RECORD_RESULT_H
-#include "process_record_result.h"
-#endif
-
-typedef struct {
-    uint16_t timer;
-} capslock_timer_t;
-
-void check_start_capslock_timer(bool isCapsLocked);
-void check_disable_capslock(void);
-process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyrecord_t *record);
+typedef enum process_record_result {
+  PROCESS_RECORD_RETURN_TRUE,
+  PROCESS_RECORD_RETURN_FALSE,
+  PROCESS_RECORD_CONTINUE
+} process_record_result_t;

@@ -14,6 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#define _TAPDANCE_H
+
 #include QMK_KEYBOARD_H
 
 enum {

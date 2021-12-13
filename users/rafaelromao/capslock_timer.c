@@ -62,7 +62,7 @@ void check_disable_capslock(void) {
     disable_capslock_when_timeout(isCapsLocked);
 }
 
-void check_extend_capslock_timer(uint16_t keycode, keyrecord_t *record) {
+process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyrecord_t *record) {
     // Extend autodisable capslock timer
     bool isCapsLocked = host_keyboard_led_state().caps_lock;
     if (isCapsLocked) {
@@ -71,7 +71,7 @@ void check_extend_capslock_timer(uint16_t keycode, keyrecord_t *record) {
             case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
             // Earlier return if this has not been considered tapped yet.
             if (record->tap.count == 0) {
-                return;
+                return PROCESS_RECORD_CONTINUE;
             }
             // Get the base tapping keycode of a mod- or layer-tap key.
             keycode &= 0xff;
@@ -87,5 +87,7 @@ void check_extend_capslock_timer(uint16_t keycode, keyrecord_t *record) {
                 start_capslock_timer();
         }
     }
+
+    return PROCESS_RECORD_CONTINUE;
 }
 

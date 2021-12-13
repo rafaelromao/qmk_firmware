@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _CAPSLOCK_TIMER_H
+#define _MOUSELAYER_H
 
 #include QMK_KEYBOARD_H
 
@@ -22,10 +22,16 @@
 #include "process_record_result.h"
 #endif
 
-typedef struct {
-    uint16_t timer;
-} capslock_timer_t;
+#ifndef _KEYCODES_H
+#include "keycodes.h"
+#endif
 
-void check_start_capslock_timer(bool isCapsLocked);
-void check_disable_capslock(void);
-process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyrecord_t *record);
+#ifndef _LAYERS_H
+#include "layers.h"
+#endif
+
+typedef struct {
+    bool enabled;
+} mouselayer_t;
+
+process_record_result_t process_mouselayer(uint16_t keycode, keyrecord_t *record);

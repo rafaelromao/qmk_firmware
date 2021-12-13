@@ -15,7 +15,6 @@
  */
 
 #include "rafaelromao.h"
-#include "capslock_timer.h"
 
 // Combos
 
@@ -62,8 +61,7 @@ combo_t key_combos[COMBO_COUNT] = {
 // Custom handlers
 
 static user_data_t user_data = {
-    .mod_cg = MOD_CG_G,
-    .mouselayer = true
+    .mod_cg = MOD_CG_G
 };
 
 // Led update
@@ -84,7 +82,24 @@ __attribute__ ((weak)) void matrix_scan_user(void) {
 __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Extend capslock timer
-    check_extend_capslock_timer(keycode, record);
+    switch (process_capslock_timer_extension(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process mouse layer
+    switch (process_mouselayer(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
 
     bool isCGModeG = user_data.mod_cg == MOD_CG_G;
     bool isCGModeC = user_data.mod_cg == MOD_CG_C;
@@ -138,24 +153,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             }
             return false;
 
-        // Enable/Disable the Mouse Layer
-
-        case TG_M_ON:
-            if (record->event.pressed) {
-                user_data.mouselayer = true;
-                layer_off(_MOUSE);
-                layer_off(_NAVIGATION);
-            }
-            return false;
-
-        case TG_M_OF:
-            if (record->event.pressed) {
-                user_data.mouselayer = false;
-                layer_off(_MOUSE);
-                layer_off(_NAVIGATION);
-            }
-            return false;
-
         // Custom one shot mod-taps
 
         case NAV_MOD:
@@ -202,36 +199,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                 }
                 return false;
             }
-            // If it is starting or finishing holding, and the mouse layer is disabled,
-            // activate or deactivate the navigation layer instead, otherwise continue with normal behavior
-            if (!record->tap.count){
-                if (!user_data.mouselayer) {
-                    if (record->event.pressed) {
-                        layer_on(_NAVIGATION);
-                        return false;
-                    } else {
-                        layer_off(_NAVIGATION);
-                        return false;
-                    }
-                }
-            }
-            return true;
-
-        case MOU_P0:
-            // If it is starting or finishing holding, and the mouse layer is disabled,
-            // activate or deactivate the navigation layer instead, otherwise continue with normal behavior
-            if (!record->tap.count){
-                if (!user_data.mouselayer) {
-                    if (record->event.pressed) {
-                        layer_on(_NAVIGATION);
-                        return false;
-                    } else {
-                        layer_off(_NAVIGATION);
-                        return false;
-                    }
-                }
-            }
-            return true;
 
         // Macros
 
@@ -291,11 +258,9 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                     return false;
                 }
             }
-            return true;
-
-        default:
-            return true;
     }
+
+    return true;
 }
 
 // Tap-hold configuration

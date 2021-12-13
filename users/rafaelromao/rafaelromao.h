@@ -189,7 +189,7 @@ typedef struct {
 #define ____COLEMAK_R4___                               RAI_SPC , MOU_CAP
 
 #define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LPRN , KC_RPRN , SS_TILD
-#define ___________________LOWER_L2____________________ SS_BTIC , SS_SQUO , SS_DQUO , KC_AMPR , KC_PIPE
+#define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
 #define ___________________LOWER_L3____________________ XXXXXXX , KC_BSLS , KC_LBRC , KC_RBRC , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
 

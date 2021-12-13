@@ -3,6 +3,7 @@ SRC += tapdance.c
 SRC += capslock_timer.c
 SRC += mouselayer_toggle.c
 SRC += os_toggle.c
+SRC += macros.c
 LTO_ENABLE = yes
 MOUSEKEY_ENABLE = yes # Mouse keys
 EXTRAKEY_ENABLE = yes # Audio control and System control

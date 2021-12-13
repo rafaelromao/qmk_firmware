@@ -40,6 +40,10 @@
 #include "os_toggle.h"
 #endif
 
+#ifndef _MACROS_H
+#include "macros.h"
+#endif
+
 // Keymap
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T

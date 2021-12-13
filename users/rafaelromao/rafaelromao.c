@@ -107,6 +107,16 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
             break;
     };
 
+    // Process macros
+    switch (process_macros(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
     bool isMacOS = os.type == MACOS;
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotCG = (isMacOS && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
@@ -191,55 +201,6 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
                 }
                 return false;
             }
-
-        // Macros
-
-        case SS_BTIC:
-            if (record->event.pressed) {
-                SEND_STRING("` ");
-            }
-            return false;
-        case SS_DQUO:
-            if (record->event.pressed) {
-                SEND_STRING("\" ");
-            }
-            return false;
-        case SS_SQUO:
-            if (record->event.pressed) {
-                SEND_STRING("' ");
-            }
-            return false;
-        case SS_CIRC:
-            if (record->event.pressed) {
-                SEND_STRING("^ ");
-            }
-            return false;
-        case SS_TILD:
-            if (record->event.pressed) {
-                SEND_STRING("~ ");
-            }
-            return false;
-
-        case SS_MODP:
-            if (record->event.pressed) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI("+"));
-                }
-                else if (isWindowsOrLinux) {
-                    SEND_STRING(SS_LCTL("+"));
-                }
-            }
-            return false;
-        case SS_MODM:
-            if (record->event.pressed) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI("-"));
-                }
-                else if (isWindowsOrLinux) {
-                    SEND_STRING(SS_LCTL("-"));
-                }
-            }
-            return false;
 
         // Force TT to toggle on single tap
 

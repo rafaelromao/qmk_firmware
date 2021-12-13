@@ -50,7 +50,7 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(col_low_combo, TT_LOW),
   COMBO(qwe_rai_combo, TT_RAI),
   COMBO(col_rai_combo, TT_RAI),
-  COMBO(mou_nav_combo, TG_NAV),
+  COMBO(mou_nav_combo, TO_NAV),
   COMBO(nav_tog_combo, TG_NAV),
   COMBO(mou_tog_combo, TG_MOU),
   COMBO(low_tog_combo, TG_LOW),

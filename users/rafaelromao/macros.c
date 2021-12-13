@@ -24,8 +24,12 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
     bool isMacOS = os.type == MACOS;
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
+
+        // Standalone accent characters
 
         case SS_BTIC:
             if (record->event.pressed) {
@@ -53,6 +57,8 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             }
             return PROCESS_RECORD_RETURN_FALSE;
 
+        // Zoom shortcuts
+
         case SS_MODP:
             if (record->event.pressed) {
                 if (isMacOS) {
@@ -73,6 +79,17 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
                 }
             }
             return PROCESS_RECORD_RETURN_FALSE;
+
+        // Shift+Backspace for Delete (when not one-shot)
+
+        case KC_BSPC:
+            if (record->event.pressed) {
+                if (isShifted && !isOneShotShift) {
+                    tap_code(KC_DEL);
+                    return PROCESS_RECORD_RETURN_FALSE;
+                }
+            }
+            return PROCESS_RECORD_RETURN_TRUE;
 
     }
 

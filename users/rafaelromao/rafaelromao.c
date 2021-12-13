@@ -93,22 +93,10 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
     bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
     bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
     bool isAnyOneShot = isOneShotShift || isOneShotCtrl || isOneShotAlt || isOneShotGui || isOneShotCG;
-    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
     bool isCapsLocked = host_keyboard_led_state().caps_lock;
 
     // Handle custom keycodes
     switch (keycode) {
-
-        // Shift+Backspace for Delete (when not one-shot)
-
-        case KC_BSPC:
-            if (record->event.pressed) {
-                if (isShifted && !isOneShotShift) {
-                    tap_code(KC_DEL);
-                    return false;
-                }
-            }
-            return true;
 
         // Custom one shot mod-taps
 

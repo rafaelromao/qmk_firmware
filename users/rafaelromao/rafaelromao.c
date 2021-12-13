@@ -15,6 +15,7 @@
  */
 
 #include "rafaelromao.h"
+#include "capslock_timer.h"
 
 // Combos
 
@@ -62,79 +63,8 @@ combo_t key_combos[COMBO_COUNT] = {
 
 static user_data_t user_data = {
     .mod_cg = MOD_CG_G,
-    .mouselayer = true,
-    .capslock_timer = 0
+    .mouselayer = true
 };
-
-// Capslock timer
-
-bool capslock_timer_expired(void) {
-    return user_data.capslock_timer > 0 && (timer_elapsed(user_data.capslock_timer) > ONESHOT_TIMEOUT);
-}
-
-void start_capslock_timer(void) {
-    user_data.capslock_timer = timer_read();
-}
-
-void clear_capslock_timer(void) {
-    user_data.capslock_timer = 0;
-}
-
-void disable_capslock(bool isCapsLocked) {
-    if (isCapsLocked) {
-        tap_code(KC_CAPS);
-    }
-}
-
-void disable_capslock_when_timeout(bool isCapsLocked) {
-    // Disable capslock if timer expired
-    if (capslock_timer_expired()) {
-        clear_capslock_timer();
-        disable_capslock(isCapsLocked);
-    }
-}
-
-void check_start_capslock_timer(bool isCapsLocked) {
-    // Start timer to automatically disable capslock
-    if (isCapsLocked) {
-        start_capslock_timer();
-    } else {
-        clear_capslock_timer();
-    }
-}
-
-void check_disable_capslock(void) {
-    // Disable capslock if autodisable timer expired
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-    disable_capslock_when_timeout(isCapsLocked);
-}
-
-void check_extend_capslock_timer(uint16_t keycode, keyrecord_t *record) {
-    // Extend autodisable capslock timer
-    bool isCapsLocked = host_keyboard_led_state().caps_lock;
-    if (isCapsLocked) {
-        switch (keycode) {
-            case QK_MOD_TAP ... QK_MOD_TAP_MAX:
-            case QK_LAYER_TAP ... QK_LAYER_TAP_MAX:
-            // Earlier return if this has not been considered tapped yet.
-            if (record->tap.count == 0) {
-                return;
-            }
-            // Get the base tapping keycode of a mod- or layer-tap key.
-            keycode &= 0xff;
-        }
-        // Extend capslock timer
-        switch (keycode) {
-            case KC_A ... KC_Z:
-            case KC_1 ... KC_0:
-            case KC_BSPC:
-            case KC_MINS:
-            case KC_UNDS:
-            case KC_SPC:
-                start_capslock_timer();
-        }
-    }
-}
 
 // Led update
 

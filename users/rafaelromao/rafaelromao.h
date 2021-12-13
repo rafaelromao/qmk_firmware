@@ -24,8 +24,9 @@ enum layers {
   _LOWER,
   _RAISE,
   _FUNCTIONS,
-  _NAVIGATION,
   _MOUSE,
+  _NAVIGATION,
+  _NAVIGATION_CLONE,
   _MEDIA,
   _MAINTENANCE
 };
@@ -102,13 +103,11 @@ enum custom_keycodes {
 #define TT_LOW TT(_LOWER)
 #define OS_LOW OSL(_LOWER)
 #define MO_NAV MO(_NAVIGATION)
-#define TO_NAV TO(_NAVIGATION)
-#define TG_NAV TG(_NAVIGATION)
-#define OS_NAV OSL(_NAVIGATION)
+#define TO_NAV TO(_NAVIGATION_CLONE)
+#define TG_NAV TG(_NAVIGATION_CLONE)
 #define MO_MOU MO(_MOUSE)
 #define TO_MOU TO(_MOUSE)
 #define TG_MOU TG(_MOUSE)
-#define OS_MOU OSL(_MOUSE)
 #define MO_MAI MO(_MAINTENANCE)
 #define TO_MAI TO(_MAINTENANCE)
 #define TO_MED TO(_MEDIA)
@@ -219,16 +218,6 @@ typedef struct {
 #define ___________________FUNCTIONS_R3________________ XXXXXXX , KC_F1   , KC_F2   , KC_F3   , KC_F10
 #define ____FUNCTIONS_R4_                               XXXXXXX , _______
 
-#define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
-#define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
-#define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
-#define __NAVIGATION_L4__                                                             MO_MAI  , XXXXXXX
-
-#define ___________________NAVIGATION_R1_______________ XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT
-#define ___________________NAVIGATION_R2_______________ XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
-#define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
-#define __NAVIGATION_R4__                               XXXXXXX , MO_MAI
-
 #define ___________________MOUSE_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
 #define ___________________MOUSE_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , KC_BTN1
 #define ___________________MOUSE_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , KC_BTN2
@@ -238,6 +227,16 @@ typedef struct {
 #define ___________________MOUSE_R2____________________ TD_MB13 , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
 #define ___________________MOUSE_R3____________________ TD_MB24 , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define ____MOUSE_R4_____                               XXXXXXX , _______
+
+#define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
+#define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
+#define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
+#define __NAVIGATION_L4__                                                             MO_MAI  , XXXXXXX
+
+#define ___________________NAVIGATION_R1_______________ XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT
+#define ___________________NAVIGATION_R2_______________ XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
+#define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
+#define __NAVIGATION_R4__                               XXXXXXX , MO_MAI
 
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
 #define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX

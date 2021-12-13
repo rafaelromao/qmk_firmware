@@ -17,49 +17,49 @@
 #include QMK_KEYBOARD_H
 
 #ifndef _LAYERS_H
-#include "layers.h"
+#include "definitions/layers.h"
 #endif
 
 #ifndef _KEYCODES_H
-#include "keycodes.h"
+#include "definitions/keycodes.h"
 #endif
 
 #ifndef _KEYMAP_BLOCKS_H
-#include "keymap_blocks.h"
-#endif
-
-#ifndef _PERSISTENT_LAYERS_H
-#include "persistent_layers.h"
-#endif
-
-#ifndef _TAPDANCE_H
-#include "tapdance.h"
-#endif
-
-#ifndef _CAPSLOCK_TIMER_H
-#include "capslock_timer.h"
-#endif
-
-#ifndef _MOUSELAYER_H
-#include "mouselayer_toggle.h"
-#endif
-
-#ifndef _OS_TOGGLE_H
-#include "os_toggle.h"
-#endif
-
-#ifndef _MACROS_H
-#include "macros.h"
+#include "definitions/keymap_blocks.h"
 #endif
 
 #ifndef _TAPHOLD_H
-#include "taphold.h"
+#include "definitions/taphold.h"
+#endif
+
+#ifndef _PERSISTENT_LAYERS_H
+#include "features/persistent_layers.h"
+#endif
+
+#ifndef _TAPDANCE_H
+#include "features/tapdance.h"
+#endif
+
+#ifndef _CAPSLOCK_TIMER_H
+#include "features/capslock_timer.h"
+#endif
+
+#ifndef _MOUSELAYER_H
+#include "features/mouselayer_toggle.h"
+#endif
+
+#ifndef _OS_TOGGLE_H
+#include "features/os_toggle.h"
+#endif
+
+#ifndef _MACROS_H
+#include "features/macros.h"
 #endif
 
 #ifndef _COMBOS_H
-#include "combos.h"
+#include "features/combos.h"
 #endif
 
 #ifndef _SPECIAL_KEY_H
-#include "special_keys.h"
+#include "features/special_keys.h"
 #endif

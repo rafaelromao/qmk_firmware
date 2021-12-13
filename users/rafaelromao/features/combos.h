@@ -14,24 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _MOUSELAYER_H
+#define _COMBOS_H
 
 #include QMK_KEYBOARD_H
 
-#ifndef _PROCESS_RECORD_RESULT_H
-#include "process_record_result.h"
-#endif
-
 #ifndef _KEYCODES_H
-#include "keycodes.h"
+#include "../definitions/keycodes.h"
 #endif
-
-#ifndef _LAYERS_H
-#include "layers.h"
-#endif
-
-typedef struct {
-    bool enabled;
-} mouselayer_t;
-
-process_record_result_t process_mouselayer(uint16_t keycode, keyrecord_t *record);

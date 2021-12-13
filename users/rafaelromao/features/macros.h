@@ -14,10 +14,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _COMBOS_H
+#define _MACROS_H
 
 #include QMK_KEYBOARD_H
 
 #ifndef _KEYCODES_H
-#include "keycodes.h"
+#include "../definitions/keycodes.h"
 #endif
+
+#ifndef _PROCESS_RECORD_RESULT_H
+#include "process_record_result.h"
+#endif
+
+#ifndef _OS_TOGGLE_H
+#include "os_toggle.h"
+#endif
+
+process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record);

@@ -18,12 +18,12 @@
 
 #include QMK_KEYBOARD_H
 
-#ifndef _PROCESS_RECORD_RESULT_H
-#include "process_record_result.h"
+#ifndef _KEYCODES_H
+#include "../definitions/keycodes.h"
 #endif
 
-#ifndef _KEYCODES_H
-#include "keycodes.h"
+#ifndef _PROCESS_RECORD_RESULT_H
+#include "process_record_result.h"
 #endif
 
 typedef enum {

@@ -15,6 +15,7 @@
  */
 
 #include QMK_KEYBOARD_H
+
 #include "rafaelromao.h"
 
 #define LAYOUT_wrapper(...) LAYOUT_planck_mit(__VA_ARGS__)

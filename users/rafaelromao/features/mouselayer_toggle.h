@@ -14,17 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _MOUSELAYER_H
+#pragma once
 
 #include QMK_KEYBOARD_H
 
-#ifndef _KEYCODES_H
 #include "../definitions/keycodes.h"
-#endif
-
-#ifndef _PROCESS_RECORD_RESULT_H
 #include "process_record_result.h"
-#endif
 
 typedef struct {
     bool enabled;

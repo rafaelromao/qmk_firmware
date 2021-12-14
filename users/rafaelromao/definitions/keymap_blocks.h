@@ -14,13 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _KEYMAP_BLOCKS_H
+#pragma once
 
 #include QMK_KEYBOARD_H
-
-#ifndef _KEYCODES_H
 #include "keycodes.h"
-#endif
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
 #define ___________________QWERTY_L2___________________ KC_A    , LSFTT_S , LCTLT_D , LALTT_F , KC_G

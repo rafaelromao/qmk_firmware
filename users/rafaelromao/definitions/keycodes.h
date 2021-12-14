@@ -14,11 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _KEYCODES_H
+#pragma once
 
-#ifndef _LAYERS_H
 #include "layers.h"
-#endif
 
 // Custom keycodes
 

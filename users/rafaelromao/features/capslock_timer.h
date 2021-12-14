@@ -14,13 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _CAPSLOCK_TIMER_H
+#pragma once
 
 #include QMK_KEYBOARD_H
-
-#ifndef _PROCESS_RECORD_RESULT_H
 #include "process_record_result.h"
-#endif
 
 typedef struct {
     uint16_t timer;

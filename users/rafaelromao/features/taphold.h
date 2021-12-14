@@ -14,13 +14,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _TAPHOLD_H
+#pragma once
 
 #include QMK_KEYBOARD_H
-
-#ifndef _KEYCODES_H
-#include "keycodes.h"
-#endif
+#include "../definitions/keycodes.h"
 
 bool get_hold_on_other_key_press_result(uint16_t keycode);
 bool get_tapping_force_hold_result(uint16_t keycode);

@@ -14,7 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#define _LAYERS_H
+#pragma once
 
 typedef enum {
   _QWERTY,

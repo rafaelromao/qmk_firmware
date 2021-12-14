@@ -1,5 +1,5 @@
 SRC += rafaelromao.c
-SRC += definitions/taphold.c
+SRC += features/taphold.c
 SRC += features/persistent_layers.c
 SRC += features/special_keys.c
 SRC += features/tapdance.c

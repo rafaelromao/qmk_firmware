@@ -16,50 +16,15 @@
 
 #include QMK_KEYBOARD_H
 
-#ifndef _LAYERS_H
 #include "definitions/layers.h"
-#endif
-
-#ifndef _KEYCODES_H
 #include "definitions/keycodes.h"
-#endif
-
-#ifndef _KEYMAP_BLOCKS_H
 #include "definitions/keymap_blocks.h"
-#endif
-
-#ifndef _TAPHOLD_H
-#include "definitions/taphold.h"
-#endif
-
-#ifndef _PERSISTENT_LAYERS_H
+#include "features/taphold.h"
 #include "features/persistent_layers.h"
-#endif
-
-#ifndef _TAPDANCE_H
 #include "features/tapdance.h"
-#endif
-
-#ifndef _CAPSLOCK_TIMER_H
 #include "features/capslock_timer.h"
-#endif
-
-#ifndef _MOUSELAYER_H
 #include "features/mouselayer_toggle.h"
-#endif
-
-#ifndef _OS_TOGGLE_H
 #include "features/os_toggle.h"
-#endif
-
-#ifndef _MACROS_H
 #include "features/macros.h"
-#endif
-
-#ifndef _COMBOS_H
 #include "features/combos.h"
-#endif
-
-#ifndef _SPECIAL_KEY_H
 #include "features/special_keys.h"
-#endif

@@ -14,18 +14,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#pragma once
+
 #include QMK_KEYBOARD_H
 
-#include "definitions/layers.h"
-#include "definitions/keycodes.h"
-#include "definitions/keymap_blocks.h"
-#include "features/taphold.h"
-#include "features/persistent_layers.h"
-#include "features/tapdance.h"
-#include "features/capslock_timer.h"
-#include "features/mouselayer_toggle.h"
-#include "features/os_toggle.h"
-#include "features/macros.h"
-#include "features/combos.h"
-#include "features/default_mod_key.h"
-#include "features/capitalize_key.h"
+#include "../definitions/keycodes.h"
+#include "process_record_result.h"
+#include "os_toggle.h"
+
+process_record_result_t process_capitalize_key(uint16_t keycode, keyrecord_t *record);

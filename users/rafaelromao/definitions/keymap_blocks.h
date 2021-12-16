@@ -39,9 +39,9 @@
 #define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , SCL_MED
 #define ____COLEMAK_R4___                               RAI_SPC , MOU_CAP
 
-#define ___________________LOWER_L1____________________ KC_AT   , KC_UNDS , KC_LPRN , KC_RPRN , SS_TILD
+#define ___________________LOWER_L1____________________ KC_AT   , KC_LPRN , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
-#define ___________________LOWER_L3____________________ XXXXXXX , KC_BSLS , KC_LBRC , KC_RBRC , KC_HASH
+#define ___________________LOWER_L3____________________ XXXXXXX , KC_LBRC , KC_RBRC , KC_UNDS , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_P7 , KC_P8   , KC_P9   , KC_BSPC

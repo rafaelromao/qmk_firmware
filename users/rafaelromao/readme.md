@@ -19,7 +19,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - [Home block mods](docs/taphold.md) for shortcuts that combine them.
 - One-shot mods in thumb keys.
 	- [Cmd/Ctrl](docs/modifier_keys.md) on the left side (you can choose which one will be used).
-	- [Shift/Caps Lock](docs/modifier_keys.md) on the right side (if shift is already active, toggle [Caps Lock](docs/modifier_keys.md)).
+	- [Shift/Caps Lock](docs/modifier_keys.md) on the right side (if Shift is already active, toggle [Caps Lock](docs/modifier_keys.md)).
 - Symbols in the left side of the lower and right side of the raise.
     - All [symbols](docs/layers.md) reachable with a single hand.
     - Most used [VIM symbols](docs/layers.md) on the right side of the raise layer.

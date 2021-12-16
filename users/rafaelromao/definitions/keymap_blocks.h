@@ -25,7 +25,7 @@
 #define ____QWERTY_L4____                                                             NAV_MOD , LOW_SPC
 
 #define ___________________QWERTY_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
-#define ___________________QWERTY_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , KC_BSPC
+#define ___________________QWERTY_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , KC_UNDS
 #define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , KC_DOT  , SCL_MED
 #define ____QWERTY_R4____                               RAI_SPC , MOU_CAP
 
@@ -34,27 +34,27 @@
 #define ___________________COLEMAK_L3__________________ KCZ_FUN , KC_X    , KC_C    , LGUIT_D , KC_V
 #define ____COLEMAK_L4___                                                             NAV_MOD , LOW_SPC
 
-#define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , KC_BSPC
+#define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , KC_UNDS
 #define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KC_O
 #define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , SCL_MED
 #define ____COLEMAK_R4___                               RAI_SPC , MOU_CAP
 
-#define ___________________LOWER_L1____________________ KC_AT   , KC_LPRN , KC_RPRN , KC_BSLS , SS_TILD
+#define ___________________LOWER_L1____________________ KC_ESC  , KC_LPRN , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE
-#define ___________________LOWER_L3____________________ XXXXXXX , KC_LBRC , KC_RBRC , KC_UNDS , KC_HASH
+#define ___________________LOWER_L3____________________ KC_AT   , KC_LBRC , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
 
-#define ___________________LOWER_R1____________________ XXXXXXX , KC_P7 , KC_P8   , KC_P9   , KC_BSPC
-#define ___________________LOWER_R2____________________ XXXXXXX , KC_P4 , KC_P5   , KC_P6   , KC_BSPC
-#define ___________________LOWER_R3____________________ XXXXXXX , KC_P1 , KC_P2   , KC_P3   , TD_DOT
-#define ____LOWER_R4_____                               OS_RAI  , MOU_P0
+#define ___________________LOWER_R1____________________ XXXXXXX , KC_P7 , KC_P8   , KC_P9   , KC_ENT
+#define ___________________LOWER_R2____________________ XXXXXXX , KC_P4 , KC_P5   , KC_P6   , TD_DOT
+#define ___________________LOWER_R3____________________ XXXXXXX , KC_P1 , KC_P2   , KC_P3   , XXXXXXX
+#define ____LOWER_R4_____                               _______ , MOU_P0
 
-#define ___________________RAISE_L1____________________ XXXXXXX , XXXXXXX , _______ , KC_DQUO , XXXXXXX
+#define ___________________RAISE_L1____________________ KC_ESC  , XXXXXXX , _______ , KC_DQUO , XXXXXXX
 #define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , XXXXXXX
 #define ___________________RAISE_L3____________________ XXXXXXX , XXXXXXX , _______ , KC_GRV  , XXXXXXX
-#define ____RAISE_L4_____                                                             _______ , OS_LOW
+#define ____RAISE_L4_____                                                             _______ , _______
 
-#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LCBR , KC_RCBR , KC_QUES
+#define ___________________RAISE_R1____________________ SS_CIRC , KC_DLR  , KC_LCBR , KC_RCBR , KC_ENT
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               XXXXXXX , _______
@@ -64,9 +64,9 @@
 #define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____FUNCTIONS_L4_                                                             _______ , XXXXXXX
 
-#define ___________________FUNCTIONS_R1________________ XXXXXXX , KC_F7   , KC_F8   , KC_F9   , KC_F12
-#define ___________________FUNCTIONS_R2________________ XXXXXXX , KC_F4   , KC_F5   , KC_F6   , KC_F11
-#define ___________________FUNCTIONS_R3________________ XXXXXXX , KC_F1   , KC_F2   , KC_F3   , KC_F10
+#define ___________________FUNCTIONS_R1________________ KC_F15  , KC_F7   , KC_F8   , KC_F9   , KC_F12
+#define ___________________FUNCTIONS_R2________________ KC_F14  , KC_F4   , KC_F5   , KC_F6   , KC_F11
+#define ___________________FUNCTIONS_R3________________ KC_F13  , KC_F1   , KC_F2   , KC_F3   , KC_F10
 #define ____FUNCTIONS_R4_                               XXXXXXX , _______
 
 #define ___________________MOUSE_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX

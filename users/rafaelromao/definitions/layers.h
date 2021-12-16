@@ -21,10 +21,10 @@ typedef enum {
   _COLEMAK,
   _LOWER,
   _RAISE,
-  _FUNCTIONS,
   _MOUSE,
   _NAVIGATION,
   _NAVIGATION_CLONE,
+  _FUNCTIONS,
   _MEDIA,
   _MAINTENANCE
 } layers_t;

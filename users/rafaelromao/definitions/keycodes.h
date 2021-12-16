@@ -73,8 +73,8 @@ enum {
 
 #define NAV_MOD LT(_NAVIGATION, SP_MOD)
 
-#define RAI_SPC LT(_RAISE,KC_SPC)
-#define LOW_SPC LT(_LOWER,KC_SPC)
+#define RAI_SPC LT(_RAISE, KC_BSPC)
+#define LOW_SPC LT(_LOWER, KC_SPC)
 
 #define KCZ_FUN LT(_FUNCTIONS, KC_Z)
 #define SCL_MED LT(_MEDIA, KC_SCLN)
@@ -86,11 +86,9 @@ enum {
 #define TO_RAI TO(_RAISE)
 #define TG_RAI TG(_RAISE)
 #define TT_RAI TT(_RAISE)
-#define OS_RAI OSL(_RAISE)
 #define TO_LOW TO(_LOWER)
 #define TG_LOW TG(_LOWER)
 #define TT_LOW TT(_LOWER)
-#define OS_LOW OSL(_LOWER)
 #define MO_NAV MO(_NAVIGATION)
 #define TO_NAV TO(_NAVIGATION_CLONE)
 #define TG_NAV TG(_NAVIGATION_CLONE)

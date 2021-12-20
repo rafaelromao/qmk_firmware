@@ -16,5 +16,4 @@
 ##
 [Home](../readme.md) | 
 Layout |
-[Layers](layers.md) |
 [Modifiers](modifiers.md)

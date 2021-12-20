@@ -34,6 +34,9 @@ The Default Mod key is a custom key that works as either one-shot Cmd or one-sho
     - If no modifier is active or locked in one-shot mode, it activates the default modifier in one-shot mode.
 - The hold behavior of this thumb key is used to activate the Navigation layer.
 - Its alias in the keymap diagram is _Mod_.
+- The Default Mod key is implemented using a custom keycode and a layer-tap.
+    - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
+    - [default-mod-key.c](../features/default_mod_key.c)
 
 ## Capitalize Key 
 
@@ -45,13 +48,18 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
     - If Shift is not active in one-shot mode, it activates Shift for one-shot.
 - The hold behavior of this thumb key is used to activate the Mouse layer.
 - Its alias in the keymap diagram is _Cap_.
+- The Capitalize key is implemented using a custom keycode and a layer-tap.
+    - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
+    - [capitalize-key.c](../features/capitalize_key.c)
 
 ## Caps Lock
 
-- Caps Lock is also available in the [functions layer](layers), but its behavior is not what we usually see. No matter how it was activated, Caps Lock will be automatically deactivated after 2 seconds of inactivity.
+- Caps Lock is also available in the [functions layer](layers), but its behavior is not what we usually see. No matter how it was activated, Caps Lock will be automatically deactivated after 2 seconds of inactivity
+    - The caps lock timer feature is implemented by starting a timer when the caps lock is activated and deactivating it in the matrix scan, in case the timer has expired.
+        - [capslock_timer.c](../features/capslock_timer.c)
+    - The caps lock timer is restarted when a valid key is pressed.
 
 ##
 [Home](../readme.md) | 
 [Layout](layout.md) | 
-[Layers](layers.md) |
 Modifiers

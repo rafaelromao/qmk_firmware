@@ -43,6 +43,5 @@ vnoremap <BACKSPACE> <nop>
 
 ##
 [Home](../readme.md) | 
-[Layout](layout.md) | 
-Layers |
+Symbols |
 [Modifiers](modifiers.md)

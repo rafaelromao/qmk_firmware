@@ -20,23 +20,23 @@
 #include "keycodes.h"
 
 #define ___________________QWERTY_L1___________________ KC_Q    , KC_W    , KC_E    , KC_R    , KC_T
-#define ___________________QWERTY_L2___________________ KC_A    , LSFTT_S , LCTLT_D , LALTT_F , KC_G
-#define ___________________QWERTY_L3___________________ KCZ_FUN , KC_X    , KC_C    , LGUIT_V , KC_B
+#define ___________________QWERTY_L2___________________ KCA_FUN , LSFTT_S , LCTLT_D , LALTT_F , KC_G
+#define ___________________QWERTY_L3___________________ KC_Z    , KC_X    , KC_C    , LGUIT_V , KC_B
 #define ____QWERTY_L4____                                                             NAV_MOD , LOW_SPC
 
 #define ___________________QWERTY_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
-#define ___________________QWERTY_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , KC_UNDS
-#define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , KC_DOT  , SCL_MED
+#define ___________________QWERTY_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , UND_MED
+#define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN
 #define ____QWERTY_R4____                               RAI_SPC , MOU_CAP
 
 #define ___________________COLEMAK_L1__________________ KC_Q    , KC_W    , KC_F    , KC_P    , KC_B
-#define ___________________COLEMAK_L2__________________ KC_A    , LSFTT_R , LCTLT_S , LALTT_T , KC_G
-#define ___________________COLEMAK_L3__________________ KCZ_FUN , KC_X    , KC_C    , LGUIT_D , KC_V
+#define ___________________COLEMAK_L2__________________ KCA_FUN , LSFTT_R , LCTLT_S , LALTT_T , KC_G
+#define ___________________COLEMAK_L3__________________ KC_Z    , KC_X    , KC_C    , LGUIT_D , KC_V
 #define ____COLEMAK_L4___                                                             NAV_MOD , LOW_SPC
 
 #define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , KC_UNDS
-#define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KC_O
-#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , SCL_MED
+#define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KCO_MED
+#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN
 #define ____COLEMAK_R4___                               RAI_SPC , MOU_CAP
 
 #define ___________________LOWER_L1____________________ KC_ESC  , KC_LPRN , KC_RPRN , KC_BSLS , SS_TILD
@@ -92,19 +92,19 @@
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
 #define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX
 #define ___________________MEDIA_L3____________________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
-#define ____MEDIA_L4_____                                                             _______ , XXXXXXX
+#define ____MEDIA_L4_____                                                             _______ , KC_BSPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
-#define ___________________MEDIA_R2____________________ SS_MODP , SS_MODM , KC_VOLD , KC_VOLU , KC_MUTE
-#define ___________________MEDIA_R3____________________ XXXXXXX , XXXXXXX , HYPR_A  , HYPR_V  , XXXXXXX
-#define ____MEDIA_R4_____                               XXXXXXX , _______
+#define ___________________MEDIA_R2____________________ HYPR_A  , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX
+#define ___________________MEDIA_R3____________________ HYPR_V  , XXXXXXX , SS_MODM , SS_MODP , XXXXXXX
+#define ____MEDIA_R4_____                               KC_SPC  , _______
 
-#define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , DF_QWE  , XXXXXXX , EEP_RST
+#define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST
 #define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , TG_M_ON , TG_M_OF , XXXXXXX
-#define ___________________MAINTENANCE_L3______________ TO_FUN  , XXXXXXX , KC_PWR  , TO_NAV  , TO_LOW
+#define ___________________MAINTENANCE_L3______________ TO_FUN  , XXXXXXX , DF_QWE  , TO_NAV  , TO_LOW
 #define __MAINTENANCE_L4_                                                             _______ , XXXXXXX
 
-#define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , DF_COL  , XXXXXXX , XXXXXXX
+#define ___________________MAINTENANCE_R1______________ RESET   , XXXXXXX , KC_SLEP , XXXXXXX , XXXXXXX
 #define ___________________MAINTENANCE_R2______________ XXXXXXX , TG_MAC  , TG_WIN  , TG_LIN  , XXXXXXX
-#define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , KC_SLEP , XXXXXXX , TO_MED
+#define ___________________MAINTENANCE_R3______________ TO_RAI  , TO_MOU  , DF_COL  , XXXXXXX , TO_MED
 #define __MAINTENANCE_R4_                               XXXXXXX , _______

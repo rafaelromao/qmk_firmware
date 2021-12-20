@@ -1,0 +1,57 @@
+# rafaelromao's keyboard layout
+
+## Standard Modifiers
+
+- Stantard modifiers (Shift, Ctrl, Alt, Gui) are available on the left side of the [functions layer](layers.md). These standard modifiers does not have one-shot or sticky behavior, so they can be used in situations were a tap or multi tap in a modifier key is required, like Shift+Shift or Ctrl+Ctrl+Ctrl, used in some IDEs or software development plugins.
+
+## Home Block Modifiers
+
+[Home Block Modifiers](https://precondition.github.io/home-row-mods#alternative-home-row-mods-layout) are an alternative to [Home Row Modifiers](https://precondition.github.io/home-row-mods), but with the pinky key replaced by the index colunm key in the botton row.
+
+- Home block modifiers are available on both sides of the base layers.
+  - Qwerty: S Shift, D Ctrl, F Alt, V Gui, M Gui, J Alt, K Ctrl, L Shift
+  - Colemak: R Shift, S Ctrl, T Alt, D Gui, H Gui, N Alt, R Ctrl, I Shift
+- Home block modifiers are not available on lower and raise layers, since they delay the symbol activation and are not that much useful anyway.
+
+## One-Shot Modifiers
+
+One-Shot Modifiers are modifier keys that, when tapped, remain active until the next key is pressed or a timeout expires. 
+
+- They act as standard mofiders when held.
+- These modifiers will be automatically deactivated after 2 seconds. 
+- They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
+- One-shot modifiers are available on the left side of the navigation and mouse layers.
+
+## Default Mod Key 
+
+The Default Mod key is a custom key that works as either one-shot Cmd or one-shot Ctrl.
+
+- This key will activate the default modifier for the current operating system, which can be selected in the maintenace layer.
+    - When Mac OS is selected, this key activates Cmd, otherwise it activates Ctrl.
+- This key allows using the same key combinations for shortcuts like Cmd/Ctrl+S, Cmd/Ctrl+C and Cmd/Ctrl+V.
+- It is placed as a thumb key and behaves as follows, when tapped:
+    - If any modifier is active or locked in one-shot mode, all these modifiers will be deactivated.
+    - If no modifier is active or locked in one-shot mode, it activates the default modifier in one-shot mode.
+- The hold behavior of this thumb key is used to activate the Navigation layer.
+- Its alias in the keymap diagram is _Mod_.
+
+## Capitalize Key 
+
+The Capitalize key is a custom key that works both as Shift and Caps Lock.
+
+- It is placed as a thumb key and behaves as follows, when tapped:
+    - If Caps Lock is active, it deactivates Caps Lock.
+    - If Shift is active or locked in one-shot mode, it activates Caps Lock.
+    - If Shift is not active in one-shot mode, it activates Shift for one-shot.
+- The hold behavior of this thumb key is used to activate the Mouse layer.
+- Its alias in the keymap diagram is _Cap_.
+
+## Caps Lock
+
+- Caps Lock is also available in the [functions layer](layers), but its behavior is not what we usually see. No matter how it was activated, Caps Lock will be automatically deactivated after 2 seconds of inactivity.
+
+##
+[Home](../readme.md) | 
+[Layout](layout.md) | 
+[Layers](layers.md) |
+Modifiers

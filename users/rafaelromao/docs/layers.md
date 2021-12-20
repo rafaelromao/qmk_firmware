@@ -32,16 +32,17 @@ vnoremap <BACKSPACE> <nop>
 ## Navigation and Mouse
 - Navigation layer gives access to one-shot mods in the left side and VIM style navigation in the right side.
 - Mouse layer is similar to the navigation layer, but replaces the arrows and page navigation by mouse and wheel navigation.
-
-### Enter, Esc, Tab, Delete
-- Considering qwerty, on the navigation and mouse layers, you find Esc in the Q and Enter in the P.
-- Tab is present on the left side of the navigation and mouse layers, in the E, allowing easy access to Cmd/Alt+Tab.
-- [Combos](docs/tapdance_combos.md) allow easy access to ENTER, ESC, TAB.
-- Shift+Backspace sends Delete, when shift is not one-shot, but Delete is also available under ; in the navigation and mouse layers.
+- The mouse layer can be disabled, using the maintenance layer. In this case, the navigation layer will be activated in its place instead.
 
 ## Functions and Media
+- In the base layer, holding Z or ; will activate the functions and media layers, respectively.
+- In the lower or raise layers, the two opposite thumb key can be held (or tapped, for one shot) to activate its corresponding layer.
+- Tap toggle layers will be toggle on with a single tap.
 
 ## Maintenance
 
 ##
-[Home](../readme.md)
+[Home](../readme.md) | 
+[Layout](layout.md) | 
+Layers |
+[Modifiers](modifiers.md)

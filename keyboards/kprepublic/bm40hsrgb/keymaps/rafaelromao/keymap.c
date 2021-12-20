@@ -169,7 +169,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color(42, RGB_WHITE);
             break;
         case _FUNCTIONS:
-            rgb_matrix_set_color(24, RGB_WHITE);
+            rgb_matrix_set_color(12, RGB_WHITE);
             break;
         case _NAVIGATION:
         case _NAVIGATION_CLONE:
@@ -179,14 +179,14 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             rgb_matrix_set_color(43, RGB_WHITE);
             break;
         case _MEDIA:
-            rgb_matrix_set_color(35, RGB_WHITE);
+            rgb_matrix_set_color(23, RGB_WHITE);
             break;
         case _MAINTENANCE:
             rgb_matrix_set_color(39, RGB_WHITE);
             rgb_matrix_set_color(43, RGB_WHITE);
             rgb_matrix_set_color(4, RGB_WHITE);
-            rgb_matrix_set_color(26, RGB_WHITE);
-            rgb_matrix_set_color(33, RGB_WHITE);
+            rgb_matrix_set_color(2, RGB_WHITE);
+            rgb_matrix_set_color(9, RGB_WHITE);
             rgb_matrix_set_color(7, RGB_RED);
             break;
         default:

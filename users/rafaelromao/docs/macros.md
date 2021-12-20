@@ -1,5 +1,15 @@
 # rafaelromao's keyboard layout
 
+## Enter, Esc, Tab, Delete
+- Considering qwerty, on the navigation and mouse layers, you find Esc in the Q and Enter in the P.
+- Tab is present on the left side of the navigation and mouse layers, in the E, allowing easy access to Cmd/Alt+Tab.
+- Combos allow easy access to ENTER, ESC, TAB.
+- Shift+Backspace sends Delete, when shift is not one-shot, but Delete is also available under ; in the navigation and mouse layers.
+
+## Macros
+
+## Shortcuts
+
 ## Tap Dance
 
 - The key below the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap.
@@ -23,6 +33,3 @@ In the mouse layer:
 
 In all layers but the base and maintenance:
 - JKL return to the previous layer.
-
-##
-[Home](../readme.md)

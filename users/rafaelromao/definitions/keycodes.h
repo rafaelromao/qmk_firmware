@@ -76,8 +76,9 @@ enum {
 #define RAI_SPC LT(_RAISE, KC_BSPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
 
-#define KCZ_FUN LT(_FUNCTIONS, KC_Z)
-#define SCL_MED LT(_MEDIA, KC_SCLN)
+#define KCA_FUN LT(_FUNCTIONS, KC_A)
+#define UND_MED LT(_MEDIA, KC_UNDS)
+#define KCO_MED LT(_MEDIA, KC_O)
 
 // Layer transitions
 

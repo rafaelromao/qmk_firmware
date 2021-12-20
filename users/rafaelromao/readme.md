@@ -12,14 +12,14 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
-![img](https://i.imgur.com/S63o6rv.png)
+![img](https://i.imgur.com/oWVhtIu.png)
 
 ## Summary
 - This is a [34 keys split layout](docs/layout.md), 3x5+2, optimized for programmers.
-- [Home block mods](docs/taphold.md) for shortcuts that combine them.
+- [Home block mods](docs/modifiers.md) for shortcuts that combine them.
 - One-shot mods in thumb keys.
-	- [Cmd/Ctrl](docs/modifier_keys.md) on the left side (you can choose which one will be used).
-	- [Shift/Caps Lock](docs/modifier_keys.md) on the right side (if Shift is already active, toggle [Caps Lock](docs/modifier_keys.md)).
+	- [Cmd/Ctrl](docs/modifiers.md) on the left side (you can choose which one will be used).
+	- [Shift/Caps Lock](docs/modifiers.md) on the right side (if Shift is already active, toggle [Caps Lock](docs/modifiers.md)).
 - Symbols in the left side of the lower and right side of the raise.
     - All [symbols](docs/layers.md) reachable with a single hand.
     - Most used [VIM symbols](docs/layers.md) on the right side of the raise layer.
@@ -29,29 +29,29 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 - Navigation and Mouse [layers](docs/layers.md) activated holding thumb keys.
     - VIM style navigation, but in the home position (shifted one key to the right).
     - Mouse layer can be disabled (navigation layer will replace it).
-- [Combos](docs/tapdance_combos.md) allow easy access to Esc, Enter, Tab and layer switching.
-- [Tap Dance](docs/tapdance_combos.md) is used for decimal separator keys and mouse buttons.
+- [Combos](docs/layers.md) allow easy access to Esc, Enter, Tab and layer switching.
+- [Tap Dance](docs/layers.md) is used for decimal separator keys and mouse buttons.
 
 ## Feature List
 - [Layers](docs/layers.md)
   - Base, Lower, Raise, Functions, Media, Navigation, Mouse and Maintenance.
 - [Persistent Layers](docs/layers.md)
   - Qwerty or Colemak-dhm as the base layer.
-- [Tap Hold](docs/taphold.md)
+- [Tap Hold](docs/modifiers.md)
   - Home Block Mods and Layer Toggle.
-- [Combos](docs/tapdance_combos.md)
+- [Combos](docs/layers.md)
   - Enter, Esc, Tab and Layer Toggle.
-- [Tap Dance](docs/tapdance_combos.md)
+- [Tap Dance](docs/layers.md)
   - Decimal Separators and Mouse Buttons.
 - Macros
   - String Delimiters and Shortcuts.
 - OS Toggle
   - Mac OS, Windows or Linux.
-- [Default Modifier Key](docs/modifier_keys.md)
+- [Default Modifier Key](docs/modifiers.md)
   - One-shot Cmd or Ctrl, in the thumb.
-- [Capitalize Key](docs/modifier_keys.md)
+- [Capitalize Key](docs/modifiers.md)
   - One-shot Shift and Caps Lock, in the thumb.
-- [Caps Lock Timer](docs/modifier_keys.md)
+- [Caps Lock Timer](docs/modifiers.md)
   - Caps Lock automatically disable after timeout.
 - Mouse Layer Toggle
   - Replace the Mouse layer by the Navigation layer.

@@ -14,4 +14,7 @@
 - Holding both outer thumb keys will activate the maintenance layer.
 
 ##
-[Home](../readme.md)
+[Home](../readme.md) | 
+Layout |
+[Layers](layers.md) |
+[Modifiers](modifiers.md)

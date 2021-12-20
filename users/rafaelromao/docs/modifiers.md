@@ -6,6 +6,9 @@
 
 ## Home Block Modifiers
 
+
+![Home Block Modifiers](https://i.imgur.com/Wjnyss9.png)
+
 [Home Block Modifiers](https://precondition.github.io/home-row-mods#alternative-home-row-mods-layout) are an alternative to [Home Row Modifiers](https://precondition.github.io/home-row-mods), but with the pinky key replaced by the index colunm key in the botton row.
 
 - Home block modifiers are available on both sides of the base layers.

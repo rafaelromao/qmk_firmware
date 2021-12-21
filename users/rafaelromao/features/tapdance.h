@@ -18,15 +18,22 @@
 
 #include QMK_KEYBOARD_H
 
+#include "../definitions/keycodes.h"
+#include "os_toggle.h"
+
 enum {
     DOT_COM,
     MOU_B13,
-    MOU_B24
+    MOU_B24,
+    INJ_LEF,
+    INJ_RIG
 };
 
 #define TD_DOT  TD(DOT_COM)
 #define TD_MB13 TD(MOU_B13)
 #define TD_MB24 TD(MOU_B24)
+#define TD_IJLE TD(INJ_LEF)
+#define TD_IJRI TD(INJ_RIG)
 
 typedef enum {
     TD_NONE,
@@ -41,9 +48,14 @@ typedef struct {
 } td_tap_t;
 
 td_state_t dance_state(qk_tap_dance_state_t *state);
+
 void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data);
 void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data);
+
 void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data);
 void td_mou_b13_reset(qk_tap_dance_state_t *state, void *user_data);
 void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data);
 void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data);
+
+void td_inj_lef(qk_tap_dance_state_t *state, void *user_data);
+void td_inj_rig(qk_tap_dance_state_t *state, void *user_data);

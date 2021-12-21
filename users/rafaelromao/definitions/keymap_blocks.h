@@ -44,10 +44,10 @@
 #define ___________________LOWER_L3____________________ KC_AT   , KC_LBRC , KC_RBRC , KC_QUES , KC_HASH
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
 
-#define ___________________LOWER_R1____________________ XXXXXXX , KC_P7 , KC_P8   , KC_P9   , KC_ENT
-#define ___________________LOWER_R2____________________ XXXXXXX , KC_P4 , KC_P5   , KC_P6   , TD_DOT
-#define ___________________LOWER_R3____________________ XXXXXXX , KC_P1 , KC_P2   , KC_P3   , XXXXXXX
-#define ____LOWER_R4_____                               _______ , MOU_P0
+#define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_ENT
+#define ___________________LOWER_R2____________________ XXXXXXX , KC_4    , KC_5    , KC_6    , TD_DOT
+#define ___________________LOWER_R3____________________ XXXXXXX , KC_1    , KC_2    , KC_3    , XXXXXXX
+#define ____LOWER_R4_____                               _______ , MOU_0
 
 #define ___________________RAISE_L1____________________ KC_ESC  , XXXXXXX , _______ , KC_DQUO , XXXXXXX
 #define ___________________RAISE_L2____________________ _______ , KC_CIRC , KC_TILD , KC_QUOT , XXXXXXX
@@ -58,16 +58,6 @@
 #define ___________________RAISE_R2____________________ KC_PLUS , KC_MINS , KC_EQL  , KC_EXLM , KC_PERC
 #define ___________________RAISE_R3____________________ KC_ASTR , KC_SLSH , KC_LT   , KC_GT   , KC_COLN
 #define ____RAISE_R4_____                               XXXXXXX , _______
-
-#define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , KC_APP  , XXXXXXX , XXXXXXX
-#define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
-#define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
-#define ____FUNCTIONS_L4_                                                             _______ , KC_BSPC
-
-#define ___________________FUNCTIONS_R1________________ KC_F15  , KC_F7   , KC_F8   , KC_F9   , KC_F12
-#define ___________________FUNCTIONS_R2________________ KC_F14  , KC_F4   , KC_F5   , KC_F6   , KC_F11
-#define ___________________FUNCTIONS_R3________________ KC_F13  , KC_F1   , KC_F2   , KC_F3   , KC_F10
-#define ____FUNCTIONS_R4_                               KC_SPC  , _______
 
 #define ___________________MOUSE_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
 #define ___________________MOUSE_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , KC_BTN1
@@ -89,15 +79,25 @@
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
 #define __NAVIGATION_R4__                               XXXXXXX , MO_MAI
 
+#define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , KC_APP  , XXXXXXX , XXXXXXX
+#define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
+#define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
+#define ____FUNCTIONS_L4_                                                             TD_IJLE , KC_BSPC
+
+#define ___________________FUNCTIONS_R1________________ KC_F15  , KC_F7   , KC_F8   , KC_F9   , KC_F12
+#define ___________________FUNCTIONS_R2________________ KC_F14  , KC_F4   , KC_F5   , KC_F6   , KC_F11
+#define ___________________FUNCTIONS_R3________________ KC_F13  , KC_F1   , KC_F2   , KC_F3   , KC_F10
+#define ____FUNCTIONS_R4_                               KC_SPC  , TD_IJRI
+
 #define ___________________MEDIA_L1____________________ RGB_TOG , RGB_HUD , RGB_HUI , RGB_MOD , XXXXXXX
 #define ___________________MEDIA_L2____________________ XXXXXXX , RGB_VAD , RGB_VAI , XXXXXXX , XXXXXXX
 #define ___________________MEDIA_L3____________________ XXXXXXX , RGB_SAD , RGB_SAI , XXXXXXX , XXXXXXX
-#define ____MEDIA_L4_____                                                             _______ , KC_BSPC
+#define ____MEDIA_L4_____                                                             TD_IJLE , KC_BSPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
 #define ___________________MEDIA_R2____________________ HYPR_A  , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX
 #define ___________________MEDIA_R3____________________ HYPR_V  , XXXXXXX , SS_MODM , SS_MODP , XXXXXXX
-#define ____MEDIA_R4_____                               KC_SPC  , _______
+#define ____MEDIA_R4_____                               KC_SPC  , TD_IJRI
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST
 #define ___________________MAINTENANCE_L2______________ XXXXXXX , XXXXXXX , TG_M_ON , TG_M_OF , XXXXXXX

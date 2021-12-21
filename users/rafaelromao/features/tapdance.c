@@ -18,6 +18,8 @@
 
 #include "tapdance.h"
 
+extern os_t os;
+
 static td_tap_t tap_state = {
     .state = TD_NONE
 };
@@ -25,7 +27,9 @@ static td_tap_t tap_state = {
 qk_tap_dance_action_t tap_dance_actions[] = {
     [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_com_finished, td_dot_com_reset),
     [MOU_B13] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b13_finished, td_mou_b13_reset),
-    [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset)
+    [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset),
+    [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),
+    [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig)
 };
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
@@ -45,6 +49,8 @@ __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
     return TD_SINGLE_TAP;
 }
 
+// Decimal Separators
+
 void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
@@ -62,13 +68,13 @@ void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Mouse buttons
+
 void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP: register_code(KC_BTN1); break;
-        case TD_SINGLE_HOLD: register_code(KC_BTN1); break;
         case TD_DOUBLE_TAP: register_code(KC_BTN3); break;
-        case TD_DOUBLE_HOLD: register_code(KC_BTN3); break;
         default: break;
     }
 }
@@ -76,9 +82,7 @@ void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data) {
 void td_mou_b13_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP: unregister_code(KC_BTN1); break;
-        case TD_SINGLE_HOLD: unregister_code(KC_BTN1); break;
         case TD_DOUBLE_TAP: unregister_code(KC_BTN3); break;
-        case TD_DOUBLE_HOLD: unregister_code(KC_BTN3); break;
         default: break;
     }
 }
@@ -87,9 +91,7 @@ void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     switch (tap_state.state) {
         case TD_SINGLE_TAP: register_code(KC_BTN2); break;
-        case TD_SINGLE_HOLD: register_code(KC_BTN2); break;
         case TD_DOUBLE_TAP: register_code(KC_BTN4); break;
-        case TD_DOUBLE_HOLD: register_code(KC_BTN4); break;
         default: break;
     }
 }
@@ -97,11 +99,52 @@ void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data) {
 void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP: unregister_code(KC_BTN2); break;
-        case TD_SINGLE_HOLD: unregister_code(KC_BTN2); break;
         case TD_DOUBLE_TAP: unregister_code(KC_BTN4); break;
-        case TD_DOUBLE_HOLD: unregister_code(KC_BTN4); break;
         default: break;
     }
 }
 
+// IntelliJ Most Common Shortcuts
+
+void td_inj_lef(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    bool isMacOS = os.type == MACOS;
+    bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            if (isMacOS) {
+                SEND_STRING(SS_LGUI("1"));
+                break;
+            }
+            if (isWindowsOrLinux) {
+                SEND_STRING(SS_LCTL("1"));
+            }
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_LCTL);
+            tap_code16(KC_LCTL);
+            break;
+        case TD_SINGLE_HOLD:
+            SEND_STRING(SS_LALT(SS_TAP(X_F7)));
+            break;
+        default: break;
+    }
+}
+
+void td_inj_rig(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            SEND_STRING(SS_LALT(SS_TAP(X_ENT)));
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code16(KC_LSFT);
+            tap_code16(KC_LSFT);
+            break;
+        case TD_SINGLE_HOLD:
+            SEND_STRING(SS_TAP(X_F2));
+            break;
+        default: break;
+    }
+}
 

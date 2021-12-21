@@ -69,7 +69,7 @@ enum {
 // Layer-taps
 
 #define MOU_CAP LT(_MOUSE, SP_CAP)
-#define MOU_P0  LT(_MOUSE, KC_P0)
+#define MOU_0  LT(_MOUSE, KC_0)
 
 #define NAV_MOD LT(_NAVIGATION, SP_MOD)
 
@@ -108,4 +108,3 @@ enum {
 
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
-

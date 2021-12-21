@@ -2,14 +2,10 @@
 
 ## Home Block Modifiers
 
-
-![Home Block Modifiers](https://i.imgur.com/Wjnyss9.png)
-
 [Home Block Modifiers](https://precondition.github.io/home-row-mods#alternative-home-row-mods-layout) are an alternative to [Home Row Modifiers](https://precondition.github.io/home-row-mods), but with the pinky key replaced by the index colunm key in the botton row.
 
 - Home block modifiers are available on both sides of the base layers.
-  - Qwerty: S Shift, D Ctrl, F Alt, V Gui, M Gui, J Alt, K Ctrl, L Shift
-  - Colemak: R Shift, S Ctrl, T Alt, D Gui, H Gui, N Alt, R Ctrl, I Shift
+![Home Block Modifiers](https://i.imgur.com/Wjnyss9.png "Qwerty: S Shift, D Ctrl, F Alt, V Gui, M Gui, J Alt, K Ctrl, L Shift. Colemak: R Shift, S Ctrl, T Alt, D Gui, H Gui, N Alt, R Ctrl, I Shift")
 - Home block modifiers are not available on lower and raise layers, since they delay the symbol activation and are not that much useful anyway.
 
 ## One-Shot Modifiers

@@ -12,9 +12,23 @@
 
 ## Tap Dance
 
+### Decimal Separators
 - The key below the right pinky key, in the lower (numpad style) layer, sends dot on single tap and comma on double tap.
+
+### Mouse buttons
 - The third and fourth mouse buttons can be triggered double tapping the first and second button keys, on the right side of the mouse layer.
 - The first and second buttons are mirrored in the left side of the mouse layer, but without this tap dancing, since it prevents drag and drop from working as expected.
+
+### IntelliJ Shortcuts
+- In the Functions and Media layers, the two outer thumb keys provide tap dances to trigger some of the most common shortcuts in the IntelliJ IDE.
+  - Left Side:
+    - Tap = Focus the Project Window
+    - Double Tap = Run Everything
+    - Hold = Find Usages
+  - Right Side:
+    - Tap = Quick Actions
+    - Double Tap = Search Everywhere
+    - Hold = Next Error/Warning
 
 ## Combos
 

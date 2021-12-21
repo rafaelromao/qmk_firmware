@@ -5,7 +5,7 @@
 [Home Block Modifiers](https://precondition.github.io/home-row-mods#alternative-home-row-mods-layout) are an alternative to [Home Row Modifiers](https://precondition.github.io/home-row-mods), but with the pinky key replaced by the index colunm key in the botton row.
 
 - Home block modifiers are available on both sides of the base layers.
-![Home Block Modifiers](https://i.imgur.com/Wjnyss9.png "Qwerty: S Shift, D Ctrl, F Alt, V Gui, M Gui, J Alt, K Ctrl, L Shift. Colemak: R Shift, S Ctrl, T Alt, D Gui, H Gui, N Alt, R Ctrl, I Shift")
+![img](https://i.imgur.com/Wjnyss9.png)
 - Home block modifiers are not available on lower and raise layers, since they delay the symbol activation and are not that much useful anyway.
 
 ## One-Shot Modifiers
@@ -19,7 +19,7 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 
 ## Standard Modifiers
 
-- Stantard modifiers (Shift, Ctrl, Alt, Gui) are available on the left side of the [functions layer](layers.md). These standard modifiers does not have one-shot or sticky behavior, so they can be used in situations were a tap or multi tap in a modifier key is required, like Shift+Shift or Ctrl+Ctrl+Ctrl, used in some IDEs or software development plugins.
+- Stantard modifiers (Shift, Ctrl, Alt, Gui) are available on the left side of the [functions layer](layers.md). These standard modifiers does not have one-shot or sticky behavior, so they can be used in situations were a tap or multi tap in a modifier key is required.
 
 ## Default Mod Key 
 
@@ -55,7 +55,7 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 
 - Caps Lock is also available in the [functions layer](layers), but its behavior is not what we usually see. No matter how it was activated, Caps Lock will be automatically deactivated after 2 seconds of inactivity
     - The caps lock timer feature is implemented by starting a timer when the caps lock is activated and deactivating it in the matrix scan, in case the timer has expired.
-        - [capslock_timer.c](../features/capslock_timer.c)
+    - [capslock_timer.c](../features/capslock_timer.c)
     - The caps lock timer is restarted when a valid key is pressed.
 
 ##

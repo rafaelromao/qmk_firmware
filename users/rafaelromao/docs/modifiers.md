@@ -1,9 +1,5 @@
 # rafaelromao's keyboard layout
 
-## Standard Modifiers
-
-- Stantard modifiers (Shift, Ctrl, Alt, Gui) are available on the left side of the [functions layer](layers.md). These standard modifiers does not have one-shot or sticky behavior, so they can be used in situations were a tap or multi tap in a modifier key is required, like Shift+Shift or Ctrl+Ctrl+Ctrl, used in some IDEs or software development plugins.
-
 ## Home Block Modifiers
 
 
@@ -24,6 +20,10 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 - These modifiers will be automatically deactivated after 2 seconds. 
 - They can also be activated in sticky mode, with a double tap, and remain active until manually deactivated by tapping the Default Mod thumb key.
 - One-shot modifiers are available on the left side of the navigation and mouse layers.
+
+## Standard Modifiers
+
+- Stantard modifiers (Shift, Ctrl, Alt, Gui) are available on the left side of the [functions layer](layers.md). These standard modifiers does not have one-shot or sticky behavior, so they can be used in situations were a tap or multi tap in a modifier key is required, like Shift+Shift or Ctrl+Ctrl+Ctrl, used in some IDEs or software development plugins.
 
 ## Default Mod Key 
 

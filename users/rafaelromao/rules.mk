@@ -9,6 +9,7 @@ SRC += features/mouselayer_toggle.c
 SRC += features/os_toggle.c
 SRC += features/macros.c
 SRC += features/combos.c
+BACKLIGHT_ENABLE = no
 LTO_ENABLE = yes
 MOUSEKEY_ENABLE = yes # Mouse keys
 EXTRAKEY_ENABLE = yes # Audio control and System control

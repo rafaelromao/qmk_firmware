@@ -29,3 +29,5 @@
 #include "features/combos.h"
 #include "features/default_mod_key.h"
 #include "features/capitalize_key.h"
+
+__attribute__ ((weak)) void matrix_scan_keymap(void);

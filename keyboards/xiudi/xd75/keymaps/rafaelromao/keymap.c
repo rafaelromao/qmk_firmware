@@ -153,3 +153,57 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       XXXXXXX , XXXXXXX , XXXXXXX , __MAINTENANCE_L4_ , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , __MAINTENANCE_R4_ , XXXXXXX , XXXXXXX , XXXXXXX)
  // |_____________________________________________________________________________________________________________________________________________________|
 };
+
+// RGB Indicators
+
+void set_rgblight_by_layer(uint32_t layer) {
+    switch (layer) {
+        case _QWERTY:
+        case _COLEMAK:
+            rgblight_setrgb(RGB_BLUE);
+            break;
+        case _LOWER:
+        case _RAISE:
+        case _FUNCTIONS:
+        case _NAVIGATION:
+        case _NAVIGATION_CLONE:
+        case _MOUSE:
+        case _MEDIA:
+            rgblight_setrgb(RGB_TURQUOISE);
+            break;
+        case _MAINTENANCE:
+            rgblight_setrgb(RGB_RED);
+            break;
+        default:
+            break;
+    }
+}
+
+void set_current_layer_rgb(void) {
+    set_rgblight_by_layer(get_highest_layer(layer_state|default_layer_state));
+}
+
+void set_mod_indicators(void) {
+    bool isShift = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isCtrl = get_mods() & MOD_MASK_CTRL || get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
+    bool isAlt = get_mods() & MOD_MASK_ALT || get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
+    bool isGui = get_mods() & MOD_MASK_GUI || get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
+    bool isCapsLocked = host_keyboard_led_state().caps_lock;
+
+    if (isCapsLocked) {
+        rgblight_setrgb(RGB_YELLOW);
+    } else if (isShift || isCtrl || isAlt || isGui) {
+        rgblight_setrgb(RGB_WHITE);
+    } else {
+        set_current_layer_rgb();
+    }
+}
+
+uint32_t layer_state_set_user(uint32_t state) {
+    set_rgblight_by_layer(biton32(state));
+    return state;
+}
+
+void matrix_scan_keymap(void) {
+    set_mod_indicators();
+}

@@ -192,7 +192,9 @@ void set_mod_indicators(void) {
 
     if (isCapsLocked) {
         rgblight_setrgb(RGB_YELLOW);
-    } else if (isShift || isCtrl || isAlt || isGui) {
+    } else if (isShift) {
+        rgblight_setrgb(RGB_TURQUOISE);
+    } else if (isCtrl || isAlt || isGui) {
         rgblight_setrgb(RGB_WHITE);
     } else {
         set_current_layer_rgb();

@@ -62,22 +62,22 @@
 #define ___________________MOUSE_L1____________________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
 #define ___________________MOUSE_L2____________________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , KC_BTN1
 #define ___________________MOUSE_L3____________________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , KC_BTN2
-#define ____MOUSE_L4_____                                                             MO_MAI  , XXXXXXX
+#define ____MOUSE_L4_____                                                             MO_MAI  , _______
 
 #define ___________________MOUSE_R1____________________ XXXXXXX , XXXXXXX , KC_WH_D , KC_WH_U , KC_ENT
 #define ___________________MOUSE_R2____________________ TD_MB13 , KC_MS_L , KC_MS_D , KC_MS_U , KC_MS_R
 #define ___________________MOUSE_R3____________________ TD_MB24 , KC_INS  , KC_HOME , KC_END  , KC_DEL
-#define ____MOUSE_R4_____                               XXXXXXX , _______
+#define ____MOUSE_R4_____                               _______ , MO_MAI
 
 #define ___________________NAVIGATION_L1_______________ KC_ESC  , XXXXXXX , KC_TAB  , XXXXXXX , XXXXXXX
 #define ___________________NAVIGATION_L2_______________ XXXXXXX , OS_LSFT , OS_LCTL , OS_LALT , XXXXXXX
 #define ___________________NAVIGATION_L3_______________ XXXXXXX , XXXXXXX , XXXXXXX , OS_LGUI , XXXXXXX
-#define __NAVIGATION_L4__                                                             MO_MAI  , XXXXXXX
+#define __NAVIGATION_L4__                                                             MO_MAI  , _______
 
 #define ___________________NAVIGATION_R1_______________ XXXXXXX , XXXXXXX , KC_PGDN , KC_PGUP , KC_ENT
 #define ___________________NAVIGATION_R2_______________ XXXXXXX , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT
 #define ___________________NAVIGATION_R3_______________ XXXXXXX , KC_INS  , KC_HOME , KC_END  , KC_DEL
-#define __NAVIGATION_R4__                               XXXXXXX , MO_MAI
+#define __NAVIGATION_R4__                               _______ , MO_MAI
 
 #define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , KC_APP  , XXXXXXX , XXXXXXX
 #define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX

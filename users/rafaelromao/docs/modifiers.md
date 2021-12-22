@@ -35,7 +35,7 @@ The Default Mod key is a custom key that works as either one-shot Cmd or one-sho
 - Its alias in the keymap diagram is _Mod_.
 - The Default Mod key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - [default-mod-key.c](../features/default_mod_key.c)
+    - Source code: [default-mod-key.c](../features/default_mod_key.c)
 
 ## Capitalize Key 
 
@@ -49,16 +49,17 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 - Its alias in the keymap diagram is _Cap_.
 - The Capitalize key is implemented using a custom keycode and a layer-tap.
     - The hold behavior is kept as is, but the tap behavior is intercepted and customized.
-    - [capitalize-key.c](../features/capitalize_key.c)
+    - Source code: [capitalize-key.c](../features/capitalize_key.c)
 
 ## Caps Lock
 
 - Caps Lock is also available in the [functions layer](layers), but its behavior is not what we usually see. No matter how it was activated, Caps Lock will be automatically deactivated after 2 seconds of inactivity
     - The caps lock timer feature is implemented by starting a timer when the caps lock is activated and deactivating it in the matrix scan, in case the timer has expired.
-    - [capslock_timer.c](../features/capslock_timer.c)
     - The caps lock timer is restarted when a valid key is pressed.
+    - Source code: [capslock_timer.c](../features/capslock_timer.c)
 
 ##
 [Home](../readme.md) | 
 [Layout](layout.md) | 
-Modifiers
+Modifiers |
+[Functions and Media](functions.md) | 

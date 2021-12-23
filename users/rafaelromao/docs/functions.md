@@ -34,4 +34,4 @@ The Functions and Media layers are activated holding the left or right pinky key
 Symbols and Numbers |
 Functions and Media |
 [Navigation and Mouse](navigation.md) |
-[Maintenence](maintenance.md) |
+[Maintenance](maintenance.md) |

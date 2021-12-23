@@ -31,5 +31,7 @@ The Functions and Media layers are activated holding the left and right pinky ke
 [Home](../readme.md) | 
 Layout |
 [Modifiers](modifiers.md) |
+Symbols and Numbers |
 Functions and Media |
-[Navigation and Mouse](navigation.md) | 
+[Navigation and Mouse](navigation.md) |
+Maintenence |

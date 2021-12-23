@@ -31,27 +31,27 @@ Maintenence |
 	- [Cmd/Ctrl](docs/modifiers.md) on the left side (you can choose which one will be used).
 	- [Shift/Caps Lock](docs/modifiers.md) on the right side (if Shift is already active, toggle [Caps Lock](docs/modifiers.md)).
 - Symbols in the left side of the lower and right side of the raise.
-    - All [symbols](docs/layers.md) reachable with a single hand.
-    - Most used [VIM symbols](docs/layers.md) on the right side of the raise layer.
+    - All symbols reachable with a single hand.
+    - Most used VIM symbols on the right side of the raise layer.
 - Numpad in the right side of the lower and accents in the left side of the raise.
 	- A combo activates the numpad using only the right hand.
 	- Math symbols can be accessed activating the raise layer when the lower is already active.
-- Navigation and Mouse [layers](docs/layers.md) activated holding thumb keys.
+- [Navigation and Mouse](navigation.md) layers activated holding thumb keys.
     - VIM style navigation, but in the home position (shifted one key to the right).
     - Mouse layer can be disabled (navigation layer will replace it).
-- [Combos](docs/layers.md) allow easy access to Esc, Enter, Tab and layer switching.
-- [Tap Dance](docs/layers.md) is used for decimal separator keys and mouse buttons.
+- Combos allow easy access to Esc, Enter, Tab and layer switching.
+- Tap Dance is used for decimal separator keys and mouse buttons.
 
 ## Feature List
-- [Layers](docs/layers.md)
+- Layers
   - Base, Lower, Raise, Functions, Media, Navigation, Mouse and Maintenance.
-- [Persistent Layers](docs/layers.md)
+- Persistent Layers
   - Qwerty or Colemak-dhm as the base layer.
 - [Tap Hold](docs/modifiers.md)
   - Home Block Mods and Layer Toggle.
-- [Combos](docs/layers.md)
+- Combos
   - Enter, Esc, Tab and Layer Toggle.
-- [Tap Dance](docs/layers.md)
+- Tap Dance
   - Decimal Separators and Mouse Buttons.
 - Macros
   - String Delimiters and Shortcuts.
@@ -63,7 +63,7 @@ Maintenence |
   - One-shot Shift and Caps Lock, in the thumb.
 - [Caps Lock Timer](docs/modifiers.md)
   - Caps Lock automatically disable after timeout.
-- Mouse Layer Toggle
+- [Mouse Layer Toggle](navigation.md)
   - Replace the Mouse layer by the Navigation layer.
 
 ## Resources

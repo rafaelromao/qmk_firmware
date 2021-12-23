@@ -34,7 +34,7 @@ Home |
 - [Numpad](docs/symbols.md) in the right side of the lower and accents in the left side of the raise.
 	- A combo activates the numpad using only the right hand.
 	- Math symbols can be accessed activating the raise layer when the lower is already active.
-- [Navigation and Mouse](navigation.md) layers activated holding thumb keys.
+- [Navigation and Mouse](docs/navigation.md) layers activated holding thumb keys.
     - VIM style navigation, but in the home position (shifted one key to the right).
     - Mouse layer can be disabled (navigation layer will replace it).
 - Combos allow easy access to Esc, Enter, Tab and layer switching.

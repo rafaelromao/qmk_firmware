@@ -39,5 +39,7 @@
 [Home](../readme.md) | 
 Layout |
 [Modifiers](modifiers.md) |
+Symbols and Numbers |
 [Functions and Media](functions.md) | 
 Navigation and Mouse |
+Maintenance |

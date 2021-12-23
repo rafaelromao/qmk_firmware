@@ -20,7 +20,7 @@ Home |
 Symbols and Numbers |
 [Functions and Media](docs/functions.md) | 
 [Navigation and Mouse](docs/navigation.md) |
-Maintenence |
+Maintenance |
 
 ## Summary
 - This is a [34 keys split layout](docs/layout.md), 3x5+2, optimized for programmers.

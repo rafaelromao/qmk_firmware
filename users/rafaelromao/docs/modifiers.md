@@ -63,3 +63,4 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 [Layout](layout.md) | 
 Modifiers |
 [Functions and Media](functions.md) | 
+[Navigation and Mouse](navigation.md) | 

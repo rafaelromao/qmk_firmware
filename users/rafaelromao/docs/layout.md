@@ -42,3 +42,5 @@
 [Home](../readme.md) | 
 Layout |
 [Modifiers](modifiers.md)
+[Functions and Media](functions.md) | 
+[Navigation and Mouse](navigation.md) | 

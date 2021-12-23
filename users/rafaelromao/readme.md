@@ -14,6 +14,14 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 
 ![img](https://i.imgur.com/bRG6njK.png)
 
+## Table of Contents
+
+Home | 
+[Layout](docs/layout.md) |
+[Modifiers](docs/modifiers.md) |
+[Functions and Media](docs/functions.md) | 
+[Navigation and Mouse](docs/navigation.md) | 
+
 ## Summary
 - This is a [34 keys split layout](docs/layout.md), 3x5+2, optimized for programmers.
 - [Home block mods](docs/modifiers.md) for shortcuts that combine them.

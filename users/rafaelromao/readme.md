@@ -51,9 +51,9 @@ Home |
   - Enter, Esc, Tab and Layer Toggle.
 - Tap Dance
   - Decimal Separators and Mouse Buttons.
-- Macros
+- [Macros](docs/symbols.md)
   - String Delimiters and Shortcuts.
-- [OS Toggle](maintenance.md)
+- [OS Toggle](docs/maintenance.md)
   - Mac OS, Windows or Linux.
 - [Default Modifier Key](docs/modifiers.md)
   - One-shot Cmd or Ctrl, in the thumb.
@@ -61,7 +61,7 @@ Home |
   - One-shot Shift and Caps Lock, in the thumb.
 - [Caps Lock Timer](docs/modifiers.md)
   - Caps Lock automatically disable after timeout.
-- [Mouse Layer Toggle](navigation.md)
+- [Mouse Layer Toggle](docs/navigation.md)
   - Replace the Mouse layer by the Navigation layer.
 
 ## Resources

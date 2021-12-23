@@ -20,11 +20,14 @@
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
 - Source Code: [persistent_layers.c](../features/persistent_layers.c)
 
+## Base Layer Combos
+- Combos are available in the base layers to send ENTER, ESC, TAB and to toggle the [Lower and Raise](symbols.md) layers.
+
 ##
 [Home](../readme.md) | 
 Layout |
 [Modifiers](modifiers.md) |
-Symbols and Numbers |
+[Symbols and Numbers](symbols.md) |
 [Functions and Media](functions.md) | 
 [Navigation and Mouse](navigation.md) |
 [Maintenance](maintenance.md) |

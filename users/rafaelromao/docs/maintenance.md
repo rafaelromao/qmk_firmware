@@ -9,7 +9,7 @@ The Maintenance layer is activated by holding both outer thumb keys.
 [Home](../readme.md) | 
 [Layout](layout.md) |
 [Modifiers](modifiers.md) |
-Symbols and Numbers |
+[Symbols and Numbers](symbols.md) |
 [Functions and Media](functions.md) | 
 [Navigation and Mouse](navigation.md) |
 Maintenance |

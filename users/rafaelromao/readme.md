@@ -17,7 +17,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 Home | 
 [Layout](docs/layout.md) |
 [Modifiers](docs/modifiers.md) |
-Symbols and Numbers |
+[Symbols and Numbers](docs/symbols.md) |
 [Functions and Media](docs/functions.md) | 
 [Navigation and Mouse](docs/navigation.md) |
 [Maintenance](docs/maintenance.md) |

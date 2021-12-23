@@ -5,7 +5,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 ![img](https://i.imgur.com/Qaef03m.png)
 
 ## Navigation
-- It gives access to [one-shot mods](modifiers.md), along with tab and esc, in the left side and VIM style navigation, along with page navigation, insert, delete, home, end and enter, in the right side.
+- The Navigation layer gives access to [one-shot mods](modifiers.md), along with tab and esc, in the left side and VIM style navigation, along with page navigation, insert, delete, home, end and enter, in the right side.
 - In VIM, navigation with hjkl should be ignored in favor of the navigation with the fingers in the home position, using the navigation layer.
     - For that to work better, hjkl should be disabled in normal and visual modes:
         ```vim
@@ -23,7 +23,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 - Using a combo with the three main fingers in the home row, the Navigation layer is toggled off.
 
 ## Mouse
-- It is similar to the navigation layer, but replaces the arrows and page navigation by mouse and wheel navigation.
+- The Mouse layer is similar to the navigation layer, but replaces the arrows and page navigation by mouse and wheel navigation.
 - From the Mouse layer, it is possible to toggle the Navigation layer on with a combo, also using the three main fingers in the bottom row. It allow single hand access to the Navigation layer.
 
 ### Mouse Buttons
@@ -38,7 +38,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 [Home](../readme.md) | 
 [Layout](layout.md) |
 [Modifiers](modifiers.md) |
-Symbols and Numbers |
+[Symbols and Numbers](symbols.md) |
 [Functions and Media](functions.md) | 
 Navigation and Mouse |
 [Maintenance](maintenance.md) |

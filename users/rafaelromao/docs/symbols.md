@@ -1,18 +1,38 @@
 # rafaelromao's keyboard layout
 
-### Symbols
+### Symbols and Numbers
+Symbols and Numbers are available in the two classic layers, Lower and Raise, activated holding the space and backspace thumb keys, respectively.
 ![img](https://i.imgur.com/bR2duzJ.png)
-- Symbols are spread across the lower and raise layers, making them easier to reach with a single hand.
-- All symbols are conveniently placed for software programming and VIM commands.
+- Symbols are available in the left side of the lower and raise layers, making them easier to reach with a single hand.
+- Accents are available in the left side of the raise layer, so they require two hands to access them.
+- Number are available in the right side of the lower layer, also requiring two hands to access them, but that can be mitigated using a three keys combo with the right hand, in the bottom row, to toggle the lower layer on permanently.
+- A combo with the three fingers in the home row can be used to toggle the layer off.
+- Enter and Esc are available in the Lower and Raise layer, as well as in the Navigation and Mouse layers, in the same positions.
 
-### VIM
-- Symbols that are commonly used in VIM are placed in the right side of the raise layer, easily accessible using only the right hand. 
+### Lower Symbols
+- String delimiter symbols as well as symbols for AND and OR, among others, are found in the left side of the Lower layer.
+- Source code: [macros.c](../features/macros.c)
+
+### Raise Symbols
+- Symbols that are commonly used in VIM are placed in the right side of the Raise layer, making them easily accessible using only the right hand.
+- Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, ${, can all be typed rolling through keys in the right hand.
+
+### Numpad
+- In the right side of the Lower layer, there is a numpad, replicating the traditional numpad of 100% keyboards.
+- The Raise layer can be activated on top of the Lower layer, holding the left home thumb key, which make it easier to access math operators when working with the numpad.
+- A tap dance is used to give access to both comma and dot in the pinky key, which makes it easier to use different locales with different decimal separators.
+- Source code: [tapdance.c](../features/tapdance.c)
+
 ### Accentuation
-- Using the lower layer, we can type `, ', ", ~ and ^ as independent symbols, while in the left side of the raise layer, we can find these keycodes as accents. I had to program some macros in qmk to make it work this way though.
+- Accents are available in the left side of the raise layer, while non-accent versions of these symbols are available in the left side of the Lower layer and in the right side of the Raise layer.
 - For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + tapping c, gives me ç. The same goes for the other accents.
 
 
 ##
 [Home](../readme.md) | 
-Symbols |
-[Modifiers](modifiers.md)
+[Layout](layout.md) |
+[Modifiers](modifiers.md) |
+Symbols and Numbers |
+[Functions and Media](functions.md) | 
+[Navigation and Mouse](navigation.md) |
+[Maintenance](maintenance.md) |

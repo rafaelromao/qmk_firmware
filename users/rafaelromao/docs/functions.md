@@ -29,7 +29,7 @@ The Functions and Media layers are activated holding the left and right pinky ke
 
 ##
 [Home](../readme.md) | 
-Layout |
+[Layout](layout.md) |
 [Modifiers](modifiers.md) |
 Symbols and Numbers |
 Functions and Media |

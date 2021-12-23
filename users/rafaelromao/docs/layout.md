@@ -14,11 +14,11 @@
 - The two inner thumb keys act as space or backspace, when tapped.
 - Holding both outer thumb keys will activate the maintenance layer.
 
-## Base Layers
+## Persistent Base Layers
 ![img](https://i.imgur.com/icHdCiR.png)
 - The base layer can be either qwerty or colemak dhm.
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
-- [persistent_layers.c](../features/persistent_layers.c)
+- Source Code: [persistent_layers.c](../features/persistent_layers.c)
 
 ##
 [Home](../readme.md) | 

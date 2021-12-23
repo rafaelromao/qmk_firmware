@@ -1,8 +1,8 @@
 # rafaelromao's keyboard layout
 
 ## Functions and Media
-![img](https://i.imgur.com/NEgfnzi.png)
 The Functions and Media layers are activated holding the left or right pinky keys in the home row, respectively.
+![img](https://i.imgur.com/NEgfnzi.png)
 
 ## Functions
 - On the left side of the Functions layer, there are standard modifier keys, also forming a home block, along with Caps Lock and a Menu key.
@@ -34,4 +34,4 @@ The Functions and Media layers are activated holding the left or right pinky key
 Symbols and Numbers |
 Functions and Media |
 [Navigation and Mouse](navigation.md) |
-Maintenence |
+[Maintenence](maintenance.md) |

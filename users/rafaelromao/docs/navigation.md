@@ -1,10 +1,10 @@
 # rafaelromao's keyboard layout
 
 ## Navigation and Mouse
+The Navigation and Mouse layer can be activated holding the outer left and right thumb keys, respectively.
 ![img](https://i.imgur.com/Qaef03m.png)
 
 ## Navigation
-- The Navigation layer is activated while holding the outer left thumb key.
 - It gives access to [one-shot mods](modifiers.md), along with tab and esc, in the left side and VIM style navigation, along with page navigation, insert, delete, home, end and enter, in the right side.
 - In VIM, navigation with hjkl should be ignored in favor of the navigation with the fingers in the home position, using the navigation layer.
     - For that to work better, hjkl should be disabled in normal and visual modes:
@@ -23,7 +23,6 @@
 - Using a combo with the three main fingers in the home row, the Navigation layer is toggled off.
 
 ## Mouse
-- The Mouse layer is activated while holding the outer right thumb key.
 - It is similar to the navigation layer, but replaces the arrows and page navigation by mouse and wheel navigation.
 - From the Mouse layer, it is possible to toggle the Navigation layer on with a combo, also using the three main fingers in the bottom row. It allow single hand access to the Navigation layer.
 
@@ -42,4 +41,4 @@
 Symbols and Numbers |
 [Functions and Media](functions.md) | 
 Navigation and Mouse |
-Maintenance |
+[Maintenence](maintenance.md) |

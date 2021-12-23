@@ -20,7 +20,7 @@ Home |
 Symbols and Numbers |
 [Functions and Media](docs/functions.md) | 
 [Navigation and Mouse](docs/navigation.md) |
-Maintenance |
+[Maintenence](maintenance.md) |
 
 ## Summary
 - This is a [34 keys split layout](docs/layout.md), 3x5+2, optimized for programmers.
@@ -53,7 +53,7 @@ Maintenance |
   - Decimal Separators and Mouse Buttons.
 - Macros
   - String Delimiters and Shortcuts.
-- OS Toggle
+- [OS Toggle](maintenance.md)
   - Mac OS, Windows or Linux.
 - [Default Modifier Key](docs/modifiers.md)
   - One-shot Cmd or Ctrl, in the thumb.

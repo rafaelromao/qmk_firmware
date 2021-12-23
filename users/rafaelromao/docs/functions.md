@@ -8,7 +8,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 - On the left side of the Functions layer, there are standard modifier keys, also forming a home block, along with Caps Lock and a Menu key.
 - On the right side, the F keys are available in the same positions as their respective numbers, so F5 and 5 are under the same key, making it easier to assimilate. F10 to F12 goes bottom up in the pinky column, while F13 to F15 are available in the inner index column and can be mapped to custom actions or macros in the operating system level.
 - The Functions layer can be toggle on permanently using a two keys combo with the right hand, in the bottom row of the [Lower](symbols.md) layer.
-- A combo with the two main fingers in the home row toggles the layer off.
+- A combo with the three main fingers in the home row toggles the layer off.
 
 ## Media
 - In the left side of the Media layer, you can find the RGB control keys, while the media keys are placed in the right side.

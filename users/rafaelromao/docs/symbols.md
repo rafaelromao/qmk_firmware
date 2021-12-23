@@ -6,7 +6,7 @@ Symbols and Numbers are available in the two classic layers, Lower and Raise, ac
 - Symbols are available in the left side of the lower and raise layers, making them easier to reach with a single hand.
 - Accents are available in the left side of the raise layer, so they require two hands to access them.
 - Number are available in the right side of the lower layer, also requiring two hands to access them, but that can be mitigated using a two keys combo with the right hand, in the bottom row, to toggle the lower layer on permanently.
-- A combo with the two fingers in the home row can be used to toggle the layer off.
+- A combo with the three fingers in the home row can be used to toggle the layer off.
 - Enter and Esc are available in the Lower and Raise layer, as well as in the Navigation and Mouse layers, in the same positions.
 
 ### Lower Symbols

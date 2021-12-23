@@ -10,8 +10,6 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 ## Keymap
 
-http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
-
 ![img](https://i.imgur.com/bRG6njK.png)
 
 ## Table of Contents
@@ -68,6 +66,7 @@ Maintenence |
 
 ## Resources
 
+- [KLE](http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739)
 - [QMK Docs](https://docs.qmk.fm)
 - [Keyboard Tester](https://config.qmk.fm/#/test)
 

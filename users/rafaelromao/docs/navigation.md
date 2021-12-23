@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
 ## Navigation and Mouse
-![img](https://i.imgur.com/z6Jmilf.png)
+![img](https://i.imgur.com/Qaef03m.png)
 
 ## Navigation
 - The Navigation layer is activated while holding the outer left thumb key.

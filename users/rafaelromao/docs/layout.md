@@ -20,27 +20,9 @@
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
 - [persistent_layers.c](../features/persistent_layers.c)
 
-## Lower and Raise
-![img](https://i.imgur.com/bR2duzJ.png)
-
-
-## Modifiers
-![img](https://i.imgur.com/Wjnyss9.png)
-
-## Navigation and Mouse
-![img](https://i.imgur.com/SYjvs55.png)
-
-
-## Functions and Media
-![img](https://i.imgur.com/NEgfnzi.png)
-
-
-## Maintenance
-![img](https://i.imgur.com/8mNeLvh.png)
-
 ##
 [Home](../readme.md) | 
 Layout |
 [Modifiers](modifiers.md)
 [Functions and Media](functions.md) | 
-[Navigation and Mouse](navigation.md) | 
+[Navigation and Mouse](navigation.md) |

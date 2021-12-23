@@ -37,7 +37,7 @@
 
 ##
 [Home](../readme.md) | 
-[Layout](layout.md) |
+Layout |
 [Modifiers](modifiers.md) |
 [Functions and Media](functions.md) | 
 Navigation and Mouse |

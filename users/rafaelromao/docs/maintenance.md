@@ -12,4 +12,4 @@ The Maintenance layer is activated by holding both outer thumb keys.
 Symbols and Numbers |
 [Functions and Media](functions.md) | 
 [Navigation and Mouse](navigation.md) |
-Maintenence |
+Maintenance |

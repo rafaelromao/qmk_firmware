@@ -28,10 +28,10 @@ Home |
 - One-shot mods in thumb keys.
 	- [Cmd/Ctrl](docs/modifiers.md) on the left side (you can choose which one will be used).
 	- [Shift/Caps Lock](docs/modifiers.md) on the right side (if Shift is already active, toggle [Caps Lock](docs/modifiers.md)).
-- Symbols in the left side of the lower and right side of the raise.
+- [Symbols](docs/symbols) in the left side of the lower and right side of the raise.
     - All symbols reachable with a single hand.
     - Most used VIM symbols on the right side of the raise layer.
-- Numpad in the right side of the lower and accents in the left side of the raise.
+- [Numpad](docs/symbols) in the right side of the lower and accents in the left side of the raise.
 	- A combo activates the numpad using only the right hand.
 	- Math symbols can be accessed activating the raise layer when the lower is already active.
 - [Navigation and Mouse](navigation.md) layers activated holding thumb keys.

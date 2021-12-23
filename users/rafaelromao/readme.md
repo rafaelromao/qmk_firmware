@@ -17,7 +17,7 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 ## Table of Contents
 
 Home | 
-Layout |
+[Layout](docs/layout.md) |
 [Modifiers](docs/modifiers.md) |
 Symbols and Numbers |
 [Functions and Media](docs/functions.md) | 

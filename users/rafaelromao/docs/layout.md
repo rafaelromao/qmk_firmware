@@ -10,7 +10,7 @@
 
 ## Thumb Keys
 - The four thumb keys control layer transitions, when held (navigation, lower, raise and mouse).
-- The two outer thumb keys act as [modifiers](modifiers.md) or [shortcuts](shortcuts.md), when tapped.
+- The two outer thumb keys act as [modifiers](modifiers.md) or shortcuts, when tapped.
 - The two inner thumb keys act as space or backspace, when tapped.
 - Holding both outer thumb keys will activate the maintenance layer.
 

@@ -41,4 +41,4 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 Symbols and Numbers |
 [Functions and Media](functions.md) | 
 Navigation and Mouse |
-[Maintenence](maintenance.md) |
+[Maintenance](maintenance.md) |

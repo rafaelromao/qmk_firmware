@@ -37,7 +37,7 @@
 
 ##
 [Home](../readme.md) | 
-Layout |
+[Layout](layout.md) |
 [Modifiers](modifiers.md) |
 Symbols and Numbers |
 [Functions and Media](functions.md) | 

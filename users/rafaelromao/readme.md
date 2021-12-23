@@ -41,9 +41,9 @@ Maintenance |
 - Tap Dance is used for decimal separator keys and mouse buttons.
 
 ## Feature List
-- Layers
+- [Layers](docs/layout.md)
   - Base, Lower, Raise, Functions, Media, Navigation, Mouse and Maintenance.
-- Persistent Layers
+- [Persistent Base Layers](docs/layout.md)
   - Qwerty or Colemak-dhm as the base layer.
 - [Tap Hold](docs/modifiers.md)
   - Home Block Mods and Layer Toggle.

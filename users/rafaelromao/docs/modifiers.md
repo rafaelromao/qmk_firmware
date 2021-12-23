@@ -60,7 +60,7 @@ The Capitalize key is a custom key that works both as Shift and Caps Lock.
 
 ##
 [Home](../readme.md) | 
-Layout | 
+[Layout](layout.md) |
 Modifiers |
 Symbols and Numbers |
 [Functions and Media](functions.md) | 

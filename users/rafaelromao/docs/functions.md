@@ -2,7 +2,7 @@
 
 ## Functions and Media
 ![img](https://i.imgur.com/NEgfnzi.png)
-The Functions and Media layers are activated holding the left and right pinky keys in the home row, respectively.
+The Functions and Media layers are activated holding the left or right pinky keys in the home row, respectively.
 
 ## Functions
 - On the left side of the Functions layer, there are standard modifier keys, also forming a home block, along with Caps Lock and a Menu key.

@@ -17,10 +17,12 @@ http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739
 ## Table of Contents
 
 Home | 
-[Layout](docs/layout.md) |
+Layout |
 [Modifiers](docs/modifiers.md) |
+Lower and Raise |
 [Functions and Media](docs/functions.md) | 
-[Navigation and Mouse](docs/navigation.md) | 
+[Navigation and Mouse](docs/navigation.md) |
+Maintenence |
 
 ## Summary
 - This is a [34 keys split layout](docs/layout.md), 3x5+2, optimized for programmers.

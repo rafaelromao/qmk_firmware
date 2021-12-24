@@ -47,9 +47,9 @@ Home |
   - Qwerty or Colemak-dhm as the base layer.
 - [Tap Hold](docs/modifiers.md)
   - Home Block Mods and Layer Toggle.
-- [Combos](combos.c)
+- [Combos](features/combos.c)
   - Enter, Esc, Tab and Layer Toggle.
-- [Tap Dance](tapdance.c)
+- [Tap Dance](features/tapdance.c)
   - Decimal Separators and Mouse Buttons.
 - [Macros](docs/symbols.md)
   - String Delimiters and Shortcuts.

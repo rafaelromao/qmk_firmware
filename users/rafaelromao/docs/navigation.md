@@ -31,7 +31,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 - The first and second buttons are mirrored in the left side of the mouse layer, but without this tap dancing, since it prevents drag and drop from working as expected.
 
 ### Mouse Layer Toggle
-- The mouse layer can be disabled, using the [maintenance](maintenance.md) layer. In this case, the navigation layer will be activated in its place.
+- The mouse layer can be disabled, using the [Maintenance](maintenance.md) layer. In this case, the navigation layer will be activated in its place.
 - Source code: [mouselayer_toggle.c](../features/mouselayer_toggle.c)
 
 ##

@@ -20,8 +20,8 @@ Symbols and Numbers are available in the two classic layers, Lower and Raise, ac
 - Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, ${, can all be typed rolling through keys in the right hand.
 
 ### Numpad
-- In the right side of the Lower layer, there is a numpad, replicating the traditional numpad of 100% keyboards.
-- The Raise layer can be activated on top of the Lower layer, holding the left home thumb key, which make it easier to access math operators when working with the numpad.
+- In the right side of the Lower layer, there is a numpad, replicating the traditional numpad of 100% keyboards, except for the math operators.
+- The Raise layer can be activated on top of the Lower layer, holding the backspace thumb key, which make it easier to access math operators when working with the numpad.
 - A tap dance is used to give access to both comma and dot in the pinky key, which makes it easier to use different locales with different decimal separators.
 - Source code: [tapdance.c](../features/tapdance.c)
 

@@ -27,7 +27,7 @@ Home |
 - [Home block mods](docs/modifiers.md) for shortcuts that combine them.
 - [One-shot mods](docs/modifiers.md) in thumb keys.
 	- [Cmd/Ctrl](features/default_mod_key.c) on the left side (you can choose which one will be used).
-	- [Shift/Caps Lock](features/capitalize_key.c) on the right side (if Shift is already active, toggle [Caps Lock](docs/modifiers.md)).
+	- [Shift/Caps Lock](features/capitalize_key.c) on the right side (if Shift is already active, toggle Caps Lock).
 - [Symbols](docs/symbols.md) in the left side of the lower and right side of the raise.
     - All symbols reachable with a single hand.
     - Most used VIM symbols on the right side of the raise layer.

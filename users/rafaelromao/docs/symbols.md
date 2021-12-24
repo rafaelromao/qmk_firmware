@@ -4,8 +4,8 @@
 Symbols and Numbers are available in the two classic layers, Lower and Raise, activated holding the space and backspace thumb keys, respectively.
 ![img](https://i.imgur.com/kP6jRXE.png)
 - Symbols are available in the left side of the Lower layer and in the right side of the Raise layers, making them easier to reach with a single hand.
-- Accents are available in the left side of the Raise layer, so they require two hands to access them.
-- Number are available in the right side of the Lower layer, also requiring two hands to access them, but that can be mitigated using a combo to toggle the layer on using only the rigth hand.
+- Accents are available in the left side of the Raise layer, so they require two hands.
+- Number are available in the right side of the Lower layer, also requiring two hands, but that can be mitigated using a combo to toggle the layer on using only the rigth hand.
 - The Lower and Raise layers can be toggled on tapping or holding a two keys combo with the right and left hands, respectively, in the bottom row.
 - A combo with the three fingers in the home row can be used to toggle these layers off.
 - Enter and Esc are available in the Lower and Raise layer, as well as in the Navigation and Mouse layers, in the same positions.

@@ -10,7 +10,7 @@ Symbols and Numbers are available in the two classic layers, Lower and Raise, ac
 - Enter and Esc are available in the Lower and Raise layer, as well as in the Navigation and Mouse layers, in the same positions.
 
 ### Lower Symbols
-- String delimiter, conditional operators, parenthesis and square brackets, among others, are found in the left side of the Lower layer.
+- String delimiters, conditional operators, parenthesis and square brackets, among others, are found in the left side of the Lower layer.
 - Source code: [macros.c](../features/macros.c)
 
 ### Raise Symbols

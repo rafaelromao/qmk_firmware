@@ -23,11 +23,11 @@ Home |
 [Maintenance](docs/maintenance.md) |
 
 ## Summary
-- This is a [34 keys split layout](docs/layout.md), 3x5+2, optimized for programmers.
+- [This](docs/layout.md) is a 34 keys split layout, 3x5+2, optimized for programmers.
 - [Home block mods](docs/modifiers.md) for shortcuts that combine them.
-- One-shot mods in thumb keys.
-	- [Cmd/Ctrl](docs/modifiers.md) on the left side (you can choose which one will be used).
-	- [Shift/Caps Lock](docs/modifiers.md) on the right side (if Shift is already active, toggle [Caps Lock](docs/modifiers.md)).
+- [One-shot mods](docs/modifiers.md) in thumb keys.
+	- [Cmd/Ctrl](features/default_mod_key.c) on the left side (you can choose which one will be used).
+	- [Shift/Caps Lock](features/capitalize_key.c) on the right side (if Shift is already active, toggle [Caps Lock](docs/modifiers.md)).
 - [Symbols](docs/symbols.md) in the left side of the lower and right side of the raise.
     - All symbols reachable with a single hand.
     - Most used VIM symbols on the right side of the raise layer.
@@ -37,8 +37,8 @@ Home |
 - [Navigation and Mouse](docs/navigation.md) layers activated holding thumb keys.
     - VIM style navigation, but in the home position (shifted one key to the right).
     - Mouse layer can be disabled (navigation layer will replace it).
-- Combos allow easy access to Esc, Enter, Tab and layer switching.
-- Tap Dance is used for decimal separator keys and mouse buttons.
+- [Combos](features/combos.c) allow easy access to Esc, Enter, Tab and layer switching.
+- [Tap Dance](features/tapdance.c) is used for decimal separator keys and mouse buttons.
 
 ## Feature List
 - [Layers](docs/layout.md)

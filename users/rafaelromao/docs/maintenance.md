@@ -3,7 +3,16 @@
 ## Maintenance
 The Maintenance layer is activated by holding both outer thumb keys.
 ![img](https://i.imgur.com/8mNeLvh.png)
-- The Maintenance layer is where the keyboard can be configured. In this layer, there are options to put the keyboard in bootloader mode (reset), clear the eeprom, put the host computer to sleep mode or power it off, change the operating system used in keys that are OS aware, like the [default modifier key](modifiers.md), disable or enable the Mouse layer and toogle any layer on permanently, as well as chaging the base layer to either Qwerty or Colemak.
+- The Maintenance layer is where the keyboard can be configured.
+- In this layer, there are options to: 
+  - Put the keyboard in bootloader mode (reset). 
+  - Clear the eeprom. 
+  - Put the host computer in sleep mode, or power it off.
+  - Change the operating system used in keys that are OS aware, like the [Default Mod key](modifiers.md).
+    - Source code: [os_toggle.c](../features/os_toggle.c)
+  - Disable or enable the [Mouse layer](navigation.md). 
+  - Toogle any layer on. 
+  - Chaging the [Base layer](layout.md) to either Qwerty or Colemak. 
 
 ##
 [Home](../readme.md) | 

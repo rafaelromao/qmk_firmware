@@ -26,7 +26,7 @@ Symbols and Numbers are available in the two classic layers, Lower and Raise, ac
 - Source code: [tapdance.c](../features/tapdance.c)
 
 ### Accentuation
-- Accents are available in the left side of the raise layer, while non-accent versions of these symbols are available in the left side of the Lower layer and in the right side of the Raise layer.
+- Accents are available in the left side of the Raise layer, while non-accent versions of these symbols are available in the left side of the Lower layer and in the right side of the Raise layer.
 - For example, considering qwerty, holding my left thumb + tapping s + releasing the thumb + tapping c, gives me 'c, while holding my right thumb + tapping f + tapping c, gives me ç. The same goes for the other accents.
 
 

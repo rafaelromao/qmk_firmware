@@ -19,7 +19,7 @@ One-Shot Modifiers are modifier keys that, when tapped, remain active until the 
 
 ## Standard Modifiers
 
-- Stantard modifiers (Shift, Ctrl, Alt, Gui) are available on the left side of the [functions layer](layers.md). These standard modifiers does not have one-shot or sticky behavior, so they can be used in situations were a tap or multi tap in a modifier key is required.
+- Stantard modifiers (Shift, Ctrl, Alt, Gui) are available on the left side of the [functions layer](layers.md). These standard modifiers do not have one-shot or sticky behavior, so they can be used in situations were a tap or multi tap in a modifier key is required.
 
 ## Default Mod Key 
 

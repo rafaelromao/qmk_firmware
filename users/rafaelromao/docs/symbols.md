@@ -5,20 +5,21 @@ Symbols and Numbers are available in the two classic layers, Lower and Raise, ac
 ![img](https://i.imgur.com/kP6jRXE.png)
 - Symbols are available in the left side of the Lower layer and in the right side of the Raise layers, making them easier to reach with a single hand.
 - Accents are available in the left side of the Raise layer, so they require two hands to access them.
-- Number are available in the right side of the Lower layer, also requiring two hands to access them. 
-- The Lower layer can be toggled on tapping or holding a two keys combo with the left hand, in the bottom row.
-- The Raise layer can be toggled on tapping or holding a two keys combo with the right hand, in the bottom row. 
-- A combo with the three fingers in the home row can be used to toggle the layer off.
+- Number are available in the right side of the Lower layer, also requiring two hands to access them, but that can be mitigated using a combo to toggle the layer on using only the rigth hand.
 - Enter and Esc are available in the Lower and Raise layer, as well as in the Navigation and Mouse layers, in the same positions.
 
 ### Lower Symbols
 - String delimiters, conditional operators, parenthesis and square brackets, among others, are found in the left side of the Lower layer.
 - Source code: [macros.c](../features/macros.c)
+- The Lower layer can be toggled on tapping or holding a two keys combo with the left hand, in the bottom row.
+- A combo with the three fingers in the home row can be used to toggle the layer off.
 
 ### Raise Symbols
 - Symbols that are commonly used in VIM are placed in the right side of the Raise layer, making them easily accessible using only the right hand.
 - Curly braces and angle brackets are also found in the right side of this layer.
 - Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, ${, can all be typed rolling through keys in the right hand.
+- The Raise layer can be toggled on tapping or holding a two keys combo with the right hand, in the bottom row. 
+- A combo with the three fingers in the home row can be used to toggle the layer off.
 
 ### Numpad
 - In the right side of the Lower layer, there is a numpad, replicating the traditional numpad of 100% keyboards.

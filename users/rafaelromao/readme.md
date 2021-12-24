@@ -47,15 +47,15 @@ Home |
   - Qwerty or Colemak-dhm as the base layer.
 - [Tap Hold](docs/modifiers.md)
   - Home Block Mods and Layer Toggle.
-- Combos
+- [Combos](combos.c)
   - Enter, Esc, Tab and Layer Toggle.
-- Tap Dance
+- [Tap Dance](tapdance.c)
   - Decimal Separators and Mouse Buttons.
 - [Macros](docs/symbols.md)
   - String Delimiters and Shortcuts.
 - [OS Toggle](docs/maintenance.md)
   - Mac OS, Windows or Linux.
-- [Default Modifier Key](docs/modifiers.md)
+- [Default Mod Key](docs/modifiers.md)
   - One-shot Cmd or Ctrl, in the thumb.
 - [Capitalize Key](docs/modifiers.md)
   - One-shot Shift and Caps Lock, in the thumb.

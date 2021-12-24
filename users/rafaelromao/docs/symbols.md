@@ -10,11 +10,12 @@ Symbols and Numbers are available in the two classic layers, Lower and Raise, ac
 - Enter and Esc are available in the Lower and Raise layer, as well as in the Navigation and Mouse layers, in the same positions.
 
 ### Lower Symbols
-- String delimiter symbols as well as symbols for AND and OR, among others, are found in the left side of the Lower layer.
+- String delimiter, conditional operators, parenthesis and square brackets, among others, are found in the left side of the Lower layer.
 - Source code: [macros.c](../features/macros.c)
 
 ### Raise Symbols
 - Symbols that are commonly used in VIM are placed in the right side of the Raise layer, making them easily accessible using only the right hand.
+- Curly braces and angle brackets are also found in the right side of this layer.
 - Some common programmer n-grams, like ->, =>, \<!--, -->, <>, />, !=, :=, +=, -=, ${, can all be typed rolling through keys in the right hand.
 
 ### Numpad

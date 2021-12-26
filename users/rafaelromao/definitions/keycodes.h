@@ -73,8 +73,8 @@ enum {
 
 #define NAV_MOD LT(_NAVIGATION, SP_MOD)
 
-#define RAI_SPC LT(_RAISE, KC_BSPC)
 #define LOW_SPC LT(_LOWER, KC_SPC)
+#define RAI_BSP LT(_RAISE, KC_BSPC)
 
 #define KCA_FUN LT(_FUNCTIONS, KC_A)
 #define UND_MED LT(_MEDIA, KC_UNDS)
@@ -108,3 +108,9 @@ enum {
 
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
+#define CB_SAL LGUI(KC_A)
+#define CB_SAV LGUI(KC_S)
+#define CB_CUT LGUI(KC_X)
+#define CB_COPY LGUI(KC_C)
+#define CB_PAST LGUI(KC_V)
+#define CB_PTEX G(A(S(KC_V)))

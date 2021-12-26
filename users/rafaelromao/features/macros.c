@@ -83,7 +83,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
         // Shift+Backspace for Delete (when not one-shot)
 
         case KC_BSPC:
-        case RAI_SPC:
+        case RAI_BSP:
             if (record->event.pressed) {
                 if (isShifted && !isOneShotShift) {
                     tap_code(KC_DEL);

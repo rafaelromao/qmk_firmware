@@ -27,7 +27,7 @@
 #define ___________________QWERTY_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
 #define ___________________QWERTY_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , UND_MED
 #define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , KC_DOT  , KC_SCLN
-#define ____QWERTY_R4____                               RAI_SPC , MOU_CAP
+#define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
 
 #define ___________________COLEMAK_L1__________________ KC_Q    , KC_W    , KC_F    , KC_P    , KC_B
 #define ___________________COLEMAK_L2__________________ KCA_FUN , LSFTT_R , LCTLT_S , LALTT_T , KC_G
@@ -37,7 +37,7 @@
 #define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , KC_UNDS
 #define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KCO_MED
 #define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , KC_SCLN
-#define ____COLEMAK_R4___                               RAI_SPC , MOU_CAP
+#define ____COLEMAK_R4___                               RAI_BSP , MOU_CAP
 
 #define ___________________LOWER_L1____________________ KC_ESC  , KC_LPRN , KC_RPRN , KC_BSLS , SS_TILD
 #define ___________________LOWER_L2____________________ SS_BTIC , SS_DQUO , SS_SQUO , KC_AMPR , KC_PIPE

@@ -37,37 +37,10 @@ __attribute__ ((weak)) void matrix_scan_user(void) {
 __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     // Extend capslock timer
-    switch (process_capslock_timer_extension(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
+    process_capslock_timer_extension(keycode, record);
 
-    // Process persistent layers
-    switch (process_persistent_layers(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process mouse layer
-    switch (process_mouselayer(keycode, record)) {
-        case PROCESS_RECORD_RETURN_TRUE:
-            return true;
-        case PROCESS_RECORD_RETURN_FALSE:
-            return false;
-        default:
-            break;
-    };
-
-    // Process OS toggle
-    switch (process_os_toggle(keycode, record)) {
+    // Process combos
+    switch (process_combos(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:
@@ -98,6 +71,36 @@ __attribute__ ((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *r
 
     // Process capitalize key
     switch (process_capitalize_key(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process persistent layers
+    switch (process_persistent_layers(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process mouse layer
+    switch (process_mouselayer(keycode, record)) {
+        case PROCESS_RECORD_RETURN_TRUE:
+            return true;
+        case PROCESS_RECORD_RETURN_FALSE:
+            return false;
+        default:
+            break;
+    };
+
+    // Process OS toggle
+    switch (process_os_toggle(keycode, record)) {
         case PROCESS_RECORD_RETURN_TRUE:
             return true;
         case PROCESS_RECORD_RETURN_FALSE:

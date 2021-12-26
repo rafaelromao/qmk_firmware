@@ -21,7 +21,7 @@
 bool get_hold_on_other_key_press_result(uint16_t keycode) {
     switch (keycode) {
         case LOW_SPC:
-        case RAI_SPC:
+        case RAI_BSP:
             // Immediately select the hold action when another key is pressed.
             return true;
         default:

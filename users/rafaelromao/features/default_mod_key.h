@@ -22,4 +22,5 @@
 #include "process_record_result.h"
 #include "os_toggle.h"
 
+void clear_any_mods(void);
 process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *record);

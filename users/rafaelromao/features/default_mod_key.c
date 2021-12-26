@@ -20,6 +20,19 @@
 
 extern os_t os;
 
+void clear_any_mods(void) {
+    uint8_t mods = 0;
+    if ((mods = get_oneshot_locked_mods())) {
+        clear_oneshot_locked_mods();
+    }
+    if ((mods = get_oneshot_mods())) {
+        clear_oneshot_mods();
+    }
+    if ((mods = get_mods())) {
+        unregister_mods(mods);
+    }
+}
+
 process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *record) {
 
     bool isMacOS = os.type == MACOS;
@@ -37,16 +50,7 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (isAnyOneShot) {
-                        uint8_t mods = 0;
-                        if ((mods = get_oneshot_locked_mods())) {
-                            clear_oneshot_locked_mods();
-                        }
-                        if ((mods = get_oneshot_mods())) {
-                            clear_oneshot_mods();
-                        }
-                        if ((mods = get_mods())) {
-                            unregister_mods(mods);
-                        }
+                        clear_any_mods();
                     } else if (!isOneShotDefaultMod) {
                         if (isMacOS) {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));

@@ -34,6 +34,8 @@
 #define COMBO_TERM 10
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
+#define COMBO_HOLD_TERM 175
+#define COMBO_MUST_TAP_PER_COMBO
 
 // Mouse key speed and acceleration.
 #define MOUSEKEY_DELAY 100

@@ -50,7 +50,7 @@ process_record_result_t process_mouselayer(uint16_t keycode, keyrecord_t *record
         case MOU_0:
             // If it is starting or finishing holding, and the mouse layer is disabled,
             // activate or deactivate the navigation layer instead, otherwise continue with normal behavior
-            if (!record->tap.count){
+            if (!record->tap.count) {
                 if (!mouselayer.enabled) {
                     if (record->event.pressed) {
                         layer_on(_NAVIGATION);

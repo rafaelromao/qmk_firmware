@@ -76,6 +76,25 @@ combo_t key_combos[COMBO_COUNT] = {
 
 extern os_t os;
 
+bool get_combo_must_tap(uint16_t index, combo_t *combo) {
+    uint16_t key;
+    uint8_t idx = 0;
+    bool combo_must_tap = false;
+    while ((key = pgm_read_word(&combo->keys[idx])) != COMBO_END) {
+        switch (key) {
+            case QK_MOD_TAP...QK_MOD_TAP_MAX:
+            case QK_LAYER_TAP...QK_LAYER_TAP_MAX:
+            case QK_MOMENTARY...QK_MOMENTARY_MAX:
+                combo_must_tap = true;
+            default:
+                combo_must_tap = false;
+                break;
+        }
+        idx += 1;
+    }
+    return combo_must_tap;
+}
+
 process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;

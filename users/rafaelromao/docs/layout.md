@@ -20,7 +20,7 @@
 - Source Code: [persistent_layers.c](../features/persistent_layers.c)
 
 ## Base Layer Combos
-- Combos are available in the base layers to send ENTER, ESC, TAB and to toggle the [Lower and Raise](symbols.md) layers.
+- Combos are available in the base layers to send ENTER, ESC, TAB, common shortcuts and to toggle the [Lower and Raise](symbols.md) layers.
 
 ##
 [Home](../readme.md) | 

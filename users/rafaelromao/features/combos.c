@@ -102,13 +102,15 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
 process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
 
         case CB_SAL:
             if (record->event.pressed) {
                 clear_any_mods();
-                if (isWindowsOrLinux) {
+                if (isWindowsOrLinux | isShifted) {
                     SEND_STRING(SS_LCTL("a"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
@@ -117,7 +119,7 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
         case CB_SAV:
             if (record->event.pressed) {
                 clear_any_mods();
-                if (isWindowsOrLinux) {
+                if (isWindowsOrLinux | isShifted) {
                     SEND_STRING(SS_LCTL("s"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
@@ -126,7 +128,7 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
         case CB_CUT:
             if (record->event.pressed) {
                 clear_any_mods();
-                if (isWindowsOrLinux) {
+                if (isWindowsOrLinux | isShifted) {
                     SEND_STRING(SS_LCTL("x"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
@@ -135,7 +137,7 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
         case CB_COPY:
             if (record->event.pressed) {
                 clear_any_mods();
-                if (isWindowsOrLinux) {
+                if (isWindowsOrLinux | isShifted) {
                     SEND_STRING(SS_LCTL("c"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
@@ -144,7 +146,7 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
         case CB_PAST:
             if (record->event.pressed) {
                 clear_any_mods();
-                if (isWindowsOrLinux) {
+                if (isWindowsOrLinux | isShifted) {
                     SEND_STRING(SS_LCTL("v"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
@@ -153,7 +155,7 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
         case CB_PTEX:
             if (record->event.pressed) {
                 clear_any_mods();
-                if (isWindowsOrLinux) {
+                if (isWindowsOrLinux | isShifted) {
                     SEND_STRING(SS_LCTL(SS_LSFT("v")));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }

@@ -107,17 +107,19 @@ void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data) {
 // IntelliJ Most Common Shortcuts
 
 void td_inj_lef(qk_tap_dance_state_t *state, void *user_data) {
+
     tap_state.state = dance_state(state);
-    bool isMacOS = os.type == MACOS;
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
+
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            if (isMacOS) {
+            if (isWindowsOrLinux | isShifted) {
+                SEND_STRING(SS_LCTL("1"));
+            } else {
                 SEND_STRING(SS_LGUI("1"));
                 break;
-            }
-            if (isWindowsOrLinux) {
-                SEND_STRING(SS_LCTL("1"));
             }
             break;
         case TD_DOUBLE_TAP:

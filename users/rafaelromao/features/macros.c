@@ -22,7 +22,6 @@ extern os_t os;
 
 process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
-    bool isMacOS = os.type == MACOS;
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
@@ -61,21 +60,19 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
         case SS_MODP:
             if (record->event.pressed) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI("+"));
-                }
-                else if (isWindowsOrLinux) {
+                if (isWindowsOrLinux | isShifted) {
                     SEND_STRING(SS_LCTL("+"));
+                } else {
+                    SEND_STRING(SS_LGUI("+"));
                 }
             }
             return PROCESS_RECORD_RETURN_FALSE;
         case SS_MODM:
             if (record->event.pressed) {
-                if (isMacOS) {
-                    SEND_STRING(SS_LGUI("-"));
-                }
-                else if (isWindowsOrLinux) {
+                if (isWindowsOrLinux | isShifted) {
                     SEND_STRING(SS_LCTL("-"));
+                } else {
+                    SEND_STRING(SS_LGUI("-"));
                 }
             }
             return PROCESS_RECORD_RETURN_FALSE;

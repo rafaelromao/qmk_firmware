@@ -2,7 +2,7 @@
 
 ## Navigation and Mouse
 The Navigation and Mouse layer can be activated holding the outer left and right thumb keys, respectively.
-![img](https://i.imgur.com/F6y8lVN.png)
+![img](https://i.imgur.com/hm0D0MV.png)
 
 ## Navigation
 - The Navigation layer gives access to [one-shot mods](modifiers.md), along with tab and esc, in the left side and VIM style navigation, along with page navigation, insert, delete, home, end and enter, in the right side.
@@ -20,7 +20,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
         ```
     - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
 - Once in the Navigation layer, it is possible to keep the layer on permanently, using a combo with the two main fingers in the bottom row.
-- Using a combo with the three main fingers in the home row, the Navigation layer is toggled off.
+- Using a combo with the two main fingers in the home row, the Navigation layer is toggled off.
 
 ## Mouse
 - The Mouse layer is similar to the navigation layer, but replaces the arrows and page navigation by mouse and wheel navigation.

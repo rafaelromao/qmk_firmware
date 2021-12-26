@@ -46,9 +46,9 @@ Home |
 - [Persistent Base Layers](docs/layout.md)
   - Qwerty or Colemak-dhm as the base layer.
 - [Tap Hold](docs/modifiers.md)
-  - Home Block Mods and Layer Toggle.
+  - Home Block Mods and layer toggle.
 - [Combos](features/combos.c)
-  - Enter, Esc, Tab and Layer Toggle.
+  - Enter, Esc, Tab, common shortcuts and layer toggle.
 - [Tap Dance](features/tapdance.c)
   - Decimal Separators and Mouse Buttons.
 - [Macros](docs/symbols.md)

@@ -20,24 +20,24 @@
 
 const uint16_t PROGMEM qwe_esc_combo[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM qwe_sal_combo[] = {KCA_FUN, LSFTT_S, COMBO_END};
-const uint16_t PROGMEM qwe_sav_combo[] = {LSFTT_S, LCTLT_D, LALTT_F, COMBO_END};
+const uint16_t PROGMEM qwe_sav_combo[] = {LSFTT_S, LCTLT_D, COMBO_END};
 const uint16_t PROGMEM qwe_tab_combo[] = {KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM qwe_ent_combo[] = {RALTT_J, RCTLT_K, RSFTT_L, COMBO_END};
+const uint16_t PROGMEM qwe_ent_combo[] = {RCTLT_K, RSFTT_L, COMBO_END};
 const uint16_t PROGMEM col_esc_combo[] = {KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM col_sal_combo[] = {KCA_FUN, LSFTT_R, COMBO_END};
-const uint16_t PROGMEM col_sav_combo[] = {LSFTT_R, LCTLT_S, LALTT_T, COMBO_END};
+const uint16_t PROGMEM col_sav_combo[] = {LSFTT_R, LCTLT_S, COMBO_END};
 const uint16_t PROGMEM col_tab_combo[] = {KC_U, KC_Y, COMBO_END};
-const uint16_t PROGMEM col_ent_combo[] = {RALTT_N, RCTLT_E, RSFTT_I, COMBO_END};
+const uint16_t PROGMEM col_ent_combo[] = {RCTLT_E, RSFTT_I, COMBO_END};
 const uint16_t PROGMEM low_fun_combo[] = {KC_2, KC_3, COMBO_END};
 const uint16_t PROGMEM bas_low_combo[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM bas_rai_combo[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
-const uint16_t PROGMEM fun_tog_combo[] = {KC_F4, KC_F5, KC_F6, COMBO_END};
-const uint16_t PROGMEM nav_tog_combo[] = {KC_LEFT, KC_DOWN, KC_UP, COMBO_END};
-const uint16_t PROGMEM mou_tog_combo[] = {KC_MS_L, KC_MS_D, KC_MS_U, COMBO_END};
-const uint16_t PROGMEM low_tog_combo[] = {KC_4, KC_5, KC_6, COMBO_END};
-const uint16_t PROGMEM rai_tog_combo[] = {KC_MINS, KC_EQL, KC_EXLM, COMBO_END};
-const uint16_t PROGMEM med_tog_combo[] = {KC_MUTE, KC_VOLD, KC_VOLU, COMBO_END};
+const uint16_t PROGMEM fun_tog_combo[] = {KC_F5, KC_F6, COMBO_END};
+const uint16_t PROGMEM nav_tog_combo[] = {KC_DOWN, KC_UP, COMBO_END};
+const uint16_t PROGMEM mou_tog_combo[] = {KC_MS_D, KC_MS_U, COMBO_END};
+const uint16_t PROGMEM low_tog_combo[] = {KC_5, KC_6, COMBO_END};
+const uint16_t PROGMEM rai_tog_combo[] = {KC_EQL, KC_EXLM, COMBO_END};
+const uint16_t PROGMEM med_tog_combo[] = {KC_VOLD, KC_VOLU, COMBO_END};
 const uint16_t PROGMEM qwe_cut_combo[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM qwe_cop_combo[] = {KC_C, LGUIT_V, COMBO_END};
 const uint16_t PROGMEM col_cop_combo[] = {KC_C, LGUIT_D, COMBO_END};
@@ -86,9 +86,13 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
             case QK_LAYER_TAP...QK_LAYER_TAP_MAX:
             case QK_MOMENTARY...QK_MOMENTARY_MAX:
                 combo_must_tap = true;
+                break;
             default:
                 combo_must_tap = false;
                 break;
+        }
+        if (!combo_must_tap) {
+            return false;
         }
         idx += 1;
     }

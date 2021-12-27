@@ -108,9 +108,9 @@ enum {
 
 #define HYPR_A HYPR(KC_A)
 #define HYPR_V HYPR(KC_V)
+
 #define CB_SAL LGUI(KC_A)
 #define CB_SAV LGUI(KC_S)
 #define CB_CUT LGUI(KC_X)
 #define CB_COPY LGUI(KC_C)
 #define CB_PAST LGUI(KC_V)
-#define CB_PTEX G(A(S(KC_V)))

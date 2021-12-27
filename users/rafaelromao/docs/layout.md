@@ -21,7 +21,7 @@
 
 ## Base Layer Combos
 - Combos are available in the base layers to send ENTER, ESC, TAB, common shortcuts and to toggle the [Lower and Raise](symbols.md) layers.
-- All combos must include the home thumb key on its side, to avoid misfires.
+- Most combos include the home thumb key, the on its side, to avoid misfires. The exception is the combo that toggle the Navigation layer.
 - One-shot shift can be used to invert the [default modifier](modifiers.md) used in the combos.
 - If shift, or any other modifier, is held, it will be included in the combo. So Shift+ZX will send Redo instead of Undo.
 

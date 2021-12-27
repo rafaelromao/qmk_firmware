@@ -2,7 +2,7 @@
 
 ## Navigation and Mouse
 The Navigation and Mouse layer can be activated holding the outer left and right thumb keys, respectively.
-![img](https://i.imgur.com/hm0D0MV.png)
+![img](https://i.imgur.com/kypAEZU.png)
 
 ## Navigation
 - The Navigation layer gives access to [one-shot mods](modifiers.md), along with tab and esc, in the left side and VIM style navigation, along with page navigation, insert, delete, home, end and enter, in the right side.

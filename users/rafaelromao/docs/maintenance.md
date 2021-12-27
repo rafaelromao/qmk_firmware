@@ -2,7 +2,7 @@
 
 ## Maintenance
 The Maintenance layer is activated by holding both outer thumb keys.
-![img](https://i.imgur.com/XPSmmaP.png)
+![img](https://i.imgur.com/WtJD5PJ.png)
 - The Maintenance layer is where the keyboard can be configured.
 - In this layer, there are options to: 
   - Put the keyboard in bootloader mode (reset). 

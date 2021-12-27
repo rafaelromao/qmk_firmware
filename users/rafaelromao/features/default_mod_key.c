@@ -37,11 +37,12 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotDefaultMod = (!isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_GUI)) || (isWindowsOrLinux && (get_oneshot_mods() & MOD_MASK_CTRL)) ;
-    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isLockedOneShotShift = get_oneshot_locked_mods() & MOD_MASK_SHIFT;
+    bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || isLockedOneShotShift;
     bool isOneShotCtrl = get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
     bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
     bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
-    bool isAnyOneShot = isOneShotShift || isOneShotCtrl || isOneShotAlt || isOneShotGui || isOneShotDefaultMod;
+    bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
     bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
@@ -49,7 +50,7 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
         case NAV_MOD:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (isAnyOneShot) {
+                    if (isAnyOneShotButShift) {
                         clear_any_mods();
                     } else if (!isOneShotDefaultMod) {
                         if (isWindowsOrLinux | isShifted) {

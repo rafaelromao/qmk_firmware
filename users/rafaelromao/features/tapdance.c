@@ -111,11 +111,10 @@ void td_inj_lef(qk_tap_dance_state_t *state, void *user_data) {
     tap_state.state = dance_state(state);
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            if (isWindowsOrLinux | isShifted) {
+            if (isWindowsOrLinux | isOneShotShift) {
                 SEND_STRING(SS_LCTL("1"));
             } else {
                 SEND_STRING(SS_LGUI("1"));

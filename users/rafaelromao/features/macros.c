@@ -60,7 +60,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
 
         case SS_MODP:
             if (record->event.pressed) {
-                if (isWindowsOrLinux | isShifted) {
+                if (isWindowsOrLinux | isOneShotShift) {
                     SEND_STRING(SS_LCTL("+"));
                 } else {
                     SEND_STRING(SS_LGUI("+"));
@@ -69,7 +69,7 @@ process_record_result_t process_macros(uint16_t keycode, keyrecord_t *record) {
             return PROCESS_RECORD_RETURN_FALSE;
         case SS_MODM:
             if (record->event.pressed) {
-                if (isWindowsOrLinux | isShifted) {
+                if (isWindowsOrLinux | isOneShotShift) {
                     SEND_STRING(SS_LCTL("-"));
                 } else {
                     SEND_STRING(SS_LGUI("-"));

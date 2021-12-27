@@ -42,7 +42,7 @@ const uint16_t PROGMEM med_tog_combo[] = {KC_VOLD, KC_VOLU, COMBO_END};
 
 const uint16_t PROGMEM lqw_sal_combo[] = {KCA_FUN, LSFTT_S, COMBO_END};
 const uint16_t PROGMEM lqw_pas_combo[] = {LCTLT_D, LALTT_F, COMBO_END};
-const uint16_t PROGMEM lqw_cut_combo[] = {KC_Z, KC_X, COMBO_END};
+const uint16_t PROGMEM lqw_und_combo[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM lqw_cop_combo[] = {KC_C, LGUIT_V, COMBO_END};
 
 const uint16_t PROGMEM lco_sal_combo[] = {KCA_FUN, LSFTT_R, COMBO_END};
@@ -51,7 +51,7 @@ const uint16_t PROGMEM lco_cop_combo[] = {KC_C, LGUIT_D, COMBO_END};
 
 const uint16_t PROGMEM rqw_sal_combo[] = {RSFTT_L, UND_MED, COMBO_END};
 const uint16_t PROGMEM rqw_pas_combo[] = {RALTT_J, RCTLT_K, COMBO_END};
-const uint16_t PROGMEM rqw_cut_combo[] = {KC_DOT, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM rqw_und_combo[] = {KC_DOT, KC_SCLN, COMBO_END};
 const uint16_t PROGMEM rqw_cop_combo[] = {RGUIT_M, KC_COMM, COMBO_END};
 
 const uint16_t PROGMEM rco_sal_combo[] = {RSFTT_I, KCO_MED, COMBO_END};
@@ -83,7 +83,7 @@ combo_t key_combos[COMBO_COUNT] = {
 
   COMBO(lqw_sal_combo, CB_SAL),
   COMBO(lqw_pas_combo, CB_PAST),
-  COMBO(lqw_cut_combo, CB_CUT),
+  COMBO(lqw_und_combo, CB_UND),
   COMBO(lqw_cop_combo, CB_COPY),
 
   COMBO(lco_sal_combo, CB_SAL),
@@ -92,7 +92,7 @@ combo_t key_combos[COMBO_COUNT] = {
 
   COMBO(rqw_sal_combo, CB_SAL),
   COMBO(rqw_pas_combo, CB_PAST),
-  COMBO(rqw_cut_combo, CB_CUT),
+  COMBO(rqw_und_combo, CB_UND),
   COMBO(rqw_cop_combo, CB_COPY),
 
   COMBO(rco_sal_combo, CB_SAL),
@@ -129,14 +129,13 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
     bool isOneShotShift = get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
-    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
 
         case CB_SAL:
             if (record->event.pressed) {
-                clear_any_mods();
-                if (isWindowsOrLinux | isShifted) {
+                clear_locked_and_oneshot_mods();
+                if (isWindowsOrLinux | isOneShotShift) {
                     SEND_STRING(SS_LCTL("a"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
@@ -144,26 +143,26 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
 
         case CB_SAV:
             if (record->event.pressed) {
-                clear_any_mods();
-                if (isWindowsOrLinux | isShifted) {
+                clear_locked_and_oneshot_mods();
+                if (isWindowsOrLinux | isOneShotShift) {
                     SEND_STRING(SS_LCTL("s"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
 
-        case CB_CUT:
+        case CB_UND:
             if (record->event.pressed) {
-                clear_any_mods();
-                if (isWindowsOrLinux | isShifted) {
-                    SEND_STRING(SS_LCTL("x"));
+                clear_locked_and_oneshot_mods();
+                if (isWindowsOrLinux | isOneShotShift) {
+                    SEND_STRING(SS_LCTL("z"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
 
         case CB_COPY:
             if (record->event.pressed) {
-                clear_any_mods();
-                if (isWindowsOrLinux | isShifted) {
+                clear_locked_and_oneshot_mods();
+                if (isWindowsOrLinux | isOneShotShift) {
                     SEND_STRING(SS_LCTL("c"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
@@ -171,8 +170,8 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
 
         case CB_PAST:
             if (record->event.pressed) {
-                clear_any_mods();
-                if (isWindowsOrLinux | isShifted) {
+                clear_locked_and_oneshot_mods();
+                if (isWindowsOrLinux | isOneShotShift) {
                     SEND_STRING(SS_LCTL("v"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }

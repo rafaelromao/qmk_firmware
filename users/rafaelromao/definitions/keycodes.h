@@ -111,6 +111,6 @@ enum {
 
 #define CB_SAL LGUI(KC_A)
 #define CB_SAV LGUI(KC_S)
-#define CB_CUT LGUI(KC_X)
+#define CB_UND LGUI(KC_Z)
 #define CB_COPY LGUI(KC_C)
 #define CB_PAST LGUI(KC_V)

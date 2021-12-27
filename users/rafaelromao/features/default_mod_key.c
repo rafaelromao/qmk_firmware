@@ -20,17 +20,17 @@
 
 extern os_t os;
 
-void clear_any_mods(void) {
-    uint8_t mods = 0;
-    if ((mods = get_oneshot_locked_mods())) {
+void clear_locked_and_oneshot_mods(void) {
+    uint8_t locked_oneshot_mods = 0;
+    uint8_t oneshot_mods = 0;
+    if ((locked_oneshot_mods = get_oneshot_locked_mods())) {
         clear_oneshot_locked_mods();
     }
-    if ((mods = get_oneshot_mods())) {
+    if ((oneshot_mods = get_oneshot_mods())) {
         clear_oneshot_mods();
     }
-    if ((mods = get_mods())) {
-        unregister_mods(mods);
-    }
+    unregister_mods(locked_oneshot_mods);
+    unregister_mods(oneshot_mods);
 }
 
 process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *record) {
@@ -43,7 +43,6 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
     bool isOneShotAlt = get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
     bool isOneShotGui = get_oneshot_mods() & MOD_MASK_GUI || get_oneshot_locked_mods() & MOD_MASK_GUI;
     bool isAnyOneShotButShift = isOneShotCtrl || isOneShotAlt || isOneShotGui;
-    bool isShifted = isOneShotShift || get_mods() & MOD_MASK_SHIFT;
 
     switch (keycode) {
 
@@ -51,12 +50,12 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
                     if (isAnyOneShotButShift || isLockedOneShotShift) {
-                        clear_any_mods();
+                        clear_locked_and_oneshot_mods();
                     } else if (!isOneShotDefaultMod) {
-                        if (isShifted) {
-                            clear_any_mods();
+                        if (isOneShotShift) {
+                            clear_locked_and_oneshot_mods();
                         }
-                        if (isWindowsOrLinux | isShifted) {
+                        if (isWindowsOrLinux | isOneShotShift) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
                         } else {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));

@@ -37,7 +37,7 @@ Home |
 - [Navigation and Mouse](docs/navigation.md) layers activated holding thumb keys.
     - VIM style navigation, but in the home position (shifted one key to the right).
     - Mouse layer can be disabled (navigation layer will replace it).
-- [Combos](features/combos.c) allow easy access to Esc, Enter, Tab and layer switching.
+- [Combos](features/combos.c) allow easy access to Esc, Enter, Tab, common shortcuts and layer switching.
 - [Tap Dance](features/tapdance.c) is used for decimal separator keys and mouse buttons.
 
 ## Feature List

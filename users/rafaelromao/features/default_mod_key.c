@@ -53,6 +53,9 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
                     if (isAnyOneShotButShift || isLockedOneShotShift) {
                         clear_any_mods();
                     } else if (!isOneShotDefaultMod) {
+                        if (isShifted) {
+                            clear_any_mods();
+                        }
                         if (isWindowsOrLinux | isShifted) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
                         } else {

@@ -50,7 +50,7 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
         case NAV_MOD:
             if (record->tap.count > 0) {
                 if (record->event.pressed) {
-                    if (isAnyOneShotButShift) {
+                    if (isAnyOneShotButShift || isLockedOneShotShift) {
                         clear_any_mods();
                     } else if (!isOneShotDefaultMod) {
                         if (isWindowsOrLinux | isShifted) {

@@ -30,8 +30,8 @@
 #define TAPPING_TERM 175
 
 // Configure combos
-#define COMBO_COUNT 32
-#define COMBO_TERM 10
+#define COMBO_COUNT 46
+#define COMBO_TERM 40
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
 #define COMBO_HOLD_TERM 175

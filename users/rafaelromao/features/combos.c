@@ -64,7 +64,8 @@ const uint16_t PROGMEM r_col_pas_combo[] = {RAI_BSP, RALTT_N, RCTLT_E, COMBO_END
 const uint16_t PROGMEM r_col_cop_combo[] = {RAI_BSP, RGUIT_H, KC_COMM, COMBO_END};
 
 const uint16_t PROGMEM l_bas_rai_combo[] = {LOW_SPC, KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM r_bas_low_combo[] = {RAI_BSP, KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM r_bas_lo1_combo[] = {RAI_BSP, KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM r_bas_lo2_combo[] = {RAI_BSP, KC_SCLN, COMBO_END};
 const uint16_t PROGMEM r_low_fun_combo[] = {RAI_BSP, KC_2, KC_3, COMBO_END};
 const uint16_t PROGMEM r_mou_nav_combo[] = {KC_HOME, KC_END, COMBO_END};
 
@@ -122,7 +123,8 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_col_cop_combo, CB_COPY),
 
   COMBO(l_bas_rai_combo, TT_RAI),
-  COMBO(r_bas_low_combo, TT_LOW),
+  COMBO(r_bas_lo1_combo, TT_LOW),
+  COMBO(r_bas_lo2_combo, MO_LOW),
   COMBO(r_low_fun_combo, TG_FUN),
   COMBO(r_mou_nav_combo, TO_NAV),
 

@@ -87,7 +87,7 @@ enum {
 #define TO_RAI TO(_RAISE)
 #define TG_RAI TG(_RAISE)
 #define TT_RAI TT(_RAISE)
-#define MO_LOW MO(_LOWER)
+#define OS_LOW OSL(_LOWER)
 #define TO_LOW TO(_LOWER)
 #define TG_LOW TG(_LOWER)
 #define TT_LOW TT(_LOWER)

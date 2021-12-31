@@ -18,7 +18,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 - The space and backspace thumb keys are inverted in the Functions and Media layers, which allow single hand access to both of them.
 
 ## IntelliJ Shortcuts
-- Also in these two layers, the outer thumb keys, mapped to [Mod and Cap](modifiers.md) in the base layers, are used to tap dance through some of the most common IntelliJ Shortcuts.
+- Also in the Functions and Media layers, which means, when holding any of the home row pinky keys, the outer thumb keys can be used to tap dance through some of the most common IntelliJ Shortcuts:
 - Left Side:
     - Tap = Focus the Project Window
     - Double Tap = Run Everything

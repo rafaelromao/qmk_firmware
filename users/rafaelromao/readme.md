@@ -54,7 +54,7 @@ Home |
 - [Macros](docs/symbols.md)
   - String Delimiters and Shortcuts.
 - [IntelliJ Shortcuts](docs/functions.md#intellij-shortcuts)
-  - 6 most usefull IntelliJ shortcuts in the thumbs.
+  - 6 most useful IntelliJ shortcuts in the thumbs.
 - [OS Toggle](docs/maintenance.md)
   - Mac OS, Windows or Linux.
 - [Default Mod Key](docs/modifiers.md#default-mod-key)

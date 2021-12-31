@@ -43,7 +43,7 @@ Home |
 ## Feature List
 - [Layers](docs/layout.md)
   - Base, Lower, Raise, Functions, Media, Navigation, Mouse and Maintenance.
-- [Persistent Base Layers](docs/layout.md)
+- [Persistent Base Layers](docs/layout.md#persistent-base-layers)
   - Qwerty or Colemak-dhm as the base layer.
 - [Tap Hold](docs/modifiers.md)
   - Home Block Mods and layer toggle.
@@ -53,15 +53,17 @@ Home |
   - Decimal Separators and Mouse Buttons.
 - [Macros](docs/symbols.md)
   - String Delimiters and Shortcuts.
+- [IntelliJ Shortcuts](docs/functions.md#intellij-shortcuts)
+  - 6 most usefull IntelliJ shortcuts in the thumbs.
 - [OS Toggle](docs/maintenance.md)
   - Mac OS, Windows or Linux.
-- [Default Mod Key](docs/modifiers.md)
+- [Default Mod Key](docs/modifiers.md#default-mod-key)
   - One-shot Cmd or Ctrl, in the thumb.
-- [Capitalize Key](docs/modifiers.md)
+- [Capitalize Key](docs/modifiers.md#capitalize-key)
   - One-shot Shift and Caps Lock, in the thumb.
-- [Caps Lock Timer](docs/modifiers.md)
+- [Caps Lock Timer](docs/modifiers.md#caps-lock)
   - Caps Lock automatically disable after timeout.
-- [Mouse Layer Toggle](docs/navigation.md)
+- [Mouse Layer Toggle](docs/navigation.md#mouse-layer-toggle)
   - Replace the Mouse layer by the Navigation layer.
 
 ## Resources

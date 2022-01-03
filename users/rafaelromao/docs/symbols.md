@@ -23,7 +23,7 @@ Symbols and Numbers are available in the two classic layers, Lower and Raise, ac
 - In the right side of the Lower layer, there is a Numpad, replicating the traditional Numpad of 100% keyboards, except for the math operators.
 - The Raise layer can be activated on top of the Lower layer, holding the backspace thumb key, which makes it easier to access math operators when working with the numpad.
 - The Numpad can also be activated using only the right hand, holding (or tapping, for one-shot) the backspace thumb key plus the botton row pinky key.
-- A tap dance is used to give access to both comma and dot in the pinky key, which makes it easier to use different locales with different decimal separators.
+- A tap dance is used to give access to both comma and dot in the pinky key, which makes it easier to use different locales with different decimal separators. This key will also activate the Media layer when held, allowing space to be typed using the right hand without leaving the numpad.
 - Source code: [tapdance.c](../features/tapdance.c)
 
 ### Accentuation

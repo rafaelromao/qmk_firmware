@@ -19,12 +19,12 @@ The Navigation and Mouse layer can be activated holding the outer left and right
         vnoremap l <nop>
         ```
     - This trade-off turns the navigation easier and ubiquitous and makes even more sense when using Colemak.
-- Once in the Navigation layer, it is possible to keep the layer on permanently, using a combo with the two main fingers in the bottom row.
-- A combo with three fingers can be used to toggle the Navigation layer off.
+- Once in the Navigation layer, it is possible to keep the layer on, using a combo.
+- Another combo can be used to toggle the Navigation layer off.
 
 ## Mouse
 - The Mouse layer is similar to the navigation layer, but replaces the arrows and page navigation by mouse and wheel navigation.
-- From the Mouse layer, it is possible to toggle the Navigation layer on with a combo, also using the two main fingers in the bottom row. It allow single hand access to the Navigation layer.
+- From the Mouse layer, it is also possible to toggle the Navigation layer on with a combo, which allows single hand access to it.
 
 ### Mouse Buttons
 - The third and fourth mouse buttons can be triggered double tapping the first and second button keys, on the right side of the mouse layer.

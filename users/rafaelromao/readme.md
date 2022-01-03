@@ -57,7 +57,7 @@ This section details how this layout works:
 
 ## References
 
-This were my main references when designing this layout:
+These were my main references when designing this layout:
 
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)

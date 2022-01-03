@@ -2,16 +2,6 @@
 
 A 34 keys split keyboard layout, optimized for programmers.
 
-## Table of Contents
-
-Home | 
-[Layout](docs/layout.md) |
-[Modifiers](docs/modifiers.md) |
-[Symbols and Numbers](docs/symbols.md) |
-[Functions and Media](docs/functions.md) | 
-[Navigation and Mouse](docs/navigation.md) |
-[Maintenance](docs/maintenance.md) |
-
 ## Keyboards
 
 My keymaps, for the keyboards listed here, reference and extend the code in this userspace.
@@ -19,13 +9,13 @@ My keymaps, for the keyboards listed here, reference and extend the code in this
 - [kprepublic/bm40hsrgb](../../keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 - [xiudi/xd75](../../keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
-## Keymap Overview
+## Keymap
 
-The diagram below presents my Keymap definitions. Follow the table of contents above for more details.
+This diagram presents my Keymap definitions. Check the Details section below for more information.
 
 ![img](https://i.imgur.com/UNIIcJU.png)
 
-## Features
+## Main Features
 
 Here is a list of the main features implemented in this layout:
 
@@ -53,6 +43,15 @@ Here is a list of the main features implemented in this layout:
   - Caps Lock automatically disable after timeout.
 - [Mouse Layer Toggle](docs/navigation.md#mouse-layer-toggle)
   - Replace the Mouse layer by the Navigation layer.
+
+## Details
+
+- [Layout](docs/layout.md)
+- [Modifiers](docs/modifiers.md)
+- [Symbols and Numbers](docs/symbols.md)
+- [Functions and Media](docs/functions.md)
+- [Navigation and Mouse](docs/navigation.md)
+- [Maintenance](docs/maintenance.md)
 
 ## Resources
 

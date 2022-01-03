@@ -14,7 +14,6 @@ The Functions and Media layers are activated holding the left or right pinky key
 - In the left side of the Media layer, you can find the RGB control keys, while the media keys are placed in the right side.
 - Also in the right side, there are keys to control Zoom, which can be either Cmd+ and Cmd- or Ctrl+ and Ctrl-, according to the operating system that is selected in the [Maintenance](maintenance.md) layer.
 - The Media layer can also be activated using the left hand, holding (or tapping, for one-shot) the space thumb key plus the botton row pinky key. 
-- It can also be activated from the lower layer, which allow right hand access to space while using the Numpad.
 
 ## Space and Backspace
 - The space and backspace thumb keys are inverted in the Functions and Media layers, which allow single hand access to both of them.

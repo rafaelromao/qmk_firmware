@@ -101,6 +101,7 @@ enum {
 #define TO_MAI TO(_MAINTENANCE)
 #define TO_MED TO(_MEDIA)
 #define TG_MED TG(_MEDIA)
+#define OS_MED OSL(_MEDIA)
 #define MO_FUN MO(_FUNCTIONS)
 #define TO_FUN TO(_FUNCTIONS)
 #define TG_FUN TG(_FUNCTIONS)

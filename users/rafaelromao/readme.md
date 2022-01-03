@@ -10,7 +10,7 @@ Here is where most of my code resides. My keyboards reference and extend this co
 
 ## Keymap
 
-![img](https://i.imgur.com/fgmjwZi.png)
+![img](https://i.imgur.com/UNIIcJU.png)
 
 ## Table of Contents
 

@@ -56,6 +56,7 @@ void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP: register_code(KC_DOT); break;
         case TD_DOUBLE_TAP: register_code(KC_COMM); break;
+        case TD_SINGLE_HOLD: layer_on(_MEDIA);
         default: break;
     }
 }
@@ -64,6 +65,7 @@ void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data) {
     switch (tap_state.state) {
         case TD_SINGLE_TAP: unregister_code(KC_DOT); break;
         case TD_DOUBLE_TAP: unregister_code(KC_COMM); break;
+        case TD_SINGLE_HOLD: layer_off(_MEDIA);
         default: break;
     }
 }

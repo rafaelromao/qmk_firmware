@@ -19,32 +19,34 @@ This diagram presents my Keymap definitions. Check the Details section below for
 
 Here is a list of the main features implemented in this layout:
 
-- [Layers](docs/layout.md)
-  - Base, Lower, Raise, Functions, Media, Navigation, Mouse and Maintenance.
-- [Persistent Base Layers](docs/layout.md#persistent-base-layers)
-  - Qwerty or Colemak-dhm as the base layer.
-- [Tap Hold](docs/modifiers.md)
-  - Home Block Mods and layer toggle.
-- [Combos](features/combos.c)
-  - Enter, Esc, Tab, common shortcuts and layer toggle.
-- [Tap Dance](features/tapdance.c)
-  - Decimal Separators and Mouse Buttons.
-- [Macros](docs/symbols.md)
-  - String Delimiters and Shortcuts.
-- [IntelliJ Shortcuts](docs/functions.md#intellij-shortcuts)
-  - 6 most useful IntelliJ shortcuts in the thumbs.
-- [OS Toggle](docs/maintenance.md)
-  - Mac OS, Windows or Linux.
-- [Default Mod Key](docs/modifiers.md#default-mod-key)
-  - One-shot Cmd or Ctrl, in the thumb.
-- [Capitalize Key](docs/modifiers.md#capitalize-key)
-  - One-shot Shift and Caps Lock, in the thumb.
-- [Caps Lock Timer](docs/modifiers.md#caps-lock)
-  - Caps Lock automatically disable after timeout.
-- [Mouse Layer Toggle](docs/navigation.md#mouse-layer-toggle)
-  - Replace the Mouse layer by the Navigation layer.
+- [Layers](docs/layout.md):
+  Base, Lower, Raise, Functions, Media, Navigation, Mouse and Maintenance.
+- [Persistent Base Layers](docs/layout.md#persistent-base-layers):
+  Qwerty or Colemak-dhm as the base layer.
+- [Tap Hold](docs/modifiers.md):
+  Home Block Mods and layer toggle.
+- [Combos](features/combos.c):
+  Enter, Esc, Tab, common shortcuts and layer toggle.
+- [Tap Dance](features/tapdance.c):
+  Decimal Separators and Mouse Buttons.
+- [Macros](docs/symbols.md):
+  String Delimiters and Shortcuts.
+- [IntelliJ Shortcuts](docs/functions.md#intellij-shortcuts):
+  6 most useful IntelliJ shortcuts in the thumbs.
+- [OS Toggle](docs/maintenance.md):
+  Mac OS, Windows or Linux.
+- [Default Mod Key](docs/modifiers.md#default-mod-key):
+  One-shot Cmd or Ctrl, in the thumb.
+- [Capitalize Key](docs/modifiers.md#capitalize-key):
+  One-shot Shift and Caps Lock, in the thumb.
+- [Caps Lock Timer](docs/modifiers.md#caps-lock):
+  Caps Lock automatically disable after timeout.
+- [Mouse Layer Toggle](docs/navigation.md#mouse-layer-toggle):
+  Replace the Mouse layer by the Navigation layer.
 
 ## Details
+
+This section details how this layout works:
 
 - [Layout](docs/layout.md)
 - [Modifiers](docs/modifiers.md)
@@ -53,13 +55,9 @@ Here is a list of the main features implemented in this layout:
 - [Navigation and Mouse](docs/navigation.md)
 - [Maintenance](docs/maintenance.md)
 
-## Resources
-
-- [KLE](http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739)
-- [QMK Docs](https://docs.qmk.fm)
-- [Keyboard Tester](https://config.qmk.fm/#/test)
-
 ## References
+
+This were my main references when designing this layout:
 
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
@@ -70,3 +68,11 @@ Here is a list of the main features implemented in this layout:
 - [DreymaR](https://dreymar.colemak.org)
 - [Thomas Baart](https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
+
+## Resources
+
+Some other useful resouces:
+
+- [KLE](http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739)
+- [QMK Docs](https://docs.qmk.fm)
+- [Keyboard Tester](https://config.qmk.fm/#/test)

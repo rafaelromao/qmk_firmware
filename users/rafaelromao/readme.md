@@ -28,7 +28,7 @@ Here is a list of the main features implemented in this layout:
 - [Combos](features/combos.c):
   Enter, Esc, Tab, common shortcuts and layer toggle.
 - [Tap Dance](features/tapdance.c):
-  Decimal separators, mouse buttons custom shortcuts and layer toggle.
+  Decimal separators, mouse buttons, custom shortcuts and layer toggle.
 - [IntelliJ Shortcuts](docs/functions.md#intellij-shortcuts):
   6 most useful IntelliJ shortcuts in the thumbs.
 - [Macros](docs/symbols.md):

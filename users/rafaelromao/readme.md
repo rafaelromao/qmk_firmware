@@ -40,7 +40,7 @@ Here is a list of the main features implemented in this layout:
 - [Capitalize Key](docs/modifiers.md#capitalize-key):
   One-shot Shift and Caps Lock, in the thumb.
 - [Caps Lock Timer](docs/modifiers.md#caps-lock):
-  Caps Lock automatically disable after timeout.
+  Caps Lock automatically disabled after timeout.
 - [Mouse Layer Toggle](docs/navigation.md#mouse-layer-toggle):
   Replace the Mouse layer by the Navigation layer.
 

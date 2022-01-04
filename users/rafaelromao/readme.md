@@ -34,7 +34,7 @@ Here is a list of the main features implemented in this layout:
 - [Macros](docs/symbols.md):
   String delimiters and custom shortcuts.
 - [OS Toggle](docs/maintenance.md):
-  Mac OS, Windows or Linux.
+  Different behaviors for Mac OS, Windows and Linux.
 - [Default Mod Key](docs/modifiers.md#default-mod-key):
   One-shot Cmd or Ctrl, in the thumb.
 - [Capitalize Key](docs/modifiers.md#capitalize-key):

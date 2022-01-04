@@ -31,6 +31,9 @@ bool get_hold_on_other_key_press_result(uint16_t keycode) {
 }
 bool get_tapping_force_hold_result(uint16_t keycode) {
     switch (keycode) {
+        case KCA_FUN:
+        case KCO_MED:
+        case UND_MED:
         case LSFTT_S:
         case LCTLT_D:
         case LALTT_F:

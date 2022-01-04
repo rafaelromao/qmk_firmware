@@ -23,4 +23,5 @@
 #include "os_toggle.h"
 
 void clear_locked_and_oneshot_mods(void);
+bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift);
 process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *record);

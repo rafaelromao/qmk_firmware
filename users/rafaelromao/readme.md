@@ -13,7 +13,7 @@ My keymaps, for the keyboards listed here, reference and extend the code in this
 
 This diagram presents my Keymap definitions. Check the Details section below for more information.
 
-![img](https://i.imgur.com/UNIIcJU.png)
+![img](https://i.imgur.com/MCTKM9y.png)
 
 ## Main Features
 

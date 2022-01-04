@@ -173,47 +173,52 @@ process_record_result_t process_combos(uint16_t keycode, keyrecord_t *record) {
         case CB_SELC:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
-                if (isWindowsOrLinux | isOneShotShift) {
+                if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                     SEND_STRING(SS_LCTL("a"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
+            break;
 
         case CB_SAVE:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
-                if (isWindowsOrLinux | isOneShotShift) {
+                if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                     SEND_STRING(SS_LCTL("s"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
+            break;
 
         case CB_UNDO:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
-                if (isWindowsOrLinux | isOneShotShift) {
+                if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                     SEND_STRING(SS_LCTL("z"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
+            break;
 
         case CB_COPY:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
-                if (isWindowsOrLinux | isOneShotShift) {
+                if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                     SEND_STRING(SS_LCTL("c"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
+            break;
 
         case CB_PAST:
             if (record->event.pressed) {
                 clear_locked_and_oneshot_mods();
-                if (isWindowsOrLinux | isOneShotShift) {
+                if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                     SEND_STRING(SS_LCTL("v"));
                     return PROCESS_RECORD_RETURN_FALSE;
                 }
             }
+            break;
 
     }
 

@@ -116,7 +116,7 @@ void td_inj_lef(qk_tap_dance_state_t *state, void *user_data) {
 
     switch (tap_state.state) {
         case TD_SINGLE_TAP:
-            if (isWindowsOrLinux | isOneShotShift) {
+            if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                 SEND_STRING(SS_LCTL("1"));
             } else {
                 SEND_STRING(SS_LGUI("1"));

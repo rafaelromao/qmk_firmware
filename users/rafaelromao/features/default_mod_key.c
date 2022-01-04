@@ -33,6 +33,10 @@ void clear_locked_and_oneshot_mods(void) {
     unregister_mods(oneshot_mods);
 }
 
+bool should_send_ctrl(bool isWindowsOrLinux, bool isOneShotShift) {
+    return (isWindowsOrLinux && !isOneShotShift) || (!isWindowsOrLinux && isOneShotShift);
+}
+
 process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *record) {
 
     bool isWindowsOrLinux = os.type == WINDOWS || os.type == LINUX;
@@ -55,7 +59,7 @@ process_record_result_t process_default_mod_key(uint16_t keycode, keyrecord_t *r
                         if (isOneShotShift) {
                             clear_locked_and_oneshot_mods();
                         }
-                        if (isWindowsOrLinux | isOneShotShift) {
+                        if (should_send_ctrl(isWindowsOrLinux, isOneShotShift)) {
                             add_oneshot_mods(MOD_BIT(KC_LCTL));
                         } else {
                             add_oneshot_mods(MOD_BIT(KC_LGUI));

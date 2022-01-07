@@ -34,7 +34,7 @@ Symbols and Numbers are available in the two classic layers, Lower and Raise, ac
 
 ##
 [Home](../readme.md) | 
-[Layout](layout.md) |
+[Base](base.md) |
 [Modifiers](modifiers.md) |
 Symbols and Numbers |
 [Functions and Media](functions.md) | 

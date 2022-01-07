@@ -6,7 +6,7 @@ A 34 keys split keyboard layout, optimized for programmers.
 
 ![img](https://i.imgur.com/MCTKM9y.png)
 
-### How this layout works
+### How this layout works?
 
 - [Base](docs/base.md)
 - [Modifiers](docs/modifiers.md)

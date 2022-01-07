@@ -8,7 +8,7 @@ A 34 keys split keyboard layout, optimized for programmers.
 
 ### How this layout works
 
-- [Base](docs/layout.md)
+- [Base](docs/base.md)
 - [Modifiers](docs/modifiers.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Functions and Media](docs/functions.md)

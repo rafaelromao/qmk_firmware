@@ -1,7 +1,7 @@
 # rafaelromao's keyboard layout
 
 ### Symbols and Numbers
-Symbols and Numbers are available in the two classic layers, Lower and Raise, activated holding the space and backspace thumb keys, respectively.
+Symbols and Numbers are available in the two classic Lower and Raise layers, activated holding the space and backspace thumb keys, respectively.
 ![img](https://i.imgur.com/V4FZOqs.png)
 - Symbols are available in the left side of the Lower layer and in the right side of the Raise layers, making them easier to reach with a single hand.
 - Accents are available in the left side of the Raise layer, so they require two hands.

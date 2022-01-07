@@ -7,7 +7,7 @@ Symbols and Numbers are available in the two classic Lower and Raise layers, act
 - Accents are available in the left side of the Raise layer, so they require two hands.
 - Number are available in the right side of the Lower layer, also requiring two hands, but that can be mitigated using a combo to toggle the layer on, using only the right hand.
 - Enter and Esc are available in the Lower and Raise layer, as well as in the Navigation and Mouse layers, in the same positions.
-- The Lower and Raise layers can be toggled on tapping or holding a combo with the right or left hands, respectively.
+- The Lower and Raise layers can be activated also by tapping or holding a combo with the right or left hands, respectively.
 - Another combo can be used to toggle these layers off.
 - Source code: [combos.c](../features/combos.c)
 

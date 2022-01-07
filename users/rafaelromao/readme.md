@@ -2,25 +2,25 @@
 
 A 34 keys split keyboard layout, optimized for programmers.
 
-### The keyboard layout:
+### Overview
 
 ![img](https://i.imgur.com/MCTKM9y.png)
 
-### How this layout works:
+### How this layout works
 
-- [Layout](docs/layout.md)
+- [Base](docs/layout.md)
 - [Modifiers](docs/modifiers.md)
 - [Symbols and Numbers](docs/symbols.md)
 - [Functions and Media](docs/functions.md)
 - [Navigation and Mouse](docs/navigation.md)
 - [Maintenance](docs/maintenance.md)
 
-### My keyboards:
+### My keyboards
 
 - [kprepublic/bm40hsrgb](../../keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
 - [xiudi/xd75](../../keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
-### My references:
+### References
 
 - [Miryoku](https://github.com/manna-harbour/miryoku)
 - [Seniply](https://stevep99.github.io/seniply)
@@ -32,7 +32,7 @@ A 34 keys split keyboard layout, optimized for programmers.
 - [Thomas Baart](https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
 
-### Useful resouces:
+### Resouces:
 
 - [KLE](http://www.keyboard-layout-editor.com/#/gists/1a36101d96c804188d2d104ab5296739)
 - [QMK Docs](https://docs.qmk.fm)

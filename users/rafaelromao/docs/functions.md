@@ -33,7 +33,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 
 ##
 [Home](../readme.md) | 
-[Layout](layout.md) |
+[Base](base.md) |
 [Modifiers](modifiers.md) |
 [Symbols and Numbers](symbols.md) |
 Functions and Media |

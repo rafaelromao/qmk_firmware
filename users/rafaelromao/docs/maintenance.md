@@ -16,7 +16,7 @@ The Maintenance layer is activated by holding both outer thumb keys.
 
 ##
 [Home](../readme.md) | 
-[Layout](layout.md) |
+[Base](base.md) |
 [Modifiers](modifiers.md) |
 [Symbols and Numbers](symbols.md) |
 [Functions and Media](functions.md) | 

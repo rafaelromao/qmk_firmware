@@ -36,7 +36,7 @@ The Navigation and Mouse layer can be activated holding the outer left and right
 
 ##
 [Home](../readme.md) | 
-[Layout](layout.md) |
+[Base](base.md) |
 [Modifiers](modifiers.md) |
 [Symbols and Numbers](symbols.md) |
 [Functions and Media](functions.md) | 

@@ -31,7 +31,7 @@
 
 // Configure combos
 #define COMBO_COUNT 48
-#define COMBO_TERM 40
+#define COMBO_TERM 20
 #define EXTRA_SHORT_COMBOS
 #define COMBO_STRICT_TIMER
 #define COMBO_HOLD_TERM 175

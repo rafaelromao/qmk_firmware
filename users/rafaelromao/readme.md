@@ -2,51 +2,13 @@
 
 A 34 keys split keyboard layout, optimized for programmers.
 
-## Keyboards
+## Overview
 
-My keymaps, for the keyboards listed here, reference and extend the code in this userspace.
-
-- [kprepublic/bm40hsrgb](../../keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
-- [xiudi/xd75](../../keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
-
-## Keymap
-
-This diagram presents my Keymap definitions. Check the Details section below for more information.
+The next diagram presents my keyboard layout:
 
 ![img](https://i.imgur.com/MCTKM9y.png)
 
-## Main Features
-
-Here is a list of the main features implemented in this layout:
-
-- [Layers](docs/layout.md):
-  Base, Lower, Raise, Functions, Media, Navigation, Mouse and Maintenance.
-- [Persistent Base Layers](docs/layout.md#persistent-base-layers):
-  Qwerty or Colemak-dhm as the base layer.
-- [Tap Hold](docs/modifiers.md):
-  Home Block Mods and layer toggle.
-- [Combos](features/combos.c):
-  Enter, Esc, Tab, common shortcuts and layer toggle.
-- [Tap Dance](features/tapdance.c):
-  Decimal separators, mouse buttons, custom shortcuts and layer toggle.
-- [IntelliJ Shortcuts](docs/functions.md#intellij-shortcuts):
-  6 most useful IntelliJ shortcuts in the thumbs.
-- [Macros](docs/symbols.md):
-  String delimiters and custom shortcuts.
-- [OS Toggle](docs/maintenance.md):
-  Different behaviors for Mac OS, Windows and Linux.
-- [Default Mod Key](docs/modifiers.md#default-mod-key):
-  One-shot Cmd or Ctrl, in the thumb.
-- [Capitalize Key](docs/modifiers.md#capitalize-key):
-  One-shot Shift and Caps Lock, in the thumb.
-- [Caps Lock Timer](docs/modifiers.md#caps-lock):
-  Caps Lock automatically disabled after timeout.
-- [Mouse Layer Toggle](docs/navigation.md#mouse-layer-toggle):
-  Replace the Mouse layer by the Navigation layer.
-
-## Details
-
-This section details how this layout works:
+The next sections explain how this layout works:
 
 - [Layout](docs/layout.md)
 - [Modifiers](docs/modifiers.md)
@@ -54,6 +16,11 @@ This section details how this layout works:
 - [Functions and Media](docs/functions.md)
 - [Navigation and Mouse](docs/navigation.md)
 - [Maintenance](docs/maintenance.md)
+
+My keyboards, listed below, reference and extend the code in this userspace.
+
+- [kprepublic/bm40hsrgb](../../keyboards/kprepublic/bm40hsrgb/keymaps/rafaelromao/readme.md)
+- [xiudi/xd75](../../keyboards/xiudi/xd75/keymaps/rafaelromao/readme.md)
 
 ## References
 

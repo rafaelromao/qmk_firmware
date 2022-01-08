@@ -77,6 +77,8 @@ const uint16_t PROGMEM r_low_tog_combo[] = {RAI_BSP, KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM r_fun_tog_combo[] = {KC_SPC, KC_F5, KC_F6, COMBO_END};
 const uint16_t PROGMEM r_med_tog_combo[] = {KC_SPC, KC_VOLD, KC_VOLU, COMBO_END};
 
+const uint16_t PROGMEM reset_combo[] = {KC_Q, KC_P, KC_Z, KC_SCLN, COMBO_END};
+
 combo_t key_combos[COMBO_COUNT] = {
   COMBO(l_low_esc_combo, KC_ESC),
   COMBO(l_low_sal_combo, CB_SELC),
@@ -136,6 +138,8 @@ combo_t key_combos[COMBO_COUNT] = {
   COMBO(r_fun_tog_combo, TG_FUN),
   COMBO(r_med_tog_combo, TG_MED),
   COMBO(l_med_tog_combo, OS_MED),
+
+  COMBO(reset_combo, RESET),
 };
 
 extern os_t os;

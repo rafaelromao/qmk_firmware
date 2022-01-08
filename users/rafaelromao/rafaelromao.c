@@ -29,6 +29,7 @@ __attribute__ ((weak)) bool led_update_user(led_t led_state) {
 
 __attribute__ ((weak)) void matrix_scan_user(void) {
     check_disable_capslock();
+    process_leader_dictionary();
     matrix_scan_keymap();
 }
 

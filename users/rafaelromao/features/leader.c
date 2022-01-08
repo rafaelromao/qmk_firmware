@@ -16,19 +16,36 @@
 
 #include QMK_KEYBOARD_H
 
-#include "definitions/layers.h"
-#include "definitions/keycodes.h"
-#include "definitions/keymap_blocks.h"
-#include "features/taphold.h"
-#include "features/persistent_layers.h"
-#include "features/tapdance.h"
-#include "features/capslock_timer.h"
-#include "features/mouselayer_toggle.h"
-#include "features/os_toggle.h"
-#include "features/macros.h"
-#include "features/combos.h"
-#include "features/leader.h"
-#include "features/default_mod_key.h"
-#include "features/capitalize_key.h"
+#include "leader.h"
 
-__attribute__ ((weak)) void matrix_scan_keymap(void);
+LEADER_EXTERNS();
+
+void process_leader_dictionary(void) {
+    LEADER_DICTIONARY() {
+        leading = false;
+        leader_end();
+
+        SEQ_ONE_KEY(KC_SCLN) {
+            tap_code16(KC_END);
+            tap_code(KC_SCLN);
+        }
+
+        SEQ_ONE_KEY(KC_I) {
+            tap_code16(KC_END);
+            tap_code(KC_SPC);
+            tap_code16(KC_LCBR);
+        }
+
+        SEQ_ONE_KEY(KC_U) {
+            tap_code16(KC_END);
+            tap_code(KC_SPC);
+            tap_code16(KC_LCBR);
+        }
+    }
+}
+
+void leader_start(void) {
+}
+
+void leader_end(void) {
+}

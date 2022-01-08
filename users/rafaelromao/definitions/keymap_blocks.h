@@ -80,7 +80,7 @@
 #define ____MOUSE_R4_____                               _______ , MO_MAI
 
 #define ___________________FUNCTIONS_L1________________ KC_CAPS , XXXXXXX , KC_APP  , XXXXXXX , XXXXXXX
-#define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , XXXXXXX
+#define ___________________FUNCTIONS_L2________________ XXXXXXX , KC_LSFT , KC_LCTL , KC_LALT , KC_LEAD
 #define ___________________FUNCTIONS_L3________________ XXXXXXX , XXXXXXX , XXXXXXX , KC_LGUI , XXXXXXX
 #define ____FUNCTIONS_L4_                                                             TD_IJLE , KC_BSPC
 
@@ -95,8 +95,8 @@
 #define ____MEDIA_L4_____                                                             TD_IJLE , KC_BSPC
 
 #define ___________________MEDIA_R1____________________ XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , KC_MSTP
-#define ___________________MEDIA_R2____________________ HYPR_A  , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX
-#define ___________________MEDIA_R3____________________ HYPR_V  , XXXXXXX , SS_MODM , SS_MODP , XXXXXXX
+#define ___________________MEDIA_R2____________________ KC_LEAD , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX
+#define ___________________MEDIA_R3____________________ HYPR_V  , HYPR_A  , SS_MODM , SS_MODP , XXXXXXX
 #define ____MEDIA_R4_____                               KC_SPC  , TD_IJRI
 
 #define ___________________MAINTENANCE_L1______________ XXXXXXX , XXXXXXX , KC_PWR  , XXXXXXX , EEP_RST

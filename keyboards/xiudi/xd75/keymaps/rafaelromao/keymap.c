@@ -183,6 +183,11 @@ void set_current_layer_rgb(void) {
     set_rgblight_by_layer(get_highest_layer(layer_state|default_layer_state));
 }
 
+uint32_t layer_state_set_user(uint32_t state) {
+    set_rgblight_by_layer(biton32(state));
+    return state;
+}
+
 void set_mod_indicators(void) {
     bool isShift = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isCtrl = get_mods() & MOD_MASK_CTRL || get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
@@ -199,11 +204,6 @@ void set_mod_indicators(void) {
     } else {
         set_current_layer_rgb();
     }
-}
-
-uint32_t layer_state_set_user(uint32_t state) {
-    set_rgblight_by_layer(biton32(state));
-    return state;
 }
 
 void matrix_scan_keymap(void) {

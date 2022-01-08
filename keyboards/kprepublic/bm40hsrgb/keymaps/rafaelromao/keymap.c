@@ -193,7 +193,3 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             break;
     }
 }
-
-void matrix_scan_keymap(void) {
-    // Do not remove or keyboard will freeze. Need to implement templates in the right way first
-}

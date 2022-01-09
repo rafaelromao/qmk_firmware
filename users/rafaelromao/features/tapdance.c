@@ -29,7 +29,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [MOU_B13] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b13_finished, td_mou_b13_reset),
     [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset),
     [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),
-    [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig)
+    [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig),
+    [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon)
 };
 
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
@@ -151,3 +152,18 @@ void td_inj_rig(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Semicolon at the end
+
+void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_SCLN);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code(KC_SCLN);
+            break;
+        default: break;
+    }
+}

@@ -27,7 +27,8 @@ enum {
     MOU_B13,
     MOU_B24,
     INJ_LEF,
-    INJ_RIG
+    INJ_RIG,
+    SCL_END
 };
 
 #define TD_DOT  TD(DOT_COM)
@@ -35,6 +36,7 @@ enum {
 #define TD_MB24 TD(MOU_B24)
 #define TD_IJLE TD(INJ_LEF)
 #define TD_IJRI TD(INJ_RIG)
+#define TD_SCLE TD(SCL_END)
 
 typedef enum {
     TD_NONE,
@@ -60,3 +62,5 @@ void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data);
 
 void td_inj_lef(qk_tap_dance_state_t *state, void *user_data);
 void td_inj_rig(qk_tap_dance_state_t *state, void *user_data);
+
+void td_semicolon(qk_tap_dance_state_t *state, void *user_data);

@@ -18,6 +18,7 @@
 
 #include QMK_KEYBOARD_H
 #include "../definitions/keycodes.h"
+#include "tapdance.h"
 #include "process_record_result.h"
 #include "default_mod_key.h"
 

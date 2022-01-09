@@ -22,7 +22,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 ## Leader Key
 - A Leader Key is available in the home row, in the center column, in the left side of the Functions layer and in the right side of the Media kayer, allowing mirrored single hand access to it.
 - The Leader Key is used to give easy access to some useful shortcuts, like adding a ; or an { in the end of the line, without leaving insert mode, in VIM. Other shortcuts like that will be added in the future.
-- Source code: [leader.c](..\features\leader.c)
+- Source code: [leader.c](../features/leader.c)
 
 ## IntelliJ Shortcuts
 - Also in the Functions and Media layers, which means, when holding any of the home row pinky keys, the outer thumb keys can be used to tap dance through some of the most common IntelliJ Shortcuts:

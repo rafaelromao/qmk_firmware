@@ -24,15 +24,6 @@ static td_tap_t tap_state = {
     .state = TD_NONE
 };
 
-qk_tap_dance_action_t tap_dance_actions[] = {
-    [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_com_finished, td_dot_com_reset),
-    [MOU_B13] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b13_finished, td_mou_b13_reset),
-    [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset),
-    [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),
-    [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig),
-    [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon)
-};
-
 __attribute__ ((weak)) td_state_t dance_state(qk_tap_dance_state_t *state) {
     if (state->count == 1) {
         if (state->interrupted || !state->pressed)
@@ -167,3 +158,14 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
         default: break;
     }
 }
+
+// Tap dance declarations
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [DOT_COM] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_dot_com_finished, td_dot_com_reset),
+    [MOU_B13] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b13_finished, td_mou_b13_reset),
+    [MOU_B24] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, td_mou_b24_finished, td_mou_b24_reset),
+    [INJ_LEF] = ACTION_TAP_DANCE_FN(td_inj_lef),
+    [INJ_RIG] = ACTION_TAP_DANCE_FN(td_inj_rig),
+    [SCL_END] = ACTION_TAP_DANCE_FN(td_semicolon)
+};

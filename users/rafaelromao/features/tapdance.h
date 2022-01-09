@@ -51,16 +51,3 @@ typedef struct {
 } td_tap_t;
 
 td_state_t dance_state(qk_tap_dance_state_t *state);
-
-void td_dot_com_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_dot_com_reset(qk_tap_dance_state_t *state, void *user_data);
-
-void td_mou_b13_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b13_reset(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b24_finished(qk_tap_dance_state_t *state, void *user_data);
-void td_mou_b24_reset(qk_tap_dance_state_t *state, void *user_data);
-
-void td_inj_lef(qk_tap_dance_state_t *state, void *user_data);
-void td_inj_rig(qk_tap_dance_state_t *state, void *user_data);
-
-void td_semicolon(qk_tap_dance_state_t *state, void *user_data);

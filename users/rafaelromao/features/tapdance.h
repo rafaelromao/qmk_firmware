@@ -28,7 +28,11 @@ enum {
     MOU_B24,
     INJ_LEF,
     INJ_RIG,
-    SCL_END
+    SCL_END,
+    BRT_CUR,
+    BRT_SQR,
+    BRT_PAR,
+    BRT_ANG
 };
 
 #define TD_DOT  TD(DOT_COM)
@@ -37,6 +41,10 @@ enum {
 #define TD_IJLE TD(INJ_LEF)
 #define TD_IJRI TD(INJ_RIG)
 #define TD_SCLE TD(SCL_END)
+#define TD_CURB TD(BRT_CUR)
+#define TD_SQRB TD(BRT_SQR)
+#define TD_PARB TD(BRT_PAR)
+#define TD_ANGB TD(BRT_ANG)
 
 typedef enum {
     TD_NONE,

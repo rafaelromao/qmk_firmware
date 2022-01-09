@@ -26,7 +26,7 @@ const uint16_t PROGMEM l_low_und_combo[] = {KC_AT, KC_LBRC, COMBO_END};
 const uint16_t PROGMEM l_low_rai_combo[] = {KC_LBRC, KC_RBRC, COMBO_END};
 const uint16_t PROGMEM l_low_cop_combo[] = {KC_RBRC, KC_QUES, COMBO_END};
 
-const uint16_t PROGMEM l_rai_tab_combo[] = {KC_LCBR, KC_RCBR, COMBO_END};
+const uint16_t PROGMEM l_rai_tab_combo[] = {TD_CURB, KC_RCBR, COMBO_END};
 const uint16_t PROGMEM l_rai_sal_combo[] = {KC_EXLM, KC_PERC, COMBO_END};
 const uint16_t PROGMEM l_rai_ent_combo[] = {KC_EQL, KC_EXLM, COMBO_END};
 const uint16_t PROGMEM l_rai_pas_combo[] = {KC_MINS, KC_EQL, COMBO_END};

@@ -1,3 +1,4 @@
+SRC += secret.c
 SRC += rafaelromao.c
 SRC += features/taphold.c
 SRC += features/persistent_layers.c

@@ -38,8 +38,17 @@ void process_leader_dictionary(void) {
             tap_code(KC_DOWN);
         }
 
-        // Process leader sequences declared in the keymap
-        process_leader_dictionary_keymap();
+        // Git - Leader key + G + something
+
+        // Git - Commit
+        SEQ_TWO_KEYS(KC_G, KC_C) {
+            SEND_STRING("git commit -m \"\"");
+            tap_code(KC_LEFT);
+            tap_code(KC_LEFT);
+        }
+
+        // Process secret leader sequences
+        process_leader_dictionary_secret();
     }
 }
 
@@ -51,6 +60,5 @@ void leader_end(void) {
     leader_end_keymap();
 }
 
-__attribute__ ((weak)) void process_leader_dictionary_keymap(void) {}
 __attribute__ ((weak)) void leader_start_keymap(void) {}
 __attribute__ ((weak)) void leader_end_keymap(void) {}

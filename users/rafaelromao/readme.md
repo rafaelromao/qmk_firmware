@@ -29,7 +29,7 @@ A 34 keys split keyboard layout, optimized for programmers.
 - [Drashna](https://github.com/qmk/qmk_firmware/tree/master/users/drashna)
 - [Pascal Getreuer](https://github.com/getreuer/qmk-keymap)
 - [DreymaR](https://dreymar.colemak.org)
-- [Thomas Baart](https://thomasbaart.nl/2018/12/01/reducing-firmware-size-in-qmk/)
+- [Thomas Baart](https://thomasbaart.nl/category/mechanical-keyboards/firmware/qmk)
 - [Ben Vallack](https://youtube.com/c/BenVallack)
 
 ### Resouces:

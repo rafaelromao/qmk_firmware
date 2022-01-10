@@ -154,6 +154,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // |_____________________________________________________________________________________________________________________________________________________|
 };
 
+// Keymap data
+
+typedef struct {
+    bool isLeading;
+} keymap_data_t;
+
+keymap_data_t keymap_data = {
+    .isLeading = false
+};
+
 // RGB Indicators
 
 void set_rgblight_by_layer(uint32_t layer) {
@@ -184,11 +194,19 @@ void set_current_layer_rgb(void) {
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
+    if (keymap_data.isLeading) {
+        return state;
+    }
+
     set_rgblight_by_layer(biton32(state));
     return state;
 }
 
 void set_mod_indicators(void) {
+    if (keymap_data.isLeading) {
+        return;
+    }
+
     bool isShift = get_mods() & MOD_MASK_SHIFT || get_oneshot_mods() & MOD_MASK_SHIFT || get_oneshot_locked_mods() & MOD_MASK_SHIFT;
     bool isCtrl = get_mods() & MOD_MASK_CTRL || get_oneshot_mods() & MOD_MASK_CTRL || get_oneshot_locked_mods() & MOD_MASK_CTRL;
     bool isAlt = get_mods() & MOD_MASK_ALT || get_oneshot_mods() & MOD_MASK_ALT || get_oneshot_locked_mods() & MOD_MASK_ALT;
@@ -208,4 +226,14 @@ void set_mod_indicators(void) {
 
 void matrix_scan_keymap(void) {
     set_mod_indicators();
+}
+
+void leader_start_keymap(void) {
+    keymap_data.isLeading = true;
+    rgblight_setrgb(RGB_ORANGE);
+}
+
+void leader_end_keymap(void) {
+    keymap_data.isLeading = false;
+    set_current_layer_rgb();
 }

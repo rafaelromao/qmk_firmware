@@ -21,3 +21,6 @@
 #include "../definitions/keycodes.h"
 
 void process_leader_dictionary(void);
+void process_leader_dictionary_keymap(void);
+void leader_start_keymap(void);
+void leader_end_keymap(void);

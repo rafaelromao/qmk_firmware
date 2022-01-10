@@ -25,27 +25,32 @@ void process_leader_dictionary(void) {
         leading = false;
         leader_end();
 
-        SEQ_ONE_KEY(KC_SCLN) {
-            tap_code16(KC_END);
-            tap_code(KC_SCLN);
+        // Vim - Leader key + V + something
+
+        // Vim - Select Whole Block
+        SEQ_TWO_KEYS(KC_V, KC_B) {
+            tap_code(KC_V);
+            tap_code(KC_A);
+            tap_code16(KC_LCBR);
+            register_mods(MOD_LSFT);
+            tap_code(KC_V);
+            unregister_mods(MOD_LSFT);
+            tap_code(KC_DOWN);
         }
 
-        SEQ_ONE_KEY(KC_I) {
-            tap_code16(KC_END);
-            tap_code(KC_SPC);
-            tap_code16(KC_LCBR);
-        }
-
-        SEQ_ONE_KEY(KC_U) {
-            tap_code16(KC_END);
-            tap_code(KC_SPC);
-            tap_code16(KC_LCBR);
-        }
+        // Process leader sequences declared in the keymap
+        process_leader_dictionary_keymap();
     }
 }
 
 void leader_start(void) {
+    leader_start_keymap();
 }
 
 void leader_end(void) {
+    leader_end_keymap();
 }
+
+__attribute__ ((weak)) void process_leader_dictionary_keymap(void) {}
+__attribute__ ((weak)) void leader_start_keymap(void) {}
+__attribute__ ((weak)) void leader_end_keymap(void) {}

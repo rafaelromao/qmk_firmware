@@ -20,7 +20,7 @@ The Functions and Media layers are activated holding the left or right pinky key
 - The space and backspace thumb keys are inverted in the Functions and Media layers, which allow single hand access to both of them.
 
 ## Leader Key
-- A Leader Key is available in the home row, in the center column, in the left side of the Functions layer and in the right side of the Media kayer, allowing mirrored single hand access to it.
+- A Leader Key is available in the home row, in the center column, in the left side of the Functions layer and in the right side of the Media layer, allowing mirrored single hand access to it.
 - The Leader Key is used to give easy access to some useful shortcuts and macros, like typing an internet domain or recurring terminal commands.
 - Source code: [leader.c](../features/leader.c)
 

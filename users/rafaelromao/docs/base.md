@@ -21,6 +21,7 @@
 
 ## Double Dot for New Sentences
 - A double tap in the dot key outputs dot followed by space, and activates oneshot shift. This will make it easier to enter a new sentence.
+- Holding the dot key will insert it in the end of the current line.
 
 ## Base Layer Combos
 - Combos are available in the base layers to send ENTER, ESC, TAB, common shortcuts and to toggle the [Lower, Raise](symbols.md) or [Media](functions.md) layers.

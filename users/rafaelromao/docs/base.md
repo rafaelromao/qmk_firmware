@@ -19,6 +19,9 @@
 - It is possible to change the base layer in the maintenance layer and this change is persistent.
 - Source Code: [persistent_layers.c](../features/persistent_layers.c)
 
+## Double Dot for New Sentences
+- A double tap in the dot key outputs dot followed by space, and activates oneshot shift. This will make it easier to enter a new sentence.
+
 ## Base Layer Combos
 - Combos are available in the base layers to send ENTER, ESC, TAB, common shortcuts and to toggle the [Lower, Raise](symbols.md) or [Media](functions.md) layers.
 - Most combos include the home thumb key, the one in the same side, to avoid misfires. The exception is the combo that activates the Navigation layer.

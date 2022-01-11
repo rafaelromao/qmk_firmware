@@ -26,7 +26,7 @@
 
 #define ___________________QWERTY_R1___________________ KC_Y    , KC_U    , KC_I    , KC_O    , KC_P
 #define ___________________QWERTY_R2___________________ KC_H    , RALTT_J , RCTLT_K , RSFTT_L , UND_MED
-#define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , KC_DOT  , TD_SCLE
+#define ___________________QWERTY_R3___________________ KC_N    , RGUIT_M , KC_COMM , TD_DOTD , TD_SCLE
 #define ____QWERTY_R4____                               RAI_BSP , MOU_CAP
 
 #define ___________________COLEMAK_L1__________________ KC_Q    , KC_W    , KC_F    , KC_P    , KC_B
@@ -36,7 +36,7 @@
 
 #define ___________________COLEMAK_R1__________________ KC_J    , KC_L    , KC_U    , KC_Y    , KC_UNDS
 #define ___________________COLEMAK_R2__________________ KC_M    , RALTT_N , RCTLT_E , RSFTT_I , KCO_MED
-#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , KC_DOT  , TD_SCLE
+#define ___________________COLEMAK_R3__________________ KC_K    , RGUIT_H , KC_COMM , TD_DOTD , TD_SCLE
 #define ____COLEMAK_R4___                               RAI_BSP , MOU_CAP
 
 #define ___________________LOWER_L1____________________ KC_ESC  , TD_PARB , KC_RPRN , KC_BSLS , SS_TILD
@@ -45,7 +45,7 @@
 #define ____LOWER_L4_____                                                             _______ , XXXXXXX
 
 #define ___________________LOWER_R1____________________ XXXXXXX , KC_7    , KC_8    , KC_9    , KC_ENT
-#define ___________________LOWER_R2____________________ XXXXXXX , KC_4    , KC_5    , KC_6    , TD_DOT
+#define ___________________LOWER_R2____________________ XXXXXXX , KC_4    , KC_5    , KC_6    , TD_DOTC
 #define ___________________LOWER_R3____________________ XXXXXXX , KC_1    , KC_2    , KC_3    , XXXXXXX
 #define ____LOWER_R4_____                               _______ , MOU_0
 

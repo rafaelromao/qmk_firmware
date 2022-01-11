@@ -18,6 +18,16 @@
 
 #include "taphold.h"
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case TD_DOTC:
+        case TD_DOTD:
+            return 140;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 bool get_hold_on_other_key_press_result(uint16_t keycode) {
     switch (keycode) {
         case LOW_SPC:

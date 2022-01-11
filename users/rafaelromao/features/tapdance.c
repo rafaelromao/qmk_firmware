@@ -218,6 +218,27 @@ void td_semicolon(qk_tap_dance_state_t *state, void *user_data) {
     }
 }
 
+// Dot dot new sentence
+
+void td_dot_dot(qk_tap_dance_state_t *state, void *user_data) {
+    tap_state.state = dance_state(state);
+    switch (tap_state.state) {
+        case TD_SINGLE_TAP:
+            tap_code(KC_DOT);
+            break;
+        case TD_DOUBLE_TAP:
+            tap_code(KC_DOT);
+            tap_code(KC_SPC);
+            add_oneshot_mods(MOD_LSFT);
+            break;
+        case TD_SINGLE_HOLD:
+            tap_code16(KC_END);
+            tap_code(KC_DOT);
+            break;
+        default: break;
+    }
+}
+
 // Tap dance declarations
 
 qk_tap_dance_action_t tap_dance_actions[] = {
@@ -230,5 +251,6 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [BRT_CUR] = ACTION_TAP_DANCE_FN(td_curly_braces),
     [BRT_SQR] = ACTION_TAP_DANCE_FN(td_square_brackets),
     [BRT_PAR] = ACTION_TAP_DANCE_FN(td_parentesis),
-    [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets)
+    [BRT_ANG] = ACTION_TAP_DANCE_FN(td_angle_brackets),
+    [DOT_DOT] = ACTION_TAP_DANCE_FN(td_dot_dot)
 };

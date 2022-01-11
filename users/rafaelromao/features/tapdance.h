@@ -32,10 +32,11 @@ enum {
     BRT_CUR,
     BRT_SQR,
     BRT_PAR,
-    BRT_ANG
+    BRT_ANG,
+    DOT_DOT
 };
 
-#define TD_DOT  TD(DOT_COM)
+#define TD_DOTC TD(DOT_COM)
 #define TD_MB13 TD(MOU_B13)
 #define TD_MB24 TD(MOU_B24)
 #define TD_IJLE TD(INJ_LEF)
@@ -45,6 +46,7 @@ enum {
 #define TD_SQRB TD(BRT_SQR)
 #define TD_PARB TD(BRT_PAR)
 #define TD_ANGB TD(BRT_ANG)
+#define TD_DOTD TD(DOT_DOT)
 
 typedef enum {
     TD_NONE,

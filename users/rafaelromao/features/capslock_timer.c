@@ -85,6 +85,10 @@ process_record_result_t process_capslock_timer_extension(uint16_t keycode, keyre
             case KC_MINS:
             case KC_UNDS:
             case KC_SPC:
+            case KC_LEFT:
+            case KC_RIGHT:
+            case KC_HOME:
+            case KC_END:
                 start_capslock_timer();
         }
     }
